@@ -1,6 +1,5 @@
-import { Suspense } from 'react';
-import {Link, Route, Routes} from "react-router-dom";
-import './styles/index.css';
+import { Link } from "react-router-dom";
+import "./styles/index.css";
 import { AppRouter } from "app/providers/router";
 
 const App = () => {

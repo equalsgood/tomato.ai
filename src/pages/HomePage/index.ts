@@ -1,1 +1,1 @@
-export { HomePageAsync as HomePage } from './components/HomePage.async';
+export { HomePageAsync as HomePage } from "./components/HomePage.async";
