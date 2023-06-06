@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../../../shared/fonts/satoshi/Satoshi-Variable.woff2') format('woff2'),
+    url('../../../shared/fonts/satoshi/Satoshi-Variable.woff') format('woff'),
+    url('../../../shared/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
+    font-weight: 400 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+:root {
+    --font-family-main: "Satoshi", sans-serif;
+
+    --font-size-xxxl: 65;
+    --font-size-xxl: 50;
+    --font-size-xl: 40;
+    --font-size-l: 32;
+    --font-size-m: 25;
+    --font-size-s: 20;
+    --font-size-xs: 18;
+    --font-size-xxs: 16;
+    --font-size-xxxs: 14;
+
+    --font-weight-xl: 900;
+    --font-weight-l: 700;
+    --font-weight-m: 500;
+    --font-weight-s: 400;
+}

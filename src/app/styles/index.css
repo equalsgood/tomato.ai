@@ -1,0 +1,10 @@
+@import "./reset";
+@import "./variables/global.css";
+@import "./themes/light.css";
+
+.app {
+    font-family: var(--font-family-main);
+
+    background: var(--primary-bg-color);
+    min-height: 100vh;
+}
