@@ -1,1 +1,1 @@
-export { BPOsPageAsync as BPOsPage } from "./components/BPOsPage.async";
+export { BPOsPageAsync as BPOsPage } from './components/BPOsPage.async';
