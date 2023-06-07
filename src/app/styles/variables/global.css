@@ -11,18 +11,21 @@
 :root {
     --font-family-main: "Satoshi", sans-serif;
 
-    --font-size-xxxl: 65;
-    --font-size-xxl: 50;
-    --font-size-xl: 40;
-    --font-size-l: 32;
-    --font-size-m: 25;
-    --font-size-s: 20;
-    --font-size-xs: 18;
-    --font-size-xxs: 16;
-    --font-size-xxxs: 14;
+    --font-size-xxxl: 65px;
+    --font-size-xxl: 50px;
+    --font-size-xl: 40px;
+    --font-size-l: 32px;
+    --font-size-m: 25px;
+    --font-size-s: 20px;
+    --font-size-xs: 18px;
+    --font-size-xxs: 16px;
+    --font-size-xxxs: 14px;
 
     --font-weight-xl: 900;
     --font-weight-l: 700;
     --font-weight-m: 500;
     --font-weight-s: 400;
+
+    --header-height: 90px;
+    --footer-height: 370px;
 }

@@ -9,6 +9,7 @@ export enum NavigationLinkVariants {
     DEFAULT = 'default',
     DROPDOWN = 'dropdown',
     ACTION = 'action',
+    FOOTER = 'footer',
 }
 
 export interface NavigationLinkProps {

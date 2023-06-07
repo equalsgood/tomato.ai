@@ -24,3 +24,14 @@
     background: var(--primary-action-color);
     border-radius: 10px;
 }
+
+.footer {
+    font-size: var(--font-size-xxxs);
+    color: var(--third-text-color);
+    font-weight: var(--font-weight-s);
+    align-self: flex-start;
+}
+
+.footer:hover {
+    color: var(--primary-action-text-color);
+}
