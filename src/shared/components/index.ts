@@ -1,5 +1,9 @@
 import { Loader } from './Loader/Loader';
+import { NavigationLink, NavigationLinkProps, NavigationLinkVariants } from './NavigationLink/NavigationLink';
 
 export {
-    Loader
+    Loader,
+    NavigationLink,
+    NavigationLinkProps,
+    NavigationLinkVariants,
 };

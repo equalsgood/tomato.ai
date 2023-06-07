@@ -1,0 +1,26 @@
+.navigation-link {
+    font-size: var(--font-size-xxs);
+    color: var(--primary-title-color);
+    font-weight: var(--font-weight-m);
+    text-decoration: none;
+    align-self: center;
+}
+
+.dropdown {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.action {
+    color: var(--primary-action-text-color);
+    font-weight: var(--font-weight-l);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 202px;
+    height: 55px;
+    background: var(--primary-action-color);
+    border-radius: 10px;
+}

@@ -2,29 +2,23 @@ import { Navigate, RouteProps } from 'react-router-dom';
 import { HomePage } from 'pages/HomePage';
 import { BPOsPage } from 'pages/BPOsPage';
 
-export enum AppRoutes {
-    HOME = 'home',
-    BPOs = 'bpos',
-    NO_MATCH = 'noMatch'
+export enum RoutePaths {
+    HOME = '/',
+    BPOs = '/bpos',
+    NO_MATCH = '*'
 }
-
-export const RoutePaths: Record<AppRoutes, string> = {
-    [AppRoutes.HOME]: '/',
-    [AppRoutes.BPOs]: '/bpos',
-    [AppRoutes.NO_MATCH]: '*',
-};
 
 export const routeConfig: Array<RouteProps> = [
     {
-        path: RoutePaths.home,
+        path: RoutePaths.HOME,
         element: <HomePage/>,
     },
     {
-        path: RoutePaths.bpos,
+        path: RoutePaths.BPOs,
         element: <BPOsPage/>,
     },
     {
-        path: RoutePaths.noMatch,
-        element: <Navigate to={RoutePaths.home} replace />,
+        path: RoutePaths.NO_MATCH,
+        element: <Navigate to={RoutePaths.HOME} replace />,
     },
 ];
