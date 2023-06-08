@@ -1,4 +1,4 @@
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './styles/index.css';
 import { AppRouter } from 'app/providers/AppRouter';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';

@@ -3,13 +3,14 @@
     color: var(--primary-title-color);
     font-weight: var(--font-weight-m);
     text-decoration: none;
-    align-self: center;
 }
 
-.dropdown {
-    display: flex;
-    gap: 8px;
-    align-items: center;
+.default {
+    line-height: 18px;
+}
+
+.default:hover {
+    color: var(--primary-action-color);
 }
 
 .action {

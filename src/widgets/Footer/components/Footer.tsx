@@ -1,4 +1,4 @@
-import { Fragment, ReactNode } from 'react';
+import { Fragment, memo, ReactNode } from 'react';
 import cls from './Footer.module.css';
 import FooterLogo from 'shared/assets/logos/footer-logo.svg';
 import LocationIcon from 'shared/assets/icons/location-icon.svg';
@@ -6,7 +6,7 @@ import { NavigationLink, NavigationLinkVariants, SocialLinks, Text, TextVariants
 import { RoutePaths } from 'app/providers/AppRouter';
 
 
-export const Footer = () => {
+export const Footer = memo(() => {
     return (
         <footer className={cls.footer}>
             <div className={cls.logoColumn}>
@@ -48,7 +48,9 @@ export const Footer = () => {
             </FooterColumn>
         </footer>
     );
-};
+});
+
+Footer.displayName = 'Footer';
 
 interface FooterColumnProps {
     title: string,

@@ -2,6 +2,7 @@ import { Loader } from './Loader/Loader';
 import { NavigationLink, NavigationLinkProps, NavigationLinkVariants } from './NavigationLink/NavigationLink';
 import { SocialLinks } from './SocialLinks/SocialLinks';
 import { Text, TextVariants } from './Text/Text';
+import { NavigationDropdown } from './NavigationDropdown/NavigationDropdown';
 
 export {
     Loader,
@@ -10,5 +11,6 @@ export {
     NavigationLinkVariants,
     SocialLinks,
     Text,
-    TextVariants
+    TextVariants,
+    NavigationDropdown
 };

@@ -28,4 +28,7 @@
 
     --header-height: 90px;
     --footer-height: 370px;
+
+    --modal-z-index: 20;
+    --overlay-z-index: 10;
 }

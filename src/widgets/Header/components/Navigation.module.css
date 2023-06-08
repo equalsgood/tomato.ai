@@ -1,4 +1,22 @@
 .navigation {
     display: flex;
-    gap: 47px
+    gap: 47px;
+    align-items: center;
 }
+
+.links-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: var(--font-size-xxs);
+    font-weight: var(--font-weight-m);
+    color: var(--third-text-color);
+}
+
+.use-cases-links {
+    margin: 0px 0 20px 33px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+

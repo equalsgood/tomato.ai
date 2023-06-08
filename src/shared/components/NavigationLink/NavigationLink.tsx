@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { RoutePaths } from 'app/providers/AppRouter';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import cls from './NavigationLink.module.css';
-import DropdownIcon from 'shared/assets/icons/arrow-header-dropdown.svg';
 
 export enum NavigationLinkVariants {
     DEFAULT = 'default',
-    DROPDOWN = 'dropdown',
     ACTION = 'action',
     FOOTER = 'footer',
 }
@@ -18,14 +16,15 @@ export interface NavigationLinkProps {
     variant: NavigationLinkVariants;
 }
 
-export const NavigationLink = (props: NavigationLinkProps) => {
+export const NavigationLink = memo((props: NavigationLinkProps) => {
     const { text, to, variant } = props;
     const classes = classNames(cls.navigationLink, cls[variant]);
 
     return (
         <Link to={to} className={classes}>
             {text}
-            {variant === 'dropdown' && <DropdownIcon/>}
         </Link>
     );
-};
+});
+
+NavigationLink.displayName = 'NavigationLink';
