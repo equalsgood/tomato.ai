@@ -1,0 +1,32 @@
+.examples-board {
+    margin: 0 auto;
+    background: var(--reversed-bg-color);
+    padding: 18px;
+    display: flex;
+    gap: 80px;
+    border-radius: 20px;
+    width: 1070px;
+    height: 530px;
+}
+
+.info {
+    padding-top: 34px;
+    padding-left: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.action {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    height: 30px;
+    margin-top: 50px;
+}
+
+.examples {
+    border-radius: 20px;
+    background: var(--primary-bg-color);
+    flex: 1;
+}

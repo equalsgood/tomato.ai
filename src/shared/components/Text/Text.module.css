@@ -3,6 +3,31 @@
     font-weight: var(--font-weight-s);
 }
 
+.paragraph-title {
+    color: var(--third-text-color);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-m);
+}
+
+.paragraph-reversed {
+    color: var(--reversed-text-color);
+    font-size: var(--font-size-xxs);
+    font-weight: var(--font-weight-s);
+    line-height: 20px;
+}
+
+.action {
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xs);
+    color: var(--primary-action-color);
+}
+
+.action-red {
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xs);
+    color: var(--secondary-action-text-color);
+}
+
 .default {
     font-size: var(--font-size-xxs);
 }
@@ -23,4 +48,27 @@
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-xxs);
     line-height: 18px;
+}
+
+.title-main {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-xxxl);
+    color: var(--primary-title-color);
+}
+
+.badge {
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xxs);
+    color: var(--primary-action-color);
+    display: inline-block;
+    padding: 10px 27px;
+    border-radius: 10px;
+    background: var(--primary-action-color-blurred);
+}
+
+.title-reversed {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-xl);
+    color: var(--reversed-title-color);
+    line-height: 45px;
 }

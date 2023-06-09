@@ -19,6 +19,9 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         use: [
             {
                 loader: 'file-loader',
+                options: {
+                    name: '[sha512:hash:base64:7].[ext]',
+                },
             },
         ],
     };

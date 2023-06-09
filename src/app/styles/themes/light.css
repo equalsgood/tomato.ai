@@ -4,7 +4,6 @@
     --reversed-bg-color: #161414;
 
     --primary-title-color: #161414;
-    --secondary-title-color: #8A8A8A;
     --reversed-title-color: #FFFFFF;
 
     --primary-text-color: #595959;
@@ -17,4 +16,6 @@
 
     --primary-action-text-color: #FFFFFF;
     --secondary-action-text-color: #F4363F;
+
+    --primary-action-color-blurred: #00BD501A;
 }
