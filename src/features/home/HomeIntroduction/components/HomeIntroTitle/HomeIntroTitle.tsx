@@ -8,7 +8,7 @@ export const HomeIntroTitle = () => {
     return (
         <div className={cls.homeIntroTitle}>
             <div className={cls.info}>
-                <Text tag="h1" variant={TextVariants.TITLE_MAIN}>
+                <Text tag="h1" variant={TextVariants.TITLE}>
                     Soften accents for clearer agent calls
                 </Text>
                 <Text width={503} tag="p" variant={TextVariants.PARAGRAPH_TITLE}>

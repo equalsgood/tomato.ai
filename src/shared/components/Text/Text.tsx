@@ -3,14 +3,16 @@ import classNames from 'classnames';
 import cls from './Text.module.css';
 
 export enum TextVariants {
+    TITLE = 'title',
+    TITLE_REVERSED = 'titleReversed',
+    TITLE_REVERSED_SMALL = 'titleReversedSmall',
     PARAGRAPH_TITLE = 'paragraphTitle',
     PARAGRAPH_REVERSED = 'paragraphReversed',
+    PARAGRAPH_REVERSED_SMALL = 'paragraphReversedSmall',
     ACTION = 'action',
     ACTION_RED = 'actionRed',
     DEFAULT = 'default',
     DEFAULT_SMALL = 'defaultSmall',
-    TITLE_MAIN = 'titleMain',
-    TITLE_REVERSED = 'titleReversed',
     SUBHEADER_LIGHT = 'subheaderLight',
     SUBHEADER_LIGHT_SMALL = 'subheaderLightSmall',
     BADGE = 'badge'

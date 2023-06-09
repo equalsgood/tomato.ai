@@ -1,0 +1,32 @@
+.benefits {
+    padding: 55px 145px;
+    background: var(--reversed-bg-color);
+    display: flex;
+    gap: 113px;
+    justify-content: space-around;
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: 365px 365px;
+    grid-template-rows: 170px 170px;
+    gap: 50px;
+    list-style: none;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    background: var(--primary-icon-bg);
+    margin-bottom: 4px;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
