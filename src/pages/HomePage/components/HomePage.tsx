@@ -1,6 +1,6 @@
 import React from 'react';
 import { Benefits, HomeComments, HomeIntroduction } from 'features/home';
-import { InfoMenu } from 'features/common';
+import { FeaturedCompanies, InfoMenu } from 'features/common';
 
 const HomePage = () => {
     return (
@@ -9,6 +9,7 @@ const HomePage = () => {
             <Benefits/>
             <HomeComments/>
             <InfoMenu/>
+            <FeaturedCompanies/>
         </main>
     );
 };
