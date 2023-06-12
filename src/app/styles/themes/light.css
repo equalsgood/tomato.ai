@@ -1,6 +1,6 @@
 .light {
     --primary-bg-color: #FFFFFF;
-    --secondary-bg-color: linear-gradient(180deg, #F9F9F9 0%, #E1DBDB 100%);
+    --secondary-bg-color: linear-gradient(90deg, #F3F3F3 0%, rgba(243, 243, 243, 0) 100%);
     --reversed-bg-color: #161414;
 
     --primary-title-color: #161414;
@@ -13,6 +13,7 @@
 
     --primary-action-color: #00BD50;
     --secondary-action-color: #2B73FF;
+    --third-action-color: #F4363F;
 
     --primary-action-text-color: #FFFFFF;
     --secondary-action-text-color: #F4363F;

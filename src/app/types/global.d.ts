@@ -9,6 +9,8 @@ declare module '*.css' {
 declare module '*.png';
 declare module '*.jpg';
 declare module '*.jpeg';
+declare module '*.mp3';
+declare module '*.wav';
 declare module '*.svg' {
     import React from 'react';
 

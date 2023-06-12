@@ -4,6 +4,7 @@ import cls from './Text.module.css';
 
 export enum TextVariants {
     TITLE = 'title',
+    TITLE_EXTRA_SMALL = 'titleExtraSmall',
     TITLE_REVERSED = 'titleReversed',
     TITLE_REVERSED_SMALL = 'titleReversedSmall',
     PARAGRAPH_TITLE = 'paragraphTitle',

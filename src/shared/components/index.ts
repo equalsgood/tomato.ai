@@ -3,6 +3,7 @@ import { NavigationLink, NavigationLinkProps, NavigationLinkVariants } from './N
 import { SocialLinks } from './SocialLinks/SocialLinks';
 import { Text, TextVariants } from './Text/Text';
 import { NavigationDropdown } from './NavigationDropdown/NavigationDropdown';
+import { AudioPlayer } from './AudioPlayer/AudioPlayer';
 
 export {
     Loader,
@@ -12,5 +13,6 @@ export {
     SocialLinks,
     Text,
     TextVariants,
-    NavigationDropdown
+    NavigationDropdown,
+    AudioPlayer
 };

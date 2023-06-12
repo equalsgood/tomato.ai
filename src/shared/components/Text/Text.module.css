@@ -9,6 +9,12 @@
     color: var(--primary-title-color);
 }
 
+.titleExtraSmall {
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xs);
+    color: var(--primary-title-color);
+}
+
 .title-reversed {
     font-weight: var(--font-weight-xl);
     font-size: var(--font-size-xxxl);
