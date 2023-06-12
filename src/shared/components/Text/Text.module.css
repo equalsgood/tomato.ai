@@ -9,13 +9,13 @@
     color: var(--primary-title-color);
 }
 
-.titleSmall {
+.title-small {
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-s);
     color: var(--primary-title-color);
 }
 
-.titleExtraSmall {
+.title-extra-small {
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-xs);
     color: var(--primary-title-color);
@@ -27,11 +27,17 @@
     color: var(--reversed-title-color);
 }
 
-.title-reversed-small {
+.title-medium-reversed {
     font-weight: var(--font-weight-xl);
     font-size: var(--font-size-xl);
     color: var(--reversed-title-color);
     line-height: 45px;
+}
+
+.title-small-reversed {
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-s);
+    color: var(--reversed-text-color);
 }
 
 .paragraph-title {

@@ -31,4 +31,6 @@
 
     --modal-z-index: 20;
     --overlay-z-index: 10;
+    --separate-content-z-index: 5;
+    --separate-bg-z-index: 2;
 }

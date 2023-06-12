@@ -1,0 +1,10 @@
+.menu-item {
+    padding: 21px 36px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: var(--separate-content-z-index);
+    width: 380px;
+}
