@@ -1,12 +1,13 @@
 import React from 'react';
-import { Benefits, HomeIntroduction } from 'features/home';
+import { Benefits, HomeComments, HomeIntroduction } from 'features/home';
 
 const HomePage = () => {
     return (
-        <div>
+        <main>
             <HomeIntroduction/>
             <Benefits/>
-        </div>
+            <HomeComments/>
+        </main>
     );
 };
 

@@ -3,6 +3,9 @@ import { AudioPlayer, Text, TextVariants } from 'shared/components';
 import GreenArrowIcon from 'shared/assets/icons/arrow-green-right.svg';
 import classNames from 'classnames';
 import IndiaFlag from 'shared/assets/flags/india.svg';
+import PhilippinesFlag from 'shared/assets/flags/philippines.svg';
+import HaitiFlag from 'shared/assets/flags/haiti.svg';
+import PakistanFlag from 'shared/assets/flags/pakistan.svg';
 import indiaOriginalSample from 'shared/samples/2a_in.wav';
 import philOriginalSample from 'shared/samples/3a_ph.wav';
 import haitiOriginalSample from 'shared/samples/4a_ht.wav';
@@ -59,17 +62,17 @@ const originalSamples = [
     },
     {
         description: 'philOriginalSample',
-        flag: <IndiaFlag/>,
+        flag: <PhilippinesFlag/>,
         src: philOriginalSample,
     },
     {
         description: 'haitiOriginalSample',
-        flag: <IndiaFlag/>,
+        flag: <HaitiFlag/>,
         src: haitiOriginalSample,
     },
     {
         description: 'pakistanOriginalSample',
-        flag: <IndiaFlag/>,
+        flag: <PakistanFlag/>,
         src: pakistanOriginalSample,
     },
 ];

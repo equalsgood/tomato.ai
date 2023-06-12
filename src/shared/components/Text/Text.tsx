@@ -4,19 +4,22 @@ import cls from './Text.module.css';
 
 export enum TextVariants {
     TITLE = 'title',
+    TITLE_SMALL = 'titleSmall',
     TITLE_EXTRA_SMALL = 'titleExtraSmall',
     TITLE_REVERSED = 'titleReversed',
     TITLE_REVERSED_SMALL = 'titleReversedSmall',
     PARAGRAPH_TITLE = 'paragraphTitle',
+    PARAGRAPH_BLACK = 'paragraphBlack',
     PARAGRAPH_REVERSED = 'paragraphReversed',
     PARAGRAPH_REVERSED_SMALL = 'paragraphReversedSmall',
     ACTION = 'action',
     ACTION_RED = 'actionRed',
+    BADGE = 'badge',
+    BADGE_BLUE = 'badgeBlue',
     DEFAULT = 'default',
     DEFAULT_SMALL = 'defaultSmall',
     SUBHEADER_LIGHT = 'subheaderLight',
     SUBHEADER_LIGHT_SMALL = 'subheaderLightSmall',
-    BADGE = 'badge'
 }
 
 export type TextTags = 'h1' | 'h2' |'h3' | 'h4' | 'h5' | 'h6' | 'p';
