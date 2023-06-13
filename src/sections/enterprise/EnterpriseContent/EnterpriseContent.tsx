@@ -10,7 +10,7 @@ export const EnterpriseContent = () => {
         <section className={cls.content}>
             <div className={classNames(cls.contentSection, cls.left)}>
                 <div className={cls.details}>
-                    <Text tag="h2" variant={TextVariants.TITLE_SMALL_REVERSED} classNamesProps={cls.title}>Improve Satisfaction with Offshore Agents</Text>
+                    <Text tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED} classNamesProps={cls.title}>Improve Satisfaction with Offshore Agents</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
                         Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
                         <br/>
@@ -23,7 +23,7 @@ export const EnterpriseContent = () => {
             <div className={classNames(cls.contentSection, cls.right)}>
                 <img alt="photo of a map" src={expandedMap} className={cls.image} />
                 <div className={cls.details}>
-                    <Text tag="h2" variant={TextVariants.TITLE_SMALL_REVERSED}>Reduce Support Costs</Text>
+                    <Text tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Reduce Support Costs</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
                         Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo.
                         <br/>
@@ -35,7 +35,7 @@ export const EnterpriseContent = () => {
             </div>
             <div className={classNames(cls.contentSection, cls.left)}>
                 <div className={cls.details}>
-                    <Text tag="h2" variant={TextVariants.TITLE_SMALL_REVERSED}>Improve sales metrics</Text>
+                    <Text tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Improve sales metrics</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
                         Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
                         <br/>

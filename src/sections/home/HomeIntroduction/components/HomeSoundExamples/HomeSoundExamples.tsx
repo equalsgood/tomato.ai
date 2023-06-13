@@ -20,7 +20,7 @@ export const HomeSoundExamples = () => {
         <div className={cls.examplesBoard}>
             <div className={cls.info}>
                 <Text width={103} tag="p" variant={TextVariants.BADGE}>DEMO</Text>
-                <Text width={432} tag="h2" variant={TextVariants.TITLE_MEDIUM_REVERSED}>Tomato.ai provides a brilliant quality in a LIVE format</Text>
+                <Text width={432} tag="h2" variant={TextVariants.TITLE_SMALL_REVERSED}>Tomato.ai provides a brilliant quality in a LIVE format</Text>
                 <Text width={413} tag="p" variant={TextVariants.PARAGRAPH_REVERSED}>Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Some NUMBERS “Our clients increase the ... 75%”</Text>
                 <div className={cls.action}>
                     <Text tag="p" variant={TextVariants.ACTION}>Learn more</Text>
@@ -29,7 +29,7 @@ export const HomeSoundExamples = () => {
             </div>
             <div className={cls.examples}>
                 <div className={classNames(cls.examplesSection, cls.original)}>
-                    <Text tag="p" variant={TextVariants.TITLE_EXTRA_SMALL}>Original</Text>
+                    <Text tag="p" variant={TextVariants.SUBTITLE_SMALL}>Original</Text>
                     <ul className={cls.samples}>
                         {originalSamples.map(smpl =>
                             <li key={smpl.description} className={cls.sample}>
@@ -40,7 +40,7 @@ export const HomeSoundExamples = () => {
                     </ul>
                 </div>
                 <div className={classNames(cls.examplesSection, cls.enhanced)}>
-                    <Text tag="p" variant={TextVariants.TITLE_EXTRA_SMALL}>Enhanced</Text>
+                    <Text tag="p" variant={TextVariants.SUBTITLE_SMALL}>Enhanced</Text>
                     <ul className={cls.samples}>
                         {enhancedSamples.map(smpl =>
                             <li key={smpl.description} className={cls.sample}>

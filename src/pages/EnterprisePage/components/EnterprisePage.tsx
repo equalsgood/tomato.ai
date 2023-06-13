@@ -1,6 +1,6 @@
 import cls from './EnterprisePage.module.css';
 import { EnterpriseContent, EnterpriseIntroduction } from 'sections/enterprise';
-import { FeaturedCompaniesLight, InfoMenu } from 'sections/common';
+import { CtaTitle, FeaturedCompaniesLight, InfoMenu } from 'sections/common';
 
 const EnterprisePage = () => {
     return (
@@ -9,6 +9,7 @@ const EnterprisePage = () => {
             <FeaturedCompaniesLight/>
             <EnterpriseContent/>
             <InfoMenu isEnterprise/>
+            <CtaTitle isEnterprise/>
         </main>
     );
 };

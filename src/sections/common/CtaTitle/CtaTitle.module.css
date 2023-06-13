@@ -1,7 +1,10 @@
+.cta-container {
+    padding: 30px 0 80px;
+}
+
 .cta {
     width: 100%;
     height: 360px;
-    margin: 30px 0 80px;
     position: relative;
 }
 
