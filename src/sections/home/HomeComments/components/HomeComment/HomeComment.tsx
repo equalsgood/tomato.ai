@@ -18,7 +18,7 @@ export const HomeComment = (props: HomeCommentProps) => {
                 <div className={cls.person}>
                     <img alt="picture of a commentator" src={picture} className={cls.image} />
                     <div className={cls.initials} >
-                        <Text tag="p" variant={TextVariants.TITLE_SMALL}>{name}</Text>
+                        <Text tag="p" variant={TextVariants.SUBTITLE_MEDIUM}>{name}</Text>
                         <Text tag="p" variant={TextVariants.DEFAULT_SMALL}>{position}</Text>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ export const InfoMenuItem = memo((props: InfoMenuItemProps) => {
             }
             <Text
                 tag="p"
-                variant={active ? TextVariants.TITLE_SMALL : TextVariants.TITLE_SMALL_REVERSED}
+                variant={active ? TextVariants.SUBTITLE_MEDIUM : TextVariants.SUBTITLE_MEDIUM_REVERSED}
             >
                 {item.title}
             </Text>

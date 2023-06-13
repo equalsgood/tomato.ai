@@ -9,6 +9,12 @@
     color: var(--primary-title-color);
 }
 
+.title-reversed {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-xxxxl);
+    color: var(--reversed-title-color);
+}
+
 .title-large {
     font-weight: var(--font-weight-xl);
     font-size: var(--font-size-xxxl);
@@ -21,9 +27,16 @@
     color: var(--primary-title-color);
 }
 
+.title-medium-reversed {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-xl);
+    color: var(--reversed-title-color);
+    line-height: 45px;
+}
+
 .title-small {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-l);
     color: var(--primary-title-color);
 }
 
@@ -33,20 +46,13 @@
     color: var(--primary-title-color);
 }
 
-.title-reversed {
-    font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxxxl);
-    color: var(--reversed-title-color);
+.subtitle-medium {
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-s);
+    color: var(--primary-title-color);
 }
 
-.title-medium-reversed {
-    font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xl);
-    color: var(--reversed-title-color);
-    line-height: 45px;
-}
-
-.title-small-reversed {
+.subtitle-medium-reversed {
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-s);
     color: var(--reversed-text-color);
