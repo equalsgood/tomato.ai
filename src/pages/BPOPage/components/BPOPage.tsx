@@ -1,11 +1,11 @@
 import React from 'react';
 
-const BPOsPage = () => {
+const BPOPage = () => {
     return (
         <div>
-            BPOs
+            BPO
         </div>
     );
 };
 
-export default BPOsPage;
+export default BPOPage;

@@ -4,13 +4,16 @@ import FooterLogo from 'shared/assets/logos/footer-logo.svg';
 import LocationIcon from 'shared/assets/icons/location-icon.svg';
 import { NavigationLink, NavigationLinkVariants, SocialLinks, Text, TextVariants } from 'shared/components';
 import { RoutePaths } from 'app/providers/AppRouter';
+import { Link } from 'react-router-dom';
 
 
 export const Footer = memo(() => {
     return (
         <footer className={cls.footer}>
             <div className={cls.logoColumn}>
-                <FooterLogo/>
+                <Link to={RoutePaths.HOME}>
+                    <FooterLogo/>
+                </Link>
                 <div className={cls.rightsContainer}>
                     <SocialLinks/>
                     <Text tag='p' variant={TextVariants.DEFAULT}>
@@ -87,7 +90,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'Overview',
-                to: RoutePaths.HOME,
+                to: RoutePaths.BPO,
             },
             {
                 text: 'ROI Calculator',
@@ -98,7 +101,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'Overview',
-                to: RoutePaths.HOME,
+                to: RoutePaths.ENTERPRISE,
             },
             {
                 text: 'ROI Calculator',

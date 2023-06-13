@@ -74,7 +74,7 @@ export const Navigation = () => {
 const bpoLinks: Array<NavigationLinkProps> = [
     {
         text: 'Overview',
-        to: RoutePaths.HOME,
+        to: RoutePaths.BPO,
         variant: NavigationLinkVariants.DEFAULT,
     },
     {
@@ -87,7 +87,7 @@ const bpoLinks: Array<NavigationLinkProps> = [
 const enterprisesLinks: Array<NavigationLinkProps> = [
     {
         text: 'Overview',
-        to: RoutePaths.HOME,
+        to: RoutePaths.ENTERPRISE,
         variant: NavigationLinkVariants.DEFAULT,
     },
     {
