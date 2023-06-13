@@ -6,7 +6,7 @@ import agent from 'shared/assets/images/agent-home-page.png';
 import firstSample from 'shared/samples/1a_ph.mp3';
 import secondSample from 'shared/samples/1b_ph.mp3';
 import classNames from 'classnames';
-import { MouseEventHandler, useState } from 'react';
+import { useState } from 'react';
 
 export const HomeIntroTitle = () => {
     return (

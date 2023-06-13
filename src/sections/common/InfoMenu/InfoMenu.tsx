@@ -8,7 +8,7 @@ import QualityIconDark from 'shared/assets/icons/info-menu/quality-dark.svg';
 import NoiseIconLight from 'shared/assets/icons/info-menu/noise-light.svg';
 import NoiseIconDark from 'shared/assets/icons/info-menu/noise-dark.svg';
 import { useState } from 'react';
-import { InfoMenuItem } from 'features/common/InfoMenu/components/InfoMenuItem';
+import { InfoMenuItem } from './components/InfoMenuItem';
 
 const MENU_ITEM_HEIGHT = 70;
 

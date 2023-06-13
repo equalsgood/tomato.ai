@@ -1,6 +1,7 @@
 import React from 'react';
-import { Benefits, HomeComments, HomeIntroduction } from 'features/home';
-import { FeaturedCompanies, InfoMenu } from 'features/common';
+import { Benefits, HomeComments, HomeIntroduction } from 'sections/home';
+import { FeaturedCompanies, InfoMenu } from 'sections/common';
+
 
 const HomePage = () => {
     return (
