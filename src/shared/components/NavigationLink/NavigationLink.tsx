@@ -7,6 +7,7 @@ import cls from './NavigationLink.module.css';
 export enum NavigationLinkVariants {
     DEFAULT = 'default',
     ACTION = 'action',
+    OUTLINED = 'outlined',
     ACTION_BLUE = 'actionBlue',
     OUTLINED_BLUE = 'outlinedBlue',
     FOOTER = 'footer',

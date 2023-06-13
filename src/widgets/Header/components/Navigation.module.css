@@ -22,6 +22,7 @@
 
 .action-link {
     width: 202px;
-    height: 55px
+    height: 55px;
+    font-size: var(--font-size-xxs);
 }
 

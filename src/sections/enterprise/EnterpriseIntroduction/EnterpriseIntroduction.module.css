@@ -1,0 +1,45 @@
+.intro {
+    padding: 45px 0 60px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.details {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 84px;
+    margin-right: 100px;
+}
+
+.title {
+    width: 580px;
+    height: 200px;
+    line-height: 60px;
+    margin: 20px 0 11px;
+}
+
+.paragraph {
+    width: 503px;
+    height: 80px;
+    line-height: 25px;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+    margin-top: 56px;
+}
+
+.link {
+    width: 240px;
+    height: 66px;
+}
+
+.image {
+    width: 710px;
+    height: 620px;
+    background: aquamarine;
+    opacity: 0.5;
+}

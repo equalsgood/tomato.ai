@@ -20,11 +20,25 @@
 .action {
     color: var(--primary-action-text-color);
     font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xs);
 
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--primary-action-color);
+    border-radius: 10px;
+}
+
+.outlined {
+    color: var(--primary-action-color);
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xs);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid var(--primary-action-color);
     border-radius: 10px;
 }
 

@@ -21,6 +21,12 @@
     color: var(--primary-title-color);
 }
 
+.title-large-reversed {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-xxxl);
+    color: var(--reversed-text-color);
+}
+
 .title-medium {
     font-weight: var(--font-weight-xl);
     font-size: var(--font-size-xxl);
@@ -56,6 +62,12 @@
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-s);
     color: var(--reversed-text-color);
+}
+
+.paragraph-title-medium {
+    color: var(--third-text-color);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-m);
 }
 
 .paragraph-title {

@@ -1,10 +1,11 @@
-import React from 'react';
+import cls from './EnterprisePage.module.css';
+import { EnterpriseIntroduction } from 'sections/enterprise';
 
 const EnterprisePage = () => {
     return (
-        <div>
-            EnterprisePage
-        </div>
+        <main className={cls.main}>
+            <EnterpriseIntroduction/>
+        </main>
     );
 };
 
