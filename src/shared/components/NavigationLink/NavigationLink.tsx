@@ -14,11 +14,12 @@ export interface NavigationLinkProps {
     text: string;
     to: RoutePaths;
     variant: NavigationLinkVariants;
+    classNamesProps?: string | undefined;
 }
 
 export const NavigationLink = memo((props: NavigationLinkProps) => {
-    const { text, to, variant } = props;
-    const classes = classNames(cls.navigationLink, cls[variant]);
+    const { text, to, variant, classNamesProps } = props;
+    const classes = classNames(cls.navigationLink, cls[variant], classNamesProps);
 
     return (
         <Link to={to} className={classes}>

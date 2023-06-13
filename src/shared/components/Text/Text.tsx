@@ -4,12 +4,14 @@ import cls from './Text.module.css';
 
 export enum TextVariants {
     TITLE = 'title',
+    TITLE_MEDIUM = 'titleMedium',
     TITLE_SMALL = 'titleSmall',
     TITLE_EXTRA_SMALL = 'titleExtraSmall',
     TITLE_REVERSED = 'titleReversed',
     TITLE_MEDIUM_REVERSED = 'titleMediumReversed',
     TITLE_SMALL_REVERSED = 'titleSmallReversed',
     PARAGRAPH_TITLE = 'paragraphTitle',
+    PARAGRAPH_DARK = 'paragraphDark',
     PARAGRAPH_BLACK = 'paragraphBlack',
     PARAGRAPH_REVERSED = 'paragraphReversed',
     PARAGRAPH_REVERSED_SMALL = 'paragraphReversedSmall',
@@ -30,11 +32,12 @@ export interface TextProps {
     children: ReactNode;
     variant: TextVariants;
     width?: number;
+    classNamesProps?: string;
 }
 
 export const Text = (props: TextProps) => {
-    const { children, variant, tag, width } = props;
-    const classes = classNames(cls.text, cls[variant]);
+    const { children, variant, tag, width, classNamesProps } = props;
+    const classes = classNames(cls.text, cls[variant], classNamesProps);
 
     if(tag === 'h1') {
         return <h1 style={{ width: `${width + 'px' || 'auto'}` }} className={classes}>{children}</h1>;

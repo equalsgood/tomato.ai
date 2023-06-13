@@ -1,6 +1,6 @@
 import React from 'react';
 import { Benefits, HomeComments, HomeIntroduction, Map, PoweredByAi } from 'sections/home';
-import { FeaturedCompanies, InfoMenu } from 'sections/common';
+import { CtaTitle, FeaturedCompanies, InfoMenu } from 'sections/common';
 
 
 const HomePage = () => {
@@ -13,6 +13,7 @@ const HomePage = () => {
             <FeaturedCompanies/>
             <PoweredByAi/>
             <Map/>
+            <CtaTitle/>
         </main>
     );
 };

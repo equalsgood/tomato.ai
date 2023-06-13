@@ -20,8 +20,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 202px;
-    height: 55px;
     background: var(--primary-action-color);
     border-radius: 10px;
 }

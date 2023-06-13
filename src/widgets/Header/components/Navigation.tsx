@@ -64,6 +64,7 @@ export const Navigation = () => {
                     text={link.text}
                     to={link.to}
                     variant={link.variant}
+                    classNamesProps={link.classNamesProps}
                 />
             ) }
         </nav>
@@ -137,5 +138,6 @@ const navigationLinks: Array<NavigationLinkProps> = [
         text: 'Request Demo',
         to: RoutePaths.HOME,
         variant: NavigationLinkVariants.ACTION,
+        classNamesProps: cls.actionLink
     }
 ];
