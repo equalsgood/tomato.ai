@@ -1,5 +1,5 @@
 import React from 'react';
-import { Benefits, HomeComments, HomeIntroduction, Map } from 'sections/home';
+import { Benefits, HomeComments, HomeIntroduction, Map, PoweredByAi } from 'sections/home';
 import { FeaturedCompanies, InfoMenu } from 'sections/common';
 
 
@@ -11,6 +11,7 @@ const HomePage = () => {
             <HomeComments/>
             <InfoMenu/>
             <FeaturedCompanies/>
+            <PoweredByAi/>
             <Map/>
         </main>
     );
