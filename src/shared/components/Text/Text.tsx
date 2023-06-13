@@ -10,6 +10,7 @@ export enum TextVariants {
     TITLE_MEDIUM = 'titleMedium',
     TITLE_MEDIUM_REVERSED = 'titleMediumReversed',
     TITLE_SMALL = 'titleSmall',
+    TITLE_SMALL_REVERSED = 'titleSmallReversed',
     TITLE_EXTRA_SMALL = 'titleExtraSmall',
     SUBTITLE_MEDIUM = 'subtitleMedium',
     SUBTITLE_MEDIUM_REVERSED = 'subtitleMediumReversed',

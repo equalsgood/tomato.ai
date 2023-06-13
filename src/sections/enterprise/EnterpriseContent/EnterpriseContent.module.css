@@ -1,0 +1,43 @@
+.content {
+    padding-bottom: 109px;
+}
+
+.content-section {
+    display: flex;
+    gap: 58px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left {
+    margin: 0 74px 0 129px;
+}
+
+.right {
+    margin: 158px 129px 146px 74px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.title {
+    width: 371px;
+    height: 90px;
+}
+
+.paragraph {
+    width: 497px;
+    line-height: 22px;
+}
+
+.image {
+    width: 682px;
+    height: 454px;
+}
+
+.calculator-link {
+    margin-top: 28px;
+}

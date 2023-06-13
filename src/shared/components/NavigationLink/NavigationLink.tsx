@@ -3,6 +3,7 @@ import { RoutePaths } from 'app/providers/AppRouter';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import cls from './NavigationLink.module.css';
+import ArrowGreenIcon from 'shared/assets/icons/arrow-green-right.svg';
 
 export enum NavigationLinkVariants {
     DEFAULT = 'default',
@@ -10,6 +11,7 @@ export enum NavigationLinkVariants {
     OUTLINED = 'outlined',
     ACTION_BLUE = 'actionBlue',
     OUTLINED_BLUE = 'outlinedBlue',
+    ACTION_TEXT = 'actionText',
     FOOTER = 'footer',
 }
 
@@ -28,6 +30,7 @@ export const NavigationLink = memo((props: NavigationLinkProps) => {
     return (
         <Link to={to} className={classes}>
             {text}
+            {variant === NavigationLinkVariants.ACTION_TEXT && <ArrowGreenIcon/>}
         </Link>
     );
 });

@@ -71,6 +71,16 @@
     border-radius: 10px;
 }
 
+.action-text {
+    color: var(--primary-action-color);
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xs);
+
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
 .footer {
     font-size: var(--font-size-xxxs);
     color: var(--third-text-color);
