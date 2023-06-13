@@ -17,11 +17,12 @@ export interface NavigationLinkProps {
     to: RoutePaths;
     variant: NavigationLinkVariants;
     classNamesProps?: string | undefined;
+    isEnterprise?: boolean;
 }
 
 export const NavigationLink = memo((props: NavigationLinkProps) => {
-    const { text, to, variant, classNamesProps } = props;
-    const classes = classNames(cls.navigationLink, cls[variant], classNamesProps);
+    const { text, to, variant, classNamesProps, isEnterprise = false } = props;
+    const classes = classNames(cls.navigationLink, cls[variant], classNamesProps, { [cls.dark]: isEnterprise });
 
     return (
         <Link to={to} className={classes}>

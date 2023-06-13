@@ -5,10 +5,14 @@ import { RoutePaths } from 'app/providers/AppRouter';
 import BpoIcon from 'shared/assets/icons/bpo-header-icon.svg';
 import EnterprisesIcon from 'shared/assets/icons/enterprises-header-icon.svg';
 
-export const Navigation = () => {
+interface NavigationProps {
+    isEnterprise: boolean;
+}
+
+export const Navigation = ({ isEnterprise }: NavigationProps) => {
     return (
         <nav className={cls.navigation}>
-            <NavigationDropdown width={260} title="Use Cases">
+            <NavigationDropdown width={260} title="Use Cases" isEnterprise={isEnterprise}>
                 <div className={cls.linksTitle}>
                     <BpoIcon/>
                     <p>BPOs</p>
@@ -20,6 +24,7 @@ export const Navigation = () => {
                             text={link.text}
                             to={link.to}
                             variant={link.variant}
+                            isEnterprise={isEnterprise}
                         />
                     )}
                 </div>
@@ -34,27 +39,30 @@ export const Navigation = () => {
                             text={link.text}
                             to={link.to}
                             variant={link.variant}
+                            isEnterprise={isEnterprise}
                         />
                     )}
                 </div>
             </NavigationDropdown>
-            <NavigationDropdown width={150} title="Company">
+            <NavigationDropdown width={150} title="Company" isEnterprise={isEnterprise}>
                 {companyLinks.map(link =>
                     <NavigationLink
                         key={`${link.text}-header-navigation`}
                         text={link.text}
                         to={link.to}
                         variant={link.variant}
+                        isEnterprise={isEnterprise}
                     />
                 )}
             </NavigationDropdown>
-            <NavigationDropdown width={150} title="Safety">
+            <NavigationDropdown width={150} title="Safety" isEnterprise={isEnterprise}>
                 {safetyLinks.map(link =>
                     <NavigationLink
                         key={`${link.text}-header-navigation`}
                         text={link.text}
                         to={link.to}
                         variant={link.variant}
+                        isEnterprise={isEnterprise}
                     />
                 )}
             </NavigationDropdown>
@@ -65,6 +73,7 @@ export const Navigation = () => {
                     to={link.to}
                     variant={link.variant}
                     classNamesProps={link.classNamesProps}
+                    isEnterprise={isEnterprise}
                 />
             ) }
         </nav>

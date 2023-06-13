@@ -9,6 +9,10 @@
     line-height: 18px;
 }
 
+.default.dark {
+    color: var(--reversed-text-color);
+}
+
 .default:hover {
     color: var(--primary-action-color);
 }
@@ -22,6 +26,10 @@
     justify-content: center;
     background: var(--primary-action-color);
     border-radius: 10px;
+}
+
+.action.dark {
+    color: var(--third-bg-color);
 }
 
 .action-blue {

@@ -1,17 +1,29 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import cls from './Header.module.css';
 import HeaderLogo from 'shared/assets/logos/header-logo.svg';
+import HeaderLightLogo from 'shared/assets/logos/header-light-logo.svg';
 import { Navigation } from './Navigation';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { RoutePaths } from 'app/providers/AppRouter';
+import classNames from 'classnames';
 
 export const Header = memo(() => {
+    const location = useLocation();
+    const [isCurrentLocationEnterprise, setIsCurrentLocationEnterprise] = useState(location.pathname === RoutePaths.BPO);
+
+    useEffect(() => {
+        setIsCurrentLocationEnterprise(location.pathname === RoutePaths.ENTERPRISE);
+    }, [location]);
+
     return (
-        <header className={cls.header}>
+        <header className={classNames(cls.header, { [cls.dark]: isCurrentLocationEnterprise })}>
             <Link to={RoutePaths.HOME}>
-                <HeaderLogo/>
+                {isCurrentLocationEnterprise ?
+                    <HeaderLightLogo/> :
+                    <HeaderLogo/>
+                }
             </Link>
-            <Navigation/>
+            <Navigation isEnterprise={isCurrentLocationEnterprise}/>
         </header>
     );
 });

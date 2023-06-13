@@ -1,5 +1,5 @@
 import { BpoContent, BpoIntroduction } from 'sections/bpo';
-import { FeaturedCompanies } from 'sections/common';
+import { CtaTitle, FeaturedCompanies, InfoMenu } from 'sections/common';
 
 const BpoPage = () => {
     return (
@@ -7,6 +7,8 @@ const BpoPage = () => {
             <BpoIntroduction/>
             <FeaturedCompanies/>
             <BpoContent/>
+            <InfoMenu/>
+            <CtaTitle/>
         </main>
     );
 };
