@@ -5,6 +5,12 @@
 
 .title {
     font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-xxxxl);
+    color: var(--primary-title-color);
+}
+
+.title-large {
+    font-weight: var(--font-weight-xl);
     font-size: var(--font-size-xxxl);
     color: var(--primary-title-color);
 }
@@ -29,7 +35,7 @@
 
 .title-reversed {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxxxl);
     color: var(--reversed-title-color);
 }
 
@@ -49,6 +55,12 @@
 .paragraph-title {
     color: var(--third-text-color);
     font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-m);
+}
+
+.paragraph-dark-medium {
+    color: var(--primary-text-color);
+    font-size: var(--font-size-s);
     font-weight: var(--font-weight-m);
 }
 
@@ -95,7 +107,9 @@
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-xxs);
     color: var(--primary-action-color);
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 27px;
     border-radius: 10px;
     background: var(--primary-action-color-blurred);

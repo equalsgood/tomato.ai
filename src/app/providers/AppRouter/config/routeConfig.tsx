@@ -1,6 +1,6 @@
 import { Navigate, RouteProps } from 'react-router-dom';
 import { HomePage } from 'pages/HomePage';
-import { BPOPage } from 'pages/BPOPage';
+import { BpoPage } from 'pages/BpoPage';
 import { EnterprisePage } from 'pages/EnterprisePage';
 
 export enum RoutePaths {
@@ -17,7 +17,7 @@ export const routeConfig: Array<RouteProps> = [
     },
     {
         path: RoutePaths.BPO,
-        element: <BPOPage/>,
+        element: <BpoPage/>,
     },
     {
         path: RoutePaths.ENTERPRISE,

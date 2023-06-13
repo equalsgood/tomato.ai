@@ -24,6 +24,31 @@
     border-radius: 10px;
 }
 
+.action-blue {
+    color: var(--primary-action-text-color);
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xs);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-action-color);
+    border-radius: 10px;
+}
+
+.outlined-blue {
+    color: var(--secondary-action-color);
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xs);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid var(--secondary-action-color);
+    border-radius: 10px;
+}
+
 .footer {
     font-size: var(--font-size-xxxs);
     color: var(--third-text-color);

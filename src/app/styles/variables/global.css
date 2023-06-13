@@ -11,7 +11,8 @@
 :root {
     --font-family-main: "Satoshi", sans-serif;
 
-    --font-size-xxxl: 65px;
+    --font-size-xxxxl: 65px;
+    --font-size-xxxl: 55px;
     --font-size-xxl: 50px;
     --font-size-xl: 40px;
     --font-size-l: 32px;
