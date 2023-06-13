@@ -9,10 +9,15 @@ import NoiseIconLight from 'shared/assets/icons/info-menu/noise-light.svg';
 import NoiseIconDark from 'shared/assets/icons/info-menu/noise-dark.svg';
 import { useState } from 'react';
 import { InfoMenuItem } from './components/InfoMenuItem';
+import classNames from 'classnames';
 
 const MENU_ITEM_HEIGHT = 70;
 
-export const InfoMenu = () => {
+interface InfoMenuProps {
+    isEnterprise?: boolean;
+}
+
+export const InfoMenu = ({ isEnterprise = false }: InfoMenuProps) => {
     const [currentActiveMenuItem, setCurrentActiveMenuItem] = useState<number>(0);
     const [selectOffset, setSelectOffset] = useState<string>('translateY(0px)');
     
@@ -22,7 +27,7 @@ export const InfoMenu = () => {
     };
 
     return (
-        <section className={cls.menuWrapper}>
+        <section className={classNames(cls.menuWrapper, { [cls.dark]: isEnterprise })}>
             <div className={cls.menu}>
                 <ul className={cls.menuItems}>
                     {menuItems.map((item, index) =>
@@ -32,6 +37,7 @@ export const InfoMenu = () => {
                             item={item}
                             index={index}
                             onItemChange={onItemChange}
+                            isEnterprise={isEnterprise}
                         />
                     )}
                     <div className={cls.select} style={{ transform: selectOffset }}></div>

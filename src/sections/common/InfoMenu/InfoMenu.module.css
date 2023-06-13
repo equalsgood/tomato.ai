@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
 }
 
 .menu {
@@ -13,6 +13,10 @@
     border-radius: 30px;
     display: flex;
     gap: 20px;
+}
+
+.dark .menu {
+    background: var(--fourth-bg-color);
 }
 
 .menu-items {
@@ -35,8 +39,16 @@
     transition: all 0.3s;
 }
 
+.dark .select {
+    background: var(--reversed-bg-color);
+}
+
 .content {
     background: var(--primary-bg-color);
     flex: 1;
     border-radius: 20px;
+}
+
+.dark .content {
+    background: var(--reversed-bg-color);
 }

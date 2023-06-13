@@ -8,10 +8,28 @@ interface InfoMenuItemProps {
     item: menuItem;
     index: number;
     onItemChange: (index: number) => void;
+    isEnterprise?: boolean | undefined;
 }
 
 export const InfoMenuItem = memo((props: InfoMenuItemProps) => {
-    const { active, item, index, onItemChange } = props;
+    const { active, item, index, onItemChange, isEnterprise = false } = props;
+
+    if(isEnterprise) {
+        return (
+            <li
+                onClick={() => onItemChange(index)}
+                className={cls.menuItem}
+            >
+                {item.iconLight}
+                <Text
+                    tag="p"
+                    variant={TextVariants.SUBTITLE_MEDIUM_REVERSED}
+                >
+                    {item.title}
+                </Text>
+            </li>
+        );
+    }
 
     return (
         <li
