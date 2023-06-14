@@ -1,7 +1,8 @@
 import cls from './EnterpriseContent.module.css';
 import { NavigationLink, NavigationLinkVariants, Text, TextVariants } from 'shared/components';
-import satisfiedCustomer from 'shared/assets/images/double-images/bpo-1.png';
-import expandedMap from 'shared/assets/images/double-images/bpo-2.png';
+import offshoreAgents from 'shared/assets/images/double-images/ent-2.png';
+import metrics from 'shared/assets/images/double-images/ent-3.png';
+import agent from 'shared/assets/images/double-images/ent-4.png';
 import classNames from 'classnames';
 import { RoutePaths } from 'app/providers/AppRouter';
 
@@ -18,10 +19,10 @@ export const EnterpriseContent = () => {
                         Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
                     </Text>
                 </div>
-                <img alt="photo of a satisfied customer" src={satisfiedCustomer} className={cls.image} />
+                <img alt="photo of offshore agents" src={offshoreAgents} className={cls.image} />
             </div>
             <div className={classNames(cls.contentSection, cls.right)}>
-                <img alt="photo of a map" src={expandedMap} className={cls.image} />
+                <img alt="photo of metrics" src={metrics} className={cls.image} />
                 <div className={cls.details}>
                     <Text tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Reduce Support Costs</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
@@ -43,7 +44,7 @@ export const EnterpriseContent = () => {
                         Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
                     </Text>
                 </div>
-                <img alt="photo of a satisfied customer" src={satisfiedCustomer} className={cls.image} />
+                <img alt="photo of a satisfied agent" src={agent} className={cls.image} />
             </div>
         </section>
     );

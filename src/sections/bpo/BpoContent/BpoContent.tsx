@@ -1,7 +1,8 @@
 import cls from './BpoContent.module.css';
 import { Text, TextVariants } from 'shared/components';
-import satisfiedCustomer from 'shared/assets/images/double-images/bpo-1.png';
-import expandedMap from 'shared/assets/images/double-images/bpo-2.png';
+import satisfiedCustomer from 'shared/assets/images/double-images/bpo-2.png';
+import expandedMap from 'shared/assets/images/double-images/bpo-3.png';
+import improve from 'shared/assets/images/double-images/bpo-4.png';
 import classNames from 'classnames';
 
 export const BpoContent = () => {
@@ -41,7 +42,7 @@ export const BpoContent = () => {
                         Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
                     </Text>
                 </div>
-                <img alt="photo of a satisfied customer" src={satisfiedCustomer} className={cls.image} />
+                <img alt="photo of a satisfied worker" src={improve} className={cls.image} />
             </div>
         </section>
     );

@@ -1,10 +1,12 @@
 .intro {
     margin: 55px 0 70px 130px;
     display: flex;
-    position: relative;
 }
 
 .details {
+    flex: 1;
+    display: flex;
+    justify-content: center;
     padding: 50px 0 74px;
 }
 
@@ -32,12 +34,16 @@
     height: 66px;
 }
 
+.image-wrapper {
+    position: relative;
+    width: 720px;
+    height: 598px;
+}
+
 .image {
     position: absolute;
     width: 749px;
     height: 598px;
     top: 0;
     right: 0;
-    background: aquamarine;
-    opacity: 0.5;
 }

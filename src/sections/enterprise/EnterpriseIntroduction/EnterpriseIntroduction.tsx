@@ -1,11 +1,12 @@
 import cls from './EnterpriseIntroduction.module.css';
 import { NavigationLink, NavigationLinkVariants, Text, TextVariants } from 'shared/components';
 import { RoutePaths } from 'app/providers/AppRouter';
+import enterpriseMain from 'shared/assets/images/double-images/ent-1.png';
 
 export const EnterpriseIntroduction = () => {
     return (
         <section className={cls.intro}>
-            <div className={cls.image}></div>
+            <img src={enterpriseMain} alt="main enterprise image" className={cls.image}></img>
             <div className={cls.details}>
                 <div>
                     <Text width={190} tag="p" variant={TextVariants.BADGE}>SOME TAG HERE</Text>
