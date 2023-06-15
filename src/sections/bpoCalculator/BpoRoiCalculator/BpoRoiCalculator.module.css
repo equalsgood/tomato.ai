@@ -27,16 +27,6 @@
     width: 673px;
 }
 
-.calculator {
-    display: grid;
-    grid-template-columns: 270px 270px;
-    column-gap: 48px;
-    row-gap: 20px;
-    background: var(--reversed-bg-color);
-    border-radius: 20px;
-    padding: 34px 42px 40px;
-}
-
 .summary {
     width: 508px;
     height: calc(58px + 552px + 165px);

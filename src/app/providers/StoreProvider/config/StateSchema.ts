@@ -1,4 +1,4 @@
-import { BpoCalcSchema } from 'slices/bpoCalcSlice';
+import { BpoCalcSchema } from 'models/bpoCalculator';
 
 export interface StateSchema {
     bpoCalc: BpoCalcSchema

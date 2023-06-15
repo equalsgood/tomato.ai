@@ -13,7 +13,7 @@
 .label-text {
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-xxs);
     line-height: 27px;
 }
 

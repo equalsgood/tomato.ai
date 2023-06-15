@@ -1,6 +1,6 @@
 import cls from './Input.module.css';
 import { InfoBadge } from 'shared/components';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, memo } from 'react';
 import { InputValidations } from 'shared/lib/validation';
 import { validation } from 'shared/lib/validation';
 
@@ -9,20 +9,20 @@ interface InputProps {
     type: string,
     info: string,
     placeholder: string,
-    validationType: InputValidations
+    validationType: InputValidations,
+    value: string,
+    onInputChange: (value: string) => void
 }
 
-export const Input = (props: InputProps) => {
-    const { label, type, info, placeholder, validationType } = props;
-
-    const [value, setValue] = useState('');
+export const Input = memo((props: InputProps) => {
+    const { label, type, info, placeholder, validationType, value, onInputChange } = props;
 
     const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
         const newValue = validation(value, validationType);
 
         if(newValue !== null)
-            setValue(newValue);
+            onInputChange(newValue);
     };
 
     return (
@@ -40,4 +40,6 @@ export const Input = (props: InputProps) => {
             />
         </div>
     );
-};
+});
+
+Input.displayName = 'Input';

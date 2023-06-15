@@ -1,6 +1,6 @@
-import { combineReducers, configureStore, ReducersMapObject } from '@reduxjs/toolkit';
+import { CombinedState, combineReducers, configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { StateSchema } from './StateSchema';
-import { bpoCalcReducer } from 'slices/bpoCalcSlice';
+import { bpoCalcReducer } from 'models/bpoCalculator';
 
 const rootReducers: ReducersMapObject<StateSchema> = {
     bpoCalc: bpoCalcReducer

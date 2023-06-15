@@ -3,25 +3,25 @@ import { InfoBadge } from 'shared/components';
 import classNames from 'classnames';
 import DropdownIconOpen from 'shared/assets/icons/arrow-dropdown-up.svg';
 import DropdownIconClose from 'shared/assets/icons/arrow-dropdown-down-m.svg';
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 
 interface SelectProps {
     label: string,
     info: string,
+    value: string,
+    options: Array<string>,
+    onSelectChange: (value: string) => void
 }
 
-const MOCK = {
-    selectedValue: '',
-    options: [
-        'Support',
-        'Sales'
-    ]
-};
-
-export const Select = (props: SelectProps) => {
-    const { label, info } = props;
+export const Select = memo((props: SelectProps) => {
+    const { label, info, value, options, onSelectChange } = props;
 
     const [open, setOpen] = useState(false);
+
+    const clickHandler = (option: string) => {
+        onSelectChange(option);
+        setOpen(false);
+    };
 
     return (
         <div className={cls.container}>
@@ -30,10 +30,10 @@ export const Select = (props: SelectProps) => {
                 <InfoBadge text={info}/>
             </div>
             <div
-                className={classNames(cls.select, { [cls.selected]: !!MOCK.selectedValue, [cls.open]: open })}
+                className={classNames(cls.select, { [cls.selected]: !!value, [cls.open]: open })}
                 onClick={() => setOpen(true)}
             >
-                {MOCK.selectedValue || MOCK.options[0]}
+                {value || options[0]}
                 {open ?
                     <DropdownIconOpen/> :
                     <DropdownIconClose/>
@@ -42,10 +42,11 @@ export const Select = (props: SelectProps) => {
             {open &&
                 <React.Fragment>
                     <div className={cls.options}>
-                        {MOCK.options.map(option =>
+                        {options.map(option =>
                             <span
                                 key={`${option}-select-option`}
                                 className={cls.option}
+                                onClick={() => clickHandler(option)}
                             >
                                 {option}
                             </span>
@@ -56,4 +57,5 @@ export const Select = (props: SelectProps) => {
             }
         </div>
     );
-};
+});
+Select.displayName = 'Select';
