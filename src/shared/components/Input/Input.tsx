@@ -1,47 +1,28 @@
 import cls from './Input.module.css';
 import { InfoBadge } from 'shared/components';
 import { ChangeEvent, useState } from 'react';
-
-export enum InputValidations {
-    MONEY = 'money'
-}
+import { InputValidations } from 'shared/lib/validation';
+import { validation } from 'shared/lib/validation';
 
 interface InputProps {
     label: string,
     type: string,
     info: string,
     placeholder: string,
-    validation: InputValidations
+    validationType: InputValidations
 }
 
-
-
 export const Input = (props: InputProps) => {
-    const { label, type, info, placeholder, validation } = props;
+    const { label, type, info, placeholder, validationType } = props;
 
     const [value, setValue] = useState('');
 
     const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
+        const newValue = validation(value, validationType);
 
-        if(value === ''){
-            setValue('');
-            return;
-        }
-
-        if(validation === InputValidations.MONEY) {
-            if((isNaN(+value) && value.slice(0,1) !== '$') || (isNaN(+value.slice(1)))){
-                return;
-            }
-
-            if(value.includes('.') || value.includes(','))
-                return;
-
-            setValue(value.includes('$') ? value : `$${value}`);
-            return;
-        }
-
-        setValue(value);
+        if(newValue !== null)
+            setValue(newValue);
     };
 
     return (

@@ -1,5 +1,6 @@
 import cls from './BpoRoiCalculator.module.css';
-import { Input, InputValidations, Select, Text, TextVariants } from 'shared/components';
+import { Input, Select, Text, TextVariants } from 'shared/components';
+import { InputValidations } from 'shared/lib/validation';
 
 export const BpoRoiCalculator = () => {
     return (
@@ -14,7 +15,7 @@ export const BpoRoiCalculator = () => {
                     <div className={cls.calculator}>
                         <Input
                             type="text"
-                            validation={InputValidations.MONEY}
+                            validationType={InputValidations.NUMBER}
                             info="information"
                             label="Number of Agents"
                             placeholder="1000"
@@ -22,6 +23,13 @@ export const BpoRoiCalculator = () => {
                         <Select
                             label="Type of Agents"
                             info="information"
+                        />
+                        <Input
+                            type="text"
+                            validationType={InputValidations.MONEY}
+                            info="information"
+                            label="Monthly Cost per Agent"
+                            placeholder="$2500"
                         />
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import { Text, TextVariants } from './Text/Text';
 import { NavigationDropdown } from './NavigationDropdown/NavigationDropdown';
 import { AudioPlayer } from './AudioPlayer/AudioPlayer';
 import { InfoBadge } from './InfoBadge/InfoBadge';
-import { Input, InputValidations } from './Input/Input';
+import { Input } from './Input/Input';
 import { Select } from 'shared/components/Select/Select';
 
 export {
@@ -20,6 +20,5 @@ export {
     AudioPlayer,
     InfoBadge,
     Input,
-    InputValidations,
     Select
 };
