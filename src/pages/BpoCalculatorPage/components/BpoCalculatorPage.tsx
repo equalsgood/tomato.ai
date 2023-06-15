@@ -1,7 +1,9 @@
+import { BpoRoiCalculator } from 'sections/bpoCalculator';
+
 const BpoCalculatorPage = () => {
     return (
         <main>
-            BpoCalculatorPage
+            <BpoRoiCalculator/>
         </main>
     );
 };
