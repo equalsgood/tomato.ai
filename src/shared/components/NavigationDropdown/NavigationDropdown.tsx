@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { memo, ReactNode } from 'react';
 import DropdownIconClose from 'shared/assets/icons/arrow-dropdown-down.svg';
 import DropdownIconOpen from 'shared/assets/icons/arrow-dropdown-up.svg';
 import cls from './NavigationDropdown.module.css';
@@ -9,31 +9,31 @@ interface NavigationDropdownProps {
     children: ReactNode;
     width: number;
     isEnterprise: boolean;
+    open: boolean;
+    changeDropdownState: (state: boolean) => void;
 }
 
-export const NavigationDropdown = (props: NavigationDropdownProps) => {
-    const { children, title, width, isEnterprise } = props;
-    const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
-
-    const dropdownClickHandler = () => setIsDropdownOpen(prev => !prev);
+export const NavigationDropdown = memo((props: NavigationDropdownProps) => {
+    const { children, title, width, isEnterprise, open, changeDropdownState } = props;
 
     return (
         <div className={classNames(cls.dropdownContainer, { [cls.dark]: isEnterprise })}>
-            <button onClick={dropdownClickHandler} className={cls.dropdownButton}>
+            <button onClick={() => changeDropdownState(true)} className={cls.dropdownButton}>
                 {title}
-                {isDropdownOpen ?
+                {open ?
                     <DropdownIconOpen/> :
                     <DropdownIconClose fill={isEnterprise ? '#fff' : '#161414'}/>
                 }
             </button>
-            {isDropdownOpen &&
+            {open &&
                 <React.Fragment>
                     <div style={{ width }} className={cls.dropdown}>
                         {children}
                     </div>
-                    <div onClick={() => setIsDropdownOpen(false)} className={cls.overlay}/>
+                    <div onClick={() => changeDropdownState(false)} className={cls.overlay}/>
                 </React.Fragment>
             }
         </div>
     );
-};
+});
+NavigationDropdown.displayName = 'NavigationDropdown';

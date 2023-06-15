@@ -2,11 +2,15 @@ import { Navigate, RouteProps } from 'react-router-dom';
 import { HomePage } from 'pages/HomePage';
 import { BpoPage } from 'pages/BpoPage';
 import { EnterprisePage } from 'pages/EnterprisePage';
+import { BpoCalculatorPage } from 'pages/BpoCalculatorPage';
+import { EnterpriseCalculatorPage } from 'pages/EnterpriseCalculatorPage';
 
 export enum RoutePaths {
     HOME = '/',
     BPO = '/bpo',
     ENTERPRISE = '/enterprise',
+    BPO_CALCULATOR = '/bpo-roi',
+    ENTERPRISE_CALCULATOR = '/enterprise-roi',
     NO_MATCH = '*'
 }
 
@@ -22,6 +26,14 @@ export const routeConfig: Array<RouteProps> = [
     {
         path: RoutePaths.ENTERPRISE,
         element: <EnterprisePage/>,
+    },
+    {
+        path: RoutePaths.BPO_CALCULATOR,
+        element: <BpoCalculatorPage/>,
+    },
+    {
+        path: RoutePaths.ENTERPRISE_CALCULATOR,
+        element: <EnterpriseCalculatorPage/>,
     },
     {
         path: RoutePaths.NO_MATCH,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cls from './Navigation.module.css';
 import { NavigationLinkProps, NavigationLinkVariants, NavigationLink, NavigationDropdown } from 'shared/components/';
 import { RoutePaths } from 'app/providers/AppRouter';
@@ -10,9 +10,28 @@ interface NavigationProps {
 }
 
 export const Navigation = ({ isEnterprise }: NavigationProps) => {
+    const [casesDropdownOpen, setCasesDropdownOpen] = useState<boolean>(false);
+    const [companyDropdownOpen, setCompanyDropdownOpen] = useState<boolean>(false);
+    const [safetyDropdownOpen, setSafetyDropdownOpen] = useState<boolean>(false);
+
+    const switchCasesDropdownState = (state: boolean) =>
+        setCasesDropdownOpen(state);
+
+    const switchCompanyDropdownState = (state: boolean) =>
+        setCompanyDropdownOpen(state);
+
+    const switchSafetyDropdownState = (state: boolean) =>
+        setSafetyDropdownOpen(state);
+
     return (
         <nav className={cls.navigation}>
-            <NavigationDropdown width={260} title="Use Cases" isEnterprise={isEnterprise}>
+            <NavigationDropdown
+                width={260}
+                title="Use Cases"
+                isEnterprise={isEnterprise}
+                open={casesDropdownOpen}
+                changeDropdownState={switchCasesDropdownState}
+            >
                 <div className={cls.linksTitle}>
                     <BpoIcon/>
                     <p>BPOs</p>
@@ -25,6 +44,7 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                             to={link.to}
                             variant={link.variant}
                             isEnterprise={isEnterprise}
+                            onClick={() => switchCasesDropdownState(false)}
                         />
                     )}
                 </div>
@@ -40,11 +60,18 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                             to={link.to}
                             variant={link.variant}
                             isEnterprise={isEnterprise}
+                            onClick={() => switchCasesDropdownState(false)}
                         />
                     )}
                 </div>
             </NavigationDropdown>
-            <NavigationDropdown width={150} title="Company" isEnterprise={isEnterprise}>
+            <NavigationDropdown
+                width={150}
+                title="Company"
+                isEnterprise={isEnterprise}
+                open={companyDropdownOpen}
+                changeDropdownState={switchCompanyDropdownState}
+            >
                 {companyLinks.map(link =>
                     <NavigationLink
                         key={`${link.text}-header-navigation`}
@@ -52,10 +79,17 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                         to={link.to}
                         variant={link.variant}
                         isEnterprise={isEnterprise}
+                        onClick={() => switchCompanyDropdownState(false)}
                     />
                 )}
             </NavigationDropdown>
-            <NavigationDropdown width={150} title="Safety" isEnterprise={isEnterprise}>
+            <NavigationDropdown
+                width={150}
+                title="Safety"
+                isEnterprise={isEnterprise}
+                open={safetyDropdownOpen}
+                changeDropdownState={switchSafetyDropdownState}
+            >
                 {safetyLinks.map(link =>
                     <NavigationLink
                         key={`${link.text}-header-navigation`}
@@ -63,6 +97,7 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                         to={link.to}
                         variant={link.variant}
                         isEnterprise={isEnterprise}
+                        onClick={() => switchSafetyDropdownState(false)}
                     />
                 )}
             </NavigationDropdown>
@@ -88,7 +123,7 @@ const bpoLinks: Array<NavigationLinkProps> = [
     },
     {
         text: 'ROI Calculator',
-        to: RoutePaths.HOME,
+        to: RoutePaths.BPO_CALCULATOR,
         variant: NavigationLinkVariants.DEFAULT,
     },
 ];
@@ -101,7 +136,7 @@ const enterprisesLinks: Array<NavigationLinkProps> = [
     },
     {
         text: 'ROI Calculator',
-        to: RoutePaths.HOME,
+        to: RoutePaths.ENTERPRISE_CALCULATOR,
         variant: NavigationLinkVariants.DEFAULT,
     },
 ];

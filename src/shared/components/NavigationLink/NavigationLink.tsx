@@ -21,14 +21,15 @@ export interface NavigationLinkProps {
     variant: NavigationLinkVariants;
     classNamesProps?: string | undefined;
     isEnterprise?: boolean;
+    onClick?: () => void;
 }
 
 export const NavigationLink = memo((props: NavigationLinkProps) => {
-    const { text, to, variant, classNamesProps, isEnterprise = false } = props;
+    const { text, to, variant, classNamesProps, isEnterprise = false, onClick } = props;
     const classes = classNames(cls.navigationLink, cls[variant], classNamesProps, { [cls.dark]: isEnterprise });
 
     return (
-        <Link to={to} className={classes}>
+        <Link to={to} className={classes} onClick={onClick}>
             {text}
             {variant === NavigationLinkVariants.ACTION_TEXT && <ArrowGreenIcon/>}
         </Link>

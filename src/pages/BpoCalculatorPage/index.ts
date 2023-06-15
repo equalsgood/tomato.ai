@@ -1,0 +1,1 @@
+export { BpoCalculatorPageAsync as BpoCalculatorPage } from './components/BpoCalculatorPage.async';

@@ -94,7 +94,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'ROI Calculator',
-                to: RoutePaths.HOME,
+                to: RoutePaths.BPO_CALCULATOR,
             },
             {
                 text: 'Enterprises'
@@ -105,7 +105,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'ROI Calculator',
-                to: RoutePaths.HOME,
+                to: RoutePaths.ENTERPRISE_CALCULATOR,
             },
         ]
     },
