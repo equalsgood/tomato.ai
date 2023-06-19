@@ -8,13 +8,14 @@ export const validation = (value: string, validationType: InputValidations): str
         return value;
 
     if(validationType === InputValidations.MONEY) {
-        if((isNaN(+value) && value.slice(0,1) !== '$') || (isNaN(+value.slice(1))))
+        const newValue = value.split('').filter(char => char !== '$').join('');
+
+        if(isNaN(+newValue))
             return null;
 
-        if(value.includes('.') || value.includes(','))
+        if(newValue.includes('.') || newValue.includes(','))
             return null;
 
-        const newValue = value.includes('$') ? value : `$${value}`;
         return newValue.trim();
     }
 

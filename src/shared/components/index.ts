@@ -6,7 +6,9 @@ import { NavigationDropdown } from './NavigationDropdown/NavigationDropdown';
 import { AudioPlayer } from './AudioPlayer/AudioPlayer';
 import { InfoBadge } from './InfoBadge/InfoBadge';
 import { Input } from './Input/Input';
-import { Select } from 'shared/components/Select/Select';
+import { Select } from './Select/Select';
+import { Button } from './Button/Button';
+import { Divider } from 'shared/components/Divider/Divider';
 
 export {
     Loader,
@@ -20,5 +22,7 @@ export {
     AudioPlayer,
     InfoBadge,
     Input,
-    Select
+    Select,
+    Button,
+    Divider
 };

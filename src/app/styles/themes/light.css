@@ -16,6 +16,7 @@
     --primary-action-color: #00BD50;
     --secondary-action-color: #2B73FF;
     --third-action-color: #F4363F;
+    --fourth-action-color: #FFA301;
 
     --primary-action-text-color: #FFFFFF;
     --secondary-action-text-color: #F4363F;
@@ -25,4 +26,6 @@
     --primary-icon-bg: #2D2A2A;
 
     --primary-input-bg: #292626;
+
+    --primary-divider-color: #E7E7E7;
 }

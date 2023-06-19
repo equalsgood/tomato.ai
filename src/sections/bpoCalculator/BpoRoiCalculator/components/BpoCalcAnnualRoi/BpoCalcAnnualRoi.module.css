@@ -1,0 +1,29 @@
+.annual {
+    width: 673px;
+    height: 220px;
+    background: var(--reversed-bg-color);
+    padding: 34px 41px 36px 43px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.price {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-m);
+    color: var(--primary-action-color);
+}
+
+.placeholder {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-m);
+    color: var(--third-text-color);
+}

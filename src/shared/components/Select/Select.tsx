@@ -10,7 +10,7 @@ interface SelectProps {
     info: string,
     value: string,
     options: Array<string>,
-    onSelectChange: (value: string) => void
+    onSelectChange?: (value: string) => void
 }
 
 export const Select = memo((props: SelectProps) => {
@@ -19,7 +19,9 @@ export const Select = memo((props: SelectProps) => {
     const [open, setOpen] = useState(false);
 
     const clickHandler = (option: string) => {
-        onSelectChange(option);
+        if (onSelectChange) {
+            onSelectChange(option);
+        }
         setOpen(false);
     };
 

@@ -58,6 +58,12 @@
     color: var(--reversed-title-color);
 }
 
+.subtitle-bold-reversed {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-m);
+    color: var(--reversed-text-color);
+}
+
 .subtitle-medium {
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-s);

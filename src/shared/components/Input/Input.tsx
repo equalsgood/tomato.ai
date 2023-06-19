@@ -1,8 +1,7 @@
 import cls from './Input.module.css';
 import { InfoBadge } from 'shared/components';
-import { ChangeEvent, memo } from 'react';
-import { InputValidations } from 'shared/lib/validation';
-import { validation } from 'shared/lib/validation';
+import { ChangeEvent, memo, useState } from 'react';
+import { InputValidations, validation } from 'shared/lib';
 
 interface InputProps {
     label: string,
@@ -16,13 +15,20 @@ interface InputProps {
 
 export const Input = memo((props: InputProps) => {
     const { label, type, info, placeholder, validationType, value, onInputChange } = props;
+    const [inputValue, setInputValue] = useState(value);
 
     const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
         const newValue = validation(value, validationType);
 
-        if(newValue !== null)
+        if(newValue !== null) {
             onInputChange(newValue);
+
+            if(newValue !== '')
+                setInputValue(validationType === InputValidations.MONEY ? `$${newValue}` : newValue);
+            else
+                setInputValue(newValue);
+        }
     };
 
     return (
@@ -32,7 +38,7 @@ export const Input = memo((props: InputProps) => {
                 <InfoBadge text={info}/>
             </div>
             <input
-                value={value}
+                value={inputValue}
                 onChange={changeHandler}
                 className={cls.input}
                 type={type}

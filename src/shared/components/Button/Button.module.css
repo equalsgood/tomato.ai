@@ -1,0 +1,19 @@
+.button {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-action-color);
+    color: var(--reversed-text-color);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-l);
+    cursor: pointer;
+}
+
+.disabled {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: auto;
+}

@@ -1,6 +1,8 @@
 import cls from './BpoRoiCalculator.module.css';
 import { Text, TextVariants } from 'shared/components';
 import { BpoCalculator } from './components/BpoCalculator/BpoCalculator';
+import { BpoCalcAnnualRoi } from './components/BpoCalcAnnualRoi/BpoCalcAnnualRoi';
+import { BpoCalcSummary } from './components/BpoCalcSummary/BpoCalcSummary';
 
 export const BpoRoiCalculator = () => {
     return (
@@ -13,10 +15,9 @@ export const BpoRoiCalculator = () => {
             <div className={cls.contentContainer}>
                 <div className={cls.calculatorContainer}>
                     <BpoCalculator/>
+                    <BpoCalcAnnualRoi/>
                 </div>
-                <div className={cls.summary}>
-
-                </div>
+                <BpoCalcSummary/>
             </div>
         </section>
     );
