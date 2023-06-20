@@ -8,7 +8,8 @@ import { InfoBadge } from './InfoBadge/InfoBadge';
 import { Input } from './Input/Input';
 import { Select } from './Select/Select';
 import { Button } from './Button/Button';
-import { Divider } from 'shared/components/Divider/Divider';
+import { Divider } from './Divider/Divider';
+import { Faq } from './Faq/Faq';
 
 export {
     Loader,
@@ -24,5 +25,6 @@ export {
     Input,
     Select,
     Button,
-    Divider
+    Divider,
+    Faq
 };
