@@ -1,19 +1,20 @@
-import cls from './BpoCalcSummary.module.css';
+import cls from './EntepriseCalcSummary.module.css';
 import { Divider, Text, TextVariants } from 'shared/components';
 import classNames from 'classnames';
 import { useAppSelector } from 'hooks';
 import { numberFormat } from 'shared/lib';
 
-export const BpoCalcSummary = () => {
+export const EnterpriseCalcSummary = () => {
     const {
         isCurrentTypeSupport,
         improvePercent,
         calculatedValues: {
             gross,
+            grossSavings,
             savings,
             investment,
         }
-    } = useAppSelector((state) => state.bpoCalc);
+    } = useAppSelector((state) => state.enterpriseCalc);
 
     return (
         <aside className={cls.summary}>
@@ -48,6 +49,12 @@ export const BpoCalcSummary = () => {
             }
             <div className={cls.roi}>
                 <Text tag="h3" variant={TextVariants.SUBTITLE_MEDIUM} classNamesProps={cls.subtitle}>ROI</Text>
+                {isCurrentTypeSupport &&
+                    <div className={cls.benefit}>
+                        <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.prop}>GROSS SAVINGS:</Text>
+                        <span className={classNames(cls.amount, { [cls.activeGreen]: !!grossSavings })}>{grossSavings ? numberFormat(grossSavings) : '%...'}</span>
+                    </div>
+                }
                 <div className={cls.benefit}>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.prop}>GROSS REVENUE:</Text>
                     <span className={classNames(cls.amount, { [cls.activeGreen]: !!gross })}>{gross ? numberFormat(gross) : '%...'}</span>

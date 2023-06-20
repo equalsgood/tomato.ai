@@ -33,7 +33,7 @@ const bpoCalcSlice = createSlice({
 
             if(state.isCurrentTypeSupport) {
                 if(fcrIncrease !== '' && csatIncrease !== '' && agentsNumber !== '' && agentCost !== '' && improvePercent) {
-                    const gross = (+fcrIncrease * improvePercent) + (+csatIncrease * improvePercent) + (+agentsNumber * +agentCost * (improvePercent / 100));
+                    const gross = (+fcrIncrease * improvePercent) + (+csatIncrease * improvePercent) - (+agentsNumber * +agentCost * (improvePercent / 100));
                     state.calculatedValues.gross = Math.round(gross);
                 }
                 else

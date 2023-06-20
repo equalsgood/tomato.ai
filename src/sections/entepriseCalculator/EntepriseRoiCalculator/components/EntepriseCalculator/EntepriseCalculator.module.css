@@ -1,0 +1,19 @@
+.calculator {
+    display: grid;
+    grid-template-columns: 270px 270px;
+    column-gap: 48px;
+    row-gap: 20px;
+    background: var(--reversed-bg-color);
+    border-radius: 20px;
+    padding: 34px 42px 40px;
+}
+
+.single-line {
+    grid-column: 1/-1;
+}
+
+.scale-selects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 12px;
+}

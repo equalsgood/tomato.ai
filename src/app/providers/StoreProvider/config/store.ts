@@ -1,9 +1,11 @@
-import { CombinedState, combineReducers, configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
+import { combineReducers, configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { StateSchema } from './StateSchema';
 import { bpoCalcReducer } from 'models/bpoCalculator';
+import { enterpriseCalcReducer } from 'models/entepriseCalculator';
 
 const rootReducers: ReducersMapObject<StateSchema> = {
-    bpoCalc: bpoCalcReducer
+    bpoCalc: bpoCalcReducer,
+    enterpriseCalc: enterpriseCalcReducer
 };
 
 const combinedReducer = combineReducers(rootReducers);
