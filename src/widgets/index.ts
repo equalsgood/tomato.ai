@@ -5,5 +5,5 @@ import { GetReportPopup } from './GetReportPopup/GetReportPopup';
 export {
     Header,
     Footer,
-    GetReportPopup
+    GetReportPopup,
 };

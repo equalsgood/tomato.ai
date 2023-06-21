@@ -1,3 +1,11 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - var(--footer-height) - var(--header-height));
+    width: 100vw;
+}
+
 .lds-ring {
     display: inline-block;
     position: relative;
