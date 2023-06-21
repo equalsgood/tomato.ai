@@ -50,7 +50,7 @@ export const BpoCalcSummary = () => {
                 <Text tag="h3" variant={TextVariants.SUBTITLE_MEDIUM} classNamesProps={cls.subtitle}>ROI</Text>
                 <div className={cls.benefit}>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.prop}>GROSS REVENUE:</Text>
-                    <span className={classNames(cls.amount, { [cls.activeGreen]: !!gross })}>{gross ? numberFormat(gross) : '%...'}</span>
+                    <span className={classNames(cls.amount, { [cls.activeGreen]: !!gross, [cls.minus]: gross < 0, })}>{gross ? numberFormat(gross) : '%...'}</span>
                 </div>
                 <div className={cls.benefit}>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.prop}>SAVINGS ON TRAINING:</Text>

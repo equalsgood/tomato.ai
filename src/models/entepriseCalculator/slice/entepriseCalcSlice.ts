@@ -21,8 +21,8 @@ const enterpriseCalcSlice = createSlice({
 
             const improvePercent = state.improvePercent;
 
-            if(fcrIncrease !== '')
-                state.calculatedValues.grossSavings = +fcrIncrease * improvePercent;
+            if(fcrIncrease !== '' && agentsNumber !== '' && agentCost !== '' && improvePercent)
+                state.calculatedValues.grossSavings = (+fcrIncrease * 12 * improvePercent) + (+agentsNumber * +agentCost * 12 * (improvePercent / 100));
             else
                 state.calculatedValues.grossSavings = 0;
 
@@ -37,15 +37,15 @@ const enterpriseCalcSlice = createSlice({
                 state.calculatedValues.investment = 0;
 
             if(state.isCurrentTypeSupport) {
-                if(csatIncrease !== '' && agentsNumber !== '' && agentCost !== '' && improvePercent) {
-                    const gross = (+csatIncrease * improvePercent) + (+agentsNumber * +agentCost * (improvePercent / 100));
+                if(csatIncrease !== '' && improvePercent) {
+                    const gross = (+csatIncrease + 12 * improvePercent);
                     state.calculatedValues.gross = Math.round(gross);
                 }
                 else
                     state.calculatedValues.gross = 0;
             } else if(state.isCurrentTypeSupport === false) {
                 if(salesIncrease !== '' && improvePercent) {
-                    const gross = +salesIncrease * improvePercent;
+                    const gross = +salesIncrease * 12 * improvePercent;
                     state.calculatedValues.gross = Math.round(gross);
                 }
                 else
@@ -99,8 +99,14 @@ const enterpriseCalcSlice = createSlice({
 
             state.scaleSelects[changedProp as keyof typeof enterpriseCalcInitialState.scaleSelects].percent = percent;
 
-            for(const key in state.scaleSelects) {
-                newImprovePercent = newImprovePercent + state.scaleSelects[key as keyof typeof enterpriseCalcInitialState.scaleSelects].percent;
+            for(const value of Object.values(state.scaleSelects)) {
+                const fieldPercent = value.percent;
+                newImprovePercent = newImprovePercent + fieldPercent;
+
+                if(fieldPercent === 0) {
+                    newImprovePercent = 0;
+                    break;
+                }
             }
 
             state.scaleSelects[changedProp as keyof typeof enterpriseCalcInitialState.scaleSelects].value = value;

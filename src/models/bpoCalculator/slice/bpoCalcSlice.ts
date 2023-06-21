@@ -33,14 +33,14 @@ const bpoCalcSlice = createSlice({
 
             if(state.isCurrentTypeSupport) {
                 if(fcrIncrease !== '' && csatIncrease !== '' && agentsNumber !== '' && agentCost !== '' && improvePercent) {
-                    const gross = (+fcrIncrease * improvePercent) + (+csatIncrease * improvePercent) - (+agentsNumber * +agentCost * (improvePercent / 100));
+                    const gross = (+fcrIncrease * 12 * improvePercent) + (+csatIncrease * 12 * improvePercent) - (+agentsNumber * +agentCost * 12 * (improvePercent / 100));
                     state.calculatedValues.gross = Math.round(gross);
                 }
                 else
                     state.calculatedValues.gross = 0;
             } else if(state.isCurrentTypeSupport === false) {
                 if(salesIncrease !== '' && improvePercent) {
-                    const gross = +salesIncrease * improvePercent;
+                    const gross = +salesIncrease * 12 * improvePercent;
                     state.calculatedValues.gross = Math.round(gross);
                 }
                 else
@@ -87,8 +87,14 @@ const bpoCalcSlice = createSlice({
 
             state.scaleSelects[changedProp as keyof typeof bpoCalcInitialState.scaleSelects].percent = percent;
 
-            for(const key in state.scaleSelects) {
-                newImprovePercent = newImprovePercent + state.scaleSelects[key as keyof typeof bpoCalcInitialState.scaleSelects].percent;
+            for(const value of Object.values(state.scaleSelects)) {
+                const fieldPercent = value.percent;
+                newImprovePercent = newImprovePercent + fieldPercent;
+
+                if(fieldPercent === 0) {
+                    newImprovePercent = 0;
+                    break;
+                }
             }
 
             state.scaleSelects[changedProp as keyof typeof bpoCalcInitialState.scaleSelects].value = value;

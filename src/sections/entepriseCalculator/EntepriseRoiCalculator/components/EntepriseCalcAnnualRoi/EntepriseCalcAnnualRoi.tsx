@@ -4,6 +4,7 @@ import { useAppSelector } from 'hooks';
 import { numberFormat } from 'shared/lib';
 import { useState } from 'react';
 import { GetReportPopup } from 'widgets';
+import classNames from 'classnames';
 
 export const EnterpriseCalcAnnualRoi = () => {
     const { calculatedValues: { annualRoi } } = useAppSelector((state) => state.enterpriseCalc);
@@ -15,7 +16,7 @@ export const EnterpriseCalcAnnualRoi = () => {
             <div className={cls.description}>
                 <Text tag="p" variant={TextVariants.SUBTITLE_BOLD_REVERSED}>Annual ROI:</Text>
                 { annualRoi ?
-                    <span className={cls.price}>{numberFormat(annualRoi)}</span> :
+                    <span className={classNames(cls.price, { [cls.minus]: annualRoi < 0 })}>{numberFormat(annualRoi)}</span> :
                     <span className={cls.placeholder}>{'$...'}</span>
                 }
             </div>
