@@ -39,6 +39,12 @@
     color: var(--reversed-text-color);
 }
 
+.title-small {
+    font-weight: var(--font-weight-xl);
+    font-size: var(--font-size-xl);
+    color: var(--primary-title-color);
+}
+
 .title-small-reversed {
     font-weight: var(--font-weight-xl);
     font-size: var(--font-size-xl);

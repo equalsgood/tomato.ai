@@ -1,10 +1,14 @@
 import cls from './EntepriseCalcAnnualRoi.module.css';
-import { Button, Text, TextVariants } from 'shared/components';
+import { Button, ButtonVariants, Text, TextVariants } from 'shared/components';
 import { useAppSelector } from 'hooks';
 import { numberFormat } from 'shared/lib';
+import { useState } from 'react';
+import { GetReportPopup } from 'widgets';
 
 export const EnterpriseCalcAnnualRoi = () => {
     const { calculatedValues: { annualRoi } } = useAppSelector((state) => state.enterpriseCalc);
+    const [modalOpen, setModalOpen] = useState(false);
+    const toggleModal = () => setModalOpen(prev => !prev);
 
     return (
         <div className={cls.annual}>
@@ -16,9 +20,13 @@ export const EnterpriseCalcAnnualRoi = () => {
                 }
             </div>
             <Button
+                onClick={toggleModal}
                 text="Receive detailed report"
                 disabled={!annualRoi}
+                variant={ButtonVariants.ACTION}
+                type='button'
             />
+            <GetReportPopup open={modalOpen} onClose={toggleModal}/>
         </div>
     );
 };

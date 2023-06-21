@@ -1,9 +1,13 @@
 export enum InputValidations {
     MONEY = 'money',
-    NUMBER = 'number'
+    NUMBER = 'number',
+    NONE = 'NONE',
 }
 
 export const validation = (value: string, validationType: InputValidations): string | null => {
+    if(validationType === InputValidations.NONE)
+        return value;
+
     if(value === '')
         return value;
 

@@ -3,6 +3,8 @@ import { Text, TextVariants } from 'shared/components';
 import { BpoCalculator } from './components/BpoCalculator/BpoCalculator';
 import { BpoCalcAnnualRoi } from './components/BpoCalcAnnualRoi/BpoCalcAnnualRoi';
 import { BpoCalcSummary } from './components/BpoCalcSummary/BpoCalcSummary';
+import firstBackground from 'shared/assets/images/bg/calc-bg-rect-1.png';
+import secondBackground from 'shared/assets/images/bg/calc-bg-rect-2.png';
 
 export const BpoRoiCalculator = () => {
     return (
@@ -19,6 +21,8 @@ export const BpoRoiCalculator = () => {
                 </div>
                 <BpoCalcSummary/>
             </div>
+            <img alt="background image 1" src={firstBackground} className={cls.right} />
+            <img alt="background image 2" src={secondBackground} className={cls.left} />
         </section>
     );
 };

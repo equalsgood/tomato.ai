@@ -8,3 +8,8 @@
     background: var(--primary-bg-color);
     min-height: 100vh;
 }
+
+.modal-open {
+    height: 100%;
+    overflow: hidden;
+}

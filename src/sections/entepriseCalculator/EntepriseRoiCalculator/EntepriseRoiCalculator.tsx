@@ -3,6 +3,8 @@ import { Text, TextVariants } from 'shared/components';
 import { EnterpriseCalculator } from './components/EntepriseCalculator/EntepriseCalculator';
 import { EnterpriseCalcAnnualRoi } from './components/EntepriseCalcAnnualRoi/EntepriseCalcAnnualRoi';
 import { EnterpriseCalcSummary } from './components/EntepriseCalcSummary/EntepriseCalcSummary';
+import firstBackground from 'shared/assets/images/bg/calc-bg-rect-1.png';
+import secondBackground from 'shared/assets/images/bg/calc-bg-rect-2.png';
 
 export const EnterpriseRoiCalculator = () => {
     return (
@@ -19,6 +21,8 @@ export const EnterpriseRoiCalculator = () => {
                 </div>
                 <EnterpriseCalcSummary/>
             </div>
+            <img alt="background image 1" src={firstBackground} className={cls.right} />
+            <img alt="background image 2" src={secondBackground} className={cls.left} />
         </section>
     );
 };

@@ -7,7 +7,7 @@ import { AudioPlayer } from './AudioPlayer/AudioPlayer';
 import { InfoBadge } from './InfoBadge/InfoBadge';
 import { Input } from './Input/Input';
 import { Select } from './Select/Select';
-import { Button } from './Button/Button';
+import { Button, ButtonVariants } from './Button/Button';
 import { Divider } from './Divider/Divider';
 import { Faq } from './Faq/Faq';
 
@@ -25,6 +25,7 @@ export {
     Input,
     Select,
     Button,
+    ButtonVariants,
     Divider,
     Faq
 };
