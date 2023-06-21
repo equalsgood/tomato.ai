@@ -80,7 +80,7 @@ export const EnterpriseCalculator = () => {
                     <Input
                         type="text"
                         validationType={InputValidations.MONEY}
-                        info="Estimated increase in revenues per 1% of absolute CSAT increase (e.g. from 77% to 78%)"
+                        info="Monthly estimated increase in revenues per 1% of absolute CSAT increase (e.g. from 77% to 78%)"
                         label="Revenue per 1% CSAT increase"
                         placeholder="$2500"
                         value={csatIncrease}
@@ -89,7 +89,7 @@ export const EnterpriseCalculator = () => {
                     <Input
                         type="text"
                         validationType={InputValidations.MONEY}
-                        info="Estimated increase in savings per 1% of absolute First Call Resolution increase (e.g. from 70% to 71%)"
+                        info="Monthly estimated increase in savings per 1% of absolute First Call Resolution increase (e.g. from 70% to 71%)"
                         label="Savings per 1% FCR Increase"
                         placeholder="$10000"
                         value={fcrIncrease}
@@ -102,7 +102,7 @@ export const EnterpriseCalculator = () => {
                     <Input
                         type="text"
                         validationType={InputValidations.MONEY}
-                        info="Estimated increase in overall revenue for each absolute increase in the sales key performance indicator. For example close rate increasing from 5% to 6%, or pre-qualified leads increasing from 2% to 3%."
+                        info="Monthly estimated increase in overall revenue for each absolute increase in the sales key performance indicator. For example close rate increasing from 5% to 6%, or pre-qualified leads increasing from 2% to 3%."
                         label="Revenue per 1% Sales Increase"
                         placeholder="$2500"
                         value={salesIncrease}

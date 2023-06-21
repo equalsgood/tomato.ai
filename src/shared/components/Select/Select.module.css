@@ -2,7 +2,6 @@
     display: flex;
     gap: 12px;
     flex-direction: column;
-    position: relative;
 }
 
 .label {
@@ -18,8 +17,12 @@
     line-height: 27px;
 }
 
+.select-container {
+    position: relative;
+}
+
 .select {
-    padding: 22px 30px 21px 27px;
+    padding: 0 25px 0 27px;
     border: none;
     width: 100%;
     color: var(--third-text-color);
@@ -34,41 +37,45 @@
     cursor: pointer;
 }
 
-.select.open {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+.select.selected {
+    color: var(--reversed-text-color);
+    border: solid 1px var(--primary-action-color);
+    background: rgba(0, 189, 80, 0.2);
 }
 
 .options {
-    padding: 0 30px 21px 27px;
-    background: var(--primary-text-color);
+    padding: 0 23px 0 27px;
+    background: var(--primary-input-bg);
     width: 100%;
+    border: solid 1px var(--primary-action-color);
 
     position: absolute;
     z-index: var(--modal-z-index);
-    bottom: 0;
+    top: 0;
     left: 0;
-    transform: translateY(100%);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .option {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: solid 1px var(--primary-text-color);
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-m);
     font-size: var(--font-size-xs);
     cursor: pointer;
 }
 
-.option:hover {
-    color: var(--primary-action-color);
+.option:first-child {
+    border-top: none;
 }
 
-.select.selected {
-    color: var(--reversed-text-color);
+.option:hover {
+    color: var(--primary-action-color);
 }
 
 .overlay {

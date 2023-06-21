@@ -36,3 +36,7 @@
     font-weight: var(--font-weight-m);
     font-size: var(--font-size-xs);
 }
+
+.input:focus {
+    outline: solid 1px var(--primary-action-color);
+}
