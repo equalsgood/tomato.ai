@@ -7,6 +7,7 @@ import firstSample from 'shared/samples/1a_ph.mp3';
 import secondSample from 'shared/samples/1b_ph.mp3';
 import classNames from 'classnames';
 import { useState } from 'react';
+import { scrollSmoothTo } from 'shared/lib';
 
 export const HomeIntroTitle = () => {
     return (
@@ -20,10 +21,10 @@ export const HomeIntroTitle = () => {
                 </Text>
                 <div className={cls.links}>
                     <NavigationLink classNamesProps={cls.actionLink} text="Request Demo" to={RoutePaths.HOME} variant={NavigationLinkVariants.ACTION} />
-                    <div className={cls.action}>
-                        <Text tag="p" variant={TextVariants.ACTION_RED}>Listen Demos</Text>
+                    <a onClick={() => scrollSmoothTo('samples-examples')} className={cls.action}>
+                        <Text tag="p" variant={TextVariants.ACTION_RED}>More Demos</Text>
                         <RedArrowIcon/>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div className={cls.imageHolder}>

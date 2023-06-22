@@ -30,7 +30,11 @@
     display: flex;
     gap: 16px;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.second-agent {
+    border-bottom-right-radius: 20px;
 }
 
 .info {

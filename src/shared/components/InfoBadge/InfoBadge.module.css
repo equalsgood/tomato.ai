@@ -19,32 +19,3 @@
 .button:hover {
     background: white;
 }
-
-.tooltip {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.info {
-    display: flex;
-    width: max-content;
-    max-width: 270px;
-    padding: 8px 16px;
-    background: var(--primary-input-bg);
-    border-radius: 15px;
-    border: solid 1px var(--primary-action-color);
-}
-
-.arrow {
-    width: 0;
-    height: 0;
-    border: 5px solid var(--primary-action-color);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-}

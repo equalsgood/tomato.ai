@@ -10,6 +10,8 @@ import { Select } from './Select/Select';
 import { Button, ButtonVariants } from './Button/Button';
 import { Divider } from './Divider/Divider';
 import { Faq } from './Faq/Faq';
+import { Tooltip, TooltipVariants } from './Tooltip/Tooltip';
+import { Flag } from './Flag/Flag';
 
 export {
     Loader,
@@ -27,5 +29,8 @@ export {
     Button,
     ButtonVariants,
     Divider,
-    Faq
+    Faq,
+    Tooltip,
+    TooltipVariants,
+    Flag
 };

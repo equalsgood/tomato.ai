@@ -21,8 +21,10 @@ const enterpriseCalcSlice = createSlice({
 
             const improvePercent = state.improvePercent;
 
-            if(fcrIncrease !== '' && agentsNumber !== '' && agentCost !== '' && improvePercent)
-                state.calculatedValues.grossSavings = (+fcrIncrease * 12 * improvePercent) + (+agentsNumber * +agentCost * 12 * (improvePercent / 100));
+            if(agentsNumber !== '' && agentCost !== '' && improvePercent) {
+                const grossSavings = (+fcrIncrease * 12 * improvePercent) + (+agentsNumber * +agentCost * 12 * (improvePercent / 100));
+                state.calculatedValues.grossSavings = Math.round(grossSavings);
+            }
             else
                 state.calculatedValues.grossSavings = 0;
 

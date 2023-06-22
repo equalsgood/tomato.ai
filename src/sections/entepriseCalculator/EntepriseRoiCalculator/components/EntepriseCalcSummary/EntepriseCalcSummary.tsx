@@ -48,20 +48,20 @@ export const EnterpriseCalcSummary = () => {
                 </>
             }
             <div className={cls.roi}>
-                <Text tag="h3" variant={TextVariants.SUBTITLE_MEDIUM} classNamesProps={cls.subtitle}>ROI</Text>
+                <Text tag="h3" variant={TextVariants.SUBTITLE_MEDIUM} classNamesProps={cls.subtitle}>Annual ROI</Text>
                 {isCurrentTypeSupport &&
                     <div className={cls.benefit}>
                         <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.prop}>GROSS SAVINGS:</Text>
-                        <span className={classNames(cls.amount, { [cls.activeGreen]: !!grossSavings })}>{grossSavings ? numberFormat(grossSavings) : '%...'}</span>
+                        <span className={classNames(cls.amount, { [cls.activeGreen]: !!grossSavings })}>{grossSavings ? numberFormat(grossSavings, true) : '%...'}</span>
                     </div>
                 }
                 <div className={cls.benefit}>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.prop}>GROSS REVENUE:</Text>
-                    <span className={classNames(cls.amount, { [cls.activeGreen]: !!gross })}>{gross ? numberFormat(gross) : '%...'}</span>
+                    <span className={classNames(cls.amount, { [cls.activeGreen]: !!gross })}>{gross ? numberFormat(gross, true) : '%...'}</span>
                 </div>
                 <div className={cls.benefit}>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.prop}>SAVINGS ON TRAINING:</Text>
-                    <span className={classNames(cls.amount, { [cls.activeGreen]: !!savings })}>{savings ? `+${numberFormat(savings)}` : '%...'}</span>
+                    <span className={classNames(cls.amount, { [cls.activeGreen]: !!savings })}>{savings ? `${numberFormat(savings, true)}` : '%...'}</span>
                 </div>
                 <div className={cls.benefit}>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.prop}>TOMATO.AI INVESTMENT</Text>

@@ -7,7 +7,7 @@ import HireIcon from 'shared/assets/icons/benefits/hire.svg';
 
 export const Benefits = () => {
     return (
-        <section className={cls.benefits}>
+        <section id="benefits" className={cls.benefits}>
             <Text tag="h2" variant={TextVariants.TITLE_REVERSED}>Benefits</Text>
             <ul className={cls.benefitsList}>
                 {benefitsList.map(benefit =>

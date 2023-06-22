@@ -1,0 +1,6 @@
+.flag {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}

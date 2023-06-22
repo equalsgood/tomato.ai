@@ -23,6 +23,8 @@
     align-items: center;
     height: 30px;
     margin-top: 50px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .examples {

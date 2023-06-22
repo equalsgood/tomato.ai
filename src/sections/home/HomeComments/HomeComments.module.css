@@ -11,7 +11,6 @@
 
 .comments button {
     position: absolute;
-    z-index: var(--modal-z-index);
     top: 40%;
     border: none;
     background: transparent;

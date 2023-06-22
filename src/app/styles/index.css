@@ -2,11 +2,16 @@
 @import "./variables/global.css";
 @import "./themes/light.css";
 
+html {
+    scroll-behavior: smooth;
+}
+
 .app {
     font-family: var(--font-family-main);
 
     background: var(--primary-bg-color);
     min-height: 100vh;
+    margin-top: var(--header-height);
 }
 
 .modal-open {

@@ -44,7 +44,7 @@ export const BpoCalculator = () => {
             <Input
                 type="text"
                 validationType={InputValidations.NUMBER}
-                info="Total number of full shift agents, including combing part time shifts"
+                info="Total number of full shift agents, including combining part time shifts"
                 label="Number of Agents"
                 placeholder="1000"
                 value={agentsNumber}
@@ -80,8 +80,8 @@ export const BpoCalculator = () => {
                     <Input
                         type="text"
                         validationType={InputValidations.MONEY}
-                        info="Monthly estimated increase in revenues per 1% of absolute CSAT increase (e.g. from 77% to 78%)"
-                        label="Revenue per 1% CSAT increase"
+                        info="Monthly estimated increase in revenues per 1% of absolute CSAT Increase (e.g. from 77% to 78%)"
+                        label="Revenue per 1% CSAT Increase"
                         placeholder="$2500"
                         value={csatIncrease}
                         onInputChange={(value) => inputChangeHandler('csatIncrease', value)}
@@ -89,7 +89,7 @@ export const BpoCalculator = () => {
                     <Input
                         type="text"
                         validationType={InputValidations.MONEY}
-                        info="Monthly estimated increase in revenues per 1% of absolute First Call Resolution increase (e.g. from 70% to 71%)"
+                        info="Monthly estimated increase in revenues per 1% of absolute First Call Resolution Increase (e.g. from 70% to 71%)"
                         label="Revenue per 1% FCR Increase"
                         placeholder="$10000"
                         value={fcrIncrease}

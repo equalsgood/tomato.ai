@@ -30,8 +30,11 @@
     --header-height: 90px;
     --footer-height: 370px;
 
-    --modal-z-index: 20;
-    --overlay-z-index: 10;
+    --modal-z-index: 50;
+    --overlay-z-index: 45;
+    --header-z-index: 40;
+    --select-z-index: 35;
+    --select-overlay-z-index: 30;
     --separate-content-z-index: 5;
     --separate-bg-z-index: 2;
 }

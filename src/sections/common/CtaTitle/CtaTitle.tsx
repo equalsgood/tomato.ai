@@ -20,7 +20,7 @@ export const CtaTitle = ({ isEnterprise = false }: CtaTitleProps) => {
                 <div className={cls.content}>
                     <div className={cls.agents}>
                         <img alt="first agent picture" src={firstAgent} />
-                        <img alt="second agent picture" src={secondAgent} />
+                        <img alt="second agent picture" src={secondAgent} className={cls.secondAgent} />
                     </div>
                     <div className={cls.info}>
                         <div className={cls.infoDescription}>

@@ -24,6 +24,8 @@
     display: flex;
     gap: 4px;
     align-items: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .image-holder {
