@@ -14,7 +14,7 @@ export const BpoIntroduction = () => {
                     <Text tag="p" variant={TextVariants.PARAGRAPH_DARK_MEDIUM} classNamesProps={cls.paragraph}>Solving the #1 and #2 problems BPOs have. Closing the quality gap with onshore agents, and helping expand the pool of qualified offshore hires.</Text>
                     <div className={cls.links}>
                         <NavigationLink text="Request Demo" to={RoutePaths.HOME} variant={NavigationLinkVariants.ACTION_BLUE} classNamesProps={cls.link} />
-                        <NavigationLink text="Calculate ROI" to={RoutePaths.HOME} variant={NavigationLinkVariants.OUTLINED_BLUE} classNamesProps={cls.link} />
+                        <NavigationLink text="Calculate ROI" to={RoutePaths.BPO_CALCULATOR} variant={NavigationLinkVariants.OUTLINED_BLUE} classNamesProps={cls.link} />
                     </div>
                 </div>
             </div>

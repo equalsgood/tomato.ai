@@ -14,7 +14,7 @@ export const EnterpriseIntroduction = () => {
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE_MEDIUM} classNamesProps={cls.paragraph}>Inbound calls benefit from improved customer satisfaction, and outbound calls benefit from improved sales metrics.</Text>
                     <div className={cls.links}>
                         <NavigationLink text="Request Demo" to={RoutePaths.HOME} variant={NavigationLinkVariants.ACTION} classNamesProps={cls.link} isEnterprise />
-                        <NavigationLink text="Calculate ROI" to={RoutePaths.HOME} variant={NavigationLinkVariants.OUTLINED} classNamesProps={cls.link} />
+                        <NavigationLink text="Calculate ROI" to={RoutePaths.ENTERPRISE_CALCULATOR} variant={NavigationLinkVariants.OUTLINED} classNamesProps={cls.link} />
                     </div>
                 </div>
             </div>
