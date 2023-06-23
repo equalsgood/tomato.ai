@@ -11,15 +11,15 @@
     align-items: center;
 }
 
-.label.double-line {
-    width: 230px;
-}
-
 .label-text {
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-xxs);
     line-height: 27px;
+}
+
+.double-line .label-text {
+    width: 200px;
 }
 
 .input {
