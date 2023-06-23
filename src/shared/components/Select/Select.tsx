@@ -7,7 +7,7 @@ import React, { memo, useState } from 'react';
 
 interface SelectProps {
     label: string,
-    info: string,
+    info?: string,
     value: string,
     options: Array<string>,
     onSelectChange?: (value: string) => void
@@ -30,7 +30,7 @@ export const Select = memo((props: SelectProps) => {
         <div className={cls.container}>
             <div className={cls.label}>
                 <span className={cls.labelText}>{label}</span>
-                <InfoBadge text={info}/>
+                { info && <InfoBadge text={info}/>}
             </div>
             <div className={cls.selectContainer}>
                 <div

@@ -4,6 +4,7 @@ import { BpoPage } from 'pages/BpoPage';
 import { EnterprisePage } from 'pages/EnterprisePage';
 import { BpoCalculatorPage } from 'pages/BpoCalculatorPage';
 import { EnterpriseCalculatorPage } from 'pages/EnterpriseCalculatorPage';
+import { RequestDemoPage } from 'pages/RequestDemoPage';
 
 export enum RoutePaths {
     HOME = '/',
@@ -11,6 +12,7 @@ export enum RoutePaths {
     ENTERPRISE = '/enterprise',
     BPO_CALCULATOR = '/bpo-roi',
     ENTERPRISE_CALCULATOR = '/enterprise-roi',
+    REQUEST_DEMO = '/request-demo',
     NO_MATCH = '*'
 }
 
@@ -34,6 +36,10 @@ export const routeConfig: Array<RouteProps> = [
     {
         path: RoutePaths.ENTERPRISE_CALCULATOR,
         element: <EnterpriseCalculatorPage/>,
+    },
+    {
+        path: RoutePaths.REQUEST_DEMO,
+        element: <RequestDemoPage/>,
     },
     {
         path: RoutePaths.NO_MATCH,

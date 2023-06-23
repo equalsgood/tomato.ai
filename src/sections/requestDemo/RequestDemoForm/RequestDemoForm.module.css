@@ -1,0 +1,50 @@
+.section{
+    padding: 30px 39px 40px 41px;
+    background: var(--reversed-bg-color);
+    border-radius: 20px;
+    width: 906px;
+    margin: 0 auto 120px;
+    position: relative;
+    z-index: var(--separate-content-z-index);
+}
+
+.initials, .company, .selects {
+    width: 100%;
+    display: flex;
+    gap: 26px;
+}
+
+.initials {
+    margin-bottom: 27px;
+}
+
+.email {
+    margin-bottom: 23px;
+}
+
+.company, .selects {
+    margin-bottom: 34px;
+}
+
+.select {
+    background: var(--primary-select-bg);
+}
+
+.note {
+    margin-bottom: 30px;
+}
+
+.number .PhoneInputCountry {
+    background: red;
+}
+
+.label-text {
+    color: var(--reversed-text-color);
+    font-weight: var(--font-weight-l);
+    font-size: var(--font-size-xxs);
+    line-height: 27px;
+}
+
+.submitted {
+    background: rgba(0, 189, 80, 0.1);
+}

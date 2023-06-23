@@ -180,7 +180,7 @@ const navigationLinks: Array<NavigationLinkProps> = [
     },
     {
         text: 'Request Demo',
-        to: RoutePaths.HOME,
+        to: RoutePaths.REQUEST_DEMO,
         variant: NavigationLinkVariants.ACTION,
         classNamesProps: cls.actionLink
     }

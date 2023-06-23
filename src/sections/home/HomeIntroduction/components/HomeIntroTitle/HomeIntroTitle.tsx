@@ -20,7 +20,7 @@ export const HomeIntroTitle = () => {
                     AI powered voice filter clarifies offshore agent voices as they speak, resulting in improved CSAT and sales metrics.
                 </Text>
                 <div className={cls.links}>
-                    <NavigationLink classNamesProps={cls.actionLink} text="Request Demo" to={RoutePaths.HOME} variant={NavigationLinkVariants.ACTION} />
+                    <NavigationLink classNamesProps={cls.actionLink} text="Request Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} />
                     <a onClick={() => scrollSmoothTo('samples-examples')} className={cls.action}>
                         <Text tag="p" variant={TextVariants.ACTION_RED}>More Demos</Text>
                         <RedArrowIcon/>

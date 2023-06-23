@@ -1,0 +1,66 @@
+:root {
+    --PhoneInputCountryFlag-height: 28px !important;
+    --PhoneInputCountryFlag-borderColor: transparent !important;
+    --PhoneInputCountrySelectArrow-width: 10px !important;
+    --PhoneInputCountrySelectArrow-borderWidth: 4px !important;
+    --PhoneInputCountrySelectArrow-opacity: 1 !important;
+    --PhoneInputCountrySelectArrow-color: #fff !important;
+}
+
+.request-demo-number-input {
+    margin-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.request-demo-number-input .PhoneInput {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.request-demo-number-input .PhoneInputCountry {
+    width: 110px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: var(--primary-select-bg);
+    border-radius: 10px;
+    margin: 0;
+}
+
+.request-demo-number-input .PhoneInputInput {
+    padding: 22px 0 21px 25px;
+    border: none;
+    width: 100%;
+    height: 70px;
+    color: var(--reversed-text-color);
+    font-weight: var(--font-weight-m);
+    font-size: var(--font-size-xs);
+    background: var(--primary-input-bg);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.request-demo-number-input .PhoneInputInput::placeholder {
+    color: var(--third-text-color);
+    font-weight: var(--font-weight-m);
+    font-size: var(--font-size-xs);
+}
+
+.request-demo-number-input .PhoneInputInput:focus {
+    outline: solid 1px var(--primary-action-color);
+}
+
+.request-demo-number-input option {
+    color: var(--reversed-text-color);
+    font-weight: var(--font-weight-m);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+    background: var(--primary-input-bg);
+}

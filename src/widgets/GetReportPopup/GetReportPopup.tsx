@@ -45,7 +45,6 @@ export const GetReportPopup = (props: GetReportPopupProps) => {
                             label="Enter Your Email"
                             type="email"
                             placeholder="Email@gmail.com"
-                            validationType={InputValidations.NONE}
                             value={popupInputValue}
                             onInputChange={inputChangeHandler}
                         />

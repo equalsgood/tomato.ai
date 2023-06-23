@@ -130,7 +130,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'Request Demo',
-                to: RoutePaths.HOME,
+                to: RoutePaths.REQUEST_DEMO,
             },
             {
                 text: 'Brand guidelines',
