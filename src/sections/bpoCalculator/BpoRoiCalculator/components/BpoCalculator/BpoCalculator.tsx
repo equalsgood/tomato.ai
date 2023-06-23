@@ -81,19 +81,21 @@ export const BpoCalculator = () => {
                         type="text"
                         validationType={InputValidations.MONEY}
                         info="Monthly estimated increase in revenues per 1% of absolute CSAT Increase (e.g. from 77% to 78%)"
-                        label="Revenue per 1% CSAT Increase"
+                        label="Monthly Revenue per 1% CSAT Increase"
                         placeholder="$2500"
                         value={csatIncrease}
                         onInputChange={(value) => inputChangeHandler('csatIncrease', value)}
+                        doubleLabel
                     />
                     <Input
                         type="text"
                         validationType={InputValidations.MONEY}
                         info="Monthly estimated increase in revenues per 1% of absolute First Call Resolution Increase (e.g. from 70% to 71%)"
-                        label="Revenue per 1% FCR Increase"
+                        label="Monthly Revenue per 1% FCR Increase"
                         placeholder="$10000"
                         value={fcrIncrease}
                         onInputChange={(value) => inputChangeHandler('fcrIncrease', value)}
+                        doubleLabel
                     />
                 </>
             }
@@ -103,7 +105,7 @@ export const BpoCalculator = () => {
                         type="text"
                         validationType={InputValidations.MONEY}
                         info="Monthly estimated increase in overall revenue for each absolute increase in the sales key performance indicator. For example close rate increasing from 5% to 6%, or pre-qualified leads increasing from 2% to 3%."
-                        label="Revenue per 1% Sales Increase"
+                        label="Monthly Revenue per 1% Sales Increase"
                         placeholder="$2500"
                         value={salesIncrease}
                         onInputChange={(value) => inputChangeHandler('salesIncrease', value)}

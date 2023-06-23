@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.label.double-line {
+    width: 230px;
+}
+
 .label-text {
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-l);

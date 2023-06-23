@@ -15,10 +15,11 @@ interface InputProps {
     onInputChange: (value: string) => void,
     classNamesProps?: string,
     rows?: number,
+    doubleLabel?: boolean,
 }
 
 export const Input = memo((props: InputProps) => {
-    const { label, type, info, placeholder, validationType, value, onInputChange, required, classNamesProps, rows } = props;
+    const { label, type, info, placeholder, validationType, value, onInputChange, required, classNamesProps, rows, doubleLabel } = props;
     const [inputValue, setInputValue] = useState(value);
 
     const changeHandler = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
@@ -39,7 +40,7 @@ export const Input = memo((props: InputProps) => {
 
     return (
         <div className={classNames(cls.container, classNamesProps)}>
-            <div className={cls.label}>
+            <div className={classNames(cls.label, { [cls.doubleLine]: doubleLabel })}>
                 <span className={cls.labelText}>{label}</span>
                 { info && <InfoBadge text={info}/> }
             </div>
