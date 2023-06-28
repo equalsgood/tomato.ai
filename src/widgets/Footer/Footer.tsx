@@ -118,7 +118,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'Pricing',
-                to: RoutePaths.HOME,
+                to: RoutePaths.PRICING,
             },
             {
                 text: 'Careers',

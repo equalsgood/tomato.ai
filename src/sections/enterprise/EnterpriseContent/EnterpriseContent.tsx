@@ -31,7 +31,7 @@ export const EnterpriseContent = () => {
                         <br/>
                         Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque.
                     </Text>
-                    <NavigationLink text="Cost Savings Calculator" to={RoutePaths.HOME} variant={NavigationLinkVariants.ACTION_TEXT} classNamesProps={cls.calculatorLink}/>
+                    <NavigationLink text="Cost Savings Calculator" to={RoutePaths.ENTERPRISE_CALCULATOR} variant={NavigationLinkVariants.ACTION_TEXT} classNamesProps={cls.calculatorLink}/>
                 </div>
             </div>
             <div className={classNames(cls.contentSection, cls.left)}>

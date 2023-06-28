@@ -1,0 +1,118 @@
+.description {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.description.most-popular {
+    height: 770px;
+}
+
+.description-card {
+    position: relative;
+    background: var(--primary-bg-color);
+    height: 720px;
+    width: 295px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px 0px rgba(22, 20, 20, 0.08);
+    padding: 49px 26px 29px 29px;
+    display: flex;
+    flex-direction: column;
+    z-index: var(--separate-content-z-index);
+}
+
+.most-popular .description-card {
+    height: 712px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 38px 23px 29px 26px;
+    margin: 0 3px 0 3px;
+    width: 289px;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 38px;
+}
+
+.title {
+    line-height: 30px;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.feature-description {
+    line-height: 18px;
+    font-size: 13px;
+    width: 188px;
+}
+
+.cost-section {
+    margin-top: auto;
+}
+
+.cost-wrapper {
+    margin: 21px 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cost-badge {
+    font-weight: var(--font-weight-l);
+    text-transform: uppercase;
+}
+
+.cost {
+    font-weight: var(--font-weight-xl);
+    line-height: 40px;
+}
+
+.most-popular-badge {
+    width: 295px;
+    height: 770px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: var(--separate-bg-z-index);
+}
+
+.most-popular-header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    background: linear-gradient(140.84deg, #FFB800 14.07%, #FF9900 75.25%);
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag {
+    color: var(--reversed-text-color);
+    font-size: var(--font-size-xxs);
+    font-weight: var(--font-weight-xl);
+    transform: translateY(2px);
+}
+
+.most-popular-bg {
+    width: 100%;
+    background: linear-gradient(180deg, #FFB800 14.07%, rgba(255, 153, 0, 0.25) 75.25%);
+    height: 712px;
+    clip-path: polygon(0 0, 100% 0, 293px 85%, 2px 85%)
+}

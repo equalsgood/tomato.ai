@@ -149,7 +149,7 @@ const companyLinks: Array<NavigationLinkProps> = [
     },
     {
         text: 'Pricing',
-        to: RoutePaths.HOME,
+        to: RoutePaths.PRICING,
         variant: NavigationLinkVariants.DEFAULT,
     },
     {

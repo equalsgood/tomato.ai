@@ -1,0 +1,29 @@
+.section {
+    width: 100%;
+    padding: 56px 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    line-height: 70px;
+    margin-bottom: 14px;
+}
+
+.paragraph {
+    width: 535px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.plans {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 48px;
+}

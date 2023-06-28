@@ -22,6 +22,7 @@ export enum TextVariants {
     PARAGRAPH_DARK_MEDIUM = 'paragraphDarkMedium',
     PARAGRAPH_DARK = 'paragraphDark',
     PARAGRAPH_BLACK = 'paragraphBlack',
+    PARAGRAPH_DISABLED = 'paragraphDisabled',
     PARAGRAPH_REVERSED = 'paragraphReversed',
     PARAGRAPH_REVERSED_SMALL = 'paragraphReversedSmall',
     ACTION = 'action',

@@ -112,6 +112,12 @@
     font-weight: var(--font-weight-m);
 }
 
+.paragraph-disabled {
+    color: var(--disabled-text-color);
+    font-size: var(--font-size-xxxs);
+    font-weight: var(--font-weight-m);
+}
+
 .paragraph-black {
     color: var(--secondary-text-color);
     font-size: var(--font-size-xxs);
