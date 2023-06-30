@@ -161,6 +161,7 @@
     padding: 10px 27px;
     border-radius: 10px;
     background: var(--primary-action-color-blurred);
+    text-transform: uppercase;
 }
 
 .badge-blue {

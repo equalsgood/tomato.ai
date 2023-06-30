@@ -7,6 +7,7 @@ import { EnterpriseCalculatorPage } from 'pages/EnterpriseCalculatorPage';
 import { RequestDemoPage } from 'pages/RequestDemoPage';
 import { PricingPage } from 'pages/PricingPage';
 import { CareersPage } from 'pages/CareersPage';
+import { AboutPage } from 'pages/AboutPage';
 
 export enum RoutePaths {
     HOME = '/',
@@ -17,6 +18,7 @@ export enum RoutePaths {
     REQUEST_DEMO = '/request-demo',
     PRICING = '/pricing',
     CAREERS = '/careers',
+    ABOUT = '/about',
     NO_MATCH = '*'
 }
 
@@ -52,6 +54,10 @@ export const routeConfig: Array<RouteProps> = [
     {
         path: RoutePaths.CAREERS,
         element: <CareersPage/>,
+    },
+    {
+        path: RoutePaths.ABOUT,
+        element: <AboutPage/>,
     },
     {
         path: RoutePaths.NO_MATCH,

@@ -1,0 +1,63 @@
+.about {
+    margin: 0 0 105px 130px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-container {
+    margin: 109px auto 0;
+}
+
+.info {
+    width: 475px;
+}
+
+.badge {
+    width: 150px;
+}
+
+.title {
+    line-height: 52px;
+    margin: 31px 0 60px;
+}
+
+.blue {
+    color: var(--secondary-action-color);
+}
+
+.yellow {
+    color: var(--fourth-action-color);
+}
+
+.green {
+    color: var(--primary-action-color);
+}
+
+.image-container {
+    position: relative;
+    height: 700px;
+    width: 835px;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.action {
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    background: var(--reversed-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.action span {
+    color: var(--reversed-text-color);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-l);
+}

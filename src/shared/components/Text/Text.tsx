@@ -35,7 +35,7 @@ export enum TextVariants {
     SUBHEADER_LIGHT_SMALL = 'subheaderLightSmall',
 }
 
-export type TextTags = 'h1' | 'h2' |'h3' | 'h4' | 'h5' | 'h6' | 'p';
+export type TextTags = 'h1' | 'h2' |'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p';
 
 export interface TextProps {
     tag: TextTags;
@@ -71,6 +71,10 @@ export const Text = (props: TextProps) => {
 
     if(tag === 'h6') {
         return <h6 style={{ width: `${width + 'px' || 'auto'}` }} className={classes}>{children}</h6>;
+    }
+
+    if(tag === 'span') {
+        return <span style={{ width: `${width + 'px' || 'auto'}` }} className={classes}>{children}</span>;
     }
     
     return <p style={{ width: `${width + 'px' || 'auto'}` }} className={classes}>{children}</p>;
