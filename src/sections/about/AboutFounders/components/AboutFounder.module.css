@@ -1,0 +1,88 @@
+.founder {
+    width: 370px;
+    height: 540px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.short-info {
+    width: 100%;
+    height: 266px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: var(--separate-bg-z-index);
+    background: linear-gradient(180deg, rgba(27, 27, 27, 0.00) 0%, rgba(27, 27, 27, 0.90) 74.23%, #1B1B1B 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: flex-end;
+    padding: 0 0 36px 46px;
+}
+
+.short-info .name {
+    color: var(--reversed-text-color);
+    font-size: 26px;
+    font-weight: var(--font-weight-l);
+    line-height: 21px;
+}
+
+.short-info .position {
+    color: var(--primary-action-color);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-s);
+    line-height: 21px;
+}
+
+.hovered-info {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--separate-content-z-index);
+    background: linear-gradient(180deg, rgba(0, 189, 80, 0.90) 0%, #00BD50 100%);
+    padding: 40px 34px 0 46px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+.hovered-info.hovered {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.personal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.initials {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.initials .name {
+    color: var(--primary-title-color);
+    font-size: 28px;
+    font-weight: var(--font-weight-xl);
+    line-height: 26px;
+}
+
+.initials .position {
+    color: var(--primary-title-color);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-m);
+    line-height: 22px;
+}
+
+.biography {
+    color: var(--primary-title-color);
+    line-height: 22px;
+}

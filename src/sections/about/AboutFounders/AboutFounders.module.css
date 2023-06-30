@@ -1,0 +1,31 @@
+.about-founders {
+    margin: 0 122px 109px 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 81px;
+    align-items: center;
+}
+
+.title {
+    line-height: 70px;
+    width: 504px;
+}
+
+.paragraph {
+    line-height: 22px;
+    height: 70px;
+    width: 603px;
+}
+
+.founders {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    justify-content: space-around;
+}

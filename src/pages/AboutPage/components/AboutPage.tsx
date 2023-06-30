@@ -1,9 +1,10 @@
-import { AboutIntroduction } from 'sections/about';
+import { AboutFounders, AboutIntroduction } from 'sections/about';
 
 const AboutPage = () => {
     return (
         <main>
             <AboutIntroduction/>
+            <AboutFounders/>
         </main>
     );
 };
