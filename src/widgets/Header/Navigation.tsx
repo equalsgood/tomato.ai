@@ -154,7 +154,7 @@ const companyLinks: Array<NavigationLinkProps> = [
     },
     {
         text: 'Careers',
-        to: RoutePaths.HOME,
+        to: RoutePaths.CAREERS,
         variant: NavigationLinkVariants.DEFAULT,
     },
 ];

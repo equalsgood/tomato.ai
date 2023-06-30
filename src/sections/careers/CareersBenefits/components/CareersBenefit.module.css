@@ -1,0 +1,32 @@
+.benefit {
+    width: 100%;
+    height: 190px;
+    background: var(--primary-faq-color);
+    border-radius: 20px;
+    padding: 27px 17px 24px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.title-container {
+    display: flex;
+    gap: 15px;
+}
+
+.title {
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.description-container {
+    line-height: 20px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.description {
+    font-size: var(--font-size-xxxs);
+}

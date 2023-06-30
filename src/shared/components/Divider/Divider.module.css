@@ -3,3 +3,10 @@
     height: 0;
     border-top: 1px solid var(--primary-divider-color);
 }
+
+.horizontal {
+    width: 0;
+    height: 100%;
+    border-top: none;
+    border-left: 1px solid var(--primary-divider-color);
+}

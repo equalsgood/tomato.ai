@@ -1,0 +1,54 @@
+.careers {
+    margin: 35px 0 18px 130px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-container {
+    margin: 112px auto 0;
+}
+
+.info {
+    width: 580px;
+}
+
+.title {
+    line-height: 68px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    width: 503px;
+    line-height: 22px;
+    margin-bottom: 48px;
+}
+
+.image-container {
+    position: relative;
+    height: 620px;
+    width: 730px;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.action {
+    width: 306px;
+    height: 60px;
+    border-radius: 10px;
+    background: var(--reversed-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.action span {
+    color: var(--reversed-text-color);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-l);
+}

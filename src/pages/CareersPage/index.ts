@@ -1,0 +1,1 @@
+export { CareersPageAsync as CareersPage } from './components/CareersPage.async';

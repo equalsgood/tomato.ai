@@ -122,7 +122,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'Careers',
-                to: RoutePaths.HOME,
+                to: RoutePaths.CAREERS,
             },
             {
                 text: 'Blog',

@@ -1,0 +1,97 @@
+.role {
+    padding: 23px 29px 19px 31px;
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+    border-radius: 20px;
+    height: 129px;
+    width: 100%;
+}
+
+.icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: aquamarine;
+}
+
+.general-info-container {
+    margin: 0 57px 0 35px;
+    width: 747px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-container {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.location-container {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.location-container span {
+    color: var(--secondary-action-color);
+    font-size: var(--font-size-xxxs);
+    line-height: 20px;
+    font-weight: var(--font-weight-l);
+}
+
+.rate-info-container {
+    margin-left: 29px;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description {
+    font-size: var(--font-size-xxxs);
+    line-height: 20px;
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.rate-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rate {
+    text-align: right;
+    line-height: 30px;
+}
+
+.rate-badge {
+    text-align: left;
+    line-height: 30px;
+    font-size: var(--font-size-xxs);
+}
+
+.link {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+.link span {
+    color: var(--primary-action-color);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-l);
+    line-height: 32px;
+}
