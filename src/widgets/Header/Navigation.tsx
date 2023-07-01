@@ -144,7 +144,7 @@ const enterprisesLinks: Array<NavigationLinkProps> = [
 const companyLinks: Array<NavigationLinkProps> = [
     {
         text: 'About',
-        to: RoutePaths.HOME,
+        to: RoutePaths.ABOUT,
         variant: NavigationLinkVariants.DEFAULT,
     },
     {

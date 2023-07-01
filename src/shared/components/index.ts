@@ -12,6 +12,7 @@ import { Divider } from './Divider/Divider';
 import { Faq } from './Faq/Faq';
 import { Tooltip, TooltipVariants } from './Tooltip/Tooltip';
 import { Flag } from './Flag/Flag';
+import { Modal } from './Modal/Modal';
 
 export {
     Loader,
@@ -32,5 +33,6 @@ export {
     Faq,
     Tooltip,
     TooltipVariants,
-    Flag
+    Flag,
+    Modal
 };
