@@ -1,7 +1,7 @@
 import cls from './AboutIntroduction.module.css';
 import { Text, TextVariants } from 'shared/components';
 import { scrollSmoothTo } from 'shared/lib';
-import introImage from 'shared/assets/images/double-images/careers-1.png';
+import introImage from 'shared/assets/images/double-images/about-1.png';
 
 export const AboutIntroduction = () => {
     return (
@@ -18,6 +18,7 @@ export const AboutIntroduction = () => {
                 </div>
             </div>
             <div className={cls.imageContainer}>
+                <img alt="image of a working team partying" width={1000} src={introImage}/>
             </div>
         </section>
     );

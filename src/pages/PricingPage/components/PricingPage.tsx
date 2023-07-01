@@ -1,15 +1,18 @@
 import { ComparePlans, PlansIntroduction } from 'sections/pricing';
 import { FaqSection, SingleFaq } from 'sections/common';
+import cls from './PricingPage.module.css';
+import backgroundImage from 'shared/assets/images/bg/pricing-bg.png';
 
 const PricingPage = () => {
     return (
-        <main>
+        <main className={cls.main}>
             <PlansIntroduction/>
             <ComparePlans/>
             <FaqSection
                 iteratorKey="enterprise-calculator"
                 faqs={questions}
             />
+            <img alt="background image" src={backgroundImage} className={cls.image} />
         </main>
     );
 };

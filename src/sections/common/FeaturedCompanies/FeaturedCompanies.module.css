@@ -7,3 +7,26 @@
     align-items: center;
     overflow: hidden;
 }
+
+.titled {
+    height: 250px;
+    padding: 40px 100px 60px;
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--fourth-bg-color);
+}
+
+.title {
+    line-height: 36px;
+    font-size: var(--font-size-m);
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}

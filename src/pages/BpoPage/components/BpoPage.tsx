@@ -1,11 +1,11 @@
 import { BpoContent, BpoIntroduction } from 'sections/bpo';
-import { CtaTitle, FeaturedCompanies, InfoMenu } from 'sections/common';
+import { CtaTitle, FeaturedCompanies, FeaturedCompaniesVariants, InfoMenu } from 'sections/common';
 
 const BpoPage = () => {
     return (
         <main>
             <BpoIntroduction/>
-            <FeaturedCompanies/>
+            <FeaturedCompanies variant={FeaturedCompaniesVariants.DEFAULT}/>
             <BpoContent/>
             <InfoMenu/>
             <CtaTitle/>

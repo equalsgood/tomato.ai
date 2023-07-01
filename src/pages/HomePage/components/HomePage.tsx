@@ -1,6 +1,6 @@
 import React from 'react';
 import { Benefits, HomeComments, HomeIntroduction, Map, PoweredByAi } from 'sections/home';
-import { CtaTitle, FeaturedCompanies, InfoMenu } from 'sections/common';
+import { CtaTitle, FeaturedCompanies, FeaturedCompaniesVariants, InfoMenu } from 'sections/common';
 
 
 const HomePage = () => {
@@ -10,7 +10,7 @@ const HomePage = () => {
             <Benefits/>
             <HomeComments/>
             <InfoMenu/>
-            <FeaturedCompanies/>
+            <FeaturedCompanies variant={FeaturedCompaniesVariants.DEFAULT}/>
             <PoweredByAi/>
             <Map/>
             <CtaTitle/>
