@@ -1,10 +1,7 @@
 import cls from './RequestDemoForm.module.css';
-import { Button, ButtonVariants, Input, Select } from 'shared/components';
+import { Button, ButtonVariants, Input, PhoneNumberInput, Select } from 'shared/components';
 import { FormEvent, useEffect, useState } from 'react';
-import PhoneInput from 'react-phone-number-input';
 import { E164Number } from 'libphonenumber-js';
-import 'react-phone-number-input/style.css';
-import './RequestDemoForm.css';
 
 const companySizeOptions = ['10+ workers', '20+ workers', '30+ workers', '40+ workers', '50+ workers'];
 const interestsOptions = ['Improve voice quality1', 'Improve voice quality2', 'Improve voice quality3', 'Improve voice quality4'];
@@ -74,18 +71,10 @@ export const RequestDemoForm = () => {
                     onInputChange={(value) => setEmailValue(value)}
                     classNamesProps={cls.email}
                 />
-                <div className="request-demo-number-input">
-                    <span className={cls.labelText}>Phone number</span>
-                    <PhoneInput
-                        international
-                        limitMaxLength
-                        countryCallingCodeEditable={false}
-                        defaultCountry="US"
-                        placeholder="Enter phone number"
-                        value={numberValue}
-                        onChange={setNumberValue}
-                    />
-                </div>
+                <PhoneNumberInput
+                    value={numberValue}
+                    onChange={(value) => setNumberValue(value)}
+                />
                 <div className={cls.company}>
                     <Input
                         label="Company Name"

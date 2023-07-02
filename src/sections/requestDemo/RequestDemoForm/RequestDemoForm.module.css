@@ -34,17 +34,6 @@
     margin-bottom: 30px;
 }
 
-.number .PhoneInputCountry {
-    background: red;
-}
-
-.label-text {
-    color: var(--reversed-text-color);
-    font-weight: var(--font-weight-l);
-    font-size: var(--font-size-xxs);
-    line-height: 27px;
-}
-
 .submitted {
     background: rgba(0, 189, 80, 0.1);
 }

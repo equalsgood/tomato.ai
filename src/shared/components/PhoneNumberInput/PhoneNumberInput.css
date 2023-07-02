@@ -7,7 +7,7 @@
     --PhoneInputCountrySelectArrow-color: #fff !important;
 }
 
-.request-demo-number-input {
+.phone-number-input {
     margin-bottom: 34px;
     display: flex;
     flex-direction: column;
@@ -15,13 +15,13 @@
     width: 100%;
 }
 
-.request-demo-number-input .PhoneInput {
+.phone-number-input .PhoneInput {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.request-demo-number-input .PhoneInputCountry {
+.phone-number-input .PhoneInputCountry {
     width: 110px;
     height: 70px;
     display: flex;
@@ -33,7 +33,7 @@
     margin: 0;
 }
 
-.request-demo-number-input .PhoneInputInput {
+.phone-number-input .PhoneInputInput {
     padding: 22px 0 21px 25px;
     border: none;
     width: 100%;
@@ -47,17 +47,17 @@
     align-items: center;
 }
 
-.request-demo-number-input .PhoneInputInput::placeholder {
+.phone-number-input .PhoneInputInput::placeholder {
     color: var(--third-text-color);
     font-weight: var(--font-weight-m);
     font-size: var(--font-size-xs);
 }
 
-.request-demo-number-input .PhoneInputInput:focus {
+.phone-number-input .PhoneInputInput:focus {
     outline: solid 1px var(--primary-action-color);
 }
 
-.request-demo-number-input option {
+.phone-number-input option {
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-m);
     font-size: var(--font-size-xs);

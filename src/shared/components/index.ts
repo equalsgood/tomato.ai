@@ -13,6 +13,7 @@ import { Faq } from './Faq/Faq';
 import { Tooltip, TooltipVariants } from './Tooltip/Tooltip';
 import { Flag } from './Flag/Flag';
 import { Modal } from './Modal/Modal';
+import { PhoneNumberInput } from './PhoneNumberInput/PhoneNumberInput';
 
 export {
     Loader,
@@ -34,5 +35,6 @@ export {
     Tooltip,
     TooltipVariants,
     Flag,
-    Modal
+    Modal,
+    PhoneNumberInput
 };
