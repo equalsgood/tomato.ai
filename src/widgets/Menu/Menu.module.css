@@ -1,0 +1,24 @@
+.menu-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 5px;
+}
+
+.select {
+    width: 380px;
+    height: 76px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--primary-bg-color);
+    z-index: var(--separate-bg-z-index);
+    transition: all 0.3s;
+}
+
+.dark .select {
+    background: var(--reversed-bg-color);
+}
+

@@ -1,18 +1,19 @@
 import React, { memo } from 'react';
-import cls from './InfoMenuItem.module.css';
+import cls from './SingleMenuItem.module.css';
 import { Text, TextVariants } from 'shared/components';
-import { menuItem } from '../InfoMenu';
+import { MenuItem } from '../../Menu';
 
-interface InfoMenuItemProps {
+interface SingleMenuItemProps {
     active: boolean;
-    item: menuItem;
+    item: MenuItem;
     index: number;
     onItemChange: (index: number) => void;
     isEnterprise?: boolean | undefined;
+    withIcon: boolean;
 }
 
-export const InfoMenuItem = memo((props: InfoMenuItemProps) => {
-    const { active, item, index, onItemChange, isEnterprise = false } = props;
+export const SingleMenuItem = memo((props: SingleMenuItemProps) => {
+    const { active, item, index, onItemChange, isEnterprise = false, withIcon } = props;
 
     if(isEnterprise) {
         return (
@@ -20,7 +21,7 @@ export const InfoMenuItem = memo((props: InfoMenuItemProps) => {
                 onClick={() => onItemChange(index)}
                 className={cls.menuItem}
             >
-                {item.iconLight}
+                { withIcon && item.iconLight}
                 <Text
                     tag="p"
                     variant={TextVariants.SUBTITLE_MEDIUM_REVERSED}
@@ -36,10 +37,8 @@ export const InfoMenuItem = memo((props: InfoMenuItemProps) => {
             onClick={() => onItemChange(index)}
             className={cls.menuItem}
         >
-            { active ?
-                item.iconDark :
-                item.iconLight
-            }
+            { withIcon && active && item.iconDark }
+            { withIcon && !active && item.iconLight }
             <Text
                 tag="p"
                 variant={active ? TextVariants.SUBTITLE_MEDIUM : TextVariants.SUBTITLE_MEDIUM_REVERSED}
@@ -49,4 +48,4 @@ export const InfoMenuItem = memo((props: InfoMenuItemProps) => {
         </li>
     );
 });
-InfoMenuItem.displayName = 'InfoMenuItem';
+SingleMenuItem.displayName = 'SingleMenuItem';
