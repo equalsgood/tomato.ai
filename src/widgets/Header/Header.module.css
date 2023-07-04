@@ -4,13 +4,19 @@
     padding: 0 100px;
     display: flex;
     gap: 380px;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: var(--header-z-index);
+}
+
+.logo {
+    width: 15%;
+    display: flex;
+
 }
 
 .dark {

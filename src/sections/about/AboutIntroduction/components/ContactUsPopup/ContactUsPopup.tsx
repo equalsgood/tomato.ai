@@ -45,7 +45,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                     <Input
                         label="Last Name"
                         type="text"
-                        placeholder="Jones"
+                        placeholder="Smith"
                         value={lastNameValue}
                         onInputChange={(value) => setLastNameValue(value)}
                         classNamesProps={cls.input}
@@ -54,7 +54,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                 <Input
                     label="Business Email"
                     type="email"
-                    placeholder="Email@gmail.com"
+                    placeholder="john.smith@company.com"
                     value={emailValue}
                     onInputChange={(value) => setEmailValue(value)}
                     classNamesProps={classNames(cls.email, cls.input)}
@@ -74,6 +74,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                 />
                 <Input
                     rows={3}
+                    max={500}
                     label="Any additional notes for us?"
                     type="text"
                     placeholder="Leave your message"

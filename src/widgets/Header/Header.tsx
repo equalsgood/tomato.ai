@@ -17,7 +17,7 @@ export const Header = memo(() => {
 
     return (
         <header className={classNames(cls.header, { [cls.dark]: isCurrentLocationEnterprise })}>
-            <Link to={RoutePaths.HOME}>
+            <Link className={cls.logo} to={RoutePaths.HOME}>
                 {isCurrentLocationEnterprise ?
                     <HeaderLightLogo/> :
                     <HeaderLogo/>

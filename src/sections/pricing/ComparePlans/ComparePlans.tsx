@@ -1,14 +1,22 @@
 import cls from './ComparePlans.module.css';
-import { Button, ButtonVariants } from 'shared/components';
+import { Button, ButtonVariants, NavigationLink, NavigationLinkVariants } from 'shared/components';
 import ArrowIcon from 'shared/assets/icons/arrow-blue-right.svg';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import AvailableIcon from 'shared/assets/icons/plans/available.svg';
 import UnavailableIcon from 'shared/assets/icons/plans/unavailable.svg';
 import VipIcon from 'shared/assets/icons/plans/vip.svg';
+import { RoutePaths } from 'app/providers/AppRouter';
+import { Plans, requestDemoActions } from 'models/requestDemo';
+import { useAppDispatch } from 'hooks';
 
 export const ComparePlans = () => {
+    const dispatch = useAppDispatch();
     const [open, setOpen] = useState(false);
+
+    const clickLinkHandler = (plan: Plans) => {
+        dispatch(requestDemoActions.changeSelectedPlan(plan));
+    };
 
     return (
         <section className={cls.compare}>
@@ -80,10 +88,10 @@ export const ComparePlans = () => {
                         )}
                         <tr>
                             <td/>
-                            <td><Button type="button" variant={ButtonVariants.ACTION} text="Get a Demo" classNamesProps={cls.getDemo}/></td>
-                            <td><Button type="button" variant={ButtonVariants.ACTION} text="Get a Demo" classNamesProps={cls.getDemo}/></td>
-                            <td><Button type="button" variant={ButtonVariants.ACTION} text="Get a Demo" classNamesProps={cls.getDemo}/></td>
-                            <td><Button type="button" variant={ButtonVariants.ACTION} text="Get a Demo" classNamesProps={cls.getDemo}/></td>
+                            <td><NavigationLink onClick={() => clickLinkHandler(Plans.BRONZE)} text="Get a Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} classNamesProps={cls.getDemo} /></td>
+                            <td><NavigationLink onClick={() => clickLinkHandler(Plans.SILVER)} text="Get a Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} classNamesProps={cls.getDemo} /></td>
+                            <td><NavigationLink onClick={() => clickLinkHandler(Plans.GOLD)} text="Get a Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} classNamesProps={cls.getDemo} /></td>
+                            <td><NavigationLink onClick={() => clickLinkHandler(Plans.PLATINUM)} text="Get a Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} classNamesProps={cls.getDemo} /></td>
                         </tr>
                     </tbody>
                 </table>

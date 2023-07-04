@@ -5,6 +5,7 @@ import BronzeIcon from 'shared/assets/icons/plans/bronze.svg';
 import SilverIcon from 'shared/assets/icons/plans/silver.svg';
 import GoldIcon from 'shared/assets/icons/plans/gold.svg';
 import PlatinumIcon from 'shared/assets/icons/plans/platinum.svg';
+import { Plans } from 'models/requestDemo';
 
 export const PlansIntroduction = () => {
     return (
@@ -34,16 +35,16 @@ interface PlanFeature {
 
 export interface Plan {
     mostPopular: boolean,
-    name: string,
+    name: Plans,
     icon: JSX.Element,
     cost: string,
-    features: Array<PlanFeature>
+    features: Array<PlanFeature>,
 }
 
 const plans: Array<Plan> = [
     {
         mostPopular: false,
-        name: 'Bronze',
+        name: Plans.BRONZE,
         icon: <BronzeIcon/>,
         cost: 'Free',
         features: [
@@ -71,7 +72,7 @@ const plans: Array<Plan> = [
     },
     {
         mostPopular: false,
-        name: 'Silver',
+        name: Plans.SILVER,
         icon: <SilverIcon/>,
         cost: '$17/Month',
         features: [
@@ -99,7 +100,7 @@ const plans: Array<Plan> = [
     },
     {
         mostPopular: true,
-        name: 'Gold',
+        name: Plans.GOLD,
         icon: <GoldIcon/>,
         cost: '$20/Month',
         features: [
@@ -127,7 +128,7 @@ const plans: Array<Plan> = [
     },
     {
         mostPopular: false,
-        name: 'Platinum',
+        name: Plans.PLATINUM,
         icon: <PlatinumIcon/>,
         cost: 'Let’s Talk',
         features: [

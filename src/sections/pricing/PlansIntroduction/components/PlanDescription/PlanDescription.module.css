@@ -15,7 +15,7 @@
     height: 720px;
     width: 295px;
     border-radius: 20px;
-    box-shadow: 0px 10px 40px 0px rgba(22, 20, 20, 0.08);
+    box-shadow: 0 10px 40px 0 rgba(22, 20, 20, 0.08);
     padding: 49px 26px 29px 29px;
     display: flex;
     flex-direction: column;
@@ -115,4 +115,8 @@
     background: linear-gradient(180deg, #FFB800 14.07%, rgba(255, 153, 0, 0.25) 75.25%);
     height: 712px;
     clip-path: polygon(0 0, 100% 0, 293px 85%, 2px 85%)
+}
+
+.link {
+    height: 66px;
 }

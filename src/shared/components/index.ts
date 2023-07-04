@@ -14,6 +14,7 @@ import { Tooltip, TooltipVariants } from './Tooltip/Tooltip';
 import { Flag } from './Flag/Flag';
 import { Modal } from './Modal/Modal';
 import { PhoneNumberInput } from './PhoneNumberInput/PhoneNumberInput';
+import { Checkbox } from './Checkbox/Checkbox';
 
 export {
     Loader,
@@ -36,5 +37,6 @@ export {
     TooltipVariants,
     Flag,
     Modal,
-    PhoneNumberInput
+    PhoneNumberInput,
+    Checkbox
 };

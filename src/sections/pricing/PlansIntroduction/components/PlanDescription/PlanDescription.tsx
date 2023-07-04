@@ -1,14 +1,21 @@
 import cls from './PlanDescription.module.css';
 import { Plan } from '../../PlansIntroduction';
-import { Button, ButtonVariants, Divider, Text, TextVariants } from 'shared/components';
+import { Divider, NavigationLink, NavigationLinkVariants, Text, TextVariants } from 'shared/components';
 import AvailableIcon from 'shared/assets/icons/plans/available.svg';
 import UnavailableIcon from 'shared/assets/icons/plans/unavailable.svg';
 import VipIcon from 'shared/assets/icons/plans/vip.svg';
 import classNames from 'classnames';
 import PopularTagIcon from 'shared/assets/icons/plans/popular.svg';
+import { RoutePaths } from 'app/providers/AppRouter';
+import { requestDemoActions } from 'models/requestDemo';
+import { useAppDispatch } from 'hooks';
 
 export const PlanDescription = (props: Plan) => {
+    const dispatch = useAppDispatch();
     const { icon, name, cost, features, mostPopular } = props;
+    const clickLinkHandler = () => {
+        dispatch(requestDemoActions.changeSelectedPlan(name));
+    };
 
     return (
         <li className={classNames(cls.description, { [cls.mostPopular]: mostPopular })}>
@@ -39,10 +46,12 @@ export const PlanDescription = (props: Plan) => {
                         <Text tag="p" variant={TextVariants.PARAGRAPH_DARK_MEDIUM} classNamesProps={cls.costBadge}>COST:</Text>
                         <Text tag="p" variant={TextVariants.SUBTITLE_MEDIUM} classNamesProps={cls.cost}>{cost}</Text>
                     </div>
-                    <Button
-                        type="button"
+                    <NavigationLink
+                        classNamesProps={cls.link}
+                        onClick={clickLinkHandler}
+                        to={RoutePaths.REQUEST_DEMO}
                         text="Choose Plan"
-                        variant={ mostPopular ? ButtonVariants.ACTION : ButtonVariants.OUTLINED}
+                        variant={ mostPopular ? NavigationLinkVariants.ACTION : NavigationLinkVariants.OUTLINED}
                     />
                 </div>
             </div>

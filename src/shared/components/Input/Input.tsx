@@ -5,21 +5,22 @@ import { InputValidations, validation } from 'shared/lib';
 import classNames from 'classnames';
 
 interface InputProps {
-    required?: boolean,
-    label: string,
-    type: string,
-    info?: string,
-    placeholder: string,
-    validationType?: InputValidations,
-    value: string,
-    onInputChange: (value: string) => void,
-    classNamesProps?: string,
-    rows?: number,
-    doubleLabel?: boolean,
+    required?: boolean;
+    label: string;
+    type: string;
+    info?: string;
+    placeholder: string;
+    validationType?: InputValidations;
+    value: string;
+    onInputChange: (value: string) => void;
+    classNamesProps?: string;
+    rows?: number;
+    doubleLabel?: boolean;
+    max?: number;
 }
 
 export const Input = memo((props: InputProps) => {
-    const { label, type, info, placeholder, validationType, value, onInputChange, required, classNamesProps, rows, doubleLabel } = props;
+    const { label, type, info, placeholder, validationType, value, onInputChange, required, classNamesProps, rows, doubleLabel, max } = props;
     const [inputValue, setInputValue] = useState(value);
 
     const changeHandler = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
@@ -51,6 +52,7 @@ export const Input = memo((props: InputProps) => {
                     className={classNames(cls.input, cls.area)}
                     placeholder={placeholder}
                     rows={rows}
+                    maxLength={max}
                 /> :
                 <input
                     required={required}
@@ -59,6 +61,7 @@ export const Input = memo((props: InputProps) => {
                     className={cls.input}
                     type={type}
                     placeholder={placeholder}
+                    maxLength={max}
                 />
             }
         </div>

@@ -35,5 +35,10 @@
 }
 
 .submitted {
-    background: rgba(0, 189, 80, 0.1);
+    background: rgba(0, 189, 80, 0.4);
+}
+
+.checkbox {
+    background: var(--primary-select-bg);
+    width: 400px;
 }
