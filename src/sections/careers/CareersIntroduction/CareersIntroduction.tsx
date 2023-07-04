@@ -10,7 +10,7 @@ export const CareersIntroduction = () => {
                 <div className={cls.info}>
                     <Text tag="h1" variant={TextVariants.TITLE} classNamesProps={cls.title}>Join our Tomato.ai team right now!</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>AI powered voice filter clarifies offshore agent voices as they speak. AI powered voice filter clarifies offshore agent voices as they speak.</Text>
-                    <a onClick={() => scrollSmoothTo('available-roles')} className={cls.action}>
+                    <a onClick={() => scrollSmoothTo({ elementId: 'available-roles', block: 'center' })} className={cls.action}>
                         <span>Check available roles</span>
                     </a>
                 </div>
