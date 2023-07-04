@@ -9,6 +9,7 @@ import { PricingPage } from 'pages/PricingPage';
 import { CareersPage } from 'pages/CareersPage';
 import { AboutPage } from 'pages/AboutPage';
 import { TermsPage, GuidelinesPage, PrivacyPage, EthicsPage, SecurityPage } from 'pages/terms';
+import { BlogPage } from 'pages/BlogPage';
 
 export enum RoutePaths {
     HOME = '/',
@@ -25,6 +26,7 @@ export enum RoutePaths {
     PRIVACY = '/privacy',
     ETHICS = '/ethics',
     SECURITY = '/security',
+    BLOG = '/blog',
     NO_MATCH = '*'
 }
 
@@ -84,6 +86,10 @@ export const routeConfig: Array<RouteProps> = [
     {
         path: RoutePaths.GUIDELINES,
         element: <GuidelinesPage/>,
+    },
+    {
+        path: RoutePaths.BLOG,
+        element: <BlogPage/>,
     },
     {
         path: RoutePaths.NO_MATCH,

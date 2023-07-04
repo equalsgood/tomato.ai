@@ -175,7 +175,7 @@ const safetyLinks: Array<NavigationLinkProps> = [
 const navigationLinks: Array<NavigationLinkProps> = [
     {
         text: 'Blog',
-        to: RoutePaths.HOME,
+        to: RoutePaths.BLOG,
         variant: NavigationLinkVariants.DEFAULT,
     },
     {

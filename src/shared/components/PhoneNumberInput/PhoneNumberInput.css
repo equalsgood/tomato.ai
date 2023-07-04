@@ -40,7 +40,7 @@
     height: 70px;
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-m);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     background: var(--primary-input-bg);
     border-radius: 10px;
     display: flex;
@@ -50,7 +50,7 @@
 .phone-number-input .PhoneInputInput::placeholder {
     color: var(--third-text-color);
     font-weight: var(--font-weight-m);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
 }
 
 .phone-number-input .PhoneInputInput:focus {
@@ -60,7 +60,7 @@
 .phone-number-input option {
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-m);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     cursor: pointer;
     background: var(--primary-input-bg);
 }

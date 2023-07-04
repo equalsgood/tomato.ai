@@ -15,12 +15,19 @@
     --font-size-xxxl: 55px;
     --font-size-xxl: 50px;
     --font-size-xl: 40px;
-    --font-size-l: 35px;
-    --font-size-m: 25px;
-    --font-size-s: 20px;
-    --font-size-xs: 18px;
-    --font-size-xxs: 16px;
+    --font-size-35: 35px;
+    --font-size-32: 32px;
+    --font-size-25: 25px;
+    --font-size-20: 20px;
+    --font-size-18: 18px;
+    --font-size-16: 16px;
     --font-size-xxxs: 14px;
+
+    --line-height-55: 55px;
+    --line-height-50: 50px;
+    --line-height-36: 36px;
+    --line-height-24: 24px;
+    --line-height-21: 21px;
 
     --font-weight-xl: 900;
     --font-weight-l: 700;

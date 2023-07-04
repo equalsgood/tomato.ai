@@ -14,7 +14,7 @@
 .label-text {
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
     line-height: 27px;
 }
 
@@ -29,7 +29,7 @@
     height: 70px;
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-m);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     background: var(--primary-input-bg);
     border-radius: 10px;
     display: flex;
@@ -39,7 +39,7 @@
 .input::placeholder {
     color: var(--third-text-color);
     font-weight: var(--font-weight-m);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
 }
 
 .input:focus {

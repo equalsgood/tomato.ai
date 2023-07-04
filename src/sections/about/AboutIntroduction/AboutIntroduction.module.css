@@ -58,6 +58,6 @@
 
 .action span {
     color: var(--reversed-text-color);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     font-weight: var(--font-weight-l);
 }

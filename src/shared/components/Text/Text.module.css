@@ -54,61 +54,61 @@
 
 .title-extra-small {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-35);
     color: var(--primary-title-color);
 }
 
 .title-extra-small-reversed {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-35);
     color: var(--reversed-title-color);
 }
 
 .subtitle-bold-reversed {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-25);
     color: var(--reversed-text-color);
 }
 
 .subtitle-medium {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-20);
     color: var(--primary-title-color);
 }
 
 .subtitle-medium-reversed {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-20);
     color: var(--reversed-text-color);
 }
 
 .subtitle-small {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     color: var(--primary-title-color);
 }
 
 .paragraph-title-medium {
     color: var(--third-text-color);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-20);
     font-weight: var(--font-weight-m);
 }
 
 .paragraph-title {
     color: var(--third-text-color);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     font-weight: var(--font-weight-m);
 }
 
 .paragraph-dark-medium {
     color: var(--primary-text-color);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-20);
     font-weight: var(--font-weight-m);
 }
 
 .paragraph-dark {
     color: var(--primary-text-color);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     font-weight: var(--font-weight-m);
 }
 
@@ -120,14 +120,14 @@
 
 .paragraph-black {
     color: var(--secondary-text-color);
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
     font-weight: var(--font-weight-s);
     font-style: italic;
 }
 
 .paragraph-reversed {
     color: var(--reversed-text-color);
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
     font-weight: var(--font-weight-s);
     line-height: 20px;
 }
@@ -141,19 +141,19 @@
 
 .action {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     color: var(--primary-action-color);
 }
 
 .action-red {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     color: var(--secondary-action-text-color);
 }
 
 .badge {
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
     color: var(--primary-action-color);
     display: flex;
     align-items: center;
@@ -166,12 +166,12 @@
 
 .badge-blue {
     font-weight: var(--font-weight-m);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     color: var(--secondary-action-color);
 }
 
 .default {
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
 }
 
 .default-small {
@@ -182,13 +182,13 @@
 .subheader-light {
     color: var(--reversed-title-color);
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-20);
 }
 
 .subheader-light-small {
     color: var(--reversed-title-color);
     font-weight: var(--font-weight-l);
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
     line-height: 18px;
 }
 

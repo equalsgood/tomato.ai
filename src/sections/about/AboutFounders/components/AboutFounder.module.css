@@ -30,7 +30,7 @@
 
 .short-info .position {
     color: var(--primary-action-color);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-20);
     font-weight: var(--font-weight-s);
     line-height: 21px;
 }
@@ -77,7 +77,7 @@
 
 .initials .position {
     color: var(--primary-title-color);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-20);
     font-weight: var(--font-weight-m);
     line-height: 22px;
 }

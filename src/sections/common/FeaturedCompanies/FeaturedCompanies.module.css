@@ -20,8 +20,8 @@
 }
 
 .title {
-    line-height: 36px;
-    font-size: var(--font-size-m);
+    line-height: var(--line-height-36);
+    font-size: var(--font-size-25);
 }
 
 .logos {

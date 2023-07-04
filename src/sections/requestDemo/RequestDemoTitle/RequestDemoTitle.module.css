@@ -19,5 +19,5 @@
 .paragraph {
     width: 561px;
     text-align: center;
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
 }

@@ -16,7 +16,7 @@
 
 .title {
     font-size: 22px;
-    line-height: 36px;
+    line-height: var(--line-height-36);
 }
 
 .description-container {

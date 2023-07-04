@@ -73,7 +73,7 @@
 }
 
 .benefits-title, .plan-title {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     font-weight: var(--font-weight-l);
     text-transform: uppercase;
 }
@@ -90,7 +90,7 @@
 
 .section-title {
     color: var(--primary-title-color);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     font-weight: var(--font-weight-xl);
     line-height: 34px;
     padding: 30px 0 8px 63px;

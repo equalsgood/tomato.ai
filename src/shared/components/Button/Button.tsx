@@ -6,7 +6,9 @@ export enum ButtonVariants {
     ACTION = 'action',
     ACTION_BLUE = 'actionBlue',
     OUTLINED = 'outlined',
+    TEXT = 'text',
     CLOSE = 'close',
+    OPTION = 'option'
 }
 
 interface ButtonProps {

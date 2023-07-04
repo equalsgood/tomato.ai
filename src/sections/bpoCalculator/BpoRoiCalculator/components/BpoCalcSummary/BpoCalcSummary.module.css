@@ -4,7 +4,7 @@
 }
 
 .title {
-    font-size: 32px;
+    font-size: var(--font-size-32);
     line-height: 58px;
 }
 

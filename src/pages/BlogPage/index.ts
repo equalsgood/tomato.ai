@@ -1,0 +1,1 @@
+export { BlogPageAsync as BlogPage } from './components/BlogPage.async';

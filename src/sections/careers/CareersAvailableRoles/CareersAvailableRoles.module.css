@@ -11,8 +11,8 @@
 }
 
 .title {
-    font-size: var(--font-size-l);
-    line-height: 50px;
+    font-size: var(--font-size-35);
+    line-height: var(--line-height-50);
     margin-bottom: 30px;
 }
 

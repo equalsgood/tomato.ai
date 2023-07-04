@@ -75,7 +75,7 @@
 .rate-badge {
     text-align: left;
     line-height: 30px;
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
 }
 
 .link {
@@ -91,7 +91,7 @@
 
 .link span {
     color: var(--primary-action-color);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-18);
     font-weight: var(--font-weight-l);
     line-height: 32px;
 }

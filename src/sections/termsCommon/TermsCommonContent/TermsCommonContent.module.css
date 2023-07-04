@@ -3,7 +3,7 @@
 }
 
 .title {
-    line-height: 50px;
+    line-height: var(--line-height-50);
     margin-bottom: 37px;
 }
 
@@ -21,10 +21,10 @@
 
 .subtitle {
     line-height: 25px;
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-25);
 }
 
 .paragraph {
     line-height: 22px;
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
 }

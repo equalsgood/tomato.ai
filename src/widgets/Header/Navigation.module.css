@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     gap: 13px;
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
     font-weight: var(--font-weight-m);
     color: var(--third-text-color);
 }
@@ -24,6 +24,6 @@
 .action-link {
     width: 202px;
     height: 55px;
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-16);
 }
 
