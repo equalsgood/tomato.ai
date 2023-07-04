@@ -8,7 +8,7 @@ import { RequestDemoPage } from 'pages/RequestDemoPage';
 import { PricingPage } from 'pages/PricingPage';
 import { CareersPage } from 'pages/CareersPage';
 import { AboutPage } from 'pages/AboutPage';
-import { TermsPage } from 'pages/terms';
+import { TermsPage, GuidelinesPage, PrivacyPage, EthicsPage, SecurityPage } from 'pages/terms';
 
 export enum RoutePaths {
     HOME = '/',
@@ -21,6 +21,10 @@ export enum RoutePaths {
     CAREERS = '/careers',
     ABOUT = '/about',
     TERMS = '/terms',
+    GUIDELINES = '/guidelines',
+    PRIVACY = '/privacy',
+    ETHICS = '/ethics',
+    SECURITY = '/security',
     NO_MATCH = '*'
 }
 
@@ -64,6 +68,22 @@ export const routeConfig: Array<RouteProps> = [
     {
         path: RoutePaths.TERMS,
         element: <TermsPage/>,
+    },
+    {
+        path: RoutePaths.PRIVACY,
+        element: <PrivacyPage/>,
+    },
+    {
+        path: RoutePaths.SECURITY,
+        element: <SecurityPage/>,
+    },
+    {
+        path: RoutePaths.ETHICS,
+        element: <EthicsPage/>,
+    },
+    {
+        path: RoutePaths.GUIDELINES,
+        element: <GuidelinesPage/>,
     },
     {
         path: RoutePaths.NO_MATCH,

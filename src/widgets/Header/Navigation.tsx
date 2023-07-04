@@ -162,12 +162,12 @@ const companyLinks: Array<NavigationLinkProps> = [
 const safetyLinks: Array<NavigationLinkProps> = [
     {
         text: 'Security',
-        to: RoutePaths.HOME,
+        to: RoutePaths.SECURITY,
         variant: NavigationLinkVariants.DEFAULT,
     },
     {
         text: 'Ethics',
-        to: RoutePaths.HOME,
+        to: RoutePaths.ETHICS,
         variant: NavigationLinkVariants.DEFAULT,
     }
 ];

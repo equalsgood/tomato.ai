@@ -133,7 +133,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'Brand guidelines',
-                to: RoutePaths.HOME,
+                to: RoutePaths.GUIDELINES,
             },
         ]
     },
@@ -142,11 +142,11 @@ const footerConfig: Array<IFooterColumn> = [
         content: [
             {
                 text: 'Security',
-                to: RoutePaths.HOME,
+                to: RoutePaths.SECURITY,
             },
             {
                 text: 'Ethics',
-                to: RoutePaths.HOME,
+                to: RoutePaths.ETHICS,
             },
             {
                 text: 'Terms',
@@ -154,7 +154,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'Privacy',
-                to: RoutePaths.HOME,
+                to: RoutePaths.PRIVACY,
             },
         ]
     },
