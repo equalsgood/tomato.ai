@@ -1,7 +1,9 @@
 import cls from './ContactUsPopup.module.css';
+import './ContactUsPopup.css';
 import { Modal, Text, TextVariants, Input, PhoneNumberInput, ButtonVariants, Button } from 'shared/components';
 import { useEffect, useState } from 'react';
 import { E164Number } from 'libphonenumber-js';
+import classNames from 'classnames';
 
 interface ContactUsPopupProps {
     open: boolean,
@@ -30,7 +32,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
     return (
         <Modal open={open} onClose={onClose}>
             <form className={cls.content}>
-                <Text tag="h2" variant={TextVariants.TITLE_MEDIUM_REVERSED} classNamesProps={cls.title}>Let’s Talk!</Text>
+                <Text tag="h2" variant={TextVariants.SUBTITLE_BOLD_REVERSED} classNamesProps={cls.title}>Let’s Talk!</Text>
                 <div className={cls.initialsContainer}>
                     <Input
                         label="First Name"
@@ -38,6 +40,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                         placeholder="John"
                         value={firstNameValue}
                         onInputChange={(value) => setFirstNameValue(value)}
+                        classNamesProps={cls.input}
                     />
                     <Input
                         label="Last Name"
@@ -45,6 +48,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                         placeholder="Jones"
                         value={lastNameValue}
                         onInputChange={(value) => setLastNameValue(value)}
+                        classNamesProps={cls.input}
                     />
                 </div>
                 <Input
@@ -53,11 +57,12 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                     placeholder="Email@gmail.com"
                     value={emailValue}
                     onInputChange={(value) => setEmailValue(value)}
-                    classNamesProps={cls.email}
+                    classNamesProps={classNames(cls.email, cls.input)}
                 />
                 <PhoneNumberInput
                     value={numberValue}
                     onChange={(value) => setNumberValue(value)}
+                    classNamesProps="contact-us-phone-input"
                 />
                 <Input
                     label="Offshoring Countries"
@@ -65,16 +70,16 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                     placeholder=""
                     value={countriesValue}
                     onInputChange={(value) => setCountriesValue(value)}
-                    classNamesProps={cls.countries}
+                    classNamesProps={classNames(cls.countries, cls.input)}
                 />
                 <Input
-                    rows={4}
+                    rows={3}
                     label="Any additional notes for us?"
                     type="text"
                     placeholder="Leave your message"
                     value={noteValue}
                     onInputChange={(value) => setNoteValue(value)}
-                    classNamesProps={cls.note}
+                    classNamesProps={classNames(cls.note, cls.input)}
                 />
                 <Button
                     type="submit"

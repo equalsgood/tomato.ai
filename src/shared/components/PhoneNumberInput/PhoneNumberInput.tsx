@@ -3,16 +3,18 @@ import PhoneInput from 'react-phone-number-input';
 import './PhoneNumberInput.css';
 import { E164Number } from 'libphonenumber-js';
 import 'react-phone-number-input/style.css';
+import classNames from 'classnames';
 
 interface PhoneNumberInputProps {
-    value: E164Number | undefined,
-    onChange: (value?: E164Number | undefined) => void
+    value: E164Number | undefined;
+    onChange: (value?: E164Number | undefined) => void;
+    classNamesProps?: string
 }
 
 export const PhoneNumberInput = (props: PhoneNumberInputProps) => {
-    const { value, onChange } = props;
+    const { value, onChange, classNamesProps } = props;
     return (
-        <div className="phone-number-input">
+        <div className={classNames('phone-number-input', classNamesProps)}>
             <span className={cls.labelText}>Phone number</span>
             <PhoneInput
                 international

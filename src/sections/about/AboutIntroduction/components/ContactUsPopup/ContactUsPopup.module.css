@@ -1,6 +1,6 @@
 .content {
-    padding: 43px 39px 42px 41px;
-    width: 906px;
+    padding: 32px 29px 32px 31px;
+    width: 750px;
     border-radius: 20px;
     background: var(--reversed-bg-color);
     display: flex;
@@ -9,32 +9,36 @@
 }
 
 .title {
-    font-size: 45px;
-    line-height: 50px;
-    margin-bottom: 45px;
+    font-size: 32px;
+    line-height: 41px;
+    margin-bottom: 42px;
 }
 
 .initials-container {
     width: 100%;
     display: flex;
     gap: 26px;
-    margin-bottom: 27px;
+    margin-bottom: 23px;
 }
 
 .email {
-    margin-bottom: 23px;
+    margin-bottom: 20px;
 }
 
 .countries {
-    margin-bottom: 23px;
+    margin-bottom: 19px;
 }
 
 .note {
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
 .close {
     position: absolute;
-    top: 38px;
-    right: 39px;
+    top: 29px;
+    right: 26px;
+}
+
+.input input {
+    height: 58px;
 }
