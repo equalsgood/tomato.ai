@@ -23,8 +23,9 @@ export const SingleMenuItem = memo((props: SingleMenuItemProps) => {
             >
                 { withIcon && item.iconLight}
                 <Text
-                    tag="p"
+                    tag="span"
                     variant={TextVariants.SUBTITLE_MEDIUM_REVERSED}
+                    classNamesProps={cls.title}
                 >
                     {item.title}
                 </Text>
@@ -42,6 +43,7 @@ export const SingleMenuItem = memo((props: SingleMenuItemProps) => {
             <Text
                 tag="p"
                 variant={active ? TextVariants.SUBTITLE_MEDIUM : TextVariants.SUBTITLE_MEDIUM_REVERSED}
+                classNamesProps={cls.title}
             >
                 {item.title}
             </Text>

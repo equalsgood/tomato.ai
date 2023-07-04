@@ -1,5 +1,5 @@
 .menu-item {
-    padding: 21px 36px;
+    padding: 17px 36px 18px;
     display: flex;
     align-items: center;
     gap: 22px;
@@ -7,4 +7,8 @@
     transition: all 0.3s;
     z-index: var(--separate-content-z-index);
     width: 380px;
+}
+
+.title {
+    line-height: 30px;
 }

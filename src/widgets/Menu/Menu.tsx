@@ -1,17 +1,19 @@
 import cls from './Menu.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { SingleMenuItem } from './components/SingleMenuItem/SingleMenuItem';
 
-const MENU_ITEM_HEIGHT = 70;
+const MENU_ITEM_HEIGHT = 65;
 
 export interface MenuItem {
-    title: string,
-    iconLight?: JSX.Element,
-    iconDark?: JSX.Element,
+    title: string;
+    iconLight?: JSX.Element;
+    iconDark?: JSX.Element;
+    relatedSectionId?: string;
 }
 
 interface MenuProps {
+    currentMenuItemIndex: number;
     isEnterprise?: boolean | undefined;
     items: Array<MenuItem>;
     onItemChange: (itemIndex: number) => void;
@@ -19,25 +21,22 @@ interface MenuProps {
 }
 
 export const Menu = (props: MenuProps) => {
-    const { isEnterprise, items, onItemChange, withIcon } = props;
-    const [currentActiveMenuItem, setCurrentActiveMenuItem] = useState<number>(0);
+    const { isEnterprise, items, onItemChange, withIcon, currentMenuItemIndex } = props;
     const [selectOffset, setSelectOffset] = useState<string>('translateY(0px)');
 
-    const changeItemHandler = (index: number) => {
-        setCurrentActiveMenuItem(index);
-        setSelectOffset(`translateY(${MENU_ITEM_HEIGHT * index}px)`);
-        onItemChange(index);
-    };
+    useEffect(() => {
+        setSelectOffset(`translateY(${MENU_ITEM_HEIGHT * currentMenuItemIndex}px)`);    
+    }, [currentMenuItemIndex]);
 
     return (
         <ul className={classNames(cls.menuItems, { [cls.dark]: isEnterprise })}>
             {items.map((item, index) =>
                 <SingleMenuItem
                     key={item.title}
-                    active={currentActiveMenuItem === index}
+                    active={currentMenuItemIndex === index}
                     item={item}
                     index={index}
-                    onItemChange={changeItemHandler}
+                    onItemChange={onItemChange}
                     isEnterprise={isEnterprise}
                     withIcon={withIcon}
                 />

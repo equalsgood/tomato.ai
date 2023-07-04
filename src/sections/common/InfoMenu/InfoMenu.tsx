@@ -25,6 +25,7 @@ export const InfoMenu = ({ isEnterprise = false }: InfoMenuProps) => {
         <section className={classNames(cls.menuWrapper, { [cls.dark]: isEnterprise })}>
             <div className={cls.menu}>
                 <Menu
+                    currentMenuItemIndex={currentMenuItemIndex}
                     isEnterprise={isEnterprise}
                     items={menuItems}
                     onItemChange={changeHandler}
