@@ -1,0 +1,34 @@
+.aside {
+    display: block;
+    width: 420px;
+    margin-top: 73px;
+}
+
+.content-wrapper {
+    position: sticky;
+    top: calc(var(--header-height) + 73px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 420px;
+}
+
+.menu-wrapper {
+    width: 100%;
+    background: var(--reversed-bg-color);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.info {
+    line-height: 21px;
+    text-align: center;
+    margin: 35px 0 4px;
+}
+
+.mail-link {
+    color: var(--secondary-action-color);
+    font-size: var(--font-size-xxxs);
+    font-weight: var(--font-weight-s);
+    text-decoration: none;
+}

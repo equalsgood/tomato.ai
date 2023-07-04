@@ -1,0 +1,21 @@
+.main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 420px auto;
+    column-gap: 62px;
+    width: 100%;
+    padding: 0 100px 47px;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

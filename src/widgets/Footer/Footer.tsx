@@ -46,7 +46,6 @@ export const Footer = memo(() => {
                         <LocationIcon/>
                         <Text tag="p" variant={TextVariants.DEFAULT_SMALL}>New York, NY 20-124</Text>
                     </div>
-                    <NavigationLink text="Terms" to={RoutePaths.HOME} variant={NavigationLinkVariants.FOOTER} />
                 </div>
             </FooterColumn>
         </footer>
@@ -151,7 +150,7 @@ const footerConfig: Array<IFooterColumn> = [
             },
             {
                 text: 'Terms',
-                to: RoutePaths.HOME,
+                to: RoutePaths.TERMS,
             },
             {
                 text: 'Privacy',
