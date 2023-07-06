@@ -1,11 +1,23 @@
 .featured {
+    /*width: 100%;*/
+    /*padding: 10px 25px 55px 25px;*/
+    /*display: flex;*/
+    /*gap: 40px;*/
+    /*justify-content: space-around;*/
+    /*align-items: center;*/
+    /*overflow: hidden;*/
+
     width: 100%;
-    padding: 10px 25px 55px 25px;
-    display: flex;
-    gap: 40px;
+    padding: 10px 2% 45px;
+    display: grid;
+    grid-template-columns: 12% 16% 24% 19% 10%;
     justify-content: space-around;
     align-items: center;
-    overflow: hidden;
+    gap: 1%;
+}
+
+.image {
+    width: 100%;
 }
 
 .titled {
@@ -39,9 +51,5 @@
         grid-template-columns: 12% 16% 24% 19% 10%;
         justify-content: space-around;
         gap: 1%;
-    }
-
-    .image {
-        width: 100%;
     }
 }

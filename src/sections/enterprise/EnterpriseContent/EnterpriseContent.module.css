@@ -41,3 +41,41 @@
 .calculator-link {
     margin-top: 28px;
 }
+
+@media(max-width: 1438px) {
+    .content {
+        padding-bottom: 90px;
+    }
+
+    .content-section {
+        gap: 57px;
+    }
+
+    .left {
+        margin: 0 45px 0 90px;
+    }
+
+    .right {
+        margin: 92px 76px 107px 43px;
+    }
+
+    .details {
+        gap: 25px;
+    }
+
+    .title {
+        width: 338px;
+        height: 66px;
+        line-height: 32px;
+    }
+
+    .paragraph {
+        width: 338px;
+        line-height: 18px;
+    }
+
+    .image {
+        width: 494px;
+        height: 330px;
+    }
+}
