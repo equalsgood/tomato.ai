@@ -17,7 +17,7 @@ export const Faq = (props: FaqProps) => {
     return (
         <li className={classNames(cls.faq, { [cls.open]: open })}>
             <div className={cls.question} onClick={() => setOpen(prev => !prev)}>
-                <Text tag="p" variant={TextVariants.SUBTITLE_MEDIUM}>{question}</Text>
+                <Text tag="p" variant={TextVariants.SUBTITLE_MEDIUM} classNamesProps={cls.questionText}>{question}</Text>
                 { open ?
                     <OpenIcon/> :
                     <CloseIcon/>

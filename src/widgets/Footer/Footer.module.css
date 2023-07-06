@@ -33,7 +33,7 @@
 
 .mail-link {
     color: var(--secondary-action-color);
-    font-size: var(--font-size-xxxs);
+    font-size: var(--font-size-14);
     font-weight: var(--font-weight-s);
     text-decoration: none;
 }

@@ -4,11 +4,11 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100vw;
 }
 
 .app {
     font-family: var(--font-family-main);
-
     background: var(--primary-bg-color);
     min-height: 100vh;
     padding-top: var(--header-height);

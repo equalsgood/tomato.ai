@@ -23,7 +23,7 @@
 
 .short-info .name {
     color: var(--reversed-text-color);
-    font-size: 26px;
+    font-size: var(--font-size-26);
     font-weight: var(--font-weight-l);
     line-height: 21px;
 }
@@ -70,7 +70,7 @@
 
 .initials .name {
     color: var(--primary-title-color);
-    font-size: 28px;
+    font-size: var(--font-size-28);
     font-weight: var(--font-weight-xl);
     line-height: 26px;
 }

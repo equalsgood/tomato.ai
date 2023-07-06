@@ -22,7 +22,7 @@ export const PlanDescription = (props: Plan) => {
             <div className={cls.descriptionCard}>
                 <div className={cls.titleWrapper}>
                     {icon}
-                    <Text tag="h2" variant={TextVariants.TITLE_SMALL} classNamesProps={cls.title}>{name}</Text>
+                    <Text tag="h2" variant={TextVariants.TITLE} classNamesProps={cls.title}>{name}</Text>
                 </div>
                 <ul className={cls.features}>
                     {features.map((feature, index) =>
@@ -44,7 +44,7 @@ export const PlanDescription = (props: Plan) => {
                     <Divider/>
                     <div className={cls.costWrapper}>
                         <Text tag="p" variant={TextVariants.PARAGRAPH_DARK_MEDIUM} classNamesProps={cls.costBadge}>COST:</Text>
-                        <Text tag="p" variant={TextVariants.SUBTITLE_MEDIUM} classNamesProps={cls.cost}>{cost}</Text>
+                        <Text tag="p" variant={TextVariants.TITLE} classNamesProps={cls.cost}>{cost}</Text>
                     </div>
                     <NavigationLink
                         classNamesProps={cls.link}

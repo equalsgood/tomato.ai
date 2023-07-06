@@ -21,7 +21,7 @@ export const HomeSoundExamples = () => {
         <div id="samples-examples" className={cls.examplesBoard}>
             <div className={cls.info}>
                 <Text width={103} tag="p" variant={TextVariants.BADGE}>DEMO</Text>
-                <Text width={432} tag="h2" variant={TextVariants.TITLE_SMALL_REVERSED}>Tomato.ai provides a brilliant quality in a LIVE format</Text>
+                <Text width={432} tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>Tomato.ai provides a brilliant quality in a LIVE format</Text>
                 <Text width={413} tag="p" variant={TextVariants.PARAGRAPH_REVERSED}>Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Some NUMBERS “Our clients increase the ... 75%”</Text>
                 <a onClick={() => scrollSmoothTo({ elementId: 'benefits', block: 'center' })} className={cls.action}>
                     <Text tag="p" variant={TextVariants.ACTION}>Learn more</Text>

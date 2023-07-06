@@ -14,7 +14,7 @@ export const EnterpriseCalcAnnualRoi = () => {
     return (
         <div className={cls.annual}>
             <div className={cls.description}>
-                <Text tag="p" variant={TextVariants.SUBTITLE_BOLD_REVERSED}>Annual ROI:</Text>
+                <Text tag="p" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.roi}>Annual ROI:</Text>
                 { annualRoi ?
                     <span className={classNames(cls.price, { [cls.minus]: annualRoi < 0 })}>{numberFormat(annualRoi)}</span> :
                     <span className={cls.placeholder}>{'$...'}</span>

@@ -40,7 +40,7 @@
 
 .title {
     line-height: 30px;
-    font-size: 26px;
+    font-size: var(--font-size-26);
     text-transform: uppercase;
 }
 
@@ -58,7 +58,7 @@
 
 .feature-description {
     line-height: 18px;
-    font-size: 13px;
+    font-size: var(--font-size-13);;
     width: 188px;
 }
 
@@ -79,6 +79,7 @@
 }
 
 .cost {
+    font-size: var(--font-size-20);
     font-weight: var(--font-weight-xl);
     line-height: 40px;
 }

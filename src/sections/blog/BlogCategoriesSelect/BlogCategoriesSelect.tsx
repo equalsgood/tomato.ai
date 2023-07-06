@@ -15,7 +15,7 @@ export const BlogCategoriesSelect = (props: BlogCategoriesSelectProps) => {
     return (
         <section className={cls.section}>
             <div className={cls.titleContainer}>
-                <Text tag="h2" variant={TextVariants.TITLE_SMALL} classNamesProps={cls.title}>Categories</Text>
+                <Text tag="h2" variant={TextVariants.TITLE} classNamesProps={cls.title}>Categories</Text>
                 <Text tag="span" variant={TextVariants.PARAGRAPH_TITLE_MEDIUM} classNamesProps={cls.number}>{`(${filteredArticlesNumber})`}</Text>
                 <Button
                     type="button"

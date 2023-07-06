@@ -32,7 +32,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
     return (
         <Modal open={open} onClose={onClose}>
             <form className={cls.content}>
-                <Text tag="h2" variant={TextVariants.SUBTITLE_BOLD_REVERSED} classNamesProps={cls.title}>Let’s Talk!</Text>
+                <Text tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>Let’s Talk!</Text>
                 <div className={cls.initialsContainer}>
                     <Input
                         label="First Name"

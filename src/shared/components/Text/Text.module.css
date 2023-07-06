@@ -5,51 +5,36 @@
 
 .title {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxxxl);
     color: var(--primary-title-color);
 }
 
 .title-reversed {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxxxl);
     color: var(--reversed-title-color);
 }
 
 .title-large {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-55);
     color: var(--primary-title-color);
 }
 
 .title-large-reversed {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-55);
     color: var(--reversed-text-color);
 }
 
 .title-medium {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-50);
     color: var(--primary-title-color);
 }
 
 .title-medium_reversed {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-50);
     color: var(--reversed-text-color);
-}
-
-.title-small {
-    font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xl);
-    color: var(--primary-title-color);
-}
-
-.title-small-reversed {
-    font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-xl);
-    color: var(--reversed-title-color);
-    line-height: 45px;
 }
 
 .title-extra-small {
@@ -62,12 +47,6 @@
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-35);
     color: var(--reversed-title-color);
-}
-
-.subtitle-bold-reversed {
-    font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-25);
-    color: var(--reversed-text-color);
 }
 
 .subtitle-medium {
@@ -114,7 +93,7 @@
 
 .paragraph-disabled {
     color: var(--disabled-text-color);
-    font-size: var(--font-size-xxxs);
+    font-size: var(--font-size-14);
     font-weight: var(--font-weight-m);
 }
 
@@ -134,7 +113,7 @@
 
 .paragraph-reversed-small {
     color: var(--reversed-text-color);
-    font-size: var(--font-size-xxxs);
+    font-size: var(--font-size-14);
     font-weight: var(--font-weight-m);
     line-height: 18px;
 }
@@ -175,7 +154,7 @@
 }
 
 .default-small {
-    font-size: var(--font-size-xxxs);
+    font-size: var(--font-size-14);
     color: var(--third-text-color);
 }
 

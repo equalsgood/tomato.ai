@@ -82,7 +82,7 @@
 }
 
 .footer {
-    font-size: var(--font-size-xxxs);
+    font-size: var(--font-size-14);
     color: var(--third-text-color);
     font-weight: var(--font-weight-s);
     align-self: flex-start;

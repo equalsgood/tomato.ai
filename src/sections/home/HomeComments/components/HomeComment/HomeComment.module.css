@@ -12,6 +12,10 @@
     transition: all 1s;
 }
 
+.name {
+    font-size: var(--font-size-20);
+}
+
 .active {
     opacity: 1;
 }

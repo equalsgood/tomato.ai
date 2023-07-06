@@ -11,7 +11,7 @@ export const CareersBenefits = () => {
     return (
         <section className={cls.benefits}>
             <div className={cls.titleContainer}>
-                <Text tag="h2" variant={TextVariants.TITLE_SMALL} classNamesProps={cls.title}>Benefits</Text>
+                <Text tag="h2" variant={TextVariants.TITLE} classNamesProps={cls.title}>Benefits</Text>
                 <a className={classNames(cls.benefitsMore, cls.hidden)}>Read more about Benefits</a>
             </div>
             <ul className={cls.benefitsContainer}>

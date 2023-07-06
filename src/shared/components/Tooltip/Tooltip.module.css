@@ -45,7 +45,11 @@
 }
 
 .flag .textContent {
-    font-size: 22px;
+    font-size: var(--font-size-22);
+}
+
+.info .textContent {
+    font-size: var(--font-size-20);
 }
 
 .arrow {

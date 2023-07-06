@@ -9,6 +9,10 @@
     justify-content: space-between;
 }
 
+.roi {
+    font-size: var(--font-size-25);
+}
+
 .description {
     display: flex;
     justify-content: space-between;
@@ -18,7 +22,7 @@
 
 .price {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-25);
+    font-size: var(--font-size-26);
     color: var(--primary-action-color);
 }
 
@@ -28,6 +32,6 @@
 
 .placeholder {
     font-weight: var(--font-weight-xl);
-    font-size: var(--font-size-25);
+    font-size: var(--font-size-26);
     color: var(--third-text-color);
 }

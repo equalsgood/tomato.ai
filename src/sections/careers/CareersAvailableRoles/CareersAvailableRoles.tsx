@@ -9,7 +9,7 @@ export const CareersAvailableRoles = () => {
     return (
         <section id="available-roles" className={cls.section}>
             <div className={cls.availableRolesContainer}>
-                <Text tag="h2" variant={TextVariants.TITLE_SMALL} classNamesProps={cls.title}>Available Roles</Text>
+                <Text tag="h2" variant={TextVariants.TITLE} classNamesProps={cls.title}>Available Roles</Text>
                 <ul className={cls.roles}>
                     {roles.map((role, index) =>
                         <AvailableRole

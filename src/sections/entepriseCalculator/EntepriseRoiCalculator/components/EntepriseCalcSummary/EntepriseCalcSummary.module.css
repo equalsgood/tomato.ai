@@ -9,12 +9,12 @@
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: var(--font-size-24);
     line-height: 46px;
 }
 
 .prop {
-    font-size: 19px;
+    font-size: var(--font-size-19);
     line-height: 20px;
     text-transform: uppercase;
 }
@@ -22,7 +22,7 @@
 .amount {
     font-weight: var(--font-weight-xl);
     color: var(--third-text-color);
-    font-size: 23px;
+    font-size: var(--font-size-23);
     line-height: 38px;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .additional {
-    font-size: 16px;
+    font-size: var(--font-size-16);
     line-height: 22px;
     height: 165px;
     padding-top: 22px;

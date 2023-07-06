@@ -23,7 +23,7 @@ export const GetReportPopup = (props: GetReportPopupProps) => {
     return (
         <Modal open={open} onClose={onClose}>
             <div className={cls.popupContent}>
-                <Text tag="h2" variant={TextVariants.TITLE_SMALL_REVERSED} classNamesProps={cls.popupTitle}>One more step</Text>
+                <Text tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.popupTitle}>One more step</Text>
                 <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE_MEDIUM} classNamesProps={cls.popupParagraph}>Enter your email to get the <span className={cls.em}>custom detailed report</span> with more details about savings and other calculations</Text>
                 <form className={cls.popupForm} onSubmit={submitHandler}>
                     <Input

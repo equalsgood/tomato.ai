@@ -25,6 +25,10 @@
     position: relative;
 }
 
+.question-text {
+    font-size: var(--font-size-22);
+}
+
 .open .question {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;

@@ -99,7 +99,7 @@
 .benefit-description {
     padding: 8px 35px 8px 63px;
     color: var(--primary-text-color);
-    font-size: 15px;
+    font-size: var(--font-size-15);
     line-height: 20px;
     font-weight: var(--font-weight-m);
     width: 421px;

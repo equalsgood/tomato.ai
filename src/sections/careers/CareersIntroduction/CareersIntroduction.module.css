@@ -13,7 +13,8 @@
 }
 
 .title {
-    line-height: 68px;
+    font-size: var(--font-size-65);
+    line-height: var(--line-height-68);
     height: 150px;
     margin-bottom: 20px;
 }

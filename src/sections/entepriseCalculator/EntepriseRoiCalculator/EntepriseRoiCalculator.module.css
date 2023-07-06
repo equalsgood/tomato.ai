@@ -12,6 +12,11 @@
     gap: 20px;
 }
 
+.title {
+    line-height: var(--line-height-76);
+    font-size: var(--font-size-60);
+}
+
 .content-container {
     display: flex;
     gap: 84px;
