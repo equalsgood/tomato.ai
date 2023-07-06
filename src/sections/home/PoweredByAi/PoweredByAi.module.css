@@ -3,3 +3,15 @@
     align-items: center;
     justify-content: center;
 }
+
+
+@media(max-width: 1438px) {
+    .powered {
+        margin: 0 62px;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 1070px;
+    }
+}

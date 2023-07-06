@@ -58,12 +58,15 @@ export const AudioPlayer = memo((props: AudioPlayerProps) => {
     return (
         <div>
             <button className={classes} onClick={toggleAudio}>
-                {isPlayed ?
-                    <PauseIcon/> :
-                    <div className={cls.playIcon}>
-                        <PlayIcon/>
-                    </div>
-                }
+                <div className={cls.icon}>
+                    {isPlayed ?
+
+                        <PauseIcon/> :
+                        <div className={cls.playIcon}>
+                            <PlayIcon/>
+                        </div>
+                    }
+                </div>
             </button>
             <audio
                 onEnded={endedHandler}

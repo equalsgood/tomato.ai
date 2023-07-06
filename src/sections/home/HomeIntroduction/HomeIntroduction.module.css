@@ -17,3 +17,16 @@
     top: 60px;
     left: 0;
 }
+
+
+@media(max-width: 1438px) {
+    .introduction-section {
+        padding: 65px 0 70px 0;
+        gap: 62px;
+    }
+
+    .left {
+        top: 550px;
+        height: 600px;
+    }
+}

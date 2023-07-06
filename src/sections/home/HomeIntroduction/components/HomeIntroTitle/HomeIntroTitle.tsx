@@ -16,7 +16,7 @@ export const HomeIntroTitle = () => {
                 <Text tag="h1" variant={TextVariants.TITLE} classNamesProps={cls.title}>
                     Soften accents for clearer agent calls
                 </Text>
-                <Text width={503} tag="p" variant={TextVariants.PARAGRAPH_TITLE}>
+                <Text classNamesProps={cls.paragraph} tag="p" variant={TextVariants.PARAGRAPH_TITLE}>
                     AI powered voice filter clarifies offshore agent voices as they speak, resulting in improved CSAT and sales metrics.
                 </Text>
                 <div className={cls.links}>
@@ -28,7 +28,7 @@ export const HomeIntroTitle = () => {
                 </div>
             </div>
             <div className={cls.imageHolder}>
-                <img alt="Agent photo" src={agent} />
+                <img alt="Agent photo" src={agent} className={cls.image} />
                 <div className={cls.samplesHolder}>
                     <SampleExample src={firstSample} type='original' size='small' />
                     <SampleExample src={secondSample} type='enhanced' size='small' />

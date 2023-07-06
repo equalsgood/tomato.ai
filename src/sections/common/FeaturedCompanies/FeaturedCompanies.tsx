@@ -1,9 +1,9 @@
 import cls from './FeaturedCompanies.module.css';
-import OctaveLogo from 'shared/assets/logos/featured/octave.svg';
-import PointLogo from 'shared/assets/logos/featured/point.svg';
-import TribeLogo from 'shared/assets/logos/featured/tribe.svg';
-import CardumenLogo from 'shared/assets/logos/featured/cardumen.svg';
-import RecursiveLogo from 'shared/assets/logos/featured/recursive.svg';
+import OctaveLogo from 'shared/assets/logos/featured/octave.png';
+import PointLogo from 'shared/assets/logos/featured/point.png';
+import TribeLogo from 'shared/assets/logos/featured/tribe.png';
+import CardumenLogo from 'shared/assets/logos/featured/cardumen.png';
+import RecursiveLogo from 'shared/assets/logos/featured/recursive.png';
 import OctaveLightLogo from 'shared/assets/logos/featured/octave-light.svg';
 import PointLightLogo from 'shared/assets/logos/featured/point-light.svg';
 import TribeLightLogo from 'shared/assets/logos/featured/tribe-light.svg';
@@ -33,11 +33,11 @@ export const FeaturedCompanies = ({ variant, title }: FeaturedCompaniesProps) =>
         <section className={classNames(cls.featured, { [cls.titled]: variant === FeaturedCompaniesVariants.TITLED })}>
             { variant === FeaturedCompaniesVariants.DEFAULT &&
                 <>
-                    <OctaveLogo/>
-                    <PointLogo/>
-                    <TribeLogo/>
-                    <CardumenLogo/>
-                    <RecursiveLogo/>
+                    <img alt="logo of the company Octave" className={cls.image} src={OctaveLogo} />
+                    <img alt="logo of the company Point" className={cls.image} src={PointLogo} />
+                    <img alt="logo of the company Point" className={cls.image} src={TribeLogo} />
+                    <img alt="logo of the company Cardumen" className={cls.image} src={CardumenLogo} />
+                    <img alt="logo of the company Cardumen" className={cls.image} src={RecursiveLogo} />
                 </>
             }
             { variant === FeaturedCompaniesVariants.LIGHT &&

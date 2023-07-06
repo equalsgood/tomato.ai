@@ -20,6 +20,15 @@
 .title {
     font-size: var(--font-size-40);
     line-height: var(--line-height-45);
+    width: 432px;
+}
+
+.flag {
+    height: 58px;
+}
+
+.paragraph {
+    width: 413px;
 }
 
 .action {
@@ -83,4 +92,68 @@
 
 .original .sample {
     height: 58px;
+}
+
+@media(max-width: 1438px) {
+    .examples-board {
+        padding: 16px;
+        gap: 70px;
+        width: 900px;
+        height: 460px;
+    }
+
+    .info {
+        padding-top: 39px;
+        padding-left: 46px;
+        gap: 20px;
+    }
+
+    .title {
+        width: 320px;
+        line-height: 40px;
+    }
+
+    .paragraph {
+        width: 342px;
+    }
+
+    .action {
+        gap: 12px;
+        height: 30px;
+        margin-top: 16px;
+    }
+
+    .examples-section {
+        padding: 29px 36px;
+    }
+
+    .original {
+        width: 249px;
+    }
+
+    .enhanced {
+        width: 161px;
+    }
+
+    .original .samples {
+        gap: 35px;
+        margin-top: 28px;
+    }
+
+    .flag {
+        height: 48px;
+    }
+
+    .enhanced .samples {
+        gap: 43px;
+        margin-top: 32px;
+    }
+
+    .sample {
+        gap: 48px;
+    }
+
+    .original .sample {
+        height: 48px;
+    }
 }

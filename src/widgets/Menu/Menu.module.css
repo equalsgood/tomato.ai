@@ -22,3 +22,14 @@
     background: var(--reversed-bg-color);
 }
 
+@media(max-width: 1438px) {
+    .menu-items {
+        padding-top: 0;
+    }
+
+    .select {
+        width: 280px;
+        height: 64px;
+    }
+}
+

@@ -2,10 +2,10 @@ import cls from './HomeSoundExamples.module.css';
 import { AudioPlayer, Flag, Text, TextVariants } from 'shared/components';
 import GreenArrowIcon from 'shared/assets/icons/arrow-green-right.svg';
 import classNames from 'classnames';
-import IndiaFlag from 'shared/assets/flags/india.svg';
-import PhilippinesFlag from 'shared/assets/flags/philippines.svg';
-import HaitiFlag from 'shared/assets/flags/haiti.svg';
-import PakistanFlag from 'shared/assets/flags/pakistan.svg';
+import IndiaFlag from 'shared/assets/flags/india.png';
+import PhilippinesFlag from 'shared/assets/flags/philippines.png';
+import HaitiFlag from 'shared/assets/flags/haiti.png';
+import PakistanFlag from 'shared/assets/flags/pakistan.png';
 import indiaOriginalSample from 'shared/samples/2a_in.wav';
 import philOriginalSample from 'shared/samples/3a_ph.wav';
 import haitiOriginalSample from 'shared/samples/4a_ht.wav';
@@ -21,8 +21,8 @@ export const HomeSoundExamples = () => {
         <div id="samples-examples" className={cls.examplesBoard}>
             <div className={cls.info}>
                 <Text width={103} tag="p" variant={TextVariants.BADGE}>DEMO</Text>
-                <Text width={432} tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>Tomato.ai provides a brilliant quality in a LIVE format</Text>
-                <Text width={413} tag="p" variant={TextVariants.PARAGRAPH_REVERSED}>Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Some NUMBERS “Our clients increase the ... 75%”</Text>
+                <Text tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>Tomato.ai provides a brilliant quality in a LIVE format</Text>
+                <Text classNamesProps={cls.paragraph} tag="p" variant={TextVariants.PARAGRAPH_REVERSED}>Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Some NUMBERS “Our clients increase the ... 75%”</Text>
                 <a onClick={() => scrollSmoothTo({ elementId: 'benefits', block: 'center' })} className={cls.action}>
                     <Text tag="p" variant={TextVariants.ACTION}>Learn more</Text>
                     <GreenArrowIcon/>
@@ -34,7 +34,7 @@ export const HomeSoundExamples = () => {
                     <ul className={cls.samples}>
                         {originalSamples.map(smpl =>
                             <li key={smpl.description} className={cls.sample}>
-                                <Flag flag={smpl.flag} country={smpl.country}/>
+                                <img alt={`image of ${smpl.country} flag`} src={smpl.flag} className={cls.flag} />
                                 <AudioPlayer src={smpl.src} type="original" size="large"/>
                             </li>
                         )}
@@ -59,25 +59,25 @@ const originalSamples = [
     {
         country: 'India',
         description: 'indiaOriginalSample',
-        flag: <IndiaFlag/>,
+        flag: IndiaFlag,
         src: indiaOriginalSample,
     },
     {
         country: 'Philippines',
         description: 'philOriginalSample',
-        flag: <PhilippinesFlag/>,
+        flag: PhilippinesFlag,
         src: philOriginalSample,
     },
     {
         country: 'Haiti',
         description: 'haitiOriginalSample',
-        flag: <HaitiFlag/>,
+        flag: HaitiFlag,
         src: haitiOriginalSample,
     },
     {
         country: 'Pakistan',
         description: 'pakistanOriginalSample',
-        flag: <PakistanFlag/>,
+        flag: PakistanFlag,
         src: pakistanOriginalSample,
     },
 ];

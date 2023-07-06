@@ -13,3 +13,16 @@
     font-size: var(--font-size-20);
     line-height: 30px;
 }
+
+@media(max-width: 1438px) {
+    .menu-item {
+        padding: 17px 28px 18px;
+        gap: 18px;
+        width: 280px;
+    }
+
+    .title {
+        font-size: var(--font-size-20);
+        line-height: 30px;
+    }
+}

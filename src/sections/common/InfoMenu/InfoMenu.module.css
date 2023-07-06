@@ -28,3 +28,15 @@
 .dark .content {
     background: var(--reversed-bg-color);
 }
+
+@media(max-width: 1438px) {
+    .menu-wrapper {
+        padding-bottom: 40px;
+    }
+
+    .menu {
+        width: 900px;
+        height: 380px;
+        gap: 17px;
+    }
+}

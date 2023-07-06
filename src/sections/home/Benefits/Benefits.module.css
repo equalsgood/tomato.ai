@@ -34,3 +34,42 @@
     flex-direction: column;
     gap: 6px;
 }
+
+@media(max-width: 1438px) {
+    .benefits {
+        height: 600px;
+        padding: 47px 0 56px;
+        flex-direction: column;
+        gap: 48px;
+        justify-content: space-between;
+    }
+
+    .title {
+        width: 812px;
+        margin: 0 auto;
+    }
+
+    .benefits-list {
+        margin: 0 auto;
+        width: 812px;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 60px;
+        border-radius: 15px;
+        background: var(--primary-icon-bg);
+        margin-bottom: 4px;
+    }
+
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+}

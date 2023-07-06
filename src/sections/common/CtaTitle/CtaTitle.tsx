@@ -19,7 +19,7 @@ export const CtaTitle = ({ isEnterprise = false }: CtaTitleProps) => {
             <div className={cls.cta}>
                 <div className={cls.content}>
                     <div className={cls.agents}>
-                        <img alt="first agent picture" src={firstAgent} />
+                        <img alt="first agent picture" className={cls.firstAgent} src={firstAgent} />
                         <img alt="second agent picture" src={secondAgent} className={cls.secondAgent} />
                     </div>
                     <div className={cls.info}>
@@ -35,8 +35,8 @@ export const CtaTitle = ({ isEnterprise = false }: CtaTitleProps) => {
                         />
                     </div>
                     <div className={cls.agents}>
-                        <img alt="third agent picture" src={thirdAgent} />
-                        <img alt="fourth agent picture" src={fourthAgent} />
+                        <img alt="third agent picture" className={cls.thirdAgent} src={thirdAgent} />
+                        <img alt="fourth agent picture" className={cls.fourthAgent} src={fourthAgent} />
                     </div>
                 </div>
                 {isEnterprise ?

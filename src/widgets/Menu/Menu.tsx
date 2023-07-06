@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { SingleMenuItem } from './components/SingleMenuItem/SingleMenuItem';
 
-const MENU_ITEM_HEIGHT = 65;
-
 export interface MenuItem {
     title: string;
     iconLight?: JSX.Element;
@@ -20,9 +18,19 @@ interface MenuProps {
     withIcon: boolean;
 }
 
+const MENU_ITEM_HEIGHT = 65;
+
+const getScreenWidth = () => {
+    return window.innerWidth;
+};
+
 export const Menu = (props: MenuProps) => {
     const { isEnterprise, items, onItemChange, withIcon, currentMenuItemIndex } = props;
     const [selectOffset, setSelectOffset] = useState<string>('translateY(0px)');
+
+    // const screenWidth = getScreenWidth();
+    // let menuItemHeight = 65;
+    // if(screenWidth)
 
     useEffect(() => {
         setSelectOffset(`translateY(${MENU_ITEM_HEIGHT * currentMenuItemIndex}px)`);    
