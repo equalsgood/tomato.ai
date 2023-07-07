@@ -21,6 +21,7 @@ export const BpoCalcAnnualRoi = () => {
                 }
             </div>
             <Button
+                classNamesProps={cls.button}
                 onClick={toggleModal}
                 text="Receive detailed report"
                 disabled={!annualRoi}

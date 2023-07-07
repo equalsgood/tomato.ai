@@ -65,3 +65,34 @@
     height: 165px;
     padding-top: 22px;
 }
+
+@media(max-width: 1438px) {
+    .summary {
+        padding-top: 7px;
+        width: 353px;
+    }
+
+    .title {
+        line-height: 40px;
+    }
+
+    .subtitle {
+        line-height: 30px;
+        margin-bottom: 8px;
+    }
+
+    .benefits, .roi {
+        padding: 40px 0 33px 0;
+        gap: 3px;
+    }
+
+    .roi {
+        padding: 31px 0 33px 0;
+    }
+
+    .additional {
+        font-size: var(--font-size-15);
+        line-height: 18px;
+        height: 167px;
+    }
+}

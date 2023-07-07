@@ -17,3 +17,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 12px;
 }
+
+@media(max-width: 1438px) {
+    .calculator {
+        grid-template-columns: 210px 210px;
+        column-gap: 20px;
+        row-gap: 24px;
+        padding: 18px 22px 30px 28px;
+    }
+
+    .scale-selects {
+        grid-column-gap: 10px;
+    }
+}

@@ -32,6 +32,8 @@
 .open .question {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    height: 88px;
+    padding-top: 7px;
 }
 
 .answer {
@@ -55,4 +57,19 @@
     pointer-events: auto;
     visibility: visible;
     opacity: 1;
+}
+
+@media(max-width: 1438px) {
+    .question-text {
+        font-size: var(--font-size-26);
+    }
+
+    .open .question {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .answer {
+        padding: 0 63px 52px 47px;
+    }
 }

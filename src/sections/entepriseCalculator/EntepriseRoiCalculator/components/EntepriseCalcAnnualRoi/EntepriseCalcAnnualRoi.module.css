@@ -35,3 +35,23 @@
     font-size: var(--font-size-26);
     color: var(--third-text-color);
 }
+
+@media(max-width: 1438px) {
+    .annual {
+        width: 490px;
+        height: 170px;
+        padding: 26px 22px 27px 28px;
+    }
+
+    .button {
+        margin-top: auto;
+    }
+
+    .annual {
+        border-radius: 20px;
+    }
+
+    .description {
+        height: 38px;
+    }
+}

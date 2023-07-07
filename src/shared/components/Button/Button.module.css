@@ -55,3 +55,35 @@
     background: rgba(255, 255, 255, 0.2);
     cursor: auto;
 }
+
+@media(max-width: 1438px) {
+
+    .action, .outlined, .action-blue, .option {
+        height: 56px;
+    }
+
+    /*.option {*/
+    /*    background: var(--primary-option-button-bg);*/
+    /*    color: var(--primary-title-color);*/
+    /*}*/
+
+    /*.outlined {*/
+    /*    background: transparent;*/
+    /*    color: var(--primary-action-color);*/
+    /*    border: solid 2px var(--primary-action-color);*/
+    /*}*/
+
+    /*.action-blue {*/
+    /*    background: rgba(43, 115, 255, 0.1);*/
+    /*    color: var(--secondary-action-color);*/
+    /*    border: none;*/
+    /*}*/
+
+    /*.text {*/
+    /*    color: var(--primary-action-color);*/
+    /*    font-weight: var(--font-weight-l);*/
+    /*    border-radius: 10px;*/
+    /*    font-size: var(--font-size-18);*/
+    /*    background: transparent;*/
+    /*}*/
+}

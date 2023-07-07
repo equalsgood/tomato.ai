@@ -24,6 +24,7 @@ export const EnterpriseCalcAnnualRoi = () => {
                 onClick={toggleModal}
                 text="Receive detailed report"
                 disabled={!annualRoi}
+                classNamesProps={cls.button}
                 variant={ButtonVariants.ACTION}
                 type='button'
             />

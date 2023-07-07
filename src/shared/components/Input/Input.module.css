@@ -50,3 +50,22 @@
     resize: none;
     height: auto;
 }
+
+@media(max-width: 1438px) {
+    .container {
+        gap: 10px;
+    }
+
+    .label-text {
+        font-size: var(--font-size-15);
+    }
+
+    .double-line .label-text {
+        width: 150px;
+    }
+
+    .input {
+        padding: 16px 0 15px 25px;
+        height: 58px;
+    }
+}

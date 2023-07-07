@@ -18,3 +18,10 @@
     gap: 16px;
     width: 100%;
 }
+
+@media(max-width: 1438px) {
+    .faq-section {
+        padding: 0 62px 100px;
+        gap: 37px;
+    }
+}

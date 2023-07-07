@@ -50,3 +50,51 @@
     left: 0;
     pointer-events: none;
 }
+
+@media(max-width: 1438px) {
+    .section {
+        gap: 57px;
+        margin: 58px 0 100px;
+    }
+
+    .section-title {
+        gap: 15px;
+    }
+
+    .content-container {
+        gap: 59px;
+        padding: 0 62px 0 60px;
+    }
+
+    .calculator-container {
+        gap: 15px;
+        width: 490px;
+    }
+
+    .title-paragraph {
+        width: 510px;
+        height: 49px;
+        line-height: 20px;
+    }
+
+    .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+        height: 500px;
+    }
+
+    .title {
+        font-size: var(--font-size-60);
+        line-height: 50px;
+    }
+
+    .left {
+        position: absolute;
+        top: 500px;
+        left: 0;
+        pointer-events: none;
+        height: 500px;
+    }
+}
