@@ -21,15 +21,19 @@ export const PlanDescription = (props: Plan) => {
         <li className={classNames(cls.description, { [cls.mostPopular]: mostPopular })}>
             <div className={cls.descriptionCard}>
                 <div className={cls.titleWrapper}>
-                    {icon}
+                    <div className={cls.icon}>
+                        {icon}
+                    </div>
                     <Text tag="h2" variant={TextVariants.TITLE} classNamesProps={cls.title}>{name}</Text>
                 </div>
                 <ul className={cls.features}>
                     {features.map((feature, index) =>
                         <li key={`${feature}-${name}-${index}`} className={cls.feature}>
-                            {feature.status === 'available' && <AvailableIcon/>}
-                            {feature.status === 'unavailable' && <UnavailableIcon/>}
-                            {feature.status === 'vip' && <VipIcon/>}
+                            <div className={cls.icon}>
+                                {feature.status === 'available' && <AvailableIcon/>}
+                                {feature.status === 'unavailable' && <UnavailableIcon/>}
+                                {feature.status === 'vip' && <VipIcon/>}
+                            </div>
                             <Text
                                 tag="p"
                                 variant={feature.status === 'unavailable' ? TextVariants.PARAGRAPH_DISABLED : TextVariants.PARAGRAPH_DARK}
@@ -58,7 +62,9 @@ export const PlanDescription = (props: Plan) => {
             { mostPopular &&
                 <div className={cls.mostPopularBadge}>
                     <div className={cls.mostPopularHeader}>
-                        <PopularTagIcon/>
+                        <div className={cls.icon}>
+                            <PopularTagIcon/>
+                        </div>
                         <span className={cls.tag}>MOST POPULAR</span>
                     </div>
                     <div className={cls.mostPopularBg}/>

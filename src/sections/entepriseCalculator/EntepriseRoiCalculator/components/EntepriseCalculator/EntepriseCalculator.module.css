@@ -29,4 +29,8 @@
     .scale-selects {
         grid-column-gap: 10px;
     }
+
+    .input span {
+        font-size: var(--font-size-15);
+    }
 }

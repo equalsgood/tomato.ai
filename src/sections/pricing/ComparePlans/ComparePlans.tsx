@@ -12,7 +12,7 @@ import { useAppDispatch } from 'hooks';
 
 export const ComparePlans = () => {
     const dispatch = useAppDispatch();
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const clickLinkHandler = (plan: Plans) => {
         dispatch(requestDemoActions.changeSelectedPlan(plan));

@@ -27,3 +27,13 @@
     justify-content: center;
     padding-top: 48px;
 }
+
+@media(max-width: 1438px) {
+    .section {
+        padding: 50px 60px 50px;
+    }
+
+    .title {
+        line-height: 50px;
+    }
+}

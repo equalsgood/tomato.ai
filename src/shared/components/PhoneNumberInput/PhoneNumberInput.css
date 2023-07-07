@@ -64,3 +64,31 @@
     cursor: pointer;
     background: var(--primary-input-bg);
 }
+
+@media(max-width: 1438px) {
+    :root {
+        --PhoneInputCountryFlag-height: 28px !important;
+        --PhoneInputCountryFlag-borderColor: transparent !important;
+        --PhoneInputCountrySelectArrow-width: 10px !important;
+        --PhoneInputCountrySelectArrow-borderWidth: 4px !important;
+        --PhoneInputCountrySelectArrow-opacity: 1 !important;
+        --PhoneInputCountrySelectArrow-color: #fff !important;
+    }
+
+    .phone-number-input {
+        margin-bottom: 24px;
+    }
+
+    .phone-number-input .PhoneInput {
+        gap: 10px;
+    }
+
+    .phone-number-input .PhoneInputCountry {
+        height: 58px;
+    }
+
+    .phone-number-input .PhoneInputInput {
+        padding: 16px 0 15px 22px;
+        height: 58px;
+    }
+}

@@ -90,12 +90,8 @@
 }
 
 @media(max-width: 1438px) {
-    .container {
-        gap: 10px;
-    }
-
     .label-text {
-        font-size: var(--font-size-15);
+        font-size: var(--font-size-18);
     }
 
     .select {

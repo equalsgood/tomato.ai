@@ -21,3 +21,19 @@
     text-align: center;
     font-size: var(--font-size-16);
 }
+
+@media(max-width: 1438px) {
+    .section{
+        padding: 60px 0 45px;
+    }
+
+    .title {
+        font-size: var(--font-size-60);
+    }
+
+    .paragraph {
+        width: 520px;
+        text-align: center;
+        font-size: var(--font-size-16);
+    }
+}

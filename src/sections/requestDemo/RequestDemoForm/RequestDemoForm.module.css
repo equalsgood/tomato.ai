@@ -42,3 +42,28 @@
     background: var(--primary-select-bg);
     width: 400px;
 }
+
+@media(max-width: 1438px) {
+    .section{
+        padding: 30px 36px 32px 38px;
+        width: 840px;
+        margin: 0 auto 100px;
+    }
+
+    .initials {
+        margin-bottom: 24px;
+    }
+
+    .email {
+        margin-bottom: 24px;
+    }
+
+    .company, .selects {
+        margin-bottom: 24px;
+    }
+
+    .checkbox {
+        background: var(--primary-select-bg);
+        width: 370px;
+    }
+}

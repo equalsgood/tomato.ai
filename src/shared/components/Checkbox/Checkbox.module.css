@@ -99,3 +99,23 @@
     height: 100vh;
     background: transparent;
 }
+
+@media(max-width: 1438px) {
+    .label-text {
+        font-size: var(--font-size-18);
+    }
+
+    .select {
+        padding: 0 22px 0 22px;
+        height: 58px;
+    }
+
+    .options {
+        height: 300px;
+        padding: 0 22px 0 22px;
+    }
+
+    .option {
+        height: 58px;
+    }
+}

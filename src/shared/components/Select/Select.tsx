@@ -12,10 +12,11 @@ interface SelectProps {
     options: Array<string>,
     onSelectChange?: (value: string) => void
     classNamesProps?: string;
+    labelClassNamesProps?: string;
 }
 
 export const Select = memo((props: SelectProps) => {
-    const { label, info, value, options, onSelectChange, classNamesProps } = props;
+    const { label, info, value, options, onSelectChange, classNamesProps, labelClassNamesProps } = props;
 
     const [open, setOpen] = useState(false);
 
@@ -28,7 +29,7 @@ export const Select = memo((props: SelectProps) => {
 
     return (
         <div className={cls.container}>
-            <div className={cls.label}>
+            <div className={classNames(cls.label, labelClassNamesProps)}>
                 <span className={cls.labelText}>{label}</span>
                 { info && <InfoBadge text={info}/>}
             </div>

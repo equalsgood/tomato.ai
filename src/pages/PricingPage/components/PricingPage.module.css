@@ -10,3 +10,9 @@
     left: 0;
     z-index: var(--separate-bg-z-index);
 }
+
+@media(max-width: 1438px) {
+    .image {
+        height: 505px;
+    }
+}

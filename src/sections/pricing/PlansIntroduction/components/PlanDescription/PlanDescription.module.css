@@ -121,3 +121,79 @@
 .link {
     height: 66px;
 }
+
+@media(max-width: 1438px) {
+    .description.most-popular {
+        height: 561px;
+    }
+
+    .description-card {
+        height: 525px;
+        width: 215px;
+        padding: 33px 20px 20px 22px;
+    }
+
+    .most-popular .description-card {
+        height: 519px;
+        width: 209px;
+        padding: 28px 20px 20px 22px;
+    }
+
+    .title-wrapper {
+        height: 32px;
+        gap: 10px;
+        margin-bottom: 27px;
+    }
+
+    .title {
+        line-height: 21px;
+    }
+
+    .features {
+        gap: 10px;
+    }
+
+    .feature {
+        gap: 14px;
+    }
+
+    .feature-description {
+        line-height: 14px;
+        width: 137px;
+    }
+
+    .cost-wrapper {
+        margin: 20px 0 21px;
+    }
+
+    .cost {
+        font-size: var(--font-size-19);
+        line-height: 25px;
+    }
+
+    .most-popular-badge {
+        width: 215px;
+        height: 561px;
+    }
+
+    .most-popular-header {
+        height: 42px;
+    }
+
+    .tag {
+        font-size: var(--font-size-15);
+    }
+
+    .most-popular-bg {
+        height: 519px;
+        clip-path: polygon(0 0, 100% 0, 213px 85%, 2px 85%)
+    }
+
+    .link {
+        height: 50px;
+    }
+
+    .icon {
+        transform: scale(0.8);
+    }
+}

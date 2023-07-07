@@ -126,8 +126,74 @@
     padding-bottom: 16px;
 }
 
-.getDemo {
+.get-demo {
     width: 150px;
     height: 60px;
     margin: 22px 15px 21px;
+}
+
+@media(max-width: 1438px) {
+    .compare {
+        gap: 60px;
+    }
+
+    .btn {
+        width: 190px;
+        height: 46px;
+    }
+
+    .table-wrapper {
+        margin-bottom: 80px;
+    }
+
+    .table {
+        margin: 55px auto;
+        width: 904px;
+    }
+
+    .benefits-col {
+        width: 377px;
+    }
+
+    .plan-col {
+        width: 132px;
+    }
+
+    .plan-col:last-child {
+        width: 132px;
+    }
+
+    .header-row {
+        height: 55px;
+    }
+
+    .benefits-title, .plan-title {
+        font-size: var(--font-size-20);
+    }
+
+    .benefits-title {
+        padding-left: 46px;
+    }
+
+    .section-title {
+        font-size: var(--font-size-20);
+        line-height: 20px;
+        padding: 22px 0 11px 46px;
+    }
+
+    .benefit-description {
+        padding: 10px 24px 10px 46px;
+        line-height: 16px;
+        width: 306px;
+    }
+
+    .last-benefit-row .benefit-description {
+        padding: 8px 24px 28px 46px;
+    }
+
+    .get-demo {
+        width: 110px;
+        height: 44px;
+        margin: 22px 11px 15px;
+    }
 }

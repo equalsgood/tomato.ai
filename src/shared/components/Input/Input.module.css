@@ -52,12 +52,8 @@
 }
 
 @media(max-width: 1438px) {
-    .container {
-        gap: 10px;
-    }
-
     .label-text {
-        font-size: var(--font-size-15);
+        font-size: var(--font-size-18);
     }
 
     .double-line .label-text {
@@ -67,5 +63,10 @@
     .input {
         padding: 16px 0 15px 25px;
         height: 58px;
+    }
+
+    .area {
+        resize: none;
+        height: auto;
     }
 }
