@@ -23,3 +23,23 @@
     flex-direction: column;
     gap: 12px;
 }
+
+@media(max-width: 1438px) {
+    .section {
+        padding: 37px 60px 60px;
+    }
+
+    .available-roles-container {
+        width: 904px;
+    }
+
+    .title {
+        font-size: var(--font-size-35);
+        line-height: 30px;
+        margin: 0 0 30px 30px;
+    }
+
+    .roles {
+        gap: 8px;
+    }
+}

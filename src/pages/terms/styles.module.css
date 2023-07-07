@@ -19,3 +19,15 @@
     bottom: 0;
     left: 0;
 }
+
+@media(max-width: 1438px) {
+    .main {
+        grid-template-columns: 308px auto;
+        column-gap: 39px;
+        padding: 84px 50px 60px;
+    }
+
+    .left {
+        height: 500px;
+    }
+}

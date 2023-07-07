@@ -8,7 +8,9 @@ export const CareersBenefit = (props: CareerBenefit) => {
     return (
         <li className={cls.benefit}>
             <div className={cls.titleContainer}>
-                {icon}
+                <div className={cls.icon}>
+                    {icon}
+                </div>
                 <Text tag="h3" variant={TextVariants.SUBTITLE_MEDIUM} classNamesProps={cls.title}>{title}</Text>
             </div>
             <div className={cls.descriptionContainer}>

@@ -31,3 +31,23 @@
     font-weight: var(--font-weight-s);
     text-decoration: none;
 }
+
+@media(max-width: 1438px) {
+    .aside {
+        width: 308px;
+    }
+
+    .content-wrapper {
+        width: 308px;
+    }
+
+    .menu-wrapper {
+        border-radius: 20px;
+        padding: 14px;
+    }
+
+    .info {
+        line-height: 30px;
+        margin: 16px 0 4px;
+    }
+}

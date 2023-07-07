@@ -40,3 +40,25 @@
     height: 190px;
     background: aquamarine;
 }
+
+@media(max-width: 1438px) {
+    .benefits {
+        width: 904px;
+        margin: 0 auto 70px;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 30px 30px;
+    }
+
+    .title {
+        line-height: 30px;
+    }
+
+    .benefits-container {
+        gap: 16px;
+    }
+}

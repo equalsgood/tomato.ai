@@ -9,12 +9,16 @@ export const AvailableRole = (props: CareerRole) => {
 
     return (
         <li className={cls.role}>
-            {icon}
+            <div className={cls.icon}>
+                {icon}
+            </div>
             <div className={cls.generalInfoContainer}>
                 <div className={cls.titleContainer}>
                     <Text tag="h3" variant={TextVariants.SUBTITLE_SMALL}>{title}</Text>
                     <div className={cls.locationContainer}>
-                        <LocationIcon/>
+                        <div className={cls.locationIcon}>
+                            <LocationIcon/>
+                        </div>
                         <span>{location}</span>
                     </div>
                 </div>
@@ -28,7 +32,9 @@ export const AvailableRole = (props: CareerRole) => {
                 </div>
                 <a href={applyLink} className={cls.link}>
                     <span>Apply Now</span>
-                    <ArrowIcon/>
+                    <div className={cls.locationIcon}>
+                        <ArrowIcon/>
+                    </div>
                 </a>
             </div>
         </li>

@@ -30,3 +30,36 @@
 .description {
     font-size: var(--font-size-14);
 }
+
+@media(max-width: 1438px) {
+    .benefit {
+        width: 100%;
+        height: 138px;
+        padding: 20px 11px 14px 32px;
+        gap: 10px;
+    }
+
+    .title-container {
+        height: 27px;
+        gap: 12px;
+    }
+
+    .title {
+        font-size: var(--font-size-22);
+        line-height: 27px;
+    }
+
+    .description-container {
+        line-height: 14px;
+        height: 65px;
+    }
+
+    .description {
+        font-size: var(--font-size-13);
+    }
+
+    .icon {
+        width: 27px;
+        transform: scale(0.7) translateY(-5px);
+    }
+}

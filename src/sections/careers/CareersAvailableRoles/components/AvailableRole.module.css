@@ -8,13 +8,6 @@
     width: 100%;
 }
 
-.icon {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background: aquamarine;
-}
-
 .general-info-container {
     margin: 0 57px 0 35px;
     width: 747px;
@@ -94,4 +87,69 @@
     font-size: var(--font-size-18);
     font-weight: var(--font-weight-l);
     line-height: 32px;
+}
+
+@media(max-width: 1438px) {
+    .role {
+        padding: 17px 35px 17px 31px;
+        height: 92px;
+    }
+
+    .general-info-container {
+        margin: 0 35px 0 23px;
+        width: 532px;
+        height: 100%;
+    }
+
+    .title-container {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .location-container span {
+        line-height: 14px;
+    }
+
+    .rate-info-container {
+        margin-left: 18px;
+    }
+
+    .description {
+        font-size: var(--font-size-13);
+        line-height: 14px;
+        height: 32px;
+        overflow: hidden;
+    }
+
+    .rate {
+        text-align: right;
+        line-height: 21px;
+    }
+
+    .rate-badge {
+        text-align: left;
+        line-height: 21px;
+        font-size: var(--font-size-15);
+    }
+
+    .link {
+        gap: 8px;
+        margin-bottom: 0;
+    }
+
+    .link span {
+        line-height: 22px;
+    }
+
+    .icon {
+        width: 58px;
+        transform: scale(0.7) translateX(-5px);
+    }
+
+    .location-icon {
+        width: 14px;
+        transform: scale(0.8) translateY(2px);
+    }
 }
