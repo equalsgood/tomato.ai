@@ -86,3 +86,54 @@
     color: var(--primary-title-color);
     line-height: 22px;
 }
+
+@media(max-width: 1438px) {
+    .founder {
+        width: 292px;
+        height: 426px;
+    }
+
+    .short-info {
+        height: 210px;
+        gap: 10px;
+        padding: 0 0 28px 36px;
+    }
+
+    .short-info .name {
+        line-height: 20px;
+    }
+
+    .short-info .position {
+        line-height: 18px;
+    }
+
+    .hovered-info {
+        padding: 26px 23px 0 25px;
+    }
+
+    .personal {
+        margin-bottom: 30px;
+    }
+
+    .initials {
+        gap: 12px;
+    }
+
+    .initials .name {
+        line-height: 21px;
+    }
+
+    .initials .position {
+        line-height: 22px;
+    }
+
+    .biography {
+        font-size: var(--font-size-16);
+        line-height: 20px;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+}

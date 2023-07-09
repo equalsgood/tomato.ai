@@ -51,3 +51,40 @@
     justify-self: end;
     text-decoration: none;
 }
+
+@media(max-width: 1438px) {
+    .info {
+        height: 114px;
+        padding: 19px 60px 20px 85px;
+        grid-template-columns: 870fr 184fr;
+    }
+
+    .title {
+        font-size: var(--font-size-26);
+        line-height: 30px;
+    }
+
+    .author, .description {
+        font-size: var(--font-size-15);
+        line-height: 16px;
+    }
+
+    .description {
+        height: 32px;
+        overflow: hidden;
+    }
+
+    .author {
+        padding-top: 5px;
+    }
+
+    .link {
+        color: var(--secondary-action-color);
+        font-size: var(--font-size-16);
+        line-height: 17px;
+    }
+
+    .icon {
+        transform: scale(0.8) translateY(3px);
+    }
+}

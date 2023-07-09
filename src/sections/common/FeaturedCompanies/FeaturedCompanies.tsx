@@ -9,11 +9,12 @@ import PointLightLogo from 'shared/assets/logos/featured/point-light.png';
 import TribeLightLogo from 'shared/assets/logos/featured/tribe-light.png';
 import CardumenLightLogo from 'shared/assets/logos/featured/cardumen-light.png';
 import RecursiveLightLogo from 'shared/assets/logos/featured/recursive-light.png';
-import OctaveTitledLogo from 'shared/assets/logos/featured/octave-titled.svg';
-import PointTitledLogo from 'shared/assets/logos/featured/point-titled.svg';
-import TribeTitledLogo from 'shared/assets/logos/featured/tribe-titled.svg';
-import CardumenTitledLogo from 'shared/assets/logos/featured/cardumen-titled.svg';
-import RecursiveTitledLogo from 'shared/assets/logos/featured/recursive-titled.svg';
+
+import OctaveTitledLogo from 'shared/assets/logos/featured/octave-titled.png';
+import PointTitledLogo from 'shared/assets/logos/featured/point-titled.png';
+import TribeTitledLogo from 'shared/assets/logos/featured/tribe-titled.png';
+import CardumenTitledLogo from 'shared/assets/logos/featured/cardumen-titled.png';
+import RecursiveTitledLogo from 'shared/assets/logos/featured/recursive-titled.png';
 import classNames from 'classnames';
 import { Text, TextVariants } from 'shared/components';
 
@@ -53,11 +54,11 @@ export const FeaturedCompanies = ({ variant, title }: FeaturedCompaniesProps) =>
                 <>
                     <Text tag="h3" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED} classNamesProps={cls.title}>{title}</Text>
                     <div className={cls.logos}>
-                        <OctaveTitledLogo/>
-                        <PointTitledLogo/>
-                        <TribeTitledLogo/>
-                        <CardumenTitledLogo/>
-                        <RecursiveTitledLogo/>
+                        <img alt="logo of the company Octave" className={cls.image} src={OctaveTitledLogo} />
+                        <img alt="logo of the company Point" className={cls.image} src={PointTitledLogo} />
+                        <img alt="logo of the company Point" className={cls.image} src={TribeTitledLogo} />
+                        <img alt="logo of the company Cardumen" className={cls.image} src={CardumenTitledLogo} />
+                        <img alt="logo of the company Cardumen" className={cls.image} src={RecursiveTitledLogo} />
                     </div>
                 </>
             }

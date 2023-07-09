@@ -35,3 +35,30 @@
     font-size: var(--font-size-16);
     height: 50px;
 }
+
+@media(max-width: 1438px) {
+    .section {
+        padding: 40px 60px 30px;
+    }
+
+    .title-container {
+        margin: 0 0 30px 30px;
+    }
+
+    .title {
+        line-height: 30px;
+    }
+
+    .number {
+        margin-left: 10px;
+    }
+
+    .categories-container {
+        gap: 14px;
+    }
+
+    .option {
+        font-size: var(--font-size-14);
+        height: 40px;
+    }
+}

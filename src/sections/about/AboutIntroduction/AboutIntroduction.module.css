@@ -61,3 +61,47 @@
     font-size: var(--font-size-18);
     font-weight: var(--font-weight-l);
 }
+
+@media(max-width: 1438px) {
+    .about {
+        margin: 0 0 78px 90px;
+    }
+
+    .info-container {
+        margin: 62px auto 0;
+    }
+
+    .info {
+        width: 353px;
+    }
+
+    .badge {
+        width: 130px;
+    }
+
+    .title {
+        line-height: 40px;
+        margin: 21px 0 30px;
+        font-size: var(--font-size-55);
+    }
+
+    .image-container {
+        position: relative;
+        height: 533px;
+        width: 580px;
+    }
+
+    .image-container img {
+        pointer-events: none;
+        width: 700px;
+        height: 620px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .action {
+        width: 190px;
+        height: 56px;
+    }
+}

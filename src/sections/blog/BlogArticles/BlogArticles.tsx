@@ -25,7 +25,7 @@ export const BlogArticles = (props: BlogArticlesProps) => {
                         </div>
                         <div className={cls.rowWrapper}>
                             <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.description}>{article.description}</Text>
-                            <a target='_blank' rel='noreferrer' href={article.link} className={cls.link}>Read<ArrowIcon/></a>
+                            <a target='_blank' rel='noreferrer' href={article.link} className={cls.link}>Read<div className={cls.icon}><ArrowIcon/></div></a>
                         </div>
                     </div>
                 </div>

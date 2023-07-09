@@ -29,3 +29,32 @@
     gap: 35px;
     justify-content: center;
 }
+
+@media(max-width: 1438px) {
+    .about-founders {
+        margin: 0 60px 80px;
+        gap: 40px;
+    }
+
+    .title-container {
+        gap: 69px;
+    }
+
+    .title {
+        line-height: 30px;
+        width: 301px;
+        font-size: var(--font-size-35);
+        padding-left: 30px;
+    }
+
+    .paragraph {
+        line-height: 16px;
+        height: 50px;
+        width: 503px;
+        font-size: var(--font-size-15);
+    }
+
+    .founders {
+        gap: 14px;
+    }
+}

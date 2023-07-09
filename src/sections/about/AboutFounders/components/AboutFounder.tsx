@@ -15,7 +15,7 @@ export const AboutFounder = (props: Founder) => {
             onMouseOver={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <img src={imageSrc} alt={`picture of the founder ${name}`} />
+            <img src={imageSrc} className={cls.image} alt={`picture of the founder ${name}`} />
             <div className={cls.shortInfo}>
                 <span className={cls.name}>{name}</span>
                 <span className={cls.position}>{position}</span>
