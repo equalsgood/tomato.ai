@@ -44,3 +44,10 @@
     height: 100vh;
     background: transparent;
 }
+
+@media(max-width: 1438px) {
+    .dropdown {
+        padding: 23px 25px 13px 23px;
+        gap: 14px;
+    }
+}

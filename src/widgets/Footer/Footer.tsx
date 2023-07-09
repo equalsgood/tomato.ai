@@ -11,7 +11,7 @@ export const Footer = memo(() => {
     return (
         <footer className={cls.footer}>
             <div className={cls.logoColumn}>
-                <Link to={RoutePaths.HOME}>
+                <Link className={cls.logo} to={RoutePaths.HOME}>
                     <FooterLogo/>
                 </Link>
                 <div className={cls.rightsContainer}>
@@ -28,9 +28,9 @@ export const Footer = memo(() => {
                             <Fragment key={`${column.title}-${row.text}-${index}`}>
                                 {row.to
                                     ?
-                                    <NavigationLink key={`${column.title}-${row.text}=`} text={row.text} to={row.to} variant={NavigationLinkVariants.FOOTER} />
+                                    <NavigationLink classNamesProps={cls.link} key={`${column.title}-${row.text}=`} text={row.text} to={row.to} variant={NavigationLinkVariants.FOOTER} />
                                     :
-                                    <Text tag='h4' variant={TextVariants.SUBHEADER_LIGHT_SMALL}>
+                                    <Text tag='h4' classNamesProps={cls.subheader} variant={TextVariants.SUBHEADER_LIGHT_SMALL}>
                                         {row.text}
                                     </Text>
                                 }
@@ -44,7 +44,7 @@ export const Footer = memo(() => {
                     <a className={cls.mailLink} href = "mailto: customersupport@tomato.ai">customersupport@tomato.ai</a>
                     <div className={cls.footerLocation}>
                         <LocationIcon/>
-                        <Text tag="p" variant={TextVariants.DEFAULT_SMALL}>New York, NY 20-124</Text>
+                        <Text tag="p" classNamesProps={cls.link} variant={TextVariants.DEFAULT_SMALL}>New York, NY 20-124</Text>
                     </div>
                 </div>
             </FooterColumn>
@@ -62,7 +62,7 @@ interface FooterColumnProps {
 const FooterColumn = (props: FooterColumnProps) => {
     return (
         <div className={cls.footerColumn}>
-            <Text tag='h3' variant={TextVariants.SUBHEADER_LIGHT}>
+            <Text tag='h3' classNamesProps={cls.title} variant={TextVariants.SUBHEADER_LIGHT}>
                 {props.title}
             </Text>
             {props.children}

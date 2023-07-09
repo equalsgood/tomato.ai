@@ -82,5 +82,8 @@
         --font-size-15: 12px;
         --font-size-14: 12px;
         --font-size-13: 10px;
+
+        --header-height: 70px;
+        --footer-height: 420px;
     }
 }

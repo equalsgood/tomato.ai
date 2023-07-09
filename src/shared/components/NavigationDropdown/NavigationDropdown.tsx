@@ -7,14 +7,14 @@ import classNames from 'classnames';
 interface NavigationDropdownProps {
     title: string;
     children: ReactNode;
-    width: number;
     isEnterprise: boolean;
     open: boolean;
     changeDropdownState: (state: boolean) => void;
+    classNamesProps?: string;
 }
 
 export const NavigationDropdown = memo((props: NavigationDropdownProps) => {
-    const { children, title, width, isEnterprise, open, changeDropdownState } = props;
+    const { children, title, isEnterprise, open, changeDropdownState, classNamesProps } = props;
 
     return (
         <div className={classNames(cls.dropdownContainer, { [cls.dark]: isEnterprise })}>
@@ -27,7 +27,7 @@ export const NavigationDropdown = memo((props: NavigationDropdownProps) => {
             </button>
             {open &&
                 <React.Fragment>
-                    <div style={{ width }} className={cls.dropdown}>
+                    <div className={classNames(cls.dropdown, classNamesProps)}>
                         {children}
                     </div>
                     <div onClick={() => changeDropdownState(false)} className={cls.overlay}/>

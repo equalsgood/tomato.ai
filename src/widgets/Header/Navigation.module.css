@@ -27,3 +27,59 @@
     font-size: var(--font-size-16);
 }
 
+.cases-dropdown {
+    width: 260px;
+}
+
+.company-dropdown {
+    width: 150px;
+}
+
+.default-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media(max-width: 1438px) {
+    .navigation {
+        width: auto;
+        gap: 30px;
+    }
+
+    .links-title {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-m);
+        color: var(--third-text-color);
+    }
+
+    .use-cases-links {
+        margin: 0 0 18px 39px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .action-link {
+        margin-left: 30px;
+        width: 160px;
+        height: 48px;
+        font-size: var(--font-size-16);
+    }
+
+    .cases-dropdown {
+        width: 220px;
+    }
+
+    .company-dropdown {
+        width: 146px;
+    }
+
+    .default-links {
+        padding: 6px 0 16px 10px;
+        gap: 17px;
+    }
+}

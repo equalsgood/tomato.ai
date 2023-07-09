@@ -22,3 +22,16 @@
 .dark {
     background: var(--third-bg-color);
 }
+
+@media(max-width: 1438px) {
+    .header {
+        padding: 0 60px 0 35px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .logo {
+        transform: scale(0.78);
+        width: auto;
+    }
+}

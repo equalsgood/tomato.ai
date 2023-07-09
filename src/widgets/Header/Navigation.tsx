@@ -26,7 +26,7 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
     return (
         <nav className={cls.navigation}>
             <NavigationDropdown
-                width={260}
+                classNamesProps={cls.casesDropdown}
                 title="Use Cases"
                 isEnterprise={isEnterprise}
                 open={casesDropdownOpen}
@@ -66,40 +66,44 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                 </div>
             </NavigationDropdown>
             <NavigationDropdown
-                width={150}
+                classNamesProps={cls.companyDropdown}
                 title="Company"
                 isEnterprise={isEnterprise}
                 open={companyDropdownOpen}
                 changeDropdownState={switchCompanyDropdownState}
             >
-                {companyLinks.map(link =>
-                    <NavigationLink
-                        key={`${link.text}-header-navigation`}
-                        text={link.text}
-                        to={link.to}
-                        variant={link.variant}
-                        isEnterprise={isEnterprise}
-                        onClick={() => switchCompanyDropdownState(false)}
-                    />
-                )}
+                <div className={cls.defaultLinks}>
+                    {companyLinks.map(link =>
+                        <NavigationLink
+                            key={`${link.text}-header-navigation`}
+                            text={link.text}
+                            to={link.to}
+                            variant={link.variant}
+                            isEnterprise={isEnterprise}
+                            onClick={() => switchCompanyDropdownState(false)}
+                        />
+                    )}
+                </div>
             </NavigationDropdown>
             <NavigationDropdown
-                width={150}
+                classNamesProps={cls.companyDropdown}
                 title="Safety"
                 isEnterprise={isEnterprise}
                 open={safetyDropdownOpen}
                 changeDropdownState={switchSafetyDropdownState}
             >
-                {safetyLinks.map(link =>
-                    <NavigationLink
-                        key={`${link.text}-header-navigation`}
-                        text={link.text}
-                        to={link.to}
-                        variant={link.variant}
-                        isEnterprise={isEnterprise}
-                        onClick={() => switchSafetyDropdownState(false)}
-                    />
-                )}
+                <div className={cls.defaultLinks}>
+                    {safetyLinks.map(link =>
+                        <NavigationLink
+                            key={`${link.text}-header-navigation`}
+                            text={link.text}
+                            to={link.to}
+                            variant={link.variant}
+                            isEnterprise={isEnterprise}
+                            onClick={() => switchSafetyDropdownState(false)}
+                        />
+                    )}
+                </div>
             </NavigationDropdown>
             { navigationLinks.map(link =>
                 <NavigationLink
