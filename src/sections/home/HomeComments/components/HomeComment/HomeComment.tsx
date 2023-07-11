@@ -6,11 +6,12 @@ import classNames from 'classnames';
 
 interface HomeCommentProps extends PublicComment {
     active: boolean;
+    classNamesProps: string;
 }
 
 export const HomeComment = (props: HomeCommentProps) => {
-    const { picture, text, name, company, position, active } = props;
-    const classes = classNames(cls.comment, { [cls.active]: active });
+    const { picture, text, name, company, position, active, classNamesProps } = props;
+    const classes = classNames(cls.comment, { [cls.active]: active }, classNamesProps);
 
     return (
         <div className={classes}>

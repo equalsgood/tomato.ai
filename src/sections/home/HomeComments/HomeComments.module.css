@@ -9,45 +9,75 @@
     position: relative;
 }
 
-.comments button {
+.carousel-container {
+    height: 190px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    cursor: grab;
+}
+
+.carousel {
+    pointer-events: none;
     position: absolute;
-    top: 40%;
-    border: none;
-    background: transparent;
-    cursor: pointer;
+    top: 0;
+    left: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    transform: scale(2);
-    border-radius: 10px;
-    transition: all 0.3s;
+    gap: 12px;
+    padding-right: 12px;
 }
 
-.comments button:hover {
-    box-shadow: 0px 10px 40px 0px #ddd;
+.second {
+    opacity: 0;
 }
 
-.comments button:active {
-    transform: scale(2.5);
-}
+@keyframes scroll {
+    0% {
+        transform: translate3d(0,0,0);
+    }
 
-.left {
-    left: 10%;
-}
-
-.right {
-    right: 10%;
-}
-
-.comments-list {
-    display: flex;
-    list-style: none;
-    transition: all 1s;
+    100% {
+        transform: translate3d(-50%,0,0);
+    }
 }
 
 .pagination {
     display: flex;
     gap: 16px;
 }
+
+.dot:hover {
+    cursor: pointer;
+}
+
+/*.comments button {*/
+/*    position: absolute;*/
+/*    top: 40%;*/
+/*    border: none;*/
+/*    background: transparent;*/
+/*    cursor: pointer;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    width: 36px;*/
+/*    height: 36px;*/
+/*    transform: scale(2);*/
+/*    border-radius: 10px;*/
+/*    transition: all 0.3s;*/
+/*}*/
+
+/*.comments button:hover {*/
+/*    box-shadow: 0px 10px 40px 0px #ddd;*/
+/*}*/
+
+/*.comments button:active {*/
+/*    transform: scale(2.5);*/
+/*}*/
+
+/*.left {*/
+/*    left: 10%;*/
+/*}*/
+
+/*.right {*/
+/*    right: 10%;*/
+/*}*/
