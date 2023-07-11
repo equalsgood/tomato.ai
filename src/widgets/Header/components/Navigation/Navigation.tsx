@@ -4,12 +4,15 @@ import { NavigationLinkProps, NavigationLinkVariants, NavigationLink, Navigation
 import { RoutePaths } from 'app/providers/AppRouter';
 import BpoIcon from 'shared/assets/icons/bpo-header-icon.svg';
 import EnterprisesIcon from 'shared/assets/icons/enterprises-header-icon.svg';
+import classNames from 'classnames';
 
 interface NavigationProps {
     isEnterprise: boolean;
+    mobile?: boolean;
+    open?: boolean;
 }
 
-export const Navigation = ({ isEnterprise }: NavigationProps) => {
+export const Navigation = ({ isEnterprise, mobile, open }: NavigationProps) => {
     const [casesDropdownOpen, setCasesDropdownOpen] = useState<boolean>(false);
     const [companyDropdownOpen, setCompanyDropdownOpen] = useState<boolean>(false);
     const [safetyDropdownOpen, setSafetyDropdownOpen] = useState<boolean>(false);
@@ -24,8 +27,9 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
         setSafetyDropdownOpen(state);
 
     return (
-        <nav className={cls.navigation}>
+        <nav className={classNames(cls.navigation, { [cls.open]: open })}>
             <NavigationDropdown
+                mobile={!!mobile}
                 classNamesProps={cls.casesDropdown}
                 title="Use Cases"
                 isEnterprise={isEnterprise}
@@ -39,6 +43,7 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                 <div className={cls.useCasesLinks}>
                     {bpoLinks.map(link =>
                         <NavigationLink
+                            classNamesProps={cls.link}
                             key={`bpo-${link.text}-header-navigation`}
                             text={link.text}
                             to={link.to}
@@ -48,13 +53,14 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                         />
                     )}
                 </div>
-                <div className={cls.linksTitle}>
+                <div className={classNames(cls.linksTitle, cls.lastLinksTitle)}>
                     <EnterprisesIcon/>
                     <p>Enterprises</p>
                 </div>
                 <div className={cls.useCasesLinks}>
                     {enterprisesLinks.map(link =>
                         <NavigationLink
+                            classNamesProps={cls.link}
                             key={`enterprises-${link.text}-header-navigation`}
                             text={link.text}
                             to={link.to}
@@ -66,6 +72,7 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                 </div>
             </NavigationDropdown>
             <NavigationDropdown
+                mobile={!!mobile}
                 classNamesProps={cls.companyDropdown}
                 title="Company"
                 isEnterprise={isEnterprise}
@@ -75,6 +82,7 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                 <div className={cls.defaultLinks}>
                     {companyLinks.map(link =>
                         <NavigationLink
+                            classNamesProps={cls.link}
                             key={`${link.text}-header-navigation`}
                             text={link.text}
                             to={link.to}
@@ -86,6 +94,7 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                 </div>
             </NavigationDropdown>
             <NavigationDropdown
+                mobile={!!mobile}
                 classNamesProps={cls.companyDropdown}
                 title="Safety"
                 isEnterprise={isEnterprise}
@@ -95,6 +104,7 @@ export const Navigation = ({ isEnterprise }: NavigationProps) => {
                 <div className={cls.defaultLinks}>
                     {safetyLinks.map(link =>
                         <NavigationLink
+                            classNamesProps={cls.link}
                             key={`${link.text}-header-navigation`}
                             text={link.text}
                             to={link.to}
@@ -181,6 +191,7 @@ const navigationLinks: Array<NavigationLinkProps> = [
         text: 'Blog',
         to: RoutePaths.BLOG,
         variant: NavigationLinkVariants.DEFAULT,
+        classNamesProps: cls.blogLink
     },
     {
         text: 'Request Demo',

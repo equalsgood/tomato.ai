@@ -1,4 +1,4 @@
-import React, { Suspense, useContext } from 'react';
+import React, { Suspense, useContext, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from '../config/routeConfig';
 import { Loader } from 'shared/components';
@@ -11,6 +11,10 @@ export const AppRouter = () => {
         const screenWidth = window.innerWidth;
         onResize(screenWidth);
     });
+
+    useEffect(() => {
+        onResize(window.innerWidth);
+    }, []);
 
     return (
         <Suspense fallback={<Loader/>}>

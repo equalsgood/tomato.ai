@@ -82,3 +82,71 @@
         gap: 17px;
     }
 }
+
+@media(max-width: 1022px) {
+    .navigation {
+        margin-top: 19px;
+        height: calc(100% - var(--header-height));
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+
+        transition: all 1s;
+        visibility: hidden;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .navigation.open {
+        transition: all 0s;
+        visibility: visible;
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .links-title {
+        gap: 13px;
+        font-size: var(--font-size-18);
+    }
+
+    .last-links-title {
+        margin-top: 15px;
+    }
+
+    .use-cases-links {
+        margin: 0;
+        gap: 27px;
+    }
+
+    .default-links {
+        gap: 27px;
+        padding: 0;
+    }
+
+    .action-link {
+        margin: auto 30px 37px 30px;
+        width: calc(100% - 60px);
+        height: 60px;
+        font-size: var(--font-size-18);
+    }
+
+    .cases-dropdown {
+        width: 100%;
+    }
+
+    .company-dropdown {
+        width: 100%;
+    }
+
+    .link {
+        font-size: var(--font-size-18);
+    }
+
+    .blog-link {
+        width: 100%;
+        padding: 20px 0 20px 41px;
+        font-size: var(--font-size-20);
+    }
+}
+
+
