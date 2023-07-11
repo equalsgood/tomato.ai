@@ -42,6 +42,7 @@ module.exports = {
         ],
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
-        'object-curly-spacing': ['error', 'always']
+        'object-curly-spacing': ['error', 'always'],
+        'no-empty-function': 'warn',
     }
 };
