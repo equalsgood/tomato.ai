@@ -1,44 +1,64 @@
-.comments-section {
-    padding: 70px 0 90px;
+.section {
+    width: 100%;
+    padding: 40px 0 90px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     align-items: center;
-    width: 100%;
+}
+
+.comments-section {
+    width: 1422px;
+    height: 250px;
+    padding: 0 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.comments-section button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    transform: scale(2);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.comments-section button:hover {
+    box-shadow: 0px 10px 40px 0px #ddd;
+}
+
+.comments-section button:active {
+    transform: scale(2.5);
+}
+
+.comments-wrapper {
+    flex: 1;
     overflow: hidden;
+    height: 100%;
     position: relative;
 }
 
-.carousel-container {
-    height: 190px;
-    width: 100%;
-    position: relative;
-    display: flex;
-    cursor: grab;
-}
-
-.carousel {
-    pointer-events: none;
+.comments-list {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    width: max-content;
     display: flex;
+    list-style: none;
     gap: 12px;
-    padding-right: 12px;
+    transition: all 1s;
 }
 
-.second {
-    opacity: 0;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translate3d(0,0,0);
-    }
-
-    100% {
-        transform: translate3d(-50%,0,0);
-    }
+.dot {
+    cursor: pointer;
 }
 
 .pagination {
@@ -46,38 +66,23 @@
     gap: 16px;
 }
 
-.dot:hover {
-    cursor: pointer;
+@media(max-width: 1438px) {
+    .section {
+        padding: 40px 0 80px;
+    }
+
+    .comments-section {
+        width: 1005px;
+        height: 250px;
+        padding: 0 60px;
+        gap: 45px;
+    }
+
+    .comments-section button {
+        transform: scale(1.5);
+    }
+
+    .comments-section button:active {
+        transform: scale(2);
+    }
 }
-
-/*.comments button {*/
-/*    position: absolute;*/
-/*    top: 40%;*/
-/*    border: none;*/
-/*    background: transparent;*/
-/*    cursor: pointer;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    width: 36px;*/
-/*    height: 36px;*/
-/*    transform: scale(2);*/
-/*    border-radius: 10px;*/
-/*    transition: all 0.3s;*/
-/*}*/
-
-/*.comments button:hover {*/
-/*    box-shadow: 0px 10px 40px 0px #ddd;*/
-/*}*/
-
-/*.comments button:active {*/
-/*    transform: scale(2.5);*/
-/*}*/
-
-/*.left {*/
-/*    left: 10%;*/
-/*}*/
-
-/*.right {*/
-/*    right: 10%;*/
-/*}*/

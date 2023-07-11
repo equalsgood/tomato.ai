@@ -4,14 +4,9 @@ import { Text, TextVariants } from 'shared/components';
 import { PublicComment } from '../../HomeComments';
 import classNames from 'classnames';
 
-interface HomeCommentProps extends PublicComment {
-    active: boolean;
-    classNamesProps: string;
-}
-
-export const HomeComment = (props: HomeCommentProps) => {
-    const { picture, text, name, company, position, active, classNamesProps } = props;
-    const classes = classNames(cls.comment, { [cls.active]: active }, classNamesProps);
+export const HomeComment = (props: PublicComment) => {
+    const { picture, text, name, company, position } = props;
+    const classes = classNames(cls.comment);
 
     return (
         <div className={classes}>
