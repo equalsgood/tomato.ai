@@ -83,6 +83,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                     classNamesProps={classNames(cls.note, cls.input)}
                 />
                 <Button
+                    classNamesProps={cls.submit}
                     type="submit"
                     variant={ButtonVariants.ACTION}
                     text="Send Message"

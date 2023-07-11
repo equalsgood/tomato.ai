@@ -1,4 +1,6 @@
 .intro {
+    width: 1422px;
+    margin: 0 auto;
     padding: 45px 0 60px;
     display: flex;
     gap: 50px;
@@ -45,9 +47,13 @@
 @media(max-width: 1438px) {
     .intro {
         padding: 61px 0 55px;
+        width: 1005px;
+        margin: 0 auto;
+        gap: 11px;
     }
 
     .details {
+        align-items: center;
         padding: 0 0 50px;
         margin-right: 90px;
     }
@@ -75,7 +81,7 @@
     }
 
     .image {
-        width: 477px;
-        height: 412px;
+        width: 518px;
+        height: auto;
     }
 }

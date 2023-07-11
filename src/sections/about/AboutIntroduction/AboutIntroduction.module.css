@@ -1,5 +1,7 @@
 .about {
-    margin: 0 0 105px 130px;
+    width: 1422px;
+    margin: 0 auto;
+    padding: 0 0 105px 130px;
     display: flex;
     justify-content: flex-end;
 }
@@ -64,7 +66,9 @@
 
 @media(max-width: 1438px) {
     .about {
-        margin: 0 0 78px 90px;
+        width: 1005px;
+        margin: 0 auto;
+        padding: 0 0 78px 90px;
     }
 
     .info-container {

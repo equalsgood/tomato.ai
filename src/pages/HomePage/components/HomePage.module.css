@@ -1,0 +1,22 @@
+.main {
+    position: relative;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.left {
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+@media(max-width: 1438px) {
+    .left {
+        top: 550px;
+        height: 600px;
+    }
+}

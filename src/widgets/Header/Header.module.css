@@ -1,11 +1,7 @@
 .header {
+    width: 100%;
     height: var(--header-height);
     background: var(--primary-bg-color);
-    padding: 0 100px;
-    display: flex;
-    gap: 360px;
-    justify-content: end;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,10 +9,14 @@
     z-index: var(--header-z-index);
 }
 
-.logo {
-    width: 15%;
+.content {
+    height: 100%;
+    width: 1422px;
+    margin: 0 auto;
+    padding: 0 100px;
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
 .dark {
@@ -24,10 +24,9 @@
 }
 
 @media(max-width: 1438px) {
-    .header {
+    .content {
+        width: 1007px;
         padding: 0 60px 0 35px;
-        gap: 0;
-        justify-content: space-between;
     }
 
     .logo {

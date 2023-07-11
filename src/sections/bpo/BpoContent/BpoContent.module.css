@@ -1,5 +1,6 @@
 .content {
-    margin-bottom: 109px;
+    width: 1422px;
+    margin: 0 auto 109px;
 }
 
 .content-section {
@@ -35,7 +36,8 @@
 
 @media(max-width: 1438px) {
     .content {
-        margin-bottom: 90px;
+        width: 1005px;
+        margin: 0 auto 90px;
     }
 
     .content-section {

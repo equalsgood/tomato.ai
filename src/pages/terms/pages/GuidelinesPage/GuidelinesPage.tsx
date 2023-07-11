@@ -14,8 +14,10 @@ const GuidelinesPage = () => {
 
     return (
         <main className={cls.main}>
-            <TermsCommonMenu onChange={sectionChangeHandler} currentMenuIndex={currentMenuIndex} content={contentMemo}/>
-            <TermsCommonContent onChange={sectionChangeHandler} content={contentMemo}/>
+            <div className={cls.content}>
+                <TermsCommonMenu onChange={sectionChangeHandler} currentMenuIndex={currentMenuIndex} content={contentMemo}/>
+                <TermsCommonContent onChange={sectionChangeHandler} content={contentMemo}/>
+            </div>
             <img alt="background image 1" src={backgroundImageOne} className={cls.right} />
             <img alt="background image 2" src={backgroundImageTwo} className={cls.left} />
         </main>

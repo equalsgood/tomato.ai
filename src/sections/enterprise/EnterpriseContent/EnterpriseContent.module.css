@@ -1,4 +1,6 @@
 .content {
+    width: 1422px;
+    margin: 0 auto;
     padding-bottom: 109px;
 }
 
@@ -44,6 +46,8 @@
 
 @media(max-width: 1438px) {
     .content {
+        width: 1005px;
+        margin: 0 auto;
         padding-bottom: 90px;
     }
 

@@ -32,7 +32,8 @@ interface FeaturedCompaniesProps {
 export const FeaturedCompanies = ({ variant, title }: FeaturedCompaniesProps) => {
     return (
         <section className={classNames(cls.featured, { [cls.titled]: variant === FeaturedCompaniesVariants.TITLED })}>
-            { variant === FeaturedCompaniesVariants.DEFAULT &&
+            <div className={classNames(cls.content, { [cls.titled]: variant === FeaturedCompaniesVariants.TITLED })}>
+                { variant === FeaturedCompaniesVariants.DEFAULT &&
                 <>
                     <img alt="logo of the company Octave" className={cls.image} src={OctaveLogo} />
                     <img alt="logo of the company Point" className={cls.image} src={PointLogo} />
@@ -40,8 +41,8 @@ export const FeaturedCompanies = ({ variant, title }: FeaturedCompaniesProps) =>
                     <img alt="logo of the company Cardumen" className={cls.image} src={CardumenLogo} />
                     <img alt="logo of the company Cardumen" className={cls.image} src={RecursiveLogo} />
                 </>
-            }
-            { variant === FeaturedCompaniesVariants.LIGHT &&
+                }
+                { variant === FeaturedCompaniesVariants.LIGHT &&
                 <>
                     <img alt="logo of the company Octave" className={cls.image} src={OctaveLightLogo} />
                     <img alt="logo of the company Point" className={cls.image} src={PointLightLogo} />
@@ -49,8 +50,8 @@ export const FeaturedCompanies = ({ variant, title }: FeaturedCompaniesProps) =>
                     <img alt="logo of the company Cardumen" className={cls.image} src={CardumenLightLogo} />
                     <img alt="logo of the company Cardumen" className={cls.image} src={RecursiveLightLogo} />
                 </>
-            }
-            { variant === FeaturedCompaniesVariants.TITLED &&
+                }
+                { variant === FeaturedCompaniesVariants.TITLED &&
                 <>
                     <Text tag="h3" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED} classNamesProps={cls.title}>{title}</Text>
                     <div className={cls.logos}>
@@ -61,7 +62,8 @@ export const FeaturedCompanies = ({ variant, title }: FeaturedCompaniesProps) =>
                         <img alt="logo of the company Cardumen" className={cls.image} src={RecursiveTitledLogo} />
                     </div>
                 </>
-            }
+                }
+            </div>
         </section>
     );
 };

@@ -1,6 +1,13 @@
 .footer {
+    width: 100%;
     height: var(--footer-height);
     background: var(--reversed-bg-color);
+}
+
+.content {
+    width: 1422px;
+    margin: 0 auto;
+    height: 100%;
     padding: 50px 0 45px 100px;
 
     display: grid;
@@ -45,10 +52,11 @@
 }
 
 @media(max-width: 1438px) {
-    .footer {
+    .content {
         position: relative;
+
+        width: 1000px;
         padding: 119px 0 46px 89px;
-        display: grid;
         grid-template-columns: 0 220fr 219fr 193fr 303fr;
     }
 
@@ -104,3 +112,4 @@
         align-items: center;
     }
 }
+

@@ -43,6 +43,10 @@
     height: 58px;
 }
 
+.submit {
+    margin-top: 10px;
+}
+
 @media(max-width: 1438px) {
     .content {
         padding: 32px 29px 32px 31px;

@@ -22,6 +22,11 @@ export const Checkbox = memo((props: CheckboxProps) => {
         setSelectedValuesString(newString);
     });
 
+    const clickHandler = (option: string) => {
+        onSelect(option);
+        setOpen(false);
+    };
+
     return (
         <div className={cls.container}>
             <div className={cls.label}>
@@ -44,7 +49,7 @@ export const Checkbox = memo((props: CheckboxProps) => {
                             <div
                                 key={`${option}-select-option`}
                                 className={classNames(cls.option, { [cls.selectedOption]: values.includes(option) })}
-                                onClick={() => onSelect(option)}
+                                onClick={() => clickHandler(option)}
                             >
                                 {option}
                             </div>

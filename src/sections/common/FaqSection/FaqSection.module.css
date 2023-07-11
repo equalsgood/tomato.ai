@@ -1,4 +1,6 @@
 .faq-section {
+    width: 1422px;
+    margin: 0 auto;
     padding: 0 130px 121px;
     display: flex;
     flex-direction: column;
@@ -21,6 +23,8 @@
 
 @media(max-width: 1438px) {
     .faq-section {
+        width: 1005px;
+        margin: 0 auto;
         padding: 0 62px 100px;
         gap: 37px;
     }

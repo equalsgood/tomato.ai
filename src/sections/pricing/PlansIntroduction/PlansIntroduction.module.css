@@ -1,5 +1,6 @@
 .section {
-    width: 100%;
+    width: 1422px;
+    margin: 0 auto;
     padding: 56px 100px 50px;
     display: flex;
     flex-direction: column;
@@ -30,6 +31,8 @@
 
 @media(max-width: 1438px) {
     .section {
+        width: 1005px;
+        margin: 0 auto;
         padding: 50px 60px 50px;
     }
 

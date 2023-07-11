@@ -1,6 +1,7 @@
 import cls from './ComparePlans.module.css';
 import { Button, ButtonVariants, NavigationLink, NavigationLinkVariants } from 'shared/components';
-import ArrowIcon from 'shared/assets/icons/arrow-blue-right.svg';
+import ArrowRightIcon from 'shared/assets/icons/arrow-blue-right.svg';
+import ArrowUpIcon from 'shared/assets/icons/arrow-blue-up.svg';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import AvailableIcon from 'shared/assets/icons/plans/available.svg';
@@ -12,7 +13,7 @@ import { useAppDispatch } from 'hooks';
 
 export const ComparePlans = () => {
     const dispatch = useAppDispatch();
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const clickLinkHandler = (plan: Plans) => {
         dispatch(requestDemoActions.changeSelectedPlan(plan));
@@ -23,9 +24,9 @@ export const ComparePlans = () => {
             <Button
                 type="button"
                 variant={ButtonVariants.ACTION_BLUE}
-                text="Compare Plans"
+                text={open ? 'Hide' : 'Compare Plans'}
                 classNamesProps={cls.btn}
-                endIcon={<ArrowIcon/>}
+                endIcon={open ? <ArrowUpIcon/> : <ArrowRightIcon/>}
                 onClick={() => setOpen(prev => !prev)}
             />
             <div className={classNames(cls.tableWrapper, { [cls.open]: open })}>

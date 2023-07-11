@@ -1,6 +1,12 @@
-.benefits {
-    padding: 55px 145px;
+.benefits-container {
+    width: 100%;
     background: var(--reversed-bg-color);
+}
+
+.benefits {
+    width: 1422px;
+    margin: 0 auto;
+    padding: 55px 145px;
     display: flex;
     gap: 113px;
     justify-content: space-around;
@@ -37,23 +43,24 @@
 
 @media(max-width: 1438px) {
     .benefits {
+        width: 1005px;
+        margin: 0 auto;
         height: 600px;
-        padding: 47px 0 56px;
+        padding: 47px 0 56px 89px;
         flex-direction: column;
         gap: 48px;
         justify-content: space-between;
     }
 
     .title {
-        width: 812px;
-        margin: 0 auto;
+        width: 100%;
     }
 
     .benefits-list {
         margin: 0 auto;
-        width: 812px;
-        grid-template-columns: 1fr 1fr;
-        justify-content: space-around;
+        width: 100%;
+        grid-template-columns: 347fr 467fr;
+        column-gap: 121px;
     }
 
     .icon {

@@ -9,8 +9,6 @@ export const HomeIntroduction = () => {
         <section className={cls.introductionSection}>
             <HomeIntroTitle/>
             <HomeSoundExamples/>
-            <img alt="background image 1" src={firstBackground} className={cls.right} />
-            <img alt="background image 2" src={secondBackground} className={cls.left} />
         </section>
     );
 };

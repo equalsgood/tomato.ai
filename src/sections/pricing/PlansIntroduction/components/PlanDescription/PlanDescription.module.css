@@ -122,6 +122,10 @@
     height: 66px;
 }
 
+.link:hover {
+    background: rgba(0, 189, 80, 0.1);
+}
+
 @media(max-width: 1438px) {
     .description.most-popular {
         height: 561px;

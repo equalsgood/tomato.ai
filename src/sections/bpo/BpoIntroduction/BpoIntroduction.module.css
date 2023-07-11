@@ -1,12 +1,14 @@
 .intro {
-    margin: 55px 0 70px 130px;
+    width: 1422px;
+    margin: 0 auto;
+    padding: 55px 0 70px 130px;
     display: flex;
+    gap: 27px;
 }
 
 .details {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     padding: 50px 0 74px;
 }
 
@@ -36,25 +38,30 @@
 
 .image-wrapper {
     position: relative;
-    width: 720px;
-    height: 598px;
+    width: 703px;
+    height: 600px;
 }
 
 .image {
     position: absolute;
-    width: 749px;
-    height: 598px;
     top: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media(max-width: 1438px) {
     .intro {
-        margin: 61px 0 55px 90px;
+        width: 1005px;
+        margin: 0 auto;
+        padding: 52px 0 40px 90px;
     }
 
     .details {
-        padding: 0;
+        flex: 0;
+        align-items: center;
+        min-width: 404px;
+        padding: 10px 0 0;
     }
 
     .title {
@@ -80,12 +87,15 @@
     }
 
     .image-wrapper {
+        position: relative;
         width: 512px;
-        height: 412px;
+        height: auto;
+        margin-left: auto;
     }
 
     .image {
-        width: 512px;
-        height: 412px;
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 }

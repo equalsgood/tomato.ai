@@ -1,5 +1,7 @@
 .section {
     padding: 50px 100px 40px;
+    width: 1422px;
+    margin: 0 auto;
 }
 
 .title-container {
@@ -38,6 +40,8 @@
 
 @media(max-width: 1438px) {
     .section {
+        width: 1005px;
+        margin: 0 auto;
         padding: 40px 60px 30px;
     }
 

@@ -17,13 +17,15 @@ export const Header = memo(() => {
 
     return (
         <header className={classNames(cls.header, { [cls.dark]: isCurrentLocationEnterprise })}>
-            <Link className={cls.logo} to={RoutePaths.HOME}>
-                {isCurrentLocationEnterprise ?
-                    <HeaderLightLogo/> :
-                    <HeaderLogo/>
-                }
-            </Link>
-            <Navigation isEnterprise={isCurrentLocationEnterprise}/>
+            <div className={cls.content}>
+                <Link className={cls.logo} to={RoutePaths.HOME}>
+                    {isCurrentLocationEnterprise ?
+                        <HeaderLightLogo/> :
+                        <HeaderLogo/>
+                    }
+                </Link>
+                <Navigation isEnterprise={isCurrentLocationEnterprise}/>
+            </div>
         </header>
     );
 });

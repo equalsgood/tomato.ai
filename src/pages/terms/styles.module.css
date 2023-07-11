@@ -1,9 +1,14 @@
 .main {
+    width: 100%;
     position: relative;
+}
+
+.content {
+    width: 1422px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 420px auto;
     column-gap: 62px;
-    width: 100%;
     padding: 73px 100px 47px;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
@@ -21,7 +26,8 @@
 }
 
 @media(max-width: 1438px) {
-    .main {
+    .content {
+        width: 1007px;
         grid-template-columns: 308px auto;
         column-gap: 39px;
         padding: 84px 50px 60px;

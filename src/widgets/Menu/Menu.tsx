@@ -20,17 +20,9 @@ interface MenuProps {
 
 const MENU_ITEM_HEIGHT = 65;
 
-const getScreenWidth = () => {
-    return window.innerWidth;
-};
-
 export const Menu = (props: MenuProps) => {
     const { isEnterprise, items, onItemChange, withIcon, currentMenuItemIndex } = props;
     const [selectOffset, setSelectOffset] = useState<string>('translateY(0px)');
-
-    // const screenWidth = getScreenWidth();
-    // let menuItemHeight = 65;
-    // if(screenWidth)
 
     useEffect(() => {
         setSelectOffset(`translateY(${MENU_ITEM_HEIGHT * currentMenuItemIndex}px)`);    

@@ -1,7 +1,6 @@
 .navigation {
-    width: 55%;
     display: flex;
-    gap: 47px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -22,6 +21,7 @@
 }
 
 .action-link {
+    margin-left: 26px;
     width: 202px;
     height: 55px;
     font-size: var(--font-size-16);
@@ -43,7 +43,6 @@
 
 @media(max-width: 1438px) {
     .navigation {
-        width: auto;
         gap: 30px;
     }
 

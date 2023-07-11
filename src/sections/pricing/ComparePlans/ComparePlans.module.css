@@ -7,9 +7,9 @@
 }
 
 .btn {
-    width: 250px;
-    height: 60px;
-    gap: 8px;
+    width: max-content;
+    padding: 14px 22px 16px 44px;
+    gap: 12px;
 }
 
 .table-wrapper {
@@ -138,8 +138,10 @@
     }
 
     .btn {
-        width: 190px;
+        width: max-content;
+        padding: 8px 16px 8px 30px;
         height: 46px;
+        gap: 8px;
     }
 
     .table-wrapper {

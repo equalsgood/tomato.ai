@@ -10,44 +10,46 @@ import { Link } from 'react-router-dom';
 export const Footer = memo(() => {
     return (
         <footer className={cls.footer}>
-            <div className={cls.logoColumn}>
-                <Link className={cls.logo} to={RoutePaths.HOME}>
-                    <FooterLogo/>
-                </Link>
-                <div className={cls.rightsContainer}>
-                    <SocialLinks/>
-                    <Text tag='p' variant={TextVariants.DEFAULT}>
+            <div className={cls.content}>
+                <div className={cls.logoColumn}>
+                    <Link className={cls.logo} to={RoutePaths.HOME}>
+                        <FooterLogo/>
+                    </Link>
+                    <div className={cls.rightsContainer}>
+                        <SocialLinks/>
+                        <Text tag='p' variant={TextVariants.DEFAULT}>
                         ©2023 Tomato.ai. All rights reserved.
-                    </Text>
+                        </Text>
+                    </div>
                 </div>
-            </div>
-            {footerConfig.map(column =>
-                <FooterColumn key={`${column.title}-footer-column`} title={column.title}>
+                {footerConfig.map(column =>
+                    <FooterColumn key={`${column.title}-footer-column`} title={column.title}>
+                        <div className={cls.footerLinks}>
+                            {column.content.map((row, index) =>
+                                <Fragment key={`${column.title}-${row.text}-${index}`}>
+                                    {row.to
+                                        ?
+                                        <NavigationLink classNamesProps={cls.link} key={`${column.title}-${row.text}=`} text={row.text} to={row.to} variant={NavigationLinkVariants.FOOTER} />
+                                        :
+                                        <Text tag='h4' classNamesProps={cls.subheader} variant={TextVariants.SUBHEADER_LIGHT_SMALL}>
+                                            {row.text}
+                                        </Text>
+                                    }
+                                </Fragment>
+                            )}
+                        </div>
+                    </FooterColumn>
+                )}
+                <FooterColumn title="Contact">
                     <div className={cls.footerLinks}>
-                        {column.content.map((row, index) =>
-                            <Fragment key={`${column.title}-${row.text}-${index}`}>
-                                {row.to
-                                    ?
-                                    <NavigationLink classNamesProps={cls.link} key={`${column.title}-${row.text}=`} text={row.text} to={row.to} variant={NavigationLinkVariants.FOOTER} />
-                                    :
-                                    <Text tag='h4' classNamesProps={cls.subheader} variant={TextVariants.SUBHEADER_LIGHT_SMALL}>
-                                        {row.text}
-                                    </Text>
-                                }
-                            </Fragment>
-                        )}
+                        <a className={cls.mailLink} href = "mailto: customersupport@tomato.ai">customersupport@tomato.ai</a>
+                        <div className={cls.footerLocation}>
+                            <LocationIcon/>
+                            <Text tag="p" classNamesProps={cls.link} variant={TextVariants.DEFAULT_SMALL}>New York, NY 20-124</Text>
+                        </div>
                     </div>
                 </FooterColumn>
-            )}
-            <FooterColumn title="Contact">
-                <div className={cls.footerLinks}>
-                    <a className={cls.mailLink} href = "mailto: customersupport@tomato.ai">customersupport@tomato.ai</a>
-                    <div className={cls.footerLocation}>
-                        <LocationIcon/>
-                        <Text tag="p" classNamesProps={cls.link} variant={TextVariants.DEFAULT_SMALL}>New York, NY 20-124</Text>
-                    </div>
-                </div>
-            </FooterColumn>
+            </div>
         </footer>
     );
 });

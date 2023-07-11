@@ -1,4 +1,6 @@
 .introduction-section {
+    width: 1422px;
+    margin: 0 auto;
     padding: 65px 0 90px 0;
     display: flex;
     flex-direction: column;
@@ -6,27 +8,10 @@
     position: relative;
 }
 
-.right {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.left {
-    position: absolute;
-    top: 60px;
-    left: 0;
-}
-
-
 @media(max-width: 1438px) {
     .introduction-section {
+        width: 1005px;
         padding: 65px 0 70px 0;
         gap: 62px;
-    }
-
-    .left {
-        top: 550px;
-        height: 600px;
     }
 }

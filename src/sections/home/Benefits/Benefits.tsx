@@ -7,19 +7,21 @@ import HireIcon from 'shared/assets/icons/benefits/hire.svg';
 
 export const Benefits = () => {
     return (
-        <section id="benefits" className={cls.benefits}>
-            <Text tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>Benefits</Text>
-            <ul className={cls.benefitsList}>
-                {benefitsList.map(benefit =>
-                    <li key={benefit.title} className={cls.benefit}>
-                        <div className={cls.icon}>
-                            {benefit.icon}
-                        </div>
-                        <Text tag="h3" variant={TextVariants.SUBHEADER_LIGHT}>{benefit.title}</Text>
-                        <Text tag="p" width={330} variant={TextVariants.PARAGRAPH_REVERSED_SMALL}>{benefit.text}</Text>
-                    </li>
-                )}
-            </ul>
+        <section id="benefits" className={cls.benefitsContainer}>
+            <div className={cls.benefits}>
+                <Text tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>Benefits</Text>
+                <ul className={cls.benefitsList}>
+                    {benefitsList.map(benefit =>
+                        <li key={benefit.title} className={cls.benefit}>
+                            <div className={cls.icon}>
+                                {benefit.icon}
+                            </div>
+                            <Text tag="h3" variant={TextVariants.SUBHEADER_LIGHT}>{benefit.title}</Text>
+                            <Text tag="p" width={330} variant={TextVariants.PARAGRAPH_REVERSED_SMALL}>{benefit.text}</Text>
+                        </li>
+                    )}
+                </ul>
+            </div>
         </section>
     );
 };

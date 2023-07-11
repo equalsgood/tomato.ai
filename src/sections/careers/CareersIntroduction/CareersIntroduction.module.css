@@ -1,5 +1,7 @@
 .careers {
-    margin: 35px 0 18px 130px;
+    width: 1422px;
+    margin: 0 auto;
+    padding: 35px 0 18px 130px;
     display: flex;
     justify-content: flex-end;
 }
@@ -57,7 +59,8 @@
 
 @media(max-width: 1438px) {
     .careers {
-        margin: 60px 0 89px 90px;
+        width: 1007px;
+        padding: 60px 0 89px 90px;
     }
 
     .info-container {
