@@ -34,7 +34,8 @@
 
 @media(max-width: 1438px) {
     .about-founders {
-        width: 1005px;
+        width: 100%;
+        max-width: 1005px;
         margin: 0 auto;
         padding: 0 60px 80px;
         gap: 40px;

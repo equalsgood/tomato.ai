@@ -72,7 +72,8 @@
     }
 
     .comments-section {
-        width: 1005px;
+        width: 100%;
+        max-width: 1005px;
         height: 250px;
         padding: 0 60px;
         gap: 45px;

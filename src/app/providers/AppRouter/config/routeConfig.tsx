@@ -22,7 +22,7 @@ export enum RoutePaths {
     CAREERS = '/careers',
     ABOUT = '/about',
     TERMS = '/terms',
-    GUIDELINES = '/guidelines',
+    GUIDELINES = '/brand-guidelines',
     PRIVACY = '/privacy',
     ETHICS = '/ethics',
     SECURITY = '/security',

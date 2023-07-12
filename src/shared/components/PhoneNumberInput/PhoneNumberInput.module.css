@@ -1,8 +1,21 @@
+.label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .label-text {
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-l);
     font-size: var(--font-size-16);
     line-height: 27px;
+}
+
+.errorMessage {
+    color: var(--third-action-color);
+    line-height: 27px;
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-m);
 }
 
 @media(max-width: 1438px) {

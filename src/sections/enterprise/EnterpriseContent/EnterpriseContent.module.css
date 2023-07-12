@@ -46,7 +46,8 @@
 
 @media(max-width: 1438px) {
     .content {
-        width: 1005px;
+        width: 100%;
+        max-width: 1005px;
         margin: 0 auto;
         padding-bottom: 90px;
     }

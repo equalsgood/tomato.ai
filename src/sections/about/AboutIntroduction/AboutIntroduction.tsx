@@ -1,8 +1,7 @@
 import cls from './AboutIntroduction.module.css';
 import { Text, TextVariants } from 'shared/components';
-import { scrollSmoothTo } from 'shared/lib';
 import introImage from 'shared/assets/images/double-images/about-1.png';
-import { ContactUsPopup } from 'sections/about/AboutIntroduction/components/ContactUsPopup/ContactUsPopup';
+import { ContactUsPopup } from 'widgets';
 import { useCallback, useState } from 'react';
 
 export const AboutIntroduction = () => {

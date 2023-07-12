@@ -5,6 +5,8 @@ export interface ContextSchema {
     isMobile: boolean,
     screenWidth: number,
     onResize: (width: number) => void;
+    onPlay: (audio: string) => void;
+    playedAudio: string;
 }
 
 const defaultValue: ContextSchema = {
@@ -12,6 +14,8 @@ const defaultValue: ContextSchema = {
     mobileBreakpoint: 1023,
     screenWidth: window.innerWidth,
     onResize: (width) => {},
+    onPlay: (audio) => {},
+    playedAudio: '',
 };
 
 export const Context = createContext(defaultValue);
@@ -24,6 +28,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
     const mobileBreakpoint = 1023;
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [isMobile, setIsMobile] = useState(false);
+    const [playedAudio, setPlayedAudio] = useState('');
 
     const resizeHandler = (width: number) => {
         if(width < mobileBreakpoint) {
@@ -34,11 +39,17 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
         setScreenWidth(width);
     };
 
+    const playHandler = (audio: string) => {
+        setPlayedAudio(audio);
+    };
+
     const contextValue: ContextSchema = {
+        playedAudio,
         mobileBreakpoint,
         isMobile,
         screenWidth,
-        onResize: resizeHandler
+        onResize: resizeHandler,
+        onPlay: playHandler
     };
 
     return (

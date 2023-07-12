@@ -35,7 +35,7 @@ export const HomeSoundExamples = () => {
                         {originalSamples.map(smpl =>
                             <li key={smpl.description} className={cls.sample}>
                                 <img alt={`image of ${smpl.country} flag`} src={smpl.flag} className={cls.flag} />
-                                <AudioPlayer src={smpl.src} type="original" size="large"/>
+                                <AudioPlayer audioId={smpl.audioId} src={smpl.src} type="original" size="large"/>
                             </li>
                         )}
                     </ul>
@@ -45,7 +45,7 @@ export const HomeSoundExamples = () => {
                     <ul className={cls.samples}>
                         {enhancedSamples.map(smpl =>
                             <li key={smpl.description} className={cls.sample}>
-                                <AudioPlayer src={smpl.src} type="enhanced" size="large"/>
+                                <AudioPlayer audioId={smpl.audioId} src={smpl.src} type="enhanced" size="large"/>
                             </li>
                         )}
                     </ul>
@@ -61,24 +61,28 @@ const originalSamples = [
         description: 'indiaOriginalSample',
         flag: IndiaFlag,
         src: indiaOriginalSample,
+        audioId: 'India-original'
     },
     {
         country: 'Philippines',
         description: 'philOriginalSample',
         flag: PhilippinesFlag,
         src: philOriginalSample,
+        audioId: 'Philippines-original'
     },
     {
         country: 'Haiti',
         description: 'haitiOriginalSample',
         flag: HaitiFlag,
         src: haitiOriginalSample,
+        audioId: 'Haiti-original'
     },
     {
         country: 'Pakistan',
         description: 'pakistanOriginalSample',
         flag: PakistanFlag,
         src: pakistanOriginalSample,
+        audioId: 'Pakistan-original'
     },
 ];
 
@@ -86,17 +90,21 @@ const enhancedSamples = [
     {
         description: 'indiaEnhancedSample',
         src: indiaEnhancedSample,
+        audioId: 'india-enhanced'
     },
     {
         description: 'philEnhancedSample',
         src: philEnhancedSample,
+        audioId: 'phil-enhanced'
     },
     {
         description: 'haitiEnhancedSample',
         src: haitiEnhancedSample,
+        audioId: 'haiti-enhanced'
     },
     {
         description: 'pakistanEnhancedSample',
         src: pakistanEnhancedSample,
+        audioId: 'Pakistan-enhanced'
     },
 ];

@@ -46,9 +46,24 @@
     outline: solid 1px var(--primary-action-color);
 }
 
+.error .input:focus {
+    outline: solid 1px var(--third-action-color);
+}
+
+.error .input {
+    outline: solid 1px var(--third-action-color);
+}
+
 .area {
     resize: none;
     height: auto;
+}
+
+.errorMessage {
+    color: var(--third-action-color);
+    line-height: 27px;
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-m);
 }
 
 @media(max-width: 1438px) {

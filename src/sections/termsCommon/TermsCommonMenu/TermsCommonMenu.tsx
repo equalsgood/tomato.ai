@@ -1,5 +1,5 @@
 import cls from './TermsCommonMenu.module.css';
-import { Menu, MenuItem } from 'widgets';
+import { ContactUsPopup, Menu, MenuItem } from 'widgets';
 import { Text, TextVariants } from 'shared/components';
 import { useEffect, useState } from 'react';
 import { scrollSmoothTo } from 'shared/lib';
@@ -14,6 +14,7 @@ interface TermsMenuProps {
 export const TermsCommonMenu = (props: TermsMenuProps) => {
     const { content, currentMenuIndex, onChange } = props;
     const [items, setItems] = useState<Array<MenuItem>>([]);
+    const [open, setOpen] = useState<boolean>(false);
 
     useEffect(() => {
         const newItems = content.sections.map(section => {
@@ -29,7 +30,12 @@ export const TermsCommonMenu = (props: TermsMenuProps) => {
     const changeHandler = (itemIndex: number) => {
         onChange(itemIndex);
         const newItem = items[itemIndex];
-        scrollSmoothTo({ elementId: `${newItem?.relatedSectionId || ''}`, block: 'start' });
+        if(itemIndex !== 0) {
+            scrollSmoothTo({ elementId: `${newItem?.relatedSectionId || ''}`, block: 'start' });
+        }
+        if(itemIndex === 0) {
+            scrollSmoothTo({ elementId: `${newItem?.relatedSectionId || ''}`, block: 'pageStart' });
+        }
     };
 
     return (
@@ -43,9 +49,16 @@ export const TermsCommonMenu = (props: TermsMenuProps) => {
                         withIcon={false}
                     />
                 </div>
-                <Text tag="p" variant={TextVariants.DEFAULT} classNamesProps={cls.info}>For any other questions you can text to:</Text>
-                <a className={cls.mailLink} href = "mailto: customersupport@tomato.ai">customersupport@tomato.ai</a>
+                <Text tag="p" variant={TextVariants.DEFAULT} classNamesProps={cls.info}>
+                    For any other questions please <button
+                        onClick={() => setOpen(true)}
+                        className={cls.contactBtn}
+                    >
+                        contact us
+                    </button>
+                </Text>
             </div>
+            <ContactUsPopup open={open} onClose={() => setOpen(false)}/>
         </aside>
     );
 };

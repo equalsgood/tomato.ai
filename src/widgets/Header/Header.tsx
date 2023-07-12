@@ -15,6 +15,11 @@ export const Header = memo(() => {
     const { isMobile } = useContext(Context);
 
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant'
+        } as unknown as ScrollOptions);
         setIsCurrentLocationEnterprise(location.pathname === RoutePaths.ENTERPRISE);
     }, [location]);
 

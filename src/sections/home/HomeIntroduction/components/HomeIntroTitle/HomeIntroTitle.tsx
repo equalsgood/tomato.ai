@@ -6,8 +6,9 @@ import agent from 'shared/assets/images/agent-home-page.png';
 import firstSample from 'shared/samples/1a_ph.mp3';
 import secondSample from 'shared/samples/1b_ph.mp3';
 import classNames from 'classnames';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { scrollSmoothTo } from 'shared/lib';
+import { Context } from 'app/providers/ContextProvider';
 
 export const HomeIntroTitle = () => {
     return (
@@ -30,8 +31,8 @@ export const HomeIntroTitle = () => {
             <div className={cls.imageHolder}>
                 <img alt="Agent photo" src={agent} className={cls.image} />
                 <div className={cls.samplesHolder}>
-                    <SampleExample src={firstSample} type='original' size='small' />
-                    <SampleExample src={secondSample} type='enhanced' size='small' />
+                    <SampleExample audioId="main-original" src={firstSample} type='original' size='small' />
+                    <SampleExample audioId="main-enhanced" src={secondSample} type='enhanced' size='small' />
                 </div>
             </div>
         </div>
@@ -42,21 +43,35 @@ interface SampleExampleProps {
     src: string;
     type: 'original' | 'enhanced';
     size: 'small' | 'large';
+    audioId: string;
 }
 
 const SampleExample = (props: SampleExampleProps) => {
-    const { src, type, size } = props;
+    const { src, type, size, audioId } = props;
     const classes = classNames(cls.sample, { [cls.enhanced]: type === 'enhanced' });
 
     const [isPlayed, setIsPlayed] = useState(false);
+    const { playedAudio, onPlay } = useContext(Context);
 
     const toggle = () => setIsPlayed(prev => !prev);
 
     const onEnded = () => setIsPlayed(false);
 
+    useEffect(() => {
+        if(isPlayed) {
+            onPlay(audioId);
+        }
+    }, [isPlayed]);
+
+    useEffect(() => {
+        if(playedAudio !== audioId) {
+            onEnded();
+        }
+    }, [playedAudio]);
+
     return (
         <div onClick={toggle} className={classes}>
-            <AudioPlayer onEnded={onEnded} isPlayedProp={isPlayed} src={src} type={type} size={size} />
+            <AudioPlayer audioId={audioId} onEnded={onEnded} isPlayedProp={isPlayed} src={src} type={type} size={size} />
             {type === 'original' ?
                 <Text tag="p" variant={TextVariants.ACTION_RED}>Original</Text> :
                 <Text tag="p" variant={TextVariants.ACTION}>Enhanced</Text>

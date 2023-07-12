@@ -1,10 +1,11 @@
-import { memo, useEffect, useRef, useState } from 'react';
+import { memo, useContext, useEffect, useRef, useState } from 'react';
 import cls from './AudioPlayer.module.css';
 import classNames from 'classnames';
 import PlayIconSmall from 'shared/assets/icons/player/play-small.svg';
 import PlayIconLarge from 'shared/assets/icons/player/play-large.svg';
 import PauseIconSmall from 'shared/assets/icons/player/pause-small.svg';
 import PauseIconLarge from 'shared/assets/icons/player/pause-large.svg';
+import { Context } from 'app/providers/ContextProvider';
 
 type AudioButtonType = 'original' | 'enhanced';
 type AudioButtonSize = 'large' | 'small';
@@ -15,10 +16,11 @@ interface AudioPlayerProps {
     size: AudioButtonSize;
     isPlayedProp?: boolean;
     onEnded?: () => void;
+    audioId: string;
 }
 
 export const AudioPlayer = memo((props: AudioPlayerProps) => {
-    const { src, type, size, isPlayedProp, onEnded } = props;
+    const { src, type, size, isPlayedProp, onEnded, audioId } = props;
     const PlayIcon = size === 'small' ? PlayIconSmall : PlayIconLarge;
     const PauseIcon = size === 'small' ? PauseIconSmall : PauseIconLarge;
 
@@ -26,16 +28,28 @@ export const AudioPlayer = memo((props: AudioPlayerProps) => {
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const classes = classNames(cls.playButton, cls[type], cls[size]);
 
+    const { playedAudio, onPlay } = useContext(Context);
+
     const toggleAudio = () => {
         if(isPlayedProp === undefined) {
-            if(isPlayed)
+            if(isPlayed) {
                 audioRef.current?.pause();
-            else
+            }
+            else {
+                onPlay(audioId);
                 audioRef.current?.play().then();
+            }
 
             setIsPlayed(prev => !prev);
         }
     };
+
+    useEffect(() => {
+        if(playedAudio !== audioId) {
+            audioRef.current?.pause();
+            setIsPlayed(false);
+        }
+    }, [playedAudio]);
 
     useEffect(() => {
         if(isPlayedProp !== undefined) {
@@ -60,8 +74,9 @@ export const AudioPlayer = memo((props: AudioPlayerProps) => {
             <button className={classes} onClick={toggleAudio}>
                 <div className={cls.icon}>
                     {isPlayed ?
-
-                        <PauseIcon/> :
+                        <div className={cls.pauseIcon}>
+                            <PauseIcon/>
+                        </div> :
                         <div className={cls.playIcon}>
                             <PlayIcon/>
                         </div>

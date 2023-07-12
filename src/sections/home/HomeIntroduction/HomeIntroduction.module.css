@@ -10,7 +10,8 @@
 
 @media(max-width: 1438px) {
     .introduction-section {
-        width: 1005px;
+        width: 100%;
+        max-width: 1005px;
         padding: 65px 0 70px 0;
         gap: 62px;
     }

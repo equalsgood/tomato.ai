@@ -54,7 +54,8 @@
 
 @media(max-width: 1438px) {
     .section {
-        width: 1005px;
+        width: 100%;
+        max-width: 1005px;
         gap: 57px;
         margin: 58px auto 100px;
     }

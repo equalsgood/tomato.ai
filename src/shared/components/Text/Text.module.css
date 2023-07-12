@@ -137,10 +137,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 27px;
+    padding: 10px 37px;
     border-radius: 10px;
     background: var(--primary-action-color-blurred);
-    text-transform: uppercase;
+    width: max-content;
 }
 
 .badge-blue {

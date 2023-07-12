@@ -40,7 +40,8 @@
 
 @media(max-width: 1438px) {
     .section {
-        width: 1005px;
+        width: 100%;
+        max-width: 1005px;
         margin: 0 auto;
         padding: 40px 60px 30px;
     }

@@ -43,7 +43,8 @@
 
 @media(max-width: 1438px) {
     .benefits {
-        width: 1005px;
+        width: 100%;
+        max-width: 1005px;
         margin: 0 auto;
         height: 600px;
         padding: 47px 0 56px 89px;

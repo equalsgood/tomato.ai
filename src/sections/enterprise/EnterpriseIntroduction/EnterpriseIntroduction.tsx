@@ -9,7 +9,7 @@ export const EnterpriseIntroduction = () => {
             <img src={enterpriseMain} alt="main enterprise image" className={cls.image}></img>
             <div className={cls.details}>
                 <div>
-                    <Text width={190} tag="p" variant={TextVariants.BADGE}>SOME TAG HERE</Text>
+                    <Text tag="p" variant={TextVariants.BADGE}>Enterprises</Text>
                     <Text tag="h1" variant={TextVariants.TITLE_LARGE_REVERSED} classNamesProps={cls.title}>Boost CX and sales metrics with an AI accent softening filter</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE_MEDIUM} classNamesProps={cls.paragraph}>Inbound calls benefit from improved customer satisfaction, and outbound calls benefit from improved sales metrics.</Text>
                     <div className={cls.links}>

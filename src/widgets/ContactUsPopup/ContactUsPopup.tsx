@@ -4,6 +4,8 @@ import { Modal, Text, TextVariants, Input, PhoneNumberInput, ButtonVariants, But
 import { useEffect, useState } from 'react';
 import { E164Number } from 'libphonenumber-js';
 import classNames from 'classnames';
+import isEmail from 'validator/lib/isEmail';
+import { CountriesCheckbox } from 'widgets';
 
 interface ContactUsPopupProps {
     open: boolean,
@@ -15,19 +17,50 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
     const [firstNameValue, setFirstNameValue] = useState('');
     const [lastNameValue, setLastNameValue] = useState('');
     const [emailValue, setEmailValue] = useState('');
+    const [isEmailValid, setIsEmailValid] = useState<boolean | undefined>(undefined);
     const [numberValue, setNumberValue] = useState<E164Number | undefined>();
-    const [countriesValue, setCountriesValue] = useState('');
+    const [isNumberValid, setIsNumberValid] = useState<boolean | undefined>(undefined);
+    const [countriesValues, setCountriesValues] = useState<Array<string>>([]);
     const [noteValue, setNoteValue] = useState('');
     const [completed, setCompleted] = useState(false);
 
     useEffect(() => {
         if(
-            firstNameValue !== '' && lastNameValue !== '' && emailValue !== '' && noteValue !== '' && numberValue !== '' && countriesValue !== ''
+            firstNameValue !== '' && lastNameValue !== '' && isEmailValid && noteValue !== '' && isNumberValid && countriesValues.length
         ) {
             setCompleted(true);
         } else
             setCompleted(false);
-    }, [numberValue, lastNameValue, emailValue, countriesValue, noteValue, numberValue]);
+    }, [numberValue, lastNameValue, isEmailValid, countriesValues.length, noteValue, isNumberValid]);
+
+
+    const changeNumberHandler = (value: E164Number | undefined, isValid: boolean) => {
+        setNumberValue(value);
+        setIsNumberValid(isValid);
+    };
+
+    const changeEmailHandler = (value: string) => {
+        setEmailValue(value);
+        setIsEmailValid(isEmail(value));
+    };
+
+    const countrySelectHandler = (value: string) => {
+        let isAlreadySelected = false;
+        const newCountries: Array<string> = [];
+
+        countriesValues.forEach(selectedValue => {
+            if(selectedValue !== value)
+                newCountries.push(selectedValue);
+
+            if(selectedValue === value)
+                isAlreadySelected = true;
+        });
+
+        if(!isAlreadySelected)
+            newCountries.push(value);
+
+        setCountriesValues(newCountries);
+    };
 
     return (
         <Modal open={open} onClose={onClose}>
@@ -52,25 +85,25 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                     />
                 </div>
                 <Input
+                    error="Invalid Email"
+                    isValid={isEmailValid}
                     label="Business Email"
                     type="email"
                     placeholder="john.smith@company.com"
                     value={emailValue}
-                    onInputChange={(value) => setEmailValue(value)}
+                    onInputChange={(value) => changeEmailHandler(value)}
                     classNamesProps={classNames(cls.email, cls.input)}
                 />
                 <PhoneNumberInput
+                    isValid={isNumberValid}
+                    error="Invalid number"
                     value={numberValue}
-                    onChange={(value) => setNumberValue(value)}
+                    onChange={changeNumberHandler}
                     classNamesProps="contact-us-phone-input"
                 />
-                <Input
-                    label="Offshoring Countries"
-                    type="text"
-                    placeholder=""
-                    value={countriesValue}
-                    onInputChange={(value) => setCountriesValue(value)}
-                    classNamesProps={classNames(cls.countries, cls.input)}
+                <CountriesCheckbox
+                    values={countriesValues}
+                    onSelect={countrySelectHandler}
                 />
                 <Input
                     rows={3}

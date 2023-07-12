@@ -1,13 +1,16 @@
-import { Fragment, memo, ReactNode } from 'react';
+import { Fragment, memo, ReactNode, useState } from 'react';
 import cls from './Footer.module.css';
 import FooterLogo from 'shared/assets/logos/footer-logo.svg';
 import LocationIcon from 'shared/assets/icons/location-icon.svg';
 import { NavigationLink, NavigationLinkVariants, SocialLinks, Text, TextVariants } from 'shared/components';
 import { RoutePaths } from 'app/providers/AppRouter';
 import { Link } from 'react-router-dom';
+import { ContactUsPopup } from 'widgets';
 
 
 export const Footer = memo(() => {
+    const [open, setOpen] = useState<boolean>(false);
+    
     return (
         <footer className={cls.footer}>
             <div className={cls.content}>
@@ -42,14 +45,15 @@ export const Footer = memo(() => {
                 )}
                 <FooterColumn title="Contact">
                     <div className={cls.footerLinks}>
-                        <a className={cls.mailLink} href = "mailto: customersupport@tomato.ai">customersupport@tomato.ai</a>
+                        <button onClick={() => setOpen(true)} className={cls.mailLink}>Contact us</button>
                         <div className={cls.footerLocation}>
                             <LocationIcon/>
-                            <Text tag="p" classNamesProps={cls.link} variant={TextVariants.DEFAULT_SMALL}>New York, NY 20-124</Text>
+                            <Text tag="p" classNamesProps={cls.link} variant={TextVariants.DEFAULT_SMALL}>Danville, CA 94526</Text>
                         </div>
                     </div>
                 </FooterColumn>
             </div>
+            <ContactUsPopup open={open} onClose={() => setOpen(false)}/>
         </footer>
     );
 });

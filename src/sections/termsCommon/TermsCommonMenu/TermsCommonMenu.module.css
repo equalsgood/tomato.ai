@@ -25,10 +25,14 @@
     margin: 35px 0 4px;
 }
 
-.mail-link {
+.contact-btn {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background: transparent;
     color: var(--secondary-action-color);
-    font-size: var(--font-size-14);
-    font-weight: var(--font-weight-s);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-m);
     text-decoration: none;
 }
 

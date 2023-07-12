@@ -27,7 +27,7 @@ const GuidelinesPage = () => {
 export default GuidelinesPage;
 
 const content: TermsPageSchema = {
-    title: 'Guidelines',
+    title: 'Brand Guidelines',
     sections: [
         {
             sectionTitle: 'Guidelines subtitle for this',

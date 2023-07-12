@@ -57,6 +57,14 @@
     outline: solid 1px var(--primary-action-color);
 }
 
+.phone-number-input-error.phone-number-input .PhoneInputInput:focus {
+    outline: solid 1px var(--third-action-color);
+}
+
+.phone-number-input-error.phone-number-input .PhoneInputInput {
+    outline: solid 1px var(--third-action-color);
+}
+
 .phone-number-input option {
     color: var(--reversed-text-color);
     font-weight: var(--font-weight-m);
