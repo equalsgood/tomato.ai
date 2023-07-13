@@ -2,7 +2,14 @@ import { useEffect, useState } from 'react';
 import cls from './HomeComments.module.css';
 import Dot from 'shared/assets/icons/dot-unactive.svg';
 import ActiveDot from 'shared/assets/icons/dot-active.svg';
-import FirstCommentatorImage from 'shared/assets/images/commentator-1.png';
+import FirstCommentatorImage from 'shared/assets/images/commentator-1.jpg';
+import SecondCommentatorImage from 'shared/assets/images/commentator-2.jpg';
+import ThirdCommentatorImage from 'shared/assets/images/commentator-3.png';
+import FourthCommentatorImage from 'shared/assets/images/commentator-4.jpg';
+import CedarLogo from 'shared/assets/logos/cedar-logo.jpg';
+import InfoperformanceLogo from 'shared/assets/logos/infoperformance-logo.jpg';
+import MondeeLogo from 'shared/assets/logos/mondee-logo.png';
+import SuperLogo from 'shared/assets/logos/super-logo.png';
 import { HomeComment } from './components/HomeComment/HomeComment';
 import ArrowRight from 'shared/assets/icons/arrow-right.svg';
 import ArrowLeft from 'shared/assets/icons/arrow-left.svg';
@@ -44,7 +51,7 @@ export const HomeComments = () => {
                                 picture={comment.picture}
                                 name={comment.name}
                                 position={comment.position}
-                                company={comment.company}
+                                companyImage={comment.companyImage}
                                 text={comment.text}
                             />
                         )}
@@ -72,37 +79,37 @@ export interface PublicComment {
     picture: string;
     name: string;
     position: string;
-    company: string;
+    companyImage: string;
     text: string;
 }
 
 const comments: Array<PublicComment> = [
     {
-        picture: FirstCommentatorImage,
-        name: 'Marta Jonas 1',
-        position: 'CEO Caramelland',
-        company: 'Caramelland.io',
-        text: '“Tomato.ai is an impressive AI technology that effortlessly cleans up voice audio. Its advanced algorithms can quickly identify and remove background noise, leaving behind crystal-clear audio that\'s a pleasure to listen to.”'
+        picture: ThirdCommentatorImage,
+        name: 'Michael Thomas',
+        position: 'President, Retail',
+        companyImage: MondeeLogo,
+        text: '“Excited to have Tomato.ai reduce our offshore agent costs by overcoming Mother Tongue Language (MTL) limitations, and massively growing the pool of candidates we can hire.”'
     },
     {
         picture: FirstCommentatorImage,
-        name: 'Marta Jonas 2',
-        position: 'CEO Caramelland',
-        company: 'Caramelland.io',
-        text: '“Tomato.ai is an impressive AI technology that effortlessly cleans up voice audio. Its advanced algorithms can quickly identify and remove background noise, leaving behind crystal-clear audio that\'s a pleasure to listen to.”'
+        name: 'Clem Bason',
+        position: 'GM, Travel',
+        companyImage: SuperLogo,
+        text: '“We are excited to deploy Tomato.ai in the Philippines, as it will significantly improve intelligibility resulting in higher customer satisfaction, reduced cost, and better sales conversion.”',
     },
     {
-        picture: FirstCommentatorImage,
-        name: 'Marta Jonas 3',
-        position: 'CEO Caramelland',
-        company: 'Caramelland.io',
-        text: '“Tomato.ai is an impressive AI technology that effortlessly cleans up voice audio. Its advanced algorithms can quickly identify and remove background noise, leaving behind crystal-clear audio that\'s a pleasure to listen to.”'
+        picture: FourthCommentatorImage,
+        name: 'Amir Erez',
+        position: 'CEO',
+        companyImage: CedarLogo,
+        text: '“At Cedar we have offshore agents calling US customers to collect on late bills. The benefit of the Tomato.ai accent softening is it is sure to increase trust when agents call, plus improve close rates and revenues.”'
     },
     {
-        picture: FirstCommentatorImage,
-        name: 'Marta Jonas 4',
-        position: 'CEO Caramelland',
-        company: 'Caramelland.io',
-        text: '“Tomato.ai is an impressive AI technology that effortlessly cleans up voice audio. Its advanced algorithms can quickly identify and remove background noise, leaving behind crystal-clear audio that\'s a pleasure to listen to.”'
-    },
+        picture: SecondCommentatorImage,
+        name: 'Matt Guarneri',
+        position: 'CEO',
+        companyImage: InfoperformanceLogo,
+        text: '“The accent softening from Tomato.ai is phenomenal. It makes an offshore call center like ours much more attractive to new accounts considering offshoring.”',
+    }
 ];

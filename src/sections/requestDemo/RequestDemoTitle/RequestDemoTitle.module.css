@@ -8,7 +8,7 @@
 }
 
 .badge {
-    width: 160px;
+    width: 180px;
 }
 
 .title {
@@ -25,6 +25,10 @@
 @media(max-width: 1438px) {
     .section{
         padding: 60px 0 45px;
+    }
+
+    .badge {
+        width: 160px;
     }
 
     .title {

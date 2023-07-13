@@ -29,7 +29,7 @@
     color: var(--third-text-color);
     font-weight: var(--font-weight-m);
     font-size: var(--font-size-18);
-    background: var(--primary-text-color);
+    background: var(--primary-select-bg);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;

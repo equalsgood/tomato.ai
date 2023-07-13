@@ -7,16 +7,22 @@
     width: 100%;
 }
 
-.info {
+.info-container {
+    height: 160px;
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 160px;
-    width: 100%;
     background: rgba(22, 20, 20, 0.8);
-    padding: 23px 120px 27px;
+}
+
+.info {
+    height: 100%;
+    width: 1422px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 977fr 223fr;
+    padding: 23px 120px 27px;
 }
 
 .title {
@@ -53,10 +59,15 @@
 }
 
 @media(max-width: 1438px) {
-    .info {
+    .info-container {
         height: 114px;
-        padding: 19px 60px 20px 85px;
+    }
+
+    .info {
+        width: 1005px;
+        margin: 0 auto;
         grid-template-columns: 870fr 184fr;
+        padding: 19px 60px 20px 85px;
     }
 
     .title {

@@ -1,9 +1,9 @@
 .intro {
     width: 1422px;
     margin: 0 auto;
-    padding: 55px 0 70px 130px;
+    padding: 55px 0 70px 100px;
     display: flex;
-    gap: 27px;
+    justify-content: space-between;
 }
 
 .details {
@@ -55,7 +55,7 @@
         width: 100%;
         max-width: 1005px;
         margin: 0 auto;
-        padding: 52px 0 40px 90px;
+        padding: 52px 0 40px 55px;
     }
 
     .details {
