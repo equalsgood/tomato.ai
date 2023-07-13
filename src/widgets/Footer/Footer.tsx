@@ -1,4 +1,4 @@
-import { Fragment, memo, ReactNode, useState } from 'react';
+import { Fragment, memo, ReactNode, useContext, useState } from 'react';
 import cls from './Footer.module.css';
 import FooterLogo from 'shared/assets/logos/footer-logo.svg';
 import LocationIcon from 'shared/assets/icons/location-icon.svg';
@@ -6,11 +6,21 @@ import { NavigationLink, NavigationLinkVariants, SocialLinks, Text, TextVariants
 import { RoutePaths } from 'app/providers/AppRouter';
 import { Link } from 'react-router-dom';
 import { ContactUsPopup } from 'widgets';
+import { FooterColumn } from './components/FooterColumn/FooterColumn';
+import { Context } from 'app/providers/ContextProvider';
+import { MobileFooter } from 'widgets/Footer/components/MobileFooter/MobileFooter';
 
 
 export const Footer = memo(() => {
     const [open, setOpen] = useState<boolean>(false);
-    
+    const { screenWidth } = useContext(Context);
+
+    if(screenWidth <= 550) {
+        return (
+            <MobileFooter config={footerConfig}/>
+        );
+    }
+
     return (
         <footer className={cls.footer}>
             <div className={cls.content}>
@@ -20,7 +30,7 @@ export const Footer = memo(() => {
                     </Link>
                     <div className={cls.rightsContainer}>
                         <SocialLinks/>
-                        <Text tag='p' variant={TextVariants.DEFAULT}>
+                        <Text classNamesProps={cls.rights} tag='p' variant={TextVariants.DEFAULT}>
                         ©2023 Tomato.ai. All rights reserved.
                         </Text>
                     </div>
@@ -60,28 +70,14 @@ export const Footer = memo(() => {
 
 Footer.displayName = 'Footer';
 
-interface FooterColumnProps {
-    title: string,
-    children: ReactNode,
-}
 
-const FooterColumn = (props: FooterColumnProps) => {
-    return (
-        <div className={cls.footerColumn}>
-            <Text tag='h3' classNamesProps={cls.title} variant={TextVariants.SUBHEADER_LIGHT}>
-                {props.title}
-            </Text>
-            {props.children}
-        </div>
-    );
-};
 
 interface FooterRow {
     text: string;
     to?: RoutePaths;
 }
 
-interface IFooterColumn {
+export interface IFooterColumn {
     title: string;
     content: Array<FooterRow>
 }
