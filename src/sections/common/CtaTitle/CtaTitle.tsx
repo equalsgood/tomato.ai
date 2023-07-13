@@ -6,14 +6,24 @@ import thirdAgent from 'shared/assets/images/cta-agents/third-agent.png';
 import fourthAgent from 'shared/assets/images/cta-agents/fourth-agent.png';
 import cls from './CtaTitle.module.css';
 import { NavigationLink, NavigationLinkVariants, Text, TextVariants } from 'shared/components';
-import React from 'react';
+import React, { useContext } from 'react';
 import { RoutePaths } from 'app/providers/AppRouter';
+import { Context } from 'app/providers/ContextProvider';
+import { CtaTitleMobile } from 'sections/common/CtaTitle/components/CtaTitleMobile/CtaTitleMobile';
 
 interface CtaTitleProps {
     isEnterprise?: boolean;
 }
 
 export const CtaTitle = ({ isEnterprise = false }: CtaTitleProps) => {
+    const { isMobile } = useContext(Context);
+
+    if(isMobile) {
+        return (
+            <CtaTitleMobile isEnterprise={isEnterprise}/>
+        );
+    }
+
     return (
         <section className={cls.ctaContainer}>
             <div className={cls.cta}>

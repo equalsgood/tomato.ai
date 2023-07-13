@@ -1,7 +1,8 @@
 import cls from './Menu.module.css';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { SingleMenuItem } from './components/SingleMenuItem/SingleMenuItem';
+import { Context } from 'app/providers/ContextProvider';
 
 export interface MenuItem {
     title: string;
@@ -18,15 +19,21 @@ interface MenuProps {
     withIcon: boolean;
 }
 
-const MENU_ITEM_HEIGHT = 65;
+// const MENU_ITEM_HEIGHT = 65;
 
 export const Menu = (props: MenuProps) => {
+    const { isMobile } = useContext(Context);
     const { isEnterprise, items, onItemChange, withIcon, currentMenuItemIndex } = props;
+    const [itemHeight, setItemHeight] = useState<number>(65);
     const [selectOffset, setSelectOffset] = useState<string>('translateY(0px)');
 
     useEffect(() => {
-        setSelectOffset(`translateY(${MENU_ITEM_HEIGHT * currentMenuItemIndex}px)`);    
-    }, [currentMenuItemIndex]);
+        setItemHeight(isMobile ? 58 : 65);
+    }, [isMobile]);
+    
+    useEffect(() => {
+        setSelectOffset(`translateY(${itemHeight * currentMenuItemIndex}px)`);
+    }, [currentMenuItemIndex, itemHeight]);
 
     return (
         <ul className={classNames(cls.menuItems, { [cls.dark]: isEnterprise })}>

@@ -33,3 +33,16 @@
     }
 }
 
+@media(max-width: 1022px) {
+    .menu-items {
+        padding-top: 0;
+    }
+
+    .select {
+        width: 100%;
+        max-width: 333px;
+        height: 60px;
+        border-radius: 16px;
+    }
+}
+

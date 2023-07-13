@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import cls from './HomeComments.module.css';
 import Dot from 'shared/assets/icons/dot-unactive.svg';
 import ActiveDot from 'shared/assets/icons/dot-active.svg';
@@ -13,17 +13,25 @@ import SuperLogo from 'shared/assets/logos/super-logo.png';
 import { HomeComment } from './components/HomeComment/HomeComment';
 import ArrowRight from 'shared/assets/icons/arrow-right.svg';
 import ArrowLeft from 'shared/assets/icons/arrow-left.svg';
-
-const COMMENT_WIDTH = 612;
+import { Context } from 'app/providers/ContextProvider';
 
 export const HomeComments = () => {
+    const { isMobile } = useContext(Context);
     const [currentComment, setCurrentComment] = useState<number>(1);
-
-    const [commentsOffset, setCommentsOffset] = useState(`translate(calc(-306px - ${COMMENT_WIDTH * currentComment}px), -50%)`);
+    const [commentWidth, setCommentWidth] = useState(612);
+    const [commentsOffset, setCommentsOffset] = useState(`translate(calc(-${commentWidth / 2}px - ${commentWidth * currentComment}px), -50%)`);
 
     useEffect(() => {
-        setCommentsOffset(`translate(calc(-306px - ${COMMENT_WIDTH * currentComment}px), -50%)`);
-    }, [currentComment]);
+        if(isMobile)
+            setCommentWidth(342);
+        else
+            setCommentWidth(612);
+    }, [isMobile]);
+
+
+    useEffect(() => {
+        setCommentsOffset(`translate(calc(-${commentWidth / 2}px - ${commentWidth * currentComment}px), -50%)`);
+    }, [currentComment, commentWidth]);
 
     const changeComment = (newCommentIndex: number) => {
         const maxIndex = comments.length - 1;
@@ -39,11 +47,11 @@ export const HomeComments = () => {
     return (
         <section className={cls.section}>
             <div className={cls.commentsSection}>
-                <button onClick={() => changeComment(currentComment - 1)}>
+                <button className={cls.left} onClick={() => changeComment(currentComment - 1)}>
                     <ArrowLeft/>
                 </button>
-                {/*<ul style={{ transform: commentsOffset }} className={cls.commentsList}>*/}
                 <div className={cls.commentsWrapper}>
+                    {/*<ul className={cls.commentsList}>*/}
                     <ul style={{ transform: commentsOffset }} className={cls.commentsList}>
                         {comments.map((comment, index) =>
                             <HomeComment
@@ -57,7 +65,7 @@ export const HomeComments = () => {
                         )}
                     </ul>
                 </div>
-                <button onClick={() => changeComment(currentComment + 1)}>
+                <button className={cls.right} onClick={() => changeComment(currentComment + 1)}>
                     <ArrowRight/>
                 </button>
             </div>

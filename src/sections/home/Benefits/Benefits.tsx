@@ -16,8 +16,8 @@ export const Benefits = () => {
                             <div className={cls.icon}>
                                 {benefit.icon}
                             </div>
-                            <Text tag="h3" variant={TextVariants.SUBHEADER_LIGHT}>{benefit.title}</Text>
-                            <Text tag="p" width={330} variant={TextVariants.PARAGRAPH_REVERSED_SMALL}>{benefit.text}</Text>
+                            <Text tag="h3" classNamesProps={cls.benefitTitle} variant={TextVariants.SUBHEADER_LIGHT}>{benefit.title}</Text>
+                            <Text tag="p" classNamesProps={cls.paragraph} variant={TextVariants.PARAGRAPH_REVERSED_SMALL}>{benefit.text}</Text>
                         </li>
                     )}
                 </ul>

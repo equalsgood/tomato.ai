@@ -24,7 +24,9 @@ export const HomeIntroTitle = () => {
                     <NavigationLink classNamesProps={cls.actionLink} text="Request Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} />
                     <a onClick={() => scrollSmoothTo({ elementId: 'samples-examples', block: 'center' })} className={cls.action}>
                         <Text tag="p" variant={TextVariants.ACTION_RED}>More Examples</Text>
-                        <RedArrowIcon/>
+                        <div className={cls.arrow}>
+                            <RedArrowIcon/>
+                        </div>
                     </a>
                 </div>
             </div>

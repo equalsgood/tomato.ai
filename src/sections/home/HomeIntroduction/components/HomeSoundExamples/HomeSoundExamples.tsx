@@ -15,8 +15,12 @@ import philEnhancedSample from 'shared/samples/3b_ph.wav';
 import haitiEnhancedSample from 'shared/samples/4b_ht.wav';
 import pakistanEnhancedSample from 'shared/samples/5b_pk.wav';
 import { scrollSmoothTo } from 'shared/lib';
+import { useContext } from 'react';
+import { Context } from 'app/providers/ContextProvider';
 
 export const HomeSoundExamples = () => {
+    const { isMobile } = useContext(Context);
+
     return (
         <div id="samples-examples" className={cls.examplesBoard}>
             <div className={cls.info}>
@@ -30,7 +34,7 @@ export const HomeSoundExamples = () => {
             </div>
             <div className={cls.examples}>
                 <div className={classNames(cls.examplesSection, cls.original)}>
-                    <Text tag="p" variant={TextVariants.SUBTITLE_SMALL}>Original</Text>
+                    { !isMobile && <Text tag="p" variant={TextVariants.SUBTITLE_SMALL}>Original</Text>}
                     <ul className={cls.samples}>
                         {originalSamples.map(smpl =>
                             <li key={smpl.description} className={cls.sample}>
@@ -41,7 +45,7 @@ export const HomeSoundExamples = () => {
                     </ul>
                 </div>
                 <div className={classNames(cls.examplesSection, cls.enhanced)}>
-                    <Text tag="p" variant={TextVariants.SUBTITLE_SMALL}>Enhanced</Text>
+                    { !isMobile && <Text tag="p" variant={TextVariants.SUBTITLE_SMALL}>Enhanced</Text> }
                     <ul className={cls.samples}>
                         {enhancedSamples.map(smpl =>
                             <li key={smpl.description} className={cls.sample}>

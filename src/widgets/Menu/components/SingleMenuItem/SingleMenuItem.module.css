@@ -26,3 +26,29 @@
         line-height: 30px;
     }
 }
+
+@media(max-width: 1022px) {
+    .menu-item {
+        padding: 14px 46px;
+        gap: 18px;
+        max-width: 333px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: var(--font-size-16);
+        line-height: 30px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .icon {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.8);
+    }
+}

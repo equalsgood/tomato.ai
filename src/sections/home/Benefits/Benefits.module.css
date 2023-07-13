@@ -41,6 +41,10 @@
     gap: 6px;
 }
 
+.paragraph {
+    width: 330px;
+}
+
 @media(max-width: 1438px) {
     .benefits {
         width: 100%;
@@ -79,5 +83,51 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
+    }
+}
+
+@media(max-width: 1022px) {
+    .benefits {
+        height: 920px;
+        width: 305px;
+        margin: 0 auto;
+        padding: 32px 0 41px;
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+        justify-content: flex-start;
+    }
+
+    .benefits-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .title {
+        font-size: var(--font-size-35);
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .icon {
+        margin-bottom: 2px;
+    }
+
+    .benefit-title {
+        line-height: 34px;
+    }
+
+    .benefit {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .paragraph {
+        width: 305px;
+        text-align: center;
+        font-size: var(--font-size-13);
+        line-height: 18px;
+        height: 60px;
     }
 }

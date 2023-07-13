@@ -3,13 +3,13 @@ import OctaveLogo from 'shared/assets/logos/featured/octave.png';
 import PointLogo from 'shared/assets/logos/featured/point.png';
 import TribeLogo from 'shared/assets/logos/featured/tribe.png';
 import CardumenLogo from 'shared/assets/logos/featured/cardumen.png';
+import LogosMobile from 'shared/assets/logos/featured/mobile.png';
 import RecursiveLogo from 'shared/assets/logos/featured/recursive.png';
 import OctaveLightLogo from 'shared/assets/logos/featured/octave-light.png';
 import PointLightLogo from 'shared/assets/logos/featured/point-light.png';
 import TribeLightLogo from 'shared/assets/logos/featured/tribe-light.png';
 import CardumenLightLogo from 'shared/assets/logos/featured/cardumen-light.png';
 import RecursiveLightLogo from 'shared/assets/logos/featured/recursive-light.png';
-
 import OctaveTitledLogo from 'shared/assets/logos/featured/octave-titled.png';
 import PointTitledLogo from 'shared/assets/logos/featured/point-titled.png';
 import TribeTitledLogo from 'shared/assets/logos/featured/tribe-titled.png';
@@ -17,6 +17,8 @@ import CardumenTitledLogo from 'shared/assets/logos/featured/cardumen-titled.png
 import RecursiveTitledLogo from 'shared/assets/logos/featured/recursive-titled.png';
 import classNames from 'classnames';
 import { Text, TextVariants } from 'shared/components';
+import { useContext } from 'react';
+import { Context } from 'app/providers/ContextProvider';
 
 export enum FeaturedCompaniesVariants {
     DEFAULT = 'default',
@@ -30,6 +32,18 @@ interface FeaturedCompaniesProps {
 }
 
 export const FeaturedCompanies = ({ variant, title }: FeaturedCompaniesProps) => {
+    const { isMobile } = useContext(Context);
+
+    if(isMobile) {
+        return (
+            <section>
+                {variant === FeaturedCompaniesVariants.DEFAULT &&
+                    <img className={cls.image} alt={'image of the featured companies'} src={LogosMobile}/>
+                }
+            </section>
+        );
+    }
+
     return (
         <section className={classNames(cls.featured, { [cls.titled]: variant === FeaturedCompaniesVariants.TITLED })}>
             <div className={classNames(cls.content, { [cls.titled]: variant === FeaturedCompaniesVariants.TITLED })}>

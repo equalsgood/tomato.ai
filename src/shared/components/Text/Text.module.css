@@ -171,3 +171,9 @@
     line-height: 18px;
 }
 
+@media(max-width: 1022px) {
+    .badge {
+        font-size: var(--font-size-12);
+        padding: 7px 27px;
+    }
+}

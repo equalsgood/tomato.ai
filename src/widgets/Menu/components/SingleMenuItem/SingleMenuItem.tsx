@@ -21,7 +21,11 @@ export const SingleMenuItem = memo((props: SingleMenuItemProps) => {
                 onClick={() => onItemChange(index)}
                 className={cls.menuItem}
             >
-                { withIcon && item.iconLight}
+                {withIcon &&
+                    <div className={cls.icon}>
+                        {item.iconLight}
+                    </div>
+                }
                 <Text
                     tag="span"
                     variant={TextVariants.SUBTITLE_MEDIUM_REVERSED}
@@ -38,8 +42,10 @@ export const SingleMenuItem = memo((props: SingleMenuItemProps) => {
             onClick={() => onItemChange(index)}
             className={cls.menuItem}
         >
-            { withIcon && active && item.iconDark }
-            { withIcon && !active && item.iconLight }
+            <div className={cls.icon}>
+                { withIcon && active && item.iconDark }
+                { withIcon && !active && item.iconLight }
+            </div>
             <Text
                 tag="p"
                 variant={active ? TextVariants.SUBTITLE_MEDIUM : TextVariants.SUBTITLE_MEDIUM_REVERSED}

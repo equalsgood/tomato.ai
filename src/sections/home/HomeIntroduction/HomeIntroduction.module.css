@@ -16,3 +16,11 @@
         gap: 62px;
     }
 }
+
+@media(max-width: 1022px) {
+    .introduction-section {
+        width: 100%;
+        padding: 37px 0 55px;
+        gap: 37px;
+    }
+}

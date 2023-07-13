@@ -51,3 +51,48 @@
     max-height: 50px;
     max-width: 150px;
 }
+
+@media(max-width: 1022px) {
+    .comment {
+        position: relative;
+        width: 332px;
+        height: 250px;
+        padding: 23px 27px 25px 30px;
+    }
+
+    .info {
+        height: 50px;
+        flex: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .name {
+        font-size: var(--font-size-18);
+    }
+
+    .initials {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .text {
+        height: 96px;
+        padding-left: 0;
+    }
+
+    .text p {
+        font-size: var(--font-size-13);
+        line-height: 18px;
+    }
+
+    .company {
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        max-height: 50px;
+        max-width: 100px;
+    }
+}
