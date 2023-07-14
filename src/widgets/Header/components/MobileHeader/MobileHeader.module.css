@@ -19,7 +19,7 @@
 }
 
 .header.dark {
-    background: var(--reversed-bg-color);
+    background: var(--third-bg-color);
 }
 
 .header.dark.open {

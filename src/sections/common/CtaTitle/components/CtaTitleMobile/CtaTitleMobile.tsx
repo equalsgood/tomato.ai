@@ -5,6 +5,7 @@ import firstAgent from 'shared/assets/images/cta-agents/first-agent.png';
 import secondAgent from 'shared/assets/images/cta-agents/second-agent.png';
 import fourthAgent from 'shared/assets/images/cta-agents/fourth-agent.png';
 import React from 'react';
+import classNames from 'classnames';
 
 interface CtaTitleMobileProps {
     isEnterprise?: boolean | undefined;
@@ -12,7 +13,7 @@ interface CtaTitleMobileProps {
 
 export const CtaTitleMobile = ({ isEnterprise = false }: CtaTitleMobileProps) => {
     return (
-        <section className={cls.section}>
+        <section className={classNames(cls.section, { [cls.dark]: isEnterprise })}>
             <Text tag="h2" classNamesProps={cls.title} variant={TextVariants.TITLE}>CTA Title here</Text>
             <Text tag="p" classNamesProps={cls.paragraph} variant={TextVariants.PARAGRAPH_DARK}>“Tomato.ai is an impressive AI technology that effortlessly cleans up voice audio. Its advanced algorithms can</Text>
             <NavigationLink text="Request Free Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} classNamesProps={cls.action}/>

@@ -49,3 +49,18 @@
 .fourthAgent {
     max-width: 135px;
 }
+
+.section.dark {
+    background: linear-gradient(180deg, #F9F9F9 0%, #4B4B4B 0.01%, #232121 100%);
+}
+
+.dark .title {
+    color: var(--reversed-text-color);
+    font-size: var(--font-size-26);
+    line-height: 30px;
+    margin-bottom: 11px;
+}
+
+.dark .paragraph {
+    color: var(--third-text-color);
+}

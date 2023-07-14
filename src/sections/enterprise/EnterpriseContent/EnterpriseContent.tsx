@@ -5,13 +5,17 @@ import metrics from 'shared/assets/images/double-images/ent-3.png';
 import agent from 'shared/assets/images/double-images/ent-4.png';
 import classNames from 'classnames';
 import { RoutePaths } from 'app/providers/AppRouter';
+import { useContext } from 'react';
+import { Context } from 'app/providers/ContextProvider';
 
 export const EnterpriseContent = () => {
+    const { isMobile } = useContext(Context);
+
     return (
         <section className={cls.content}>
             <div className={classNames(cls.contentSection, cls.left)}>
                 <div className={cls.details}>
-                    <Text tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED} classNamesProps={cls.title}>Improve Satisfaction with Offshore Agents</Text>
+                    <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Improve Satisfaction with Offshore Agents</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
                         Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
                         <br/>
@@ -24,19 +28,23 @@ export const EnterpriseContent = () => {
             <div className={classNames(cls.contentSection, cls.right)}>
                 <img alt="photo of metrics" src={metrics} className={cls.image} />
                 <div className={cls.details}>
-                    <Text tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Reduce Support Costs</Text>
+                    <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Reduce Support Costs</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
                         Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo.
                         <br/>
                         <br/>
                         Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque.
                     </Text>
-                    <NavigationLink text="Cost Savings Calculator" to={RoutePaths.ENTERPRISE_CALCULATOR} variant={NavigationLinkVariants.ACTION_TEXT} classNamesProps={cls.calculatorLink}/>
+                    {!isMobile &&
+                        <NavigationLink text="Cost Savings Calculator" to={RoutePaths.ENTERPRISE_CALCULATOR}
+                            variant={NavigationLinkVariants.ACTION_TEXT}
+                            classNamesProps={cls.calculatorLink}/>
+                    }
                 </div>
             </div>
             <div className={classNames(cls.contentSection, cls.left)}>
                 <div className={cls.details}>
-                    <Text tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Improve sales metrics</Text>
+                    <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Improve sales metrics</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
                         Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
                         <br/>
