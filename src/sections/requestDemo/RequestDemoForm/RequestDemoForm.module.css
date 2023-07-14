@@ -67,3 +67,35 @@
         width: 370px;
     }
 }
+
+@media(max-width: 1022px) {
+    .section{
+        padding: 18px 25px 25px;
+        width: 85vw;
+        margin: 0 auto 80px;
+    }
+
+    .initials, .company, .selects {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .initials, .email, .company, .selects {
+        margin-bottom: 15px;
+    }
+
+    .note {
+        margin-bottom: 23px;
+    }
+
+    .checkbox {
+        background: var(--primary-select-bg);
+        width: 100%;
+    }
+
+    .action, .submitted {
+        font-size: var(--font-size-14);
+    }
+}

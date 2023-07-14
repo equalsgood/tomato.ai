@@ -1,6 +1,7 @@
 import cls from './GetReportPopup.module.css';
 import { Button, ButtonVariants, Input, Modal, Text, TextVariants } from 'shared/components';
 import { FormEvent, useState } from 'react';
+import isEmail from 'validator/lib/isEmail';
 
 interface GetReportPopupProps {
     open: boolean,
@@ -11,14 +12,17 @@ export const GetReportPopup = (props: GetReportPopupProps) => {
     const { open, onClose } = props;
 
     const [popupInputValue, setPopupInputValue] = useState('');
+    const [isEmailValid, setIsEmailValid] = useState<boolean | undefined>(undefined);
 
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onClose();
     };
 
-    const inputChangeHandler = (value: string) =>
+    const inputChangeHandler = (value: string) => {
         setPopupInputValue(value);
+        setIsEmailValid(isEmail(value));
+    };
 
     return (
         <Modal open={open} onClose={onClose}>
@@ -28,13 +32,17 @@ export const GetReportPopup = (props: GetReportPopupProps) => {
                 <form className={cls.popupForm} onSubmit={submitHandler}>
                     <Input
                         required
-                        label="Enter Your Email"
+                        error="Invalid Email"
+                        isValid={isEmailValid}
+                        label="Business Email"
                         type="email"
                         placeholder="Email@gmail.com"
                         value={popupInputValue}
                         onInputChange={inputChangeHandler}
                     />
                     <Button
+                        disabled={!isEmailValid}
+                        classNamesProps={cls.button}
                         type="submit"
                         variant={ButtonVariants.ACTION}
                         text="Get Detailed Report"

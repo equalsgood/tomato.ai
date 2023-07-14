@@ -87,3 +87,53 @@
         right: 26px;
     }
 }
+
+@media(max-width: 1022px) {
+    .popup-content {
+        width: 95vw;
+        height: 394px;
+        padding: 28px 29px 21px;
+    }
+
+    .popup-title {
+        font-size: var(--font-size-22);
+        line-height: 30px;
+        margin-bottom: 18px;
+    }
+
+    .popup-paragraph {
+        width: 100%;
+        max-width: 296px;
+        height: auto;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 30px;
+    }
+
+    .popup-form {
+        min-width: 100%;
+        gap: 20px;
+        margin-bottom: 21px;
+    }
+
+    .popup-disclaimer {
+        width: 100%;
+        max-width: 286px;
+        height: 32px;
+        overflow: hidden;
+        text-align: center;
+        font-size: var(--font-size-10);
+        line-height: 16px;
+    }
+
+    .close {
+        position: absolute;
+        top: 17px;
+        right: 16px;
+        transform: scale(0.8);
+    }
+
+    .button {
+        font-size: var(--font-size-16);
+    }
+}

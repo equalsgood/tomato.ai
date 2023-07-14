@@ -23,3 +23,13 @@
         font-size: var(--font-size-18);
     }
 }
+
+@media(max-width: 1022px) {
+    .label-text {
+        font-size: var(--font-size-12);
+    }
+
+    .errorMessage {
+        font-size: var(--font-size-12);
+    }
+}

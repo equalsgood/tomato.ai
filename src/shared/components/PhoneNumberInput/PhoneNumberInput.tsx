@@ -4,7 +4,6 @@ import './PhoneNumberInput.css';
 import { E164Number } from 'libphonenumber-js';
 import 'react-phone-number-input/style.css';
 import classNames from 'classnames';
-import { useEffect } from 'react';
 
 interface PhoneNumberInputProps {
     value: E164Number | undefined;

@@ -41,3 +41,34 @@
         line-height: 50px;
     }
 }
+
+@media(max-width: 1022px) {
+    .section {
+        width: 100%;
+        max-width: 334px;
+        padding: 39px 0 34px;
+    }
+
+    .title {
+        font-size: var(--font-size-25);
+        line-height: 40px;
+        margin-bottom: 18px;
+    }
+
+    .paragraph {
+        width: 100%;
+        max-width: 327px;
+        text-align: center;
+        font-size: var(--font-size-14);
+        line-height: 20px;
+    }
+
+    .plans {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        padding-top: 46px;
+    }
+}

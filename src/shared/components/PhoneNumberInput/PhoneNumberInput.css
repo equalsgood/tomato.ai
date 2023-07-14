@@ -100,3 +100,38 @@
         height: 58px;
     }
 }
+
+@media(max-width: 1022px) {
+    :root {
+        --PhoneInputCountryFlag-height: 22px !important;
+    }
+
+    .phone-number-input {
+        margin-bottom: 15px;
+        gap: 8px;
+    }
+
+    .phone-number-input .PhoneInput {
+        gap: 10px;
+    }
+
+    .phone-number-input .PhoneInputCountry {
+        width: 85px;
+        height: 58px;
+        gap: 10px;
+    }
+
+    .phone-number-input .PhoneInputInput {
+        padding: 16px 10px 15px 20px;
+        height: 58px;
+        font-size: var(--font-size-15);
+    }
+
+    .phone-number-input .PhoneInputInput::placeholder {
+        font-size: var(--font-size-15);
+    }
+
+    .phone-number-input option {
+        font-size: var(--font-size-15);
+    }
+}

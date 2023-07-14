@@ -199,3 +199,44 @@
         margin: 22px 11px 15px;
     }
 }
+
+@media(max-width: 1022px) {
+    .compare {
+        gap: 36px;
+    }
+
+    .btn {
+        padding: 14px 22px 16px 30px;
+        gap: 12px;
+        font-size: var(--font-size-14);
+        line-height: 20px;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        margin-bottom: 70px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .table {
+        margin: 45px 35px;
+    }
+
+    .benefits-title, .plan-title {
+        font-size: var(--font-size-16);
+    }
+
+    .section-title {
+        font-size: var(--font-size-16);
+        line-height: 20px;
+    }
+
+    .benefit-description {
+        font-size: var(--font-size-12);
+    }
+
+    .get-demo {
+        font-size: var(--font-size-14);
+    }
+}

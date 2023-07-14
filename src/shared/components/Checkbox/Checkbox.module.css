@@ -153,3 +153,40 @@
         height: 58px;
     }
 }
+
+@media(max-width: 1022px) {
+    .container {
+        gap: 8px;
+    }
+
+    .label-text {
+        font-size: var(--font-size-12);
+    }
+
+    .select {
+        padding: 0 20px 0 22px;
+        font-size: var(--font-size-15);
+        height: 58px;
+    }
+
+    .search {
+        height: 58px;
+        padding: 0 20px 0 22px;
+        font-size: var(--font-size-15);
+    }
+
+    .options {
+        height: 232px;
+        padding: 0 20px 0 22px;
+    }
+
+    .option {
+        height: 58px;
+        font-size: var(--font-size-15);
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}

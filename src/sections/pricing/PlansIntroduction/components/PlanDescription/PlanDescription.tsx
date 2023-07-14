@@ -21,7 +21,7 @@ export const PlanDescription = (props: Plan) => {
         <li className={classNames(cls.description, { [cls.mostPopular]: mostPopular })}>
             <div className={cls.descriptionCard}>
                 <div className={cls.titleWrapper}>
-                    <div className={cls.icon}>
+                    <div className={cls.titleIcon}>
                         {icon}
                     </div>
                     <Text tag="h2" variant={TextVariants.TITLE} classNamesProps={cls.title}>{name}</Text>

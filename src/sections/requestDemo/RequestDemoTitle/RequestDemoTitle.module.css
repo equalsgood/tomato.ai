@@ -41,3 +41,27 @@
         font-size: var(--font-size-16);
     }
 }
+
+@media(max-width: 1022px) {
+    .section{
+        padding: 39px 0 34px;
+    }
+
+    .badge {
+        width: 140px;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: var(--font-size-25);
+        line-height: 40px;
+        margin-bottom: 18px;
+    }
+
+    .paragraph {
+        width: 327px;
+        text-align: center;
+        font-size: var(--font-size-14);
+        line-height: 20px;
+    }
+}

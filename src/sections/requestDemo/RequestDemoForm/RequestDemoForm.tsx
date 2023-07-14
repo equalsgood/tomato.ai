@@ -176,6 +176,7 @@ export const RequestDemoForm = () => {
                         disabled={!completed}
                     /> :
                     <Button
+                        classNamesProps={cls.action}
                         type="submit"
                         variant={ButtonVariants.ACTION}
                         text="Send and Request a Demo"
