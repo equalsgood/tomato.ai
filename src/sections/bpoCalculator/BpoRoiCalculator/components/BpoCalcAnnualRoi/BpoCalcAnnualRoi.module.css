@@ -55,3 +55,33 @@
         height: 38px;
     }
 }
+
+@media(max-width: 1022px) {
+    .annual {
+        width: 100%;
+        height: 170px;
+        padding: 26px 25px 27px;
+        border-radius: 20px;
+    }
+
+    .roi {
+        line-height: 38px;
+        font-size: var(--font-size-18);
+    }
+
+    .description {
+        height: auto;
+    }
+
+    .price {
+        font-size: var(--font-size-18);
+    }
+
+    .placeholder {
+        font-size: var(--font-size-18);
+    }
+
+    .button {
+        font-size: var(--font-size-14);
+    }
+}

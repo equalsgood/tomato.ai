@@ -3,7 +3,7 @@ import { Tooltip, TooltipVariants } from 'shared/components';
 import { useState } from 'react';
 
 interface FlagProps {
-    flag: JSX.Element,
+    flag: string,
     country: string
 }
 
@@ -17,7 +17,7 @@ export const Flag = (props: FlagProps) => {
             onMouseOver={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
         >
-            {flag}
+            <img alt={`image of ${country} flag`} src={flag} className={cls.flag} />
             {open &&
                 <Tooltip text={country} variant={TooltipVariants.FLAG}/>
             }

@@ -4,3 +4,15 @@
     display: flex;
     align-items: center;
 }
+
+@media(max-width: 1438px) {
+    .flag {
+        height: 48px;
+    }
+}
+
+@media(max-width: 1022px) {
+    .flag {
+        height: 48px;
+    }
+}

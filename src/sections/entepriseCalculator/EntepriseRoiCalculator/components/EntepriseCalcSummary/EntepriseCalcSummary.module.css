@@ -96,3 +96,52 @@
         height: 167px;
     }
 }
+
+
+@media(max-width: 1022px) {
+    .summary {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .title {
+        font-size: var(--font-size-24);
+        line-height: 30px;
+    }
+
+    .subtitle {
+        font-size: var(--font-size-20);
+        line-height: 30px;
+    }
+
+    .prop {
+        font-size: var(--font-size-15);
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    .amount {
+        font-weight: var(--font-weight-xl);
+        color: var(--third-text-color);
+        font-size: var(--font-size-16);
+        line-height: 38px;
+        max-width: 50%;
+        overflow: hidden;
+    }
+
+    .benefits, .roi {
+        padding: 31px 0 33px;
+        gap: 3px;
+    }
+
+    .benefits {
+        padding: 45px 0 33px;
+    }
+
+    .additional {
+        font-size: var(--font-size-12);
+        line-height: 18px;
+        height: auto;
+        padding-top: 22px;
+    }
+}

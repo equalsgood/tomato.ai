@@ -34,3 +34,29 @@
         font-size: var(--font-size-15);
     }
 }
+
+@media(max-width: 1022px) {
+    .calculator {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        column-gap: 0;
+        row-gap: 15px;
+        padding: 18px 25px 25px;
+    }
+
+    .single-line {
+        grid-column: 1/-1;
+    }
+
+    .scale-selects {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column-gap: 0;
+        row-gap: 15px;
+    }
+
+    .input span {
+        font-size: var(--font-size-12);
+    }
+}

@@ -38,7 +38,7 @@ export const HomeSoundExamples = () => {
                     <ul className={cls.samples}>
                         {originalSamples.map(smpl =>
                             <li key={smpl.description} className={cls.sample}>
-                                <img alt={`image of ${smpl.country} flag`} src={smpl.flag} className={cls.flag} />
+                                <Flag flag={smpl.flag} country={smpl.country}/>
                                 <AudioPlayer audioId={smpl.audioId} src={smpl.src} type="original" size="large"/>
                             </li>
                         )}

@@ -101,3 +101,63 @@
         height: 500px;
     }
 }
+
+@media(max-width: 1022px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 34px;
+        width: 100%;
+        max-width: 100%;
+        margin: 39px 0 80px;
+        padding: 0 30px;
+    }
+
+    .section-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .title {
+        margin-top: 2px;
+        font-size: var(--font-size-25);
+        line-height: 40px;
+    }
+
+    .title-paragraph {
+        width: 100%;
+        max-width: 327px;
+        text-align: center;
+        height: auto;
+        font-size: var(--font-size-14);
+        line-height: 20px;
+    }
+
+    .content-container {
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .calculator-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        display: none;
+    }
+}
