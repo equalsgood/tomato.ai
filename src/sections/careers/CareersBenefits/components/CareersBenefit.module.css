@@ -63,3 +63,31 @@
         transform: scale(0.7) translateY(-5px);
     }
 }
+
+@media(max-width: 1022px) {
+    .benefit {
+        width: 100%;
+        height: 150px;
+        padding: 20px 16px 17px 25px;
+        gap: 9px;
+    }
+
+    .title-container {
+        transform: translateX(-5px);
+        gap: 8px;
+    }
+
+    .title {
+        font-size: var(--font-size-15);
+        line-height: 27px;
+    }
+
+    .description-container {
+        line-height: 14px;
+        height: 76px;
+    }
+
+    .description {
+        font-size: var(--font-size-10);
+    }
+}

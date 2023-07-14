@@ -43,3 +43,25 @@
         gap: 8px;
     }
 }
+
+@media(max-width: 1022px) {
+    .section {
+        width: 100%;
+        padding: 34px 30px 36px;
+        background: var(--primary-faq-color);
+    }
+
+    .available-roles-container {
+        width: 100%
+    }
+
+    .title {
+        font-size: var(--font-size-24);
+        line-height: 30px;
+        margin: 0 0 30px 0;
+    }
+
+    .roles {
+        gap: 10px;
+    }
+}
