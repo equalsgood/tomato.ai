@@ -40,14 +40,14 @@ const founders: Array<Founder> = [
     {
         imageSrc: oferPicture,
         name: 'Ofer Ronen',
-        position: 'CEO Tomato.ai',
+        position: 'CEO',
         biography: 'Ofer previously sold three tech startups, two to Google, and one to IAC.  He spent the past five years at Google building contact center AI solutions within the Area 120 incubator.  He closed over $500M in deals for these new solutions.  He holds an MS in Computer Engineering with a focus on AI from the University of Michigan, and an MBA from Cornell.',
         link: 'https://www.linkedin.com/in/oferronen/'
     },
     {
         imageSrc: jamesPicture,
         name: 'James Fan',
-        position: 'CTO Tomato.ai',
+        position: 'CTO',
         biography: 'James previously sold a contact center startup. He then spent the past four years leading the speech engineering team at Google Cloud. Before that he was a leading researcher on the IBM Watson Question & Answering system, which successfully beat Ken Jennings at Jeopardy! James holds a PhD in computer science from the University of Texas in Austin.',
         link: 'https://www.linkedin.com/in/jamesfan1/'
     },

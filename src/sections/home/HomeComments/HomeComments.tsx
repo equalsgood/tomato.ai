@@ -25,7 +25,7 @@ export const HomeComments = () => {
     const [sliderLeft, setSliderLeft] = useState('50%');
     const [offset, setOffset] = useState(0);
     const [comments, setComments] = useState(commentsConfig);
-    const [direction, setDirection] = useState<'next' | 'prev' | ''>('');
+    const [direction, setDirection] = useState(0);
 
     useEffect(() => {
         if(isMobile)
@@ -37,17 +37,23 @@ export const HomeComments = () => {
     useEffect(() => {
         setCommentsOffset(`translate(calc(-${commentWidth / 2}px - ${commentWidth * initialComment}px - ${offset * commentWidth}px), -50%)`);
         const timeout = setTimeout(() => {
-            if(direction === 'next') {
-                const newComments = [...comments, comments[0]];
-                newComments.shift();
+            if(direction > 0) {
+                const newComments = [...comments];
+                for(let i = 0; i < Math.abs(direction); i++) {
+                    newComments.shift();
+                    newComments.push(comments[i]);
+                }
                 setComments(newComments);
             }
-            if(direction === 'prev') {
-                const newComments = [comments[comments.length - 1], ...comments];
-                newComments.pop();
+            if(direction < 0) {
+                const newComments = [...comments];
+                for(let i = 0; i < Math.abs(direction); i++) {
+                    newComments.pop();
+                    newComments.unshift(comments[comments.length - (i + 1)]);
+                }
                 setComments(newComments);
             }
-            setDirection('');
+            setDirection(0);
             setSliderLeft(`calc(50% + ${offset * commentWidth}px)`);
         }, 500);
 
@@ -56,12 +62,12 @@ export const HomeComments = () => {
 
     const changeComment = (newCommentIndex: number) => {
         if(newCommentIndex > currentComment) {
-            setDirection('next');
-            setOffset(prev => prev + 1);
+            setDirection(newCommentIndex - currentComment);
+            setOffset(prev => prev + (newCommentIndex - currentComment));
         }
         if(newCommentIndex < currentComment) {
-            setDirection('prev');
-            setOffset(prev => prev - 1);
+            setDirection(newCommentIndex - currentComment);
+            setOffset(prev => prev - (currentComment - newCommentIndex));
         }
         const maxIndex = comments.length - 1;
 

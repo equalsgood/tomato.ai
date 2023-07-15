@@ -1,11 +1,17 @@
 import cls from './BpoContent.module.css';
 import { Text, TextVariants } from 'shared/components';
 import satisfiedCustomer from 'shared/assets/images/double-images/bpo-2.png';
+import satisfiedCustomerMobile from 'shared/assets/images/double-images/bpo-2-mobile.png';
 import expandedMap from 'shared/assets/images/double-images/bpo-3.png';
+import expandedMapMobile from 'shared/assets/images/double-images/bpo-3-mobile.png';
 import satisfiedWorker from 'shared/assets/images/double-images/bpo-4.png';
+import satisfiedWorkerMobile from 'shared/assets/images/double-images/bpo-4-mobile.png';
 import classNames from 'classnames';
+import { useContext } from 'react';
+import { Context } from 'app/providers/ContextProvider';
 
 export const BpoContent = () => {
+    const { isMobile } = useContext(Context);
     return (
         <section className={cls.content}>
             <div className={classNames(cls.contentSection, cls.left)}>
@@ -18,10 +24,10 @@ export const BpoContent = () => {
                         Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
                     </Text>
                 </div>
-                <img alt="photo of a satisfied customer" src={satisfiedCustomer} className={cls.image} />
+                <img alt="photo of a satisfied customer" src={isMobile ? satisfiedCustomerMobile : satisfiedCustomer} className={cls.image} />
             </div>
             <div className={classNames(cls.contentSection, cls.right)}>
-                <img alt="photo of a map" src={expandedMap} className={cls.image} />
+                <img alt="photo of a map" src={isMobile ? expandedMapMobile : expandedMap} className={classNames(cls.image, cls.imageMap)} />
                 <div className={cls.details}>
                     <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL}>Expand Offshore Hiring Pool</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>
@@ -42,7 +48,7 @@ export const BpoContent = () => {
                         Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
                     </Text>
                 </div>
-                <img alt="photo of a satisfied worker" src={satisfiedWorker} className={cls.image} />
+                <img alt="photo of a satisfied worker" src={isMobile ? satisfiedWorkerMobile : satisfiedWorker} className={cls.image} />
             </div>
         </section>
     );

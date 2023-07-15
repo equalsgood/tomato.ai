@@ -73,15 +73,15 @@
     .content {
         max-width: 393px;
         width: 100%;
-        margin: 69px auto 80px;
+        margin: 69px auto 40px;
         display: flex;
         flex-direction: column;
-        gap: 70px;
+        gap: 30px;
     }
 
     .content-section {
         flex-direction: column;
-        gap: 30px;
+        gap: 0;
         justify-content: center;
         align-items: center;
     }
@@ -115,8 +115,12 @@
     }
 
     .image {
-        padding: 0 19px;
+        padding: 0;
         width: 100%;
         height: auto;
+    }
+
+    .imageMap {
+        margin-top: 10px;
     }
 }
