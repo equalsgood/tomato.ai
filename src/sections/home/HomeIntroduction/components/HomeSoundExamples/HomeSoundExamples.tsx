@@ -27,7 +27,7 @@ export const HomeSoundExamples = () => {
                 <Text tag="p" variant={TextVariants.BADGE}>EXAMPLES</Text>
                 <Text tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>Tomato.ai softens multiple types of accents</Text>
                 <Text classNamesProps={cls.paragraph} tag="p" variant={TextVariants.PARAGRAPH_REVERSED}>As agents speak with an Indian, Filipino, or other accent, customers hear them pronouncing words more like native speakers. This improves intelligibility and reduces customer frustration. Compared to accent training the AI voice filter produces better results, faster.</Text>
-                <a onClick={() => scrollSmoothTo({ elementId: 'benefits', block: 'center' })} className={cls.action}>
+                <a onClick={() => scrollSmoothTo({ elementId: 'benefits', block: isMobile ? 'start' : 'center' })} className={cls.action}>
                     <Text tag="p" variant={TextVariants.ACTION}>Learn more</Text>
                     <GreenArrowIcon/>
                 </a>

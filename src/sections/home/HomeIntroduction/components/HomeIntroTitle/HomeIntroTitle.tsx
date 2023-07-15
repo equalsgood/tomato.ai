@@ -11,6 +11,8 @@ import { scrollSmoothTo } from 'shared/lib';
 import { Context } from 'app/providers/ContextProvider';
 
 export const HomeIntroTitle = () => {
+    const { isMobile } = useContext(Context);
+
     return (
         <div className={cls.homeIntroTitle}>
             <div className={cls.info}>
@@ -22,7 +24,7 @@ export const HomeIntroTitle = () => {
                 </Text>
                 <div className={cls.links}>
                     <NavigationLink classNamesProps={cls.actionLink} text="Request Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} />
-                    <a onClick={() => scrollSmoothTo({ elementId: 'samples-examples', block: 'center' })} className={cls.action}>
+                    <a onClick={() => scrollSmoothTo({ elementId: 'samples-examples', block: isMobile ? 'start' : 'center' })} className={cls.action}>
                         <Text tag="p" variant={TextVariants.ACTION_RED}>More Examples</Text>
                         <div className={cls.arrow}>
                             <RedArrowIcon/>

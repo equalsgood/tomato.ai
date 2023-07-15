@@ -15,11 +15,17 @@ import ArrowRight from 'shared/assets/icons/arrow-right.svg';
 import ArrowLeft from 'shared/assets/icons/arrow-left.svg';
 import { Context } from 'app/providers/ContextProvider';
 
+const initialComment = 1;
+
 export const HomeComments = () => {
     const { isMobile } = useContext(Context);
     const [currentComment, setCurrentComment] = useState<number>(1);
     const [commentWidth, setCommentWidth] = useState(612);
-    const [commentsOffset, setCommentsOffset] = useState(`translate(calc(-${commentWidth / 2}px - ${commentWidth * currentComment}px), -50%)`);
+    const [commentsOffset, setCommentsOffset] = useState(`translate(calc(-${commentWidth / 2}px - ${commentWidth * initialComment}px), -50%)`);
+    const [sliderLeft, setSliderLeft] = useState('50%');
+    const [offset, setOffset] = useState(0);
+    const [comments, setComments] = useState(commentsConfig);
+    const [direction, setDirection] = useState<'next' | 'prev' | ''>('');
 
     useEffect(() => {
         if(isMobile)
@@ -28,12 +34,35 @@ export const HomeComments = () => {
             setCommentWidth(612);
     }, [isMobile]);
 
-
     useEffect(() => {
-        setCommentsOffset(`translate(calc(-${commentWidth / 2}px - ${commentWidth * currentComment}px), -50%)`);
-    }, [currentComment, commentWidth]);
+        setCommentsOffset(`translate(calc(-${commentWidth / 2}px - ${commentWidth * initialComment}px - ${offset * commentWidth}px), -50%)`);
+        const timeout = setTimeout(() => {
+            if(direction === 'next') {
+                const newComments = [...comments, comments[0]];
+                newComments.shift();
+                setComments(newComments);
+            }
+            if(direction === 'prev') {
+                const newComments = [comments[comments.length - 1], ...comments];
+                newComments.pop();
+                setComments(newComments);
+            }
+            setDirection('');
+            setSliderLeft(`calc(50% + ${offset * commentWidth}px)`);
+        }, 500);
+
+        return () => clearTimeout(timeout);
+    }, [commentWidth, offset]);
 
     const changeComment = (newCommentIndex: number) => {
+        if(newCommentIndex > currentComment) {
+            setDirection('next');
+            setOffset(prev => prev + 1);
+        }
+        if(newCommentIndex < currentComment) {
+            setDirection('prev');
+            setOffset(prev => prev - 1);
+        }
         const maxIndex = comments.length - 1;
 
         if(newCommentIndex > maxIndex)
@@ -52,7 +81,7 @@ export const HomeComments = () => {
                 </button>
                 <div className={cls.commentsWrapper}>
                     {/*<ul className={cls.commentsList}>*/}
-                    <ul style={{ transform: commentsOffset }} className={cls.commentsList}>
+                    <ul id="home-comments-slider" style={{ transform: commentsOffset, left: sliderLeft }} className={cls.commentsList}>
                         {comments.map((comment, index) =>
                             <HomeComment
                                 key={`comment-${index}`}
@@ -91,7 +120,7 @@ export interface PublicComment {
     text: string;
 }
 
-const comments: Array<PublicComment> = [
+const commentsConfig: Array<PublicComment> = [
     {
         picture: ThirdCommentatorImage,
         name: 'Michael Thomas',

@@ -1,9 +1,9 @@
-interface scrollSmoothToProps {
+export interface ScrollSmoothToProps {
     elementId: string;
     block: 'start' | 'center' | 'pageStart';
 }
 
-export const scrollSmoothTo = (props: scrollSmoothToProps) => {
+export const scrollSmoothTo = (props: ScrollSmoothToProps) => {
     const { elementId, block } = props;
     const element = document.getElementById(elementId);
 

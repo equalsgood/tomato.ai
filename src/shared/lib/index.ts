@@ -1,6 +1,6 @@
 import { validation, InputValidations } from './validation/validation';
 import { numberFormat } from './numberFormat/numberFormat';
-import { scrollSmoothTo } from './scrollSmoothTo/scrollSmoothTo';
+import { scrollSmoothTo, ScrollSmoothToProps } from './scrollSmoothTo/scrollSmoothTo';
 import { isInViewport } from './isInViewport/isInViewport';
 
 export {
@@ -8,5 +8,6 @@ export {
     InputValidations,
     numberFormat,
     scrollSmoothTo,
+    ScrollSmoothToProps,
     isInViewport
 };
