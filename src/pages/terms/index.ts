@@ -1,4 +1,4 @@
-import { TermsPageSchema } from './types';
+import { TermsPageSchema, TermsContentSection } from './types';
 import { TermsPageAsync as TermsPage } from './pages/TermsPage/TermsPage.async';
 import { EthicsPageAsync as EthicsPage } from './pages/EthicsPage/EthicsPage.async';
 import { SecurityPageAsync as SecurityPage } from './pages/SecurityPage/SecurityPage.async';
@@ -7,6 +7,7 @@ import { GuidelinesPageAsync as GuidelinesPage } from './pages/GuidelinesPage/Gu
 
 export {
     TermsPageSchema,
+    TermsContentSection,
     TermsPage,
     EthicsPage,
     SecurityPage,

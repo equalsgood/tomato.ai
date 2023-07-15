@@ -1,9 +1,13 @@
 import cls from './TermsCommonMenu.module.css';
 import { ContactUsPopup, Menu, MenuItem } from 'widgets';
 import { Text, TextVariants } from 'shared/components';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { scrollSmoothTo } from 'shared/lib';
 import { TermsPageSchema } from 'pages/terms';
+import { Context } from 'app/providers/ContextProvider';
+import {
+    TermsCommonMenuMobile
+} from 'sections/termsCommon/TermsCommonMenu/components/TermsCommonMenuMobile/TermsCommonMenuMobile';
 
 interface TermsMenuProps {
     content: TermsPageSchema;
@@ -12,6 +16,7 @@ interface TermsMenuProps {
 }
 
 export const TermsCommonMenu = (props: TermsMenuProps) => {
+    const { isMobile } = useContext(Context);
     const { content, currentMenuIndex, onChange } = props;
     const [items, setItems] = useState<Array<MenuItem>>([]);
     const [open, setOpen] = useState<boolean>(false);
@@ -26,6 +31,12 @@ export const TermsCommonMenu = (props: TermsMenuProps) => {
         });
         setItems(newItems);
     }, [content]);
+
+    if(isMobile) {
+        return (
+            <TermsCommonMenuMobile onChange={onChange} items={items}/>
+        );
+    }
 
     const changeHandler = (itemIndex: number) => {
         onChange(itemIndex);

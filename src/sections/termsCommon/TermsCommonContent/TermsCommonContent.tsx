@@ -1,18 +1,30 @@
 import { TermsPageSchema } from 'pages/terms';
 import { Text, TextVariants } from 'shared/components';
 import cls from './TermsCommonContent.module.css';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useContext, useEffect, useState } from 'react';
 import { isInViewport } from 'shared/lib';
+import { Context } from 'app/providers/ContextProvider';
+import {
+    TermsCommonContentMobile
+} from 'sections/termsCommon/TermsCommonContent/components/TermsCommonContentMobile/TermsCommonContentMobile';
 
 interface TermsContentProps {
     content: TermsPageSchema;
     onChange: (menuIndex: number) => void;
+    currentMenuIndex: number;
 }
 
 export const TermsCommonContent = (props: TermsContentProps) => {
-    const { content, onChange } = props;
+    const { isMobile } = useContext(Context);
+    const { content, onChange, currentMenuIndex } = props;
     const [sectionsIds, setSectionIds] = useState<Array<string>>([]);
     const [newMenuIndex, setNewMenuIndex] = useState(0);
+
+    if(isMobile) {
+        return (
+            <TermsCommonContentMobile currentMenuIndex={currentMenuIndex} content={content}/>
+        );
+    }
 
     useEffect(() => {
         const timeout = setTimeout(() => {

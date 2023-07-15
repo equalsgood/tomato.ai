@@ -9,7 +9,7 @@ interface TermsContentImage {
     src: string
 }
 
-interface TermsContentSection {
+export interface TermsContentSection {
     sectionTitle: string;
     sectionId: string;
     sectionContent: Array<TermsContentParagraph | TermsContentImage>

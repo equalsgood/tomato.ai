@@ -6,17 +6,18 @@ import DropdownIconClose from 'shared/assets/icons/arrow-dropdown-down-m.svg';
 import React, { memo, useState } from 'react';
 
 interface SelectProps {
-    label: string,
+    label?: string,
     info?: string,
     value: string,
     options: Array<string>,
     onSelectChange?: (value: string) => void
     classNamesProps?: string;
     labelClassNamesProps?: string;
+    dark?: boolean;
 }
 
 export const Select = memo((props: SelectProps) => {
-    const { label, info, value, options, onSelectChange, classNamesProps, labelClassNamesProps } = props;
+    const { label, info, value, options, onSelectChange, classNamesProps, labelClassNamesProps, dark } = props;
 
     const [open, setOpen] = useState(false);
 
@@ -28,11 +29,13 @@ export const Select = memo((props: SelectProps) => {
     };
 
     return (
-        <div className={cls.container}>
-            <div className={classNames(cls.label, labelClassNamesProps)}>
-                <span className={cls.labelText}>{label}</span>
-                { info && <InfoBadge text={info}/>}
-            </div>
+        <div className={classNames(cls.container, { [cls.dark]: dark })}>
+            { label &&
+                <div className={classNames(cls.label, labelClassNamesProps)}>
+                    <span className={cls.labelText}>{label}</span>
+                    {info && <InfoBadge text={info}/>}
+                </div>
+            }
             <div className={cls.selectContainer}>
                 <div
                     className={classNames(cls.select, classNamesProps, { [cls.selected]: !!value })}

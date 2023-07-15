@@ -50,3 +50,40 @@
         font-size: var(--font-size-16);
     }
 }
+
+@media(max-width: 1022px) {
+    .content-wrapper {
+        width: 100%;
+    }
+
+    .title {
+        font-size: var(--font-size-26);
+        line-height: 30px;
+        margin-bottom: 30px;
+        padding: 0 30px;
+    }
+
+    .section {
+        gap: 15px;
+        padding-bottom: 0;
+    }
+
+    .section img {
+        width: 100%;
+        margin-bottom: 7px;
+        height: 275px;
+    }
+
+    .subtitle {
+        padding: 0 30px;
+        line-height: 30px;
+        font-size: var(--font-size-18);
+    }
+
+    .paragraph {
+        padding: 0 30px;
+        line-height: 20px;
+        font-size: var(--font-size-14);
+        margin-bottom: 7px;
+    }
+}

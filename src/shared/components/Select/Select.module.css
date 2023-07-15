@@ -89,6 +89,22 @@
     background: transparent;
 }
 
+.dark .select {
+    padding: 0 21px 0 31px;
+    background: var(--reversed-bg-color);
+    color: var(--reversed-text-color);
+}
+
+.dark .select.selected {
+    border: none;
+}
+
+.dark .options {
+    border: none;
+    padding: 0 21px 0 31px;
+    background: var(--reversed-bg-color);
+}
+
 @media(max-width: 1438px) {
     .label-text {
         font-size: var(--font-size-18);
