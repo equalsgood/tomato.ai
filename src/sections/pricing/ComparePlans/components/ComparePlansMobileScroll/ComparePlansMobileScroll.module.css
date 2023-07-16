@@ -1,0 +1,23 @@
+.scroll-wrapper {
+    position: sticky;
+    height: 5px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: #E5E5E5;
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 120px;
+    background: var(--primary-action-color);
+}

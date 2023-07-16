@@ -217,6 +217,7 @@
         margin-bottom: 70px;
         overflow-y: hidden;
         overflow-x: scroll;
+        position: relative;
     }
 
     .table {

@@ -10,13 +10,31 @@ import VipIcon from 'shared/assets/icons/plans/vip.svg';
 import { RoutePaths } from 'app/providers/AppRouter';
 import { Plans, requestDemoActions } from 'models/requestDemo';
 import { useAppDispatch } from 'hooks';
+import {
+    ComparePlansMobileScroll
+} from 'sections/pricing/ComparePlans/components/ComparePlansMobileScroll/ComparePlansMobileScroll';
 
 export const ComparePlans = () => {
     const dispatch = useAppDispatch();
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
+    const [offset, setOffset] = useState(0);
 
     const clickLinkHandler = (plan: Plans) => {
         dispatch(requestDemoActions.changeSelectedPlan(plan));
+    };
+
+    const scrollHandler = () => {
+        const sideMargin = 35;
+        const tableWrapper = document.querySelector('#pricing-table-wrapper') as HTMLElement;
+        const table = document.querySelector('#pricing-table') as HTMLElement;
+        const { width: screenWidth } = tableWrapper.getBoundingClientRect();
+
+        const tableWidth = table.getBoundingClientRect().width + (sideMargin * 2);
+        const availableSpaceForScroll = Math.abs(screenWidth - tableWidth);
+        const scrolledPart = Math.abs(table.getBoundingClientRect().left - sideMargin);
+
+        const offset = scrolledPart * 100 / availableSpaceForScroll;
+        setOffset((screenWidth - 120) * offset / screenWidth);
     };
 
     return (
@@ -29,8 +47,9 @@ export const ComparePlans = () => {
                 endIcon={open ? <ArrowUpIcon/> : <ArrowRightIcon/>}
                 onClick={() => setOpen(prev => !prev)}
             />
-            <div className={classNames(cls.tableWrapper, { [cls.open]: open })}>
-                <table className={cls.table}>
+            <div id="pricing-table-wrapper" onScroll={scrollHandler} className={classNames(cls.tableWrapper, { [cls.open]: open })}>
+                <ComparePlansMobileScroll offset={offset}/>
+                <table id="pricing-table" className={cls.table}>
                     <colgroup>
                         <col className={cls.benefitsCol}/>
                         <col className={cls.planCol}/>

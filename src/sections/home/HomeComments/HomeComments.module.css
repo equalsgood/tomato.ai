@@ -91,6 +91,8 @@
 @media(max-width: 1022px) {
     .section {
         width: 100%;
+        max-width: 393px;
+        margin: 0 auto;
         padding: 0 0 30px;
         display: flex;
         flex-direction: column;
