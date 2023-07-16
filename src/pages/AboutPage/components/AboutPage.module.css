@@ -7,3 +7,9 @@
     top: 150px;
     left: 0;
 }
+
+@media(max-width: 1022px) {
+    .image {
+        display: none;
+    }
+}

@@ -16,6 +16,7 @@ import PointTitledLogo from 'shared/assets/logos/featured/point-titled.png';
 import TribeTitledLogo from 'shared/assets/logos/featured/tribe-titled.png';
 import CardumenTitledLogo from 'shared/assets/logos/featured/cardumen-titled.png';
 import RecursiveTitledLogo from 'shared/assets/logos/featured/recursive-titled.png';
+import LogosTitledMobile from 'shared/assets/logos/featured/mobile-titled.png';
 import classNames from 'classnames';
 import { Text, TextVariants } from 'shared/components';
 import { useContext } from 'react';
@@ -43,6 +44,12 @@ export const FeaturedCompanies = ({ variant, title }: FeaturedCompaniesProps) =>
                 }
                 {variant === FeaturedCompaniesVariants.LIGHT &&
                     <img className={cls.image} alt={'image of the featured companies'} src={LogosLightMobile}/>
+                }
+                {variant === FeaturedCompaniesVariants.TITLED &&
+                    <div className={cls.titledMobile}>
+                        <Text tag="h3" variant={TextVariants.SUBTITLE_MEDIUM_REVERSED} classNamesProps={cls.titleReversed}>Supported by leading investors</Text>
+                        <img className={cls.image} alt={'image of the featured companies'} src={LogosTitledMobile}/>
+                    </div>
                 }
             </section>
         );

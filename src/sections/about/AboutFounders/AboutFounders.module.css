@@ -63,3 +63,44 @@
         gap: 14px;
     }
 }
+
+@media(max-width: 1022px) {
+    .about-founders {
+        width: 100%;
+        margin: 0;
+        padding: 0 30px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 37px;
+    }
+
+    .title-container {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .title {
+        font-size: var(--font-size-24);
+        line-height: 30px;
+        width: auto;
+        padding-left: 0;
+    }
+
+    .paragraph {
+        font-size: var(--font-size-14);
+        line-height: 20px;
+        height: auto;
+        width: 100%;
+    }
+
+    .founders {
+        list-style: none;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+}

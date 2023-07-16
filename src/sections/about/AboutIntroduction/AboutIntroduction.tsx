@@ -1,10 +1,13 @@
 import cls from './AboutIntroduction.module.css';
 import { Text, TextVariants } from 'shared/components';
 import introImage from 'shared/assets/images/double-images/about-1.png';
+import introImageMobile from 'shared/assets/images/double-images/about-1-mobile.png';
 import { ContactUsPopup } from 'widgets';
-import { useCallback, useState } from 'react';
+import { useCallback, useContext, useState } from 'react';
+import { Context } from 'app/providers/ContextProvider';
 
 export const AboutIntroduction = () => {
+    const { isMobile } = useContext(Context); 
     const [open, setOpen] = useState(false);
 
     const closeHandler = useCallback(() => {
@@ -25,7 +28,7 @@ export const AboutIntroduction = () => {
                 </div>
             </div>
             <div className={cls.imageContainer}>
-                <img alt="image of a working team partying" width={1000} src={introImage}/>
+                <img alt="image of a working team partying" width={1000} src={isMobile ? introImageMobile : introImage}/>
             </div>
             <ContactUsPopup open={open} onClose={closeHandler}/>
         </section>

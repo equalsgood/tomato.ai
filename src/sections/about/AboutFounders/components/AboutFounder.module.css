@@ -137,3 +137,53 @@
         height: 100%;
     }
 }
+
+@media(max-width: 1022px) {
+    .founder {
+        width: 310px;
+        height: 426px;
+    }
+
+    .short-info {
+        height: 210px;
+        gap: 6px;
+        justify-content: flex-end;
+        padding: 0 0 32px 42px;
+    }
+
+    .short-info .name {
+        font-size: var(--font-size-20);
+        line-height: 20px;
+    }
+
+    .short-info .position {
+        font-size: var(--font-size-16);
+        line-height: 18px;
+    }
+
+    .hovered-info {
+        padding: 26px 32px 0 34px;
+    }
+
+    .personal {
+        margin-bottom: 30px;
+    }
+
+    .initials {
+        gap: 12px;
+    }
+
+    .initials .name {
+        font-size: var(--font-size-22);
+        line-height: 21px;
+    }
+
+    .initials .position {
+        font-size: var(--font-size-16);
+    }
+
+    .biography {
+        font-size: var(--font-size-14);
+        line-height: 20px;
+    }
+}

@@ -66,3 +66,18 @@
         line-height: 30px;
     }
 }
+
+.titled-mobile {
+    background: var(--fourth-bg-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 21px 25px 52px;
+}
+
+.title-reversed {
+    font-size: var(--font-size-16);
+    line-height: 30px;
+}
