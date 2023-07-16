@@ -5,6 +5,12 @@ import DropdownIconOpen from 'shared/assets/icons/arrow-dropdown-up-m.svg';
 import DropdownIconClose from 'shared/assets/icons/arrow-dropdown-down-m.svg';
 import React, { memo, useState } from 'react';
 
+export enum SelectVariants {
+    DEFAULT = 'default',
+    DARK = 'dark',
+    GREEN = 'green'
+}
+
 interface SelectProps {
     label?: string,
     info?: string,
@@ -13,11 +19,11 @@ interface SelectProps {
     onSelectChange?: (value: string) => void
     classNamesProps?: string;
     labelClassNamesProps?: string;
-    dark?: boolean;
+    variant?: SelectVariants;
 }
 
 export const Select = memo((props: SelectProps) => {
-    const { label, info, value, options, onSelectChange, classNamesProps, labelClassNamesProps, dark } = props;
+    const { label, info, value, options, onSelectChange, classNamesProps, labelClassNamesProps, variant = SelectVariants.DEFAULT } = props;
 
     const [open, setOpen] = useState(false);
 
@@ -29,7 +35,7 @@ export const Select = memo((props: SelectProps) => {
     };
 
     return (
-        <div className={classNames(cls.container, { [cls.dark]: dark })}>
+        <div className={classNames(cls.container, cls[variant])}>
             { label &&
                 <div className={classNames(cls.label, labelClassNamesProps)}>
                     <span className={cls.labelText}>{label}</span>

@@ -90,7 +90,7 @@
     }
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1022px) {
     :root {
         --font-size-65: 65px;
         --font-size-60: 60px;

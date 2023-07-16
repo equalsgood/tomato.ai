@@ -105,6 +105,23 @@
     background: var(--reversed-bg-color);
 }
 
+.green .select {
+    border-radius: 15px;
+    padding: 0 21px 0 31px;
+    background: var(--primary-action-color);
+    color: var(--reversed-text-color);
+}
+
+.green .select.selected {
+    border: none;
+}
+
+.green .options {
+    border: none;
+    padding: 0 21px 0 31px;
+    background: var(--primary-action-color);
+}
+
 @media(max-width: 1438px) {
     .label-text {
         font-size: var(--font-size-18);

@@ -6,7 +6,7 @@ import { NavigationDropdown } from './NavigationDropdown/NavigationDropdown';
 import { AudioPlayer } from './AudioPlayer/AudioPlayer';
 import { InfoBadge } from './InfoBadge/InfoBadge';
 import { Input } from './Input/Input';
-import { Select } from './Select/Select';
+import { Select, SelectVariants } from './Select/Select';
 import { Button, ButtonVariants } from './Button/Button';
 import { Divider } from './Divider/Divider';
 import { Faq } from './Faq/Faq';
@@ -29,6 +29,7 @@ export {
     InfoBadge,
     Input,
     Select,
+    SelectVariants,
     Button,
     ButtonVariants,
     Divider,

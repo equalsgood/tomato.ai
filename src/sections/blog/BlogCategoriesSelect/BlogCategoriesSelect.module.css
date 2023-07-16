@@ -67,3 +67,38 @@
         height: 40px;
     }
 }
+
+@media(max-width: 1022px) {
+    .section {
+        padding: 35px 30px 30px;
+        width: 100%;
+    }
+
+    .title-container {
+        margin: 0 0 24px;
+    }
+
+    .title {
+        font-size: var(--font-size-24);
+        line-height: 30px;
+    }
+
+    .number {
+        font-size: var(--font-size-14);
+        transform: translateY(2px);
+        font-weight: var(--font-weight-l);
+        margin-left: 10px;
+    }
+
+    .text-button {
+        justify-content: flex-end;
+        font-size: var(--font-size-15);
+        width: 90px;
+        height: 20px;
+        margin-left: auto;
+    }
+
+    .text-button:hover {
+        background: transparent;
+    }
+}

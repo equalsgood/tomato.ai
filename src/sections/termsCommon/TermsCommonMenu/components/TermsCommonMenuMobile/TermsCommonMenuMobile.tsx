@@ -1,7 +1,7 @@
 import cls from './TermsCommonMenuMobile.module.css';
 import { MenuItem } from 'widgets';
 import { useEffect, useState } from 'react';
-import { Select } from 'shared/components';
+import { Select, SelectVariants } from 'shared/components';
 
 interface TermsCommonMenuMobileProps {
     items: Array<MenuItem>;
@@ -26,7 +26,7 @@ export const TermsCommonMenuMobile = (props: TermsCommonMenuMobileProps) => {
     
     return (
         <div className={cls.menu}>
-            <Select onSelectChange={selectChangeHandler} value={selectValue || ''} options={selectOptions} dark />
+            <Select onSelectChange={selectChangeHandler} value={selectValue || ''} options={selectOptions} variant={SelectVariants.DARK} />
         </div>
     );
 };

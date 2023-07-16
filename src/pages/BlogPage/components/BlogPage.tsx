@@ -1,6 +1,8 @@
 import { BlogArticles, BlogCategoriesSelect, BlogTitle } from 'sections/blog';
 import { BlogArticle, BlogCategories, BlogPageSchema } from '../types';
 import blogImage from 'shared/assets/images/blog-example.png';
+import blogTitleImage from 'shared/assets/images/blog-example-title.png';
+import mobileImageForTitle from 'shared/assets/images/blog-example-mobile.png';
 import { useEffect, useState } from 'react';
 
 const BlogPage = () => {
@@ -41,7 +43,8 @@ const blogConfig: BlogPageSchema = {
     mainArticle: {
         title: 'Some title for the main article',
         description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur...',
-        image: blogImage,
+        image: blogTitleImage,
+        mobileImageForTitle: mobileImageForTitle,
         link: 'https://medium.com/',
         author: 'Author',
         category: BlogCategories.ABOUT_COMPANY

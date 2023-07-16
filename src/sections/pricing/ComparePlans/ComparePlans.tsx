@@ -3,7 +3,7 @@ import { Button, ButtonVariants, NavigationLink, NavigationLinkVariants } from '
 import ArrowRightIcon from 'shared/assets/icons/arrow-blue-right.svg';
 import ArrowUpIcon from 'shared/assets/icons/arrow-blue-up.svg';
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AvailableIcon from 'shared/assets/icons/plans/available.svg';
 import UnavailableIcon from 'shared/assets/icons/plans/unavailable.svg';
 import VipIcon from 'shared/assets/icons/plans/vip.svg';
@@ -13,8 +13,10 @@ import { useAppDispatch } from 'hooks';
 import {
     ComparePlansMobileScroll
 } from 'sections/pricing/ComparePlans/components/ComparePlansMobileScroll/ComparePlansMobileScroll';
+import { Context } from 'app/providers/ContextProvider';
 
 export const ComparePlans = () => {
+    const { screenWidth } = useContext(Context);
     const dispatch = useAppDispatch();
     const [open, setOpen] = useState(true);
     const [offset, setOffset] = useState(0);
@@ -24,6 +26,7 @@ export const ComparePlans = () => {
     };
 
     const scrollHandler = () => {
+        // side margins in css
         const sideMargin = 35;
         const tableWrapper = document.querySelector('#pricing-table-wrapper') as HTMLElement;
         const table = document.querySelector('#pricing-table') as HTMLElement;
@@ -34,6 +37,7 @@ export const ComparePlans = () => {
         const scrolledPart = Math.abs(table.getBoundingClientRect().left - sideMargin);
 
         const offset = scrolledPart * 100 / availableSpaceForScroll;
+        // 120 is a width of a green scroll bar
         setOffset((screenWidth - 120) * offset / screenWidth);
     };
 
@@ -48,7 +52,7 @@ export const ComparePlans = () => {
                 onClick={() => setOpen(prev => !prev)}
             />
             <div id="pricing-table-wrapper" onScroll={scrollHandler} className={classNames(cls.tableWrapper, { [cls.open]: open })}>
-                <ComparePlansMobileScroll offset={offset}/>
+                { screenWidth < 974 && <ComparePlansMobileScroll offset={offset}/>}
                 <table id="pricing-table" className={cls.table}>
                     <colgroup>
                         <col className={cls.benefitsCol}/>

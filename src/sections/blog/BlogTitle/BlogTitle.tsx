@@ -1,16 +1,19 @@
 import cls from './BlogTitle.module.css';
-import { BlogArticle } from 'pages/BlogPage/types';
+import { MainArticle } from 'pages/BlogPage/types';
 import { Text, TextVariants } from 'shared/components';
 import ArrowIcon from 'shared/assets/icons/arrow-blue-right.svg';
+import { useContext } from 'react';
+import { Context } from 'app/providers/ContextProvider';
 
 interface BlogTitleProps {
-    article: BlogArticle
+    article: MainArticle
 }
 
 export const BlogTitle = ({ article }: BlogTitleProps) => {
+    const { isMobile } = useContext(Context);
     return (
         <section className={cls.section}>
-            <img src={article.image} alt="main article image" className={cls.image}/>
+            <img src={isMobile ? article.mobileImageForTitle : article.image} alt="main article image" className={cls.image}/>
             <div className={cls.infoContainer}>
                 <div className={cls.info}>
                     <Text tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>{article.title}</Text>

@@ -1,6 +1,8 @@
 import cls from './BlogCategoriesSelect.module.css';
 import { BlogCategories } from 'pages/BlogPage/types';
-import { Button, ButtonVariants, Text, TextVariants } from 'shared/components';
+import { Button, ButtonVariants, Select, SelectVariants, Text, TextVariants } from 'shared/components';
+import { useContext } from 'react';
+import { Context } from 'app/providers/ContextProvider';
 
 interface BlogCategoriesSelectProps {
     categories: Array<BlogCategories>;
@@ -10,6 +12,7 @@ interface BlogCategoriesSelectProps {
 }
 
 export const BlogCategoriesSelect = (props: BlogCategoriesSelectProps) => {
+    const { isMobile } = useContext(Context);
     const { categories, selectedCategory, onCategorySelect, filteredArticlesNumber } = props;
 
     return (
@@ -25,18 +28,25 @@ export const BlogCategoriesSelect = (props: BlogCategoriesSelectProps) => {
                     text="See all posts"
                 />
             </div>
-            <div className={cls.categoriesContainer}>
-                {categories.map(category =>
-                    <Button
-                        key={`${category}-category-button`}
-                        text={category}
-                        onClick={() => onCategorySelect(category)}
-                        type="button"
-                        classNamesProps={cls.option}
-                        variant={category === selectedCategory ? ButtonVariants.ACTION : ButtonVariants.OPTION}
-                    />
-                )}
-            </div>
+            { isMobile ?
+                <Select
+                    value={selectedCategory}
+                    options={categories}
+                    variant={SelectVariants.GREEN}
+                    onSelectChange={(category) => onCategorySelect(category as BlogCategories)}
+                /> :
+                <div className={cls.categoriesContainer}>
+                    {categories.map(category =>
+                        <Button
+                            key={`${category}-category-button`}
+                            text={category}
+                            onClick={() => onCategorySelect(category)}
+                            type="button"
+                            classNamesProps={cls.option}
+                            variant={category === selectedCategory ? ButtonVariants.ACTION : ButtonVariants.OPTION}
+                        />
+                    )}
+                </div>}
         </section>
     );
 };

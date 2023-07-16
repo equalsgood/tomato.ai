@@ -5,7 +5,7 @@ export enum BlogCategories {
     PRODUCT = 'Product',
     ABOUT_COMPANY = 'About Company',
     HOW_TO = '“How To?”',
-    UNSET = 'Unset',
+    UNSET = 'All posts',
 }
 
 export interface BlogArticle {
@@ -17,8 +17,12 @@ export interface BlogArticle {
     link: string;
 }
 
+export interface MainArticle extends BlogArticle {
+    mobileImageForTitle: string;
+}
+
 export interface BlogPageSchema {
-    mainArticle: BlogArticle;
+    mainArticle: MainArticle;
     articles: Array<BlogArticle>;
     categories: Array<BlogCategories>;
 }
