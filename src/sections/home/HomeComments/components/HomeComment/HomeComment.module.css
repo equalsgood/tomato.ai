@@ -53,6 +53,10 @@
     align-items: center;
 }
 
+.company {
+    max-width: 200px;
+}
+
 @media(max-width: 1022px) {
     .comment {
         position: relative;

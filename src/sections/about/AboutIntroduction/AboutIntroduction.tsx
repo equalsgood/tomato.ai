@@ -1,7 +1,7 @@
 import cls from './AboutIntroduction.module.css';
 import { Text, TextVariants } from 'shared/components';
 import introImage from 'shared/assets/images/double-images/about-1.png';
-import introImageMobile from 'shared/assets/images/double-images/about-1-mobile.png';
+import introImageMobile from 'shared/assets/images/double-images/about-mobile.png';
 import { ContactUsPopup } from 'widgets';
 import { useCallback, useContext, useState } from 'react';
 import { Context } from 'app/providers/ContextProvider';
