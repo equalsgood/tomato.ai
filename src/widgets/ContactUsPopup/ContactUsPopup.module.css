@@ -95,3 +95,46 @@
         height: 58px;
     }
 }
+
+@media(max-width: 1022px) {
+    .content {
+        padding: 25px 25px;
+        width: 332px;
+    }
+
+    .title {
+        font-size: var(--font-size-22);
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .initials-container {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .email, .countries, .note {
+        margin-bottom: 10px;
+    }
+
+    .note {
+        margin-top: 10px;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        transform: scale(0.8);
+    }
+
+    .submit {
+        font-size: var(--font-size-14);
+        height: 48px;
+    }
+
+    .input input {
+        height: 48px;
+    }
+}

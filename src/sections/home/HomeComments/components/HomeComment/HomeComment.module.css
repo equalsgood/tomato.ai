@@ -47,9 +47,10 @@
     padding-left: 7px;
 }
 
-.company {
-    max-height: 50px;
-    max-width: 150px;
+.company-wrapper {
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 @media(max-width: 1022px) {
@@ -88,11 +89,9 @@
         line-height: 18px;
     }
 
-    .company {
+    .company-wrapper {
         position: absolute;
         bottom: 20px;
         left: 30px;
-        max-height: 50px;
-        max-width: 100px;
     }
 }

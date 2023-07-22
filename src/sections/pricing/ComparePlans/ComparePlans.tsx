@@ -18,7 +18,7 @@ import { Context } from 'app/providers/ContextProvider';
 export const ComparePlans = () => {
     const { screenWidth } = useContext(Context);
     const dispatch = useAppDispatch();
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const [offset, setOffset] = useState(0);
 
     const clickLinkHandler = (plan: Plans) => {
@@ -47,12 +47,12 @@ export const ComparePlans = () => {
                 type="button"
                 variant={ButtonVariants.ACTION_BLUE}
                 text={open ? 'Hide' : 'Compare Plans'}
-                classNamesProps={cls.btn}
+                classNamesProps={classNames(cls.btn, `${open ? [cls.openBtn] : [cls.closeBtn]}`)}
                 endIcon={open ? <ArrowUpIcon/> : <ArrowRightIcon/>}
                 onClick={() => setOpen(prev => !prev)}
             />
+            { screenWidth < 974 && open && <ComparePlansMobileScroll offset={offset}/>}
             <div id="pricing-table-wrapper" onScroll={scrollHandler} className={classNames(cls.tableWrapper, { [cls.open]: open })}>
-                { screenWidth < 974 && <ComparePlansMobileScroll offset={offset}/>}
                 <table id="pricing-table" className={cls.table}>
                     <colgroup>
                         <col className={cls.benefitsCol}/>
@@ -119,6 +119,7 @@ export const ComparePlans = () => {
                         </tr>
                     </tbody>
                 </table>
+                { screenWidth < 974 && <div className={cls.placeholder}/>}
             </div>
         </section>
     );

@@ -1,83 +1,68 @@
-.featured {
+.section {
     width: 100%;
+    background: transparent;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    align-items: center;
+    padding-top: 29px;
 }
 
-.image {
-    width: 100%;
-}
-
-.titled {
+.section.titled {
     background: var(--fourth-bg-color);
 }
 
-.content {
-    width: 1422px;
-    margin: 0 auto;
-    padding: 10px 2% 45px;
-    display: grid;
-    grid-template-columns: 12% 16% 24% 19% 10%;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1%;
-}
-
-.content.titled {
-    width: 1422px;
-    margin: 0 auto;
-    height: 250px;
-    padding: 40px 100px 60px;
-    display: flex;
-    gap: 0;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.title {
-    line-height: var(--line-height-36);
+.section span {
     font-size: var(--font-size-25);
+    line-height: 36px;
+    color: var(--third-text-color);
+    font-weight: var(--font-weight-l);
 }
 
-.logos {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 12% 16% 24% 19% 10%;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1%;
+.section.titled span {
+    color: var(--reversed-text-color);
+}
+
+.section img {
+    max-width: 1422px;
+    padding: 0 95px;
+    margin: 0 auto;
 }
 
 @media(max-width: 1438px) {
-    .content {
-        width: 100%;
-        margin: 0 auto;
-        padding: 10px 2% 45px;
-        justify-content: space-around;
+    .section {
+        height: 164px;
+        gap: 25px;
+        padding-top: 23px;
     }
 
-    .content.titled {
-        width: 100%;
-        margin: 0 auto;
-        height: 180px;
-        padding: 29px 2% 34px;
+    .section span {
+        font-size: var(--font-size-18);
+        line-height: 25px;
     }
 
-    .title {
+    .section img {
+        max-width: 1005px;
+        padding: 0 68px;
+    }
+}
+
+@media(max-width: 1022px) {
+    .section {
+        height: auto;
+        padding-top: 22px;
+        padding-bottom: 38px;
+    }
+
+    .section span {
+        font-size: var(--font-size-16);
         line-height: 30px;
     }
-}
 
-.titled-mobile {
-    background: var(--fourth-bg-color);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    padding: 21px 25px 52px;
-}
-
-.title-reversed {
-    font-size: var(--font-size-16);
-    line-height: 30px;
+    .section img {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 28px 0 34px;
+    }
 }

@@ -62,6 +62,10 @@
         height: 56px;
     }
 
+    .endIcon {
+        transform: scale(0.8) translateY(2px);
+    }
+
     /*.option {*/
     /*    background: var(--primary-option-button-bg);*/
     /*    color: var(--primary-title-color);*/

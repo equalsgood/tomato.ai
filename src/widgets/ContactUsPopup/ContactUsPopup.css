@@ -11,3 +11,18 @@
 .contact-us-phone-input.phone-number-input {
     margin-bottom: 29px;
 }
+
+@media(max-width: 1022px) {
+    .contact-us-phone-input.phone-number-input .PhoneInputCountry {
+        height: 48px;
+    }
+
+    .contact-us-phone-input.phone-number-input .PhoneInputInput {
+        height: 48px;
+        font-size: var(--font-size-14);
+    }
+
+    .contact-us-phone-input.phone-number-input {
+        margin-bottom: 10px;
+    }
+}

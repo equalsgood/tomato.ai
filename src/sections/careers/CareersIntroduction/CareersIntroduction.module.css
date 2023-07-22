@@ -1,16 +1,15 @@
 .careers {
-    width: 1422px;
+    max-width: 1616px;
+    width: 100%;
     margin: 0 auto;
     padding: 35px 0 18px 130px;
     display: flex;
-    justify-content: flex-end;
-}
-
-.info-container {
-    margin: 112px auto 0;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 .info {
+    padding-top: 112px;
     width: 580px;
 }
 
@@ -30,13 +29,14 @@
 .image-container {
     position: relative;
     height: 620px;
-    width: 730px;
+    width: 712px;
 }
 
 .image-container img {
     position: absolute;
     top: 0;
-    right: 0;
+    left: -37px;
+    width: 903px;
 }
 
 .action {
@@ -59,15 +59,12 @@
 
 @media(max-width: 1438px) {
     .careers {
-        width: 1007px;
+        max-width: 1140px;
         padding: 60px 0 89px 90px;
     }
 
-    .info-container {
-        margin: 40px auto 0;
-    }
-
     .info {
+        padding-top: 40px;
         width: 401px;
     }
 
@@ -83,12 +80,12 @@
 
     .image-container {
         height: 412px;
-        width: 510px;
+        width: 516px;
     }
 
     .image-container img {
-        height: 412px;
-        width: 510px;
+        left: 14px;
+        width: 626px;
     }
 
     .action {
@@ -105,6 +102,7 @@
 
 @media(max-width: 1022px) {
     .careers {
+        max-width: 478px;
         width: 100%;
         padding: 48px 0 45px;
         flex-direction: column;
@@ -147,15 +145,13 @@
     }
 
     .image-container {
-        position: relative;
-        height: auto;
-        padding: 37px 0 0 20px;
+        margin-top: 37px;
+        height: 301px;
         width: 100%;
     }
 
     .image-container img {
-        position: relative;
-        width: 100%;
-        height: 100%;
+        left: 20px;
+        width: 458px;
     }
 }

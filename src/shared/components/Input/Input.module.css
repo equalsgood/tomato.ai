@@ -118,4 +118,19 @@
         line-height: 27px;
         font-size: var(--font-size-12);
     }
+
+    .reduced .input {
+        padding: 16px 0 15px 20px;
+        height: 48px;
+        font-size: var(--font-size-14);
+    }
+
+    .reduced .input::placeholder {
+        font-size: var(--font-size-14);
+    }
+
+    .reduced .area {
+        resize: none;
+        height: auto;
+    }
 }

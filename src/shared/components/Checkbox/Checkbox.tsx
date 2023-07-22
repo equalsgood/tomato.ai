@@ -11,10 +11,11 @@ interface CheckboxProps {
     onSelect: (option: string) => void
     classNamesProps?: string | undefined;
     withSearch?: boolean;
+    reduced?: boolean | undefined;
 }
 
 export const Checkbox = memo((props: CheckboxProps) => {
-    const { label, values, options, onSelect, classNamesProps, withSearch } = props;
+    const { label, values, options, onSelect, classNamesProps, withSearch, reduced } = props;
     const [selectedValuesString, setSelectedValuesString] = useState<string>('');
     const [searchValue, setSearchValue] = useState<string>('');
     const [filteredOptions, setFilteredOptions] = useState<Array<string>>(options);
@@ -39,7 +40,7 @@ export const Checkbox = memo((props: CheckboxProps) => {
     };
 
     return (
-        <div className={cls.container}>
+        <div className={classNames(cls.container, { [cls.reduced]: reduced })}>
             <div className={cls.label}>
                 <span className={cls.labelText}>{label}</span>
             </div>

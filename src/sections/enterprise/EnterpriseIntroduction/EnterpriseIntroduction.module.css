@@ -1,18 +1,19 @@
 .intro {
-    width: 1422px;
+    width: 100%;
+    max-width: 1542px;
+    overflow: hidden;
     margin: 0 auto;
-    padding: 45px 0 60px;
+    padding: 77px 100px 34px 0;
     display: flex;
     gap: 50px;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .details {
-    flex: 1;
+    width: 580px;
     display: flex;
-    justify-content: center;
-    padding: 60px 0 84px;
-    margin-right: 100px;
+    flex-direction: column;
+    padding: 30px 0 84px;
 }
 
 .title {
@@ -39,24 +40,30 @@
     height: 66px;
 }
 
-.image {
+.image-wrapper {
+    position: relative;
     width: 710px;
-    height: 620px;
+    height: 600px;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 812px;
+    height: 100%;
 }
 
 @media(max-width: 1438px) {
     .intro {
-        padding: 61px 0 55px;
-        width: 100%;
-        max-width: 1005px;
-        margin: 0 auto;
+        max-width: 1100px;
+        padding: 52px 90px 13px 0;
         gap: 11px;
     }
 
     .details {
-        align-items: center;
-        padding: 0 0 50px;
-        margin-right: 90px;
+        width: 404px;
+        padding: 10px 0 0;
     }
 
     .title {
@@ -81,18 +88,22 @@
         height: 56px;
     }
 
-    .image {
+    .image-wrapper {
         width: 518px;
-        height: auto;
+        height: 440px;
+    }
+
+    .image {
+        width: 595px;
     }
 }
 
 @media(max-width: 1022px) {
     .intro {
-        max-width: 393px;
+        max-width: 466px;
         width: 100%;
         margin: 0 auto;
-        padding: 48px 0 50px;
+        padding: 48px 0 3px;
         flex-direction: column-reverse;
         justify-content: flex-start;
         gap: 38px;
@@ -137,18 +148,12 @@
     }
 
     .image-wrapper {
-        padding: 0;
-        position: relative;
         width: 100%;
-        height: auto;
+        height: 330px;
     }
 
     .image {
-        padding-right: 11px;
-        position: relative;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: auto;
+        right: 11px;
+        width: 446px;
     }
 }

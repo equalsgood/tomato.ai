@@ -175,5 +175,7 @@
     .badge {
         font-size: var(--font-size-12);
         padding: 7px 27px;
+        height: 36px;
+        width: 130px;
     }
 }

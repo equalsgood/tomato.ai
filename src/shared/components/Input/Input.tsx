@@ -19,10 +19,11 @@ interface InputProps {
     max?: number;
     isValid?: boolean | undefined;
     error?: string;
+    reduced?: boolean | undefined;
 }
 
 export const Input = memo((props: InputProps) => {
-    const { label, type, info, placeholder, validationType, value, onInputChange, required, classNamesProps, rows, doubleLabel, max, error, isValid } = props;
+    const { label, type, info, placeholder, validationType, value, onInputChange, required, classNamesProps, rows, doubleLabel, max, error, isValid, reduced } = props;
     const [inputValue, setInputValue] = useState(value);
 
     const changeHandler = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
@@ -42,7 +43,7 @@ export const Input = memo((props: InputProps) => {
     }, [value]);
 
     return (
-        <div className={classNames(cls.container, classNamesProps, { [cls.error]: isValid === false })}>
+        <div className={classNames(cls.container, classNamesProps, { [cls.error]: isValid === false, [cls.reduced]: reduced } )}>
             <div className={classNames(cls.label, { [cls.doubleLine]: doubleLabel })}>
                 <span className={cls.labelText}>{label}</span>
                 { info && <InfoBadge text={info}/> }

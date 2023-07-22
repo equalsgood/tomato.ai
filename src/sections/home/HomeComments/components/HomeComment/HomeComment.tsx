@@ -18,7 +18,9 @@ export const HomeComment = (props: PublicComment) => {
                         <Text tag="p" variant={TextVariants.DEFAULT_SMALL}>{position}</Text>
                     </div>
                 </div>
-                <img className={cls.company} src={companyImage} alt={`logo of a company in which works ${name}`} />
+                <div className={cls.companyWrapper}>
+                    <img className={cls.company} src={companyImage} alt={`logo of a company in which works ${name}`} />
+                </div>
             </div>
             <div className={cls.text}>
                 <Text tag="p" variant={TextVariants.PARAGRAPH_BLACK}>{text}</Text>

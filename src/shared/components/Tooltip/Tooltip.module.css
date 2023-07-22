@@ -37,11 +37,11 @@
 }
 
 .info .text {
-    max-width: 270px;
-    padding: 8px 16px;
+    max-width: 250px;
+    padding: 14px 15px 14px 19px;
     background: var(--primary-input-bg);
-    border: solid 1px var(--primary-action-color);
-    border-radius: 15px;
+    border: solid 1px var(--primary-bg-color);
+    border-radius: 10px;
 }
 
 .flag .textContent {
@@ -49,7 +49,7 @@
 }
 
 .info .textContent {
-    font-size: var(--font-size-20);
+    font-size: var(--font-size-14);
 }
 
 .arrow {
@@ -72,7 +72,7 @@
 .info .arrow {
     bottom: 0;
     transform: translate(-50%, 100%);
-    border: 5px solid var(--primary-action-color);
+    border: 7px solid var(--primary-bg-color);
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
@@ -88,6 +88,10 @@
         padding: 0 0 20px;
         border-radius: 20px;
         background: var(--primary-bg-color);
+    }
+
+    .info .textContent {
+        font-size: var(--font-size-16);
     }
 }
 

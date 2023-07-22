@@ -6,7 +6,7 @@ import { isInViewport } from 'shared/lib';
 import { Context } from 'app/providers/ContextProvider';
 import {
     TermsCommonContentMobile
-} from 'sections/termsCommon/TermsCommonContent/components/TermsCommonContentMobile/TermsCommonContentMobile';
+} from './components/TermsCommonContentMobile/TermsCommonContentMobile';
 
 interface TermsContentProps {
     content: TermsPageSchema;
@@ -19,12 +19,6 @@ export const TermsCommonContent = (props: TermsContentProps) => {
     const { content, onChange, currentMenuIndex } = props;
     const [sectionsIds, setSectionIds] = useState<Array<string>>([]);
     const [newMenuIndex, setNewMenuIndex] = useState(0);
-
-    if(isMobile) {
-        return (
-            <TermsCommonContentMobile currentMenuIndex={currentMenuIndex} content={content}/>
-        );
-    }
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -40,11 +34,16 @@ export const TermsCommonContent = (props: TermsContentProps) => {
     }, [content]);
 
     const scrollHandler = () => {
+        let isViewportSectionFound = false;
         for (const sectionId of sectionsIds) {
             const isSectionInViewPort = isInViewport(sectionId);
             if(isSectionInViewPort) {
+                isViewportSectionFound = true;
                 setNewMenuIndex(sectionsIds.indexOf(sectionId));
             }
+        }
+        if(!isViewportSectionFound) {
+            setNewMenuIndex(0);
         }
     };
 
@@ -53,6 +52,12 @@ export const TermsCommonContent = (props: TermsContentProps) => {
 
         return () => removeEventListener('scroll', scrollHandler);
     }, [sectionsIds]);
+
+    if(isMobile) {
+        return (
+            <TermsCommonContentMobile currentMenuIndex={currentMenuIndex} content={content}/>
+        );
+    }
 
     return (
         <div className={cls.contentWrapper}>

@@ -68,6 +68,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                 <Text tag="h2" variant={TextVariants.TITLE_REVERSED} classNamesProps={cls.title}>Let’s Talk!</Text>
                 <div className={cls.initialsContainer}>
                     <Input
+                        reduced
                         label="First Name"
                         type="text"
                         placeholder="John"
@@ -76,6 +77,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                         classNamesProps={cls.input}
                     />
                     <Input
+                        reduced
                         label="Last Name"
                         type="text"
                         placeholder="Smith"
@@ -85,6 +87,7 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                     />
                 </div>
                 <Input
+                    reduced
                     error="Invalid Email"
                     isValid={isEmailValid}
                     label="Business Email"
@@ -102,11 +105,13 @@ export const ContactUsPopup = (props: ContactUsPopupProps) => {
                     classNamesProps="contact-us-phone-input"
                 />
                 <CountriesCheckbox
+                    reduced
                     values={countriesValues}
                     onSelect={countrySelectHandler}
                 />
                 <Input
-                    rows={3}
+                    reduced
+                    rows={2}
                     max={500}
                     label="Any additional notes for us?"
                     type="text"

@@ -1,9 +1,6 @@
 .scroll-wrapper {
-    position: sticky;
     height: 5px;
     width: 100vw;
-    top: 0;
-    left: 0;
     background: #E5E5E5;
 }
 

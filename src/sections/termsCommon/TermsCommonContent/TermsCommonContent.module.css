@@ -17,6 +17,8 @@
 
 .section img {
     width: 100%;
+    border-radius: 20px;
+    height: 310px;
 }
 
 .subtitle {
@@ -49,6 +51,10 @@
         line-height: 20px;
         font-size: var(--font-size-16);
     }
+
+    .section img {
+        height: 240px;
+    }
 }
 
 @media(max-width: 1022px) {
@@ -71,7 +77,8 @@
     .section img {
         width: 100%;
         margin-bottom: 7px;
-        height: 275px;
+        height: auto;
+        border-radius: 0;
     }
 
     .subtitle {

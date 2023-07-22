@@ -1,16 +1,15 @@
 .about {
-    width: 1422px;
+    max-width: 1670px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 0 105px 130px;
     display: flex;
-    justify-content: flex-end;
-}
-
-.info-container {
-    margin: 109px auto 0;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 .info {
+    margin: 109px 0 0;
     width: 475px;
 }
 
@@ -37,14 +36,16 @@
 
 .image-container {
     position: relative;
-    height: 700px;
+    height: 737px;
     width: 835px;
 }
 
 .image-container img {
     position: absolute;
     top: 0;
-    right: 0;
+    left: -40px;
+    height: 100%;
+    width: 1065px;
 }
 
 .action {
@@ -56,6 +57,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: none;
 }
 
 .action span {
@@ -66,17 +68,14 @@
 
 @media(max-width: 1438px) {
     .about {
+        max-width: 1193px;
         width: 100%;
-        max-width: 1005px;
         margin: 0 auto;
         padding: 0 0 78px 90px;
     }
 
-    .info-container {
-        margin: 62px auto 0;
-    }
-
     .info {
+        margin: 62px 0 0;
         width: 353px;
     }
 
@@ -92,17 +91,13 @@
 
     .image-container {
         position: relative;
-        height: 533px;
-        width: 580px;
+        height: 520px;
+        width: 581px;
     }
 
     .image-container img {
-        pointer-events: none;
-        width: 700px;
-        height: 620px;
-        position: absolute;
-        top: 0;
-        right: 0;
+        left: -40px;
+        width: 750px;
     }
 
     .action {

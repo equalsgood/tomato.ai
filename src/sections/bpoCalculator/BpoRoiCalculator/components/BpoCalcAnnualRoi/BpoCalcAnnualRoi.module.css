@@ -3,7 +3,7 @@
     height: 220px;
     background: var(--reversed-bg-color);
     padding: 34px 41px 36px 43px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,15 +36,15 @@
     color: var(--third-text-color);
 }
 
+.button {
+    margin-top: auto;
+}
+
 @media(max-width: 1438px) {
     .annual {
         width: 490px;
         height: 170px;
         padding: 26px 22px 27px 28px;
-    }
-
-    .button {
-        margin-top: auto;
     }
 
     .annual {

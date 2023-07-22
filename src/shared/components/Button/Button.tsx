@@ -30,7 +30,11 @@ export const Button = (props: ButtonProps) => {
         <button onClick={onClick} className={classes} disabled={disabled} type={type}>
             { variant !== ButtonVariants.CLOSE && text}
             { variant === ButtonVariants.CLOSE && <CloseIcon/>}
-            { endIcon && endIcon }
+            {endIcon &&
+                <div className={cls.endIcon}>
+                    {endIcon}
+                </div>
+            }
         </button>
     );
 };

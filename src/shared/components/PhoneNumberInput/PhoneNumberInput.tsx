@@ -11,17 +11,18 @@ interface PhoneNumberInputProps {
     classNamesProps?: string;
     isValid?: boolean | undefined;
     error?: string;
+    reduced?: boolean | undefined;
 }
 
 export const PhoneNumberInput = (props: PhoneNumberInputProps) => {
-    const { value, onChange, classNamesProps, isValid, error } = props;
+    const { value, onChange, classNamesProps, isValid, error, reduced } = props;
 
     const changeHandler = (value: E164Number | undefined) => {
         onChange(value, isValidPhoneNumber(value ? value as string : ''));
     };
 
     return (
-        <div className={classNames('phone-number-input', classNamesProps, { ['phone-number-input-error']: isValid === false })}>
+        <div className={classNames('phone-number-input', classNamesProps, { ['phone-number-input-error']: isValid === false , ['reduced']: reduced })}>
             <div className={cls.label}>
                 <span className={cls.labelText}>Phone number</span>
                 {isValid === false &&
