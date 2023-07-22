@@ -1,5 +1,5 @@
 import cls from './Menu.module.css';
-import { useContext, useEffect, useState } from 'react';
+import { ReactNode, useContext, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { SingleMenuItem } from './components/SingleMenuItem/SingleMenuItem';
 import { Context } from 'app/providers/ContextProvider';
@@ -9,6 +9,7 @@ export interface MenuItem {
     iconLight?: JSX.Element;
     iconDark?: JSX.Element;
     relatedSectionId?: string;
+    RelatedSectionComponent?: JSX.Element;
 }
 
 interface MenuProps {
