@@ -73,6 +73,19 @@ export const TermsCommonContent = (props: TermsContentProps) => {
                             { contentPart.type === 'image' &&
                                 <img alt={contentPart.alt} src={contentPart.src}/>
                             }
+                            { contentPart.type === 'list' &&
+                                <>
+                                    {contentPart.listTitle && <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>{contentPart.listTitle}</Text>}
+                                    <ul>
+                                        {contentPart.items.map((item, index) =>
+                                            <li key={`${section.sectionId}-list-item-${index}`}>
+                                                {item.subtitle && <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.itemSubtitle}>{item.subtitle}</Text>}
+                                                <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>{item.itemText}</Text>
+                                            </li>
+                                        )}
+                                    </ul>
+                                </>
+                            }
                         </Fragment>
                     )}
                 </section>

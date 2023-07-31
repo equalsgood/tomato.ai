@@ -1,4 +1,4 @@
-import { Fragment, memo, ReactNode, useContext, useState } from 'react';
+import { Fragment, memo, useContext, useEffect, useState } from 'react';
 import cls from './Footer.module.css';
 import FooterLogo from 'shared/assets/logos/footer-logo.svg';
 import LocationIcon from 'shared/assets/icons/location-icon.svg';
@@ -13,7 +13,37 @@ import { MobileFooter } from 'widgets/Footer/components/MobileFooter/MobileFoote
 
 export const Footer = memo(() => {
     const [open, setOpen] = useState<boolean>(false);
-    const { screenWidth } = useContext(Context);
+
+    const { screenWidth, hiddenLinks: { blog, security, pricing, terms } } = useContext(Context);
+    //temporary hidden links logic
+    const [footerConfig, setFooterConfig] = useState(initialFooterConfig);
+
+    useEffect(() => {
+        const newFooterConfig = [...footerConfig];
+
+        if(blog) {
+            const newColumnContent = newFooterConfig[1]?.content.filter(el => el.to !== RoutePaths.BLOG);
+            newFooterConfig[1].content = [...newColumnContent];
+        }
+
+        if(pricing) {
+            const newColumnContent = newFooterConfig[1]?.content.filter(el => el.to !== RoutePaths.PRICING);
+            newFooterConfig[1].content = [...newColumnContent];
+        }
+
+        if(terms) {
+            const newColumnContent = newFooterConfig[2]?.content.filter(el => el.to !== RoutePaths.TERMS);
+            newFooterConfig[2].content = [...newColumnContent];
+        }
+
+        if(security) {
+            const newColumnContent = newFooterConfig[2]?.content.filter(el => el.to !== RoutePaths.SECURITY);
+            newFooterConfig[2].content = [...newColumnContent];
+        }
+
+        setFooterConfig(newFooterConfig);
+    }, [blog, security, pricing, terms]);
+    //
 
     if(screenWidth <= 550) {
         return (
@@ -82,7 +112,7 @@ export interface IFooterColumn {
     content: Array<FooterRow>
 }
 
-const footerConfig: Array<IFooterColumn> = [
+const initialFooterConfig: Array<IFooterColumn> = [
     {
         title: 'Use Cases',
         content: [

@@ -34,8 +34,8 @@ export const CtaTitle = ({ isEnterprise = false }: CtaTitleProps) => {
                     </div>
                     <div className={cls.info}>
                         <div className={cls.infoDescription}>
-                            <Text tag="h2" variant={isEnterprise ? TextVariants.TITLE_MEDIUM_REVERSED : TextVariants.TITLE_MEDIUM}>CTA Title here</Text>
-                            <Text tag="p" classNamesProps={cls.paragraph} variant={isEnterprise ? TextVariants.PARAGRAPH_TITLE : TextVariants.PARAGRAPH_DARK}>“Tomato.ai is an impressive AI technology that effortlessly cleans up voice audio. Its advanced algorithms can</Text>
+                            <Text tag="h2" classNamesProps={cls.title} variant={isEnterprise ? TextVariants.TITLE_MEDIUM_REVERSED : TextVariants.TITLE_MEDIUM}>Soften Accents Now</Text>
+                            <Text tag="p" classNamesProps={cls.paragraph} variant={isEnterprise ? TextVariants.PARAGRAPH_TITLE : TextVariants.PARAGRAPH_DARK}>Boost offshoring customer satisfaction and close rates by making agents more intelligible and credible</Text>
                         </div>
                         <NavigationLink
                             text="Request Free Demo"
@@ -46,7 +46,9 @@ export const CtaTitle = ({ isEnterprise = false }: CtaTitleProps) => {
                     </div>
                     <div className={cls.rightAgents}>
                         <img alt="third agent picture" className={cls.thirdAgent} src={thirdAgent} />
-                        <img alt="fourth agent picture" className={cls.fourthAgent} src={fourthAgent} />
+                        <div className={cls.fourthAgent}>
+                            <img alt="fourth agent picture" src={fourthAgent} />
+                        </div>
                     </div>
                 </div>
                 {isEnterprise ?

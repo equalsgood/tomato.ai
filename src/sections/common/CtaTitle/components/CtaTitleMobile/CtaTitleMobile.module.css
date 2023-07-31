@@ -27,7 +27,7 @@
     width: 236px;
     height: 46px;
     font-size: var(--font-size-13);
-    margin-bottom: 32px;
+    margin-bottom: 42px;
 }
 
 .agents {
@@ -39,15 +39,15 @@
 }
 
 .firstAgent {
-    max-width: 131px;
+    max-width: 112px;
 }
 
 .secondAgent {
-    max-width: 134px;
+    max-width: 124px;
 }
 
 .fourthAgent {
-    max-width: 135px;
+    max-width: 144px;
 }
 
 .section.dark {

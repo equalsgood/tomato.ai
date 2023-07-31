@@ -108,7 +108,7 @@
 
 @media(max-width: 1022px) {
     .about {
-        max-width: 476px;
+        max-width: 486px;
         width: 100%;
         padding: 47px 0 22px;
         flex-direction: column;

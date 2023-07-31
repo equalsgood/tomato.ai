@@ -26,12 +26,16 @@
 
 .paragraph {
     width: 497px;
-    height: 210px;
 }
 
 .image {
     width: 682px;
     height: 454px;
+}
+
+.calculator-link {
+    display: inline;
+    margin-left: 5px;
 }
 
 @media(max-width: 1438px) {
@@ -59,7 +63,6 @@
 
     .paragraph {
         width: 338px;
-        height: 169px;
         line-height: 18px;
     }
 
@@ -122,5 +125,10 @@
 
     .imageMap {
         margin-top: 10px;
+    }
+
+    .calculator-link {
+        margin-top: 0;
+        font-size: var(--font-size-12);
     }
 }

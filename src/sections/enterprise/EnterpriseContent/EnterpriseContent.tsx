@@ -18,12 +18,9 @@ export const EnterpriseContent = () => {
         <section className={cls.content}>
             <div className={classNames(cls.contentSection, cls.left)}>
                 <div className={cls.details}>
-                    <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Improve Satisfaction with Offshore Agents</Text>
+                    <Text classNamesProps={classNames(cls.title, cls.doubleLine)} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Improve Satisfaction with Offshore Agents</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
-                        Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
-                        <br/>
-                        <br/>
-                        Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
+                        Using a voice filter to enhance offshore agent intelligible improves CSAT and NPS scores. Customers are more at ease as offshore agents pronounce words the way they are used to hearing them.
                     </Text>
                 </div>
                 <img alt="photo of offshore agents" src={ isMobile ? offshoreAgentsMobile : offshoreAgents} className={classNames(cls.image, cls.agentsImage)} />
@@ -33,26 +30,21 @@ export const EnterpriseContent = () => {
                 <div className={cls.details}>
                     <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Reduce Support Costs</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
-                        Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo.
-                        <br/>
-                        <br/>
-                        Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque.
-                    </Text>
-                    {!isMobile &&
-                        <NavigationLink text="Cost Savings Calculator" to={RoutePaths.ENTERPRISE_CALCULATOR}
+                        Improving offshore customer satisfaction scores makes it possible to offshore more calls, thereby significantly cutting costs. Estimate your savings using our
+                        <NavigationLink
+                            text="cost reduction calculator"
+                            to={RoutePaths.ENTERPRISE_CALCULATOR}
                             variant={NavigationLinkVariants.ACTION_TEXT}
-                            classNamesProps={cls.calculatorLink}/>
-                    }
+                            classNamesProps={cls.calculatorLink}
+                        />
+                    </Text>
                 </div>
             </div>
             <div className={classNames(cls.contentSection, cls.left)}>
                 <div className={cls.details}>
                     <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Improve sales metrics</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
-                        Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
-                        <br/>
-                        <br/>
-                        Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
+                        When outbound sales agents speak more clearly, and pronounce words the way customers are used to, they are able to improve their results, increasing revenue, close rates, and qualification rates.
                     </Text>
                 </div>
                 <img alt="photo of a satisfied agent" src={isMobile ? agentMobile : agent} className={cls.image} />

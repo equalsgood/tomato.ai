@@ -1,10 +1,12 @@
 import React, { Suspense, useContext, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { routeConfig } from '../config/routeConfig';
+import { getRouteConfig } from '../config/getRouteConfig';
 import { Loader } from 'shared/components';
 import { Context } from 'app/providers/ContextProvider';
 
 export const AppRouter = () => {
+    const routeConfig = getRouteConfig();
+
     const { onResize } = useContext(Context);
 
     window.addEventListener('resize', () => {

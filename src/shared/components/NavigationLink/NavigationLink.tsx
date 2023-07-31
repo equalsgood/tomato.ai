@@ -31,7 +31,9 @@ export const NavigationLink = memo((props: NavigationLinkProps) => {
     return (
         <Link to={to} className={classes} onClick={onClick}>
             {text}
-            {variant === NavigationLinkVariants.ACTION_TEXT && <ArrowGreenIcon/>}
+            <div className={cls.icon}>
+                {variant === NavigationLinkVariants.ACTION_TEXT && <ArrowGreenIcon/>}
+            </div>
         </Link>
     );
 });

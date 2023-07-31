@@ -4,6 +4,9 @@
     justify-content: center;
 }
 
+.image {
+    width: 1070px;
+}
 
 @media(max-width: 1438px) {
     .powered {

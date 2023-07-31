@@ -1,5 +1,5 @@
 import { AppRouter } from './components/AppRouter';
-import { RoutePaths } from './config/routeConfig';
+import { RoutePaths } from './config/getRouteConfig';
 
 export {
     AppRouter,

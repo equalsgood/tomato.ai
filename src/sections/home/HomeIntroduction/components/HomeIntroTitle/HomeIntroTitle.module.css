@@ -78,6 +78,11 @@
     height: 66px;
 }
 
+.arrow {
+    display: flex;
+    align-items: flex-end;
+}
+
 @media(max-width: 1438px) {
     .home-intro-title {
         gap: 32px;
@@ -118,6 +123,10 @@
         bottom: 45px;
         gap: 43px;
         padding: 18px 16px;
+    }
+
+    .arrow {
+        transform: scale(0.8);
     }
 }
 
@@ -172,7 +181,7 @@
     }
 
     .arrow {
-        transform: scale(0.75) translateY(3px);
+        transform: scale(0.75);
     }
 
     .action p {

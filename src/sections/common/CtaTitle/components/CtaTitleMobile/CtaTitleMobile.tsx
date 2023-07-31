@@ -14,8 +14,8 @@ interface CtaTitleMobileProps {
 export const CtaTitleMobile = ({ isEnterprise = false }: CtaTitleMobileProps) => {
     return (
         <section className={classNames(cls.section, { [cls.dark]: isEnterprise })}>
-            <Text tag="h2" classNamesProps={cls.title} variant={TextVariants.TITLE}>CTA Title here</Text>
-            <Text tag="p" classNamesProps={cls.paragraph} variant={TextVariants.PARAGRAPH_DARK}>“Tomato.ai is an impressive AI technology that effortlessly cleans up voice audio. Its advanced algorithms can</Text>
+            <Text tag="h2" classNamesProps={cls.title} variant={TextVariants.TITLE}>Soften Accents Now</Text>
+            <Text tag="p" classNamesProps={cls.paragraph} variant={TextVariants.PARAGRAPH_DARK}>Boost offshoring customer satisfaction and close rates by making agents more intelligible and credible</Text>
             <NavigationLink text="Request Free Demo" to={RoutePaths.REQUEST_DEMO} variant={NavigationLinkVariants.ACTION} classNamesProps={cls.action}/>
             <div className={cls.agents}>
                 <img alt="first agent picture" className={cls.firstAgent} src={firstAgent} />

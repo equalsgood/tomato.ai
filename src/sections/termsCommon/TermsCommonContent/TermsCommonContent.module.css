@@ -26,9 +26,13 @@
     font-size: var(--font-size-25);
 }
 
-.paragraph {
+.paragraph, .item-subtitle {
     line-height: 22px;
     font-size: var(--font-size-16);
+}
+
+.item-subtitle {
+    font-weight: var(--font-weight-l);
 }
 
 @media(max-width: 1438px) {

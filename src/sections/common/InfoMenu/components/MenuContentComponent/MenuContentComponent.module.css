@@ -68,6 +68,7 @@
 .preserve img {
     width: 494px;
     height: 142px;
+    transform: translateX(10px);
 }
 
 @media(max-width: 1438px) {
@@ -209,5 +210,6 @@
     .preserve img {
         width: 293px;
         height: 77px;
+        transform: translateX(0);
     }
 }

@@ -10,6 +10,7 @@ import { CareersPage } from 'pages/CareersPage';
 import { AboutPage } from 'pages/AboutPage';
 import { TermsPage, GuidelinesPage, PrivacyPage, EthicsPage, SecurityPage } from 'pages/terms';
 import { BlogPage } from 'pages/BlogPage';
+import { hiddenLinks } from 'shared/lib';
 
 export enum RoutePaths {
     HOME = '/',
@@ -30,7 +31,39 @@ export enum RoutePaths {
     NO_MATCH = '*'
 }
 
-export const routeConfig: Array<RouteProps> = [
+export const getRouteConfig = (): Array<RouteProps> => {
+    const routeConfig = initialRouteConfig;
+
+    //temporary hidden links logic
+    if(!hiddenLinks.blog)
+        routeConfig.push({
+            path: RoutePaths.BLOG,
+            element: <BlogPage/>,
+        });
+
+    if(!hiddenLinks.terms)
+        routeConfig.push({
+            path: RoutePaths.TERMS,
+            element: <TermsPage/>,
+        });
+
+    if(!hiddenLinks.pricing)
+        routeConfig.push({
+            path: RoutePaths.PRICING,
+            element: <PricingPage/>,
+        });
+
+    if(!hiddenLinks.security)
+        routeConfig.push({
+            path: RoutePaths.SECURITY,
+            element: <SecurityPage/>,
+        });
+    //
+
+    return routeConfig;
+};
+
+const initialRouteConfig: Array<RouteProps> = [
     {
         path: RoutePaths.HOME,
         element: <HomePage/>,
@@ -56,10 +89,6 @@ export const routeConfig: Array<RouteProps> = [
         element: <RequestDemoPage/>,
     },
     {
-        path: RoutePaths.PRICING,
-        element: <PricingPage/>,
-    },
-    {
         path: RoutePaths.CAREERS,
         element: <CareersPage/>,
     },
@@ -68,16 +97,8 @@ export const routeConfig: Array<RouteProps> = [
         element: <AboutPage/>,
     },
     {
-        path: RoutePaths.TERMS,
-        element: <TermsPage/>,
-    },
-    {
         path: RoutePaths.PRIVACY,
         element: <PrivacyPage/>,
-    },
-    {
-        path: RoutePaths.SECURITY,
-        element: <SecurityPage/>,
     },
     {
         path: RoutePaths.ETHICS,
@@ -88,11 +109,7 @@ export const routeConfig: Array<RouteProps> = [
         element: <GuidelinesPage/>,
     },
     {
-        path: RoutePaths.BLOG,
-        element: <BlogPage/>,
-    },
-    {
         path: RoutePaths.NO_MATCH,
-        element: <Navigate to={RoutePaths.HOME} replace />,
+        element: <Navigate to={RoutePaths.HOME} replace/>,
     },
 ];

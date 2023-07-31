@@ -1,4 +1,15 @@
 import { createContext, ReactNode, useState } from 'react';
+import { hiddenLinks } from 'shared/lib';
+
+//temporary hidden links logic
+interface HiddenLinks {
+    pricing: boolean;
+    terms: boolean;
+    security: boolean;
+    blog: boolean;
+    social: boolean;
+}
+//
 
 export interface ContextSchema {
     mobileBreakpoint: number,
@@ -7,6 +18,9 @@ export interface ContextSchema {
     onResize: (width: number) => void;
     onPlay: (audio: string) => void;
     playedAudio: string;
+    //temporary hidden links logic
+    hiddenLinks: HiddenLinks;
+    //
 }
 
 const defaultValue: ContextSchema = {
@@ -16,6 +30,15 @@ const defaultValue: ContextSchema = {
     onResize: (width) => {},
     onPlay: (audio) => {},
     playedAudio: '',
+    //temporary hidden links logic
+    hiddenLinks: {
+        blog: false,
+        pricing: false,
+        terms: false,
+        security: false,
+        social: false
+    }
+    //
 };
 
 export const Context = createContext(defaultValue);
@@ -49,7 +72,10 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
         isMobile,
         screenWidth,
         onResize: resizeHandler,
-        onPlay: playHandler
+        onPlay: playHandler,
+        //temporary hidden links logic
+        hiddenLinks,
+        //
     };
 
     return (

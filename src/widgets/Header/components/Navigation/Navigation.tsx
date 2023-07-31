@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import cls from './Navigation.module.css';
 import { NavigationLinkProps, NavigationLinkVariants, NavigationLink, NavigationDropdown } from 'shared/components/';
 import { RoutePaths } from 'app/providers/AppRouter';
 import BpoIcon from 'shared/assets/icons/bpo-header-icon.svg';
 import EnterprisesIcon from 'shared/assets/icons/enterprises-header-icon.svg';
 import classNames from 'classnames';
+import { Context } from 'app/providers/ContextProvider';
 
 interface NavigationProps {
     isEnterprise: boolean;
@@ -13,6 +14,13 @@ interface NavigationProps {
 }
 
 export const Navigation = ({ isEnterprise, mobile, open }: NavigationProps) => {
+    //temporary hidden links logic
+    const { hiddenLinks: { blog, pricing, security } } = useContext(Context);
+    const [companyLinks, setCompanyLinks] = useState(initialCompanyLinks);
+    const [safetyLinks, setSafetyLinks] = useState(initialSafetyLinks);
+    const [navigationLinks, setNavigationLinks] = useState(initialNavigationLinks);
+    //
+
     const [casesDropdownOpen, setCasesDropdownOpen] = useState<boolean>(false);
     const [companyDropdownOpen, setCompanyDropdownOpen] = useState<boolean>(false);
     const [safetyDropdownOpen, setSafetyDropdownOpen] = useState<boolean>(false);
@@ -25,6 +33,54 @@ export const Navigation = ({ isEnterprise, mobile, open }: NavigationProps) => {
 
     const switchSafetyDropdownState = (state: boolean) =>
         setSafetyDropdownOpen(state);
+
+    //temporary hidden links logic
+    useEffect(() => {
+        if(pricing) {
+            setCompanyLinks([
+                {
+                    text: 'About',
+                    to: RoutePaths.ABOUT,
+                    variant: NavigationLinkVariants.DEFAULT,
+                },
+                {
+                    text: 'Careers',
+                    to: RoutePaths.CAREERS,
+                    variant: NavigationLinkVariants.DEFAULT,
+                },
+            ]);
+        } else
+            setCompanyLinks(initialCompanyLinks);
+
+        if(security) {
+            setSafetyLinks([
+                {
+                    text: 'Privacy',
+                    to: RoutePaths.PRIVACY,
+                    variant: NavigationLinkVariants.DEFAULT,
+                },
+                {
+                    text: 'Ethics',
+                    to: RoutePaths.ETHICS,
+                    variant: NavigationLinkVariants.DEFAULT,
+                }
+            ]);
+        } else
+            setSafetyLinks(initialSafetyLinks);
+
+        if(blog) {
+            setNavigationLinks([
+                {
+                    text: 'Request Demo',
+                    to: RoutePaths.REQUEST_DEMO,
+                    variant: NavigationLinkVariants.ACTION,
+                    classNamesProps: cls.actionLink
+                }
+            ]);
+        } else
+            setNavigationLinks(initialNavigationLinks);
+    }, [blog, pricing, security]);
+    //
 
     return (
         <nav className={classNames(cls.navigation, { [cls.open]: open })}>
@@ -155,7 +211,7 @@ const enterprisesLinks: Array<NavigationLinkProps> = [
     },
 ];
 
-const companyLinks: Array<NavigationLinkProps> = [
+const initialCompanyLinks: Array<NavigationLinkProps> = [
     {
         text: 'About',
         to: RoutePaths.ABOUT,
@@ -173,7 +229,7 @@ const companyLinks: Array<NavigationLinkProps> = [
     },
 ];
 
-const safetyLinks: Array<NavigationLinkProps> = [
+const initialSafetyLinks: Array<NavigationLinkProps> = [
     {
         text: 'Security',
         to: RoutePaths.SECURITY,
@@ -186,7 +242,7 @@ const safetyLinks: Array<NavigationLinkProps> = [
     }
 ];
 
-const navigationLinks: Array<NavigationLinkProps> = [
+const initialNavigationLinks: Array<NavigationLinkProps> = [
     {
         text: 'Blog',
         to: RoutePaths.BLOG,

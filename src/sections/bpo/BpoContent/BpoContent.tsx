@@ -1,5 +1,5 @@
 import cls from './BpoContent.module.css';
-import { Text, TextVariants } from 'shared/components';
+import { NavigationLink, NavigationLinkVariants, Text, TextVariants } from 'shared/components';
 import satisfiedCustomer from 'shared/assets/images/double-images/bpo-2.png';
 import satisfiedCustomerMobile from 'shared/assets/images/double-images/bpo-2-mobile.png';
 import expandedMap from 'shared/assets/images/double-images/bpo-3.png';
@@ -9,6 +9,7 @@ import satisfiedWorkerMobile from 'shared/assets/images/double-images/bpo-4-mobi
 import classNames from 'classnames';
 import { useContext } from 'react';
 import { Context } from 'app/providers/ContextProvider';
+import { RoutePaths } from 'app/providers/AppRouter';
 
 export const BpoContent = () => {
     const { isMobile } = useContext(Context);
@@ -18,10 +19,13 @@ export const BpoContent = () => {
                 <div className={cls.details}>
                     <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL}>Boost Customer Satisfaction</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>
-                        Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
-                        <br/>
-                        <br/>
-                        Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
+                        Enhancing offshore agent intelligible improves CSAT. With improved CX offshore call centers can be sure to get more call volume from existing and new customers.
+                        <NavigationLink
+                            text="Estimate your ROI"
+                            to={RoutePaths.BPO_CALCULATOR}
+                            variant={NavigationLinkVariants.ACTION_TEXT}
+                            classNamesProps={cls.calculatorLink}
+                        />
                     </Text>
                 </div>
                 <img alt="photo of a satisfied customer" src={isMobile ? satisfiedCustomerMobile : satisfiedCustomer} className={cls.image} />
@@ -31,10 +35,7 @@ export const BpoContent = () => {
                 <div className={cls.details}>
                     <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL}>Expand Offshore Hiring Pool</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>
-                        Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
-                        <br/>
-                        <br/>
-                        Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
+                        Offshore call centers have a hard time finding enough talent in market. By using an AI voice filter to soften accents of candidates they can massively scale hiring in existing markets, and in new ones
                     </Text>
                 </div>
             </div>
@@ -42,10 +43,7 @@ export const BpoContent = () => {
                 <div className={cls.details}>
                     <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL}>Improve sales metrics</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>
-                        Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur.
-                        <br/>
-                        <br/>
-                        Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in.
+                        When outbound sales agents speak more clearly, and pronounce words the way customers are used to, they are able to improve results, increasing revenue, close rates, and qualification rates.
                     </Text>
                 </div>
                 <img alt="photo of a satisfied worker" src={isMobile ? satisfiedWorkerMobile : satisfiedWorker} className={cls.image} />

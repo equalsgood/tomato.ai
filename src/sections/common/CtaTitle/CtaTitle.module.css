@@ -28,7 +28,7 @@
 .left-agents, .right-agents {
     z-index: inherit;
     display: flex;
-    gap: 16px;
+    gap: 6px;
     align-items: flex-end;
     overflow: hidden;
     width: 100%;
@@ -37,11 +37,14 @@
 .left-agents {
     border-bottom-right-radius: 20px;
     justify-content: flex-end;
+    padding-right: 20px;
 }
 
 .right-agents {
     border-bottom-left-radius: 20px;
     justify-content: flex-start;
+    padding-left: 20px;
+    overflow: hidden;
 }
 
 .info {
@@ -70,6 +73,23 @@
 .paragraph {
     text-align: center;
     width: 357px;
+}
+
+.title {
+    font-size: 38px;
+    line-height: 60px;
+}
+
+.fourth-agent {
+    position: relative;
+    width: 250px;
+}
+
+.fourth-agent img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 278px;
 }
 
 @media(max-width: 1438px) {
@@ -110,11 +130,16 @@
     }
 
     .third-agent {
-        width: 163px;
+        width: 177px;
     }
 
     .fourth-agent {
-        width: 202px;
+        width: 224px;
+        height: 193px;
+    }
+
+    .fourth-agent img {
+        height: 193px;
     }
 
     .info {
@@ -135,5 +160,10 @@
         text-align: center;
         font-size: 12px;
         width: 253px;
+    }
+
+    .title {
+        font-size: var(--font-size-32);
+        line-height: 42px;
     }
 }
