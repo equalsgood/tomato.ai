@@ -1,9 +1,7 @@
 import cls from './CareersAvailableRoles.module.css';
 import { Text, TextVariants } from 'shared/components';
 import { AvailableRole } from './components/AvailableRole';
-import SupportIcon from 'shared/assets/icons/career-roles/support.svg';
-import HrIcon from 'shared/assets/icons/career-roles/hr.svg';
-import ManagerIcon from 'shared/assets/icons/career-roles/manager.svg';
+import SupportIcon from 'shared/assets/icons/career-roles/dev.svg';
 
 export const CareersAvailableRoles = () => {
     return (
@@ -40,34 +38,18 @@ export interface CareerRole {
 const roles: Array<CareerRole> = [
     {
         icon: <SupportIcon/>,
-        title: 'Customer Support in Call Center',
-        description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum...',
-        location: 'New York City, NY',
-        rate: '$35K-$45K',
+        title: 'Senior Speech Scientist',
+        description: 'We are looking for a senior machine learning scientist experienced in speech technology to help us improve our speech-to-speech deep learning model. They should be excited about our mission to give millions of people better economic opportunities by clarifying their speech.',
+        location: 'Bay Area preferred. Open to remote globally',
+        rate: 'Competitive Pay',
         applyLink: '/'
     },
     {
         icon: <SupportIcon/>,
-        title: 'Customer Support in Main Office',
-        description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum...',
-        location: 'Los Angeles, CA',
-        rate: '$45K-$55K',
+        title: 'Infra ML Engineer',
+        description: 'Build and Improve the model inference infrastructure to reduce latency and improve handling of streaming audio inputs. Improve the model training infrastructure in PyTorch, e.g. training speed, job management, log management, and Cloud storage integration, Build and improve data processing infrastructure.',
+        location: 'Remote in US time zones',
+        rate: 'Competitive Pay',
         applyLink: '/'
-    },
-    {
-        icon: <ManagerIcon/>,
-        title: 'Office Manager',
-        description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum...',
-        location: 'Los Angeles, CA',
-        rate: '$45K-$55K',
-        applyLink: '/'
-    },
-    {
-        icon: <HrIcon/>,
-        title: 'HR assistant',
-        description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum...',
-        location: 'Los Angeles, CA',
-        rate: '$45K-$55K',
-        applyLink: '/'
-    },
+    }
 ];

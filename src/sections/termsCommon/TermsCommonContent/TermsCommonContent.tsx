@@ -68,23 +68,32 @@ export const TermsCommonContent = (props: TermsContentProps) => {
                     { section.sectionContent.map((contentPart, index) =>
                         <Fragment key={`${section.sectionTitle}-content-part-${index}`}>
                             { contentPart.type === 'paragraph' &&
-                                <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>{contentPart.text}</Text>
+                                <Text
+                                    tag="p"
+                                    variant={TextVariants.PARAGRAPH_DARK}
+                                    classNamesProps={cls.paragraph}
+                                >
+                                    {contentPart.paragraphTitle && <Text tag="span" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.itemSubtitle}>{contentPart.paragraphTitle}{'\u00A0'}</Text>}
+                                    {contentPart.text}
+                                </Text>
                             }
                             { contentPart.type === 'image' &&
                                 <img alt={contentPart.alt} src={contentPart.src}/>
                             }
                             { contentPart.type === 'list' &&
-                                <>
+                                <div className={cls.listContainer}>
                                     {contentPart.listTitle && <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>{contentPart.listTitle}</Text>}
                                     <ul>
                                         {contentPart.items.map((item, index) =>
                                             <li key={`${section.sectionId}-list-item-${index}`}>
-                                                {item.subtitle && <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.itemSubtitle}>{item.subtitle}</Text>}
-                                                <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>{item.itemText}</Text>
+                                                <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>
+                                                    {item.subtitle && <Text tag="span" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.itemSubtitle}>{item.subtitle}{'\u00A0'}</Text>}
+                                                    {item.itemText}
+                                                </Text>
                                             </li>
                                         )}
                                     </ul>
-                                </>
+                                </div>
                             }
                         </Fragment>
                     )}

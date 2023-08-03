@@ -63,10 +63,10 @@ export const BpoCalcSummary = () => {
             </div>
             <Divider/>
             <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.additional}>
-                Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit.
+                The BPO ROI calculator uses your estimates of dollar value per 1% improvement across key performance indicators multiplied by the total percent gain estimated by Tomato.ai across accent, noise, and speech clarity, to estimate an overall ROI.
                 <br/>
                 <br/>
-                Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit.
+                The estimated ROI provides an initial figure that can be further refined by running field tests to measure actual impact on metrics using the Tomato.ai solution with a statistically significant set of agents.
             </Text>
         </aside>
     );

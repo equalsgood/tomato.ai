@@ -2,12 +2,12 @@ export function isInViewport (elementId: string) {
     const element = document.getElementById(elementId);
 
     if(element) {
+        const viewedSectionCenter = 250;
         const rect = element.getBoundingClientRect();
+
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top <= viewedSectionCenter &&
+            rect.bottom >= viewedSectionCenter
         );
     } else return false;
 }

@@ -31,13 +31,13 @@ export const EnterpriseContent = () => {
                     <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL_REVERSED}>Reduce Support Costs</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_TITLE} classNamesProps={cls.paragraph}>
                         Improving offshore customer satisfaction scores makes it possible to offshore more calls, thereby significantly cutting costs. Estimate your savings using our
-                        <NavigationLink
-                            text="cost reduction calculator"
-                            to={RoutePaths.ENTERPRISE_CALCULATOR}
-                            variant={NavigationLinkVariants.ACTION_TEXT}
-                            classNamesProps={cls.calculatorLink}
-                        />
                     </Text>
+                    <NavigationLink
+                        text="Cost reduction calculator"
+                        to={RoutePaths.ENTERPRISE_CALCULATOR}
+                        variant={NavigationLinkVariants.ACTION_TEXT}
+                        classNamesProps={cls.calculatorLink}
+                    />
                 </div>
             </div>
             <div className={classNames(cls.contentSection, cls.left)}>

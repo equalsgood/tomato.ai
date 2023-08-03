@@ -45,7 +45,6 @@
 
 .calculator-link {
     display: inline;
-    margin-left: 5px;
 }
 
 @media(max-width: 1438px) {
@@ -154,5 +153,6 @@
     .calculator-link {
         margin-top: 0;
         font-size: var(--font-size-12);
+        padding: 0 30px;
     }
 }

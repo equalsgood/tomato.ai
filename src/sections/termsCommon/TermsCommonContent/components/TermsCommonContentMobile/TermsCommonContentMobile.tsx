@@ -33,6 +33,21 @@ export const TermsCommonContentMobile = (props: TermsCommonContentMobileProps) =
                         { contentPart.type === 'image' &&
                             <img alt={contentPart.alt} src={contentPart.src}/>
                         }
+                        { contentPart.type === 'list' &&
+                            <div className={cls.listContainer}>
+                                {contentPart.listTitle && <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>{contentPart.listTitle}</Text>}
+                                <ul>
+                                    {contentPart.items.map((item, index) =>
+                                        <li key={`${currentSection.sectionId}-list-item-${index}`}>
+                                            <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>
+                                                {item.subtitle && <Text tag="span" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.itemSubtitle}>{item.subtitle}{'\u00A0'}</Text>}
+                                                {item.itemText}
+                                            </Text>
+                                        </li>
+                                    )}
+                                </ul>
+                            </div>
+                        }
                     </Fragment>
                 )}
             </section>

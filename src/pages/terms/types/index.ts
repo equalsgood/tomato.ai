@@ -1,5 +1,6 @@
 interface TermsContentParagraph {
     type: 'paragraph',
+    paragraphTitle?: string | undefined,
     text: string
 }
 
@@ -10,7 +11,6 @@ interface TermsContentListItem {
 
 interface TermsContentList {
     type: 'list',
-    title: string,
     listTitle: string | undefined,
     items: Array<TermsContentListItem>
 }

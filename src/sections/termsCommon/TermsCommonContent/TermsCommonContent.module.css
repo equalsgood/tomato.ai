@@ -33,6 +33,23 @@
 
 .item-subtitle {
     font-weight: var(--font-weight-l);
+    display: inline-block;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-container ul {
+    padding-left: 18px;
+}
+
+.list-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 @media(max-width: 1438px) {
@@ -58,6 +75,10 @@
 
     .section img {
         height: 240px;
+    }
+
+    .list-container {
+        gap: 10px;
     }
 }
 
@@ -96,5 +117,26 @@
         line-height: 20px;
         font-size: var(--font-size-14);
         margin-bottom: 7px;
+    }
+
+    .item-subtitle {
+        font-size: var(--font-size-14);
+    }
+
+    .list-container .paragraph {
+        margin-bottom: 0;
+    }
+
+    ul .paragraph {
+        padding: 0;
+    }
+
+    .list-container {
+        gap: 7px;
+    }
+
+    .list-container ul {
+        padding-left: 50px;
+        gap: 2px;
     }
 }

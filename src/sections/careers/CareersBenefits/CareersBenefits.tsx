@@ -37,22 +37,22 @@ export interface CareerBenefit {
 const benefits: Array<CareerBenefit> = [
     {
         icon: <GrowingIcon/>,
-        title: 'Fast Growing Company',
-        description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec.'
+        title: 'Superstar Team Members',
+        description: 'The three Tomato.ai founders previously sold four startups and led Contact Center AI work at Google. The rest of the team is made up of highly skilled professionals from leading companies and universities.'
     },
     {
         icon: <RateIcon/>,
-        title: 'Hourly rate higher than market',
-        description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec.'
+        title: 'Competitive Pay',
+        description: 'Tomato.ai pays at the top of the pay scale for startups at our stage. The compensation includes a base salary, an annual bonus, and stock options. Employees have clear opportunities for promotion to further increase their pay.'
     },
     {
         icon: <EducationIcon/>,
-        title: 'Free Education boost courses',
-        description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec.'
+        title: 'High Learning Environment',
+        description: 'Tomato.ai team members are collaborative and always up for helping each other work through challenges. The problems we tackle are super challenging creating lots of opportunities for growth.'
     },
     {
         icon: <InsuranceIcon/>,
-        title: 'World Wide Heatlh Insurance',
-        description: 'Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. Eget eget nulla nisl facilisis quisque. Mauris arcu commodo natoque lobortis in. Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec.'
+        title: 'Compelling Benefits',
+        description: 'Tomato.ai provides compelling benefits. We are remote first. Health insurance options have low deductibles and copays. The cost of meals, coworking desks, and utilities, are covered up to a cap. There are multiple fully paid offsites in fun places each year to help the team bond.'
     },
 ];

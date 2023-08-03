@@ -20,13 +20,13 @@ export const BpoContent = () => {
                     <Text classNamesProps={cls.title} tag="h2" variant={TextVariants.TITLE_EXTRA_SMALL}>Boost Customer Satisfaction</Text>
                     <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>
                         Enhancing offshore agent intelligible improves CSAT. With improved CX offshore call centers can be sure to get more call volume from existing and new customers.
-                        <NavigationLink
-                            text="Estimate your ROI"
-                            to={RoutePaths.BPO_CALCULATOR}
-                            variant={NavigationLinkVariants.ACTION_TEXT}
-                            classNamesProps={cls.calculatorLink}
-                        />
                     </Text>
+                    <NavigationLink
+                        text="Estimate your ROI"
+                        to={RoutePaths.BPO_CALCULATOR}
+                        variant={NavigationLinkVariants.ACTION_TEXT}
+                        classNamesProps={cls.calculatorLink}
+                    />
                 </div>
                 <img alt="photo of a satisfied customer" src={isMobile ? satisfiedCustomerMobile : satisfiedCustomer} className={cls.image} />
             </div>
