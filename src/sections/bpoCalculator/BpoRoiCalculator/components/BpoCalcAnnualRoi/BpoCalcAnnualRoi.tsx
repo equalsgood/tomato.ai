@@ -1,15 +1,18 @@
 import cls from './BpoCalcAnnualRoi.module.css';
-import { Button, ButtonVariants, Input, Text, TextVariants } from 'shared/components';
+import { Button, ButtonVariants, Text, TextVariants } from 'shared/components';
 import { useAppSelector } from 'hooks';
 import { numberFormat } from 'shared/lib';
-import { useState } from 'react';
-import { GetReportPopup } from 'widgets';
+import { ReportDocument } from 'widgets';
 import classNames from 'classnames';
+import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
 
 export const BpoCalcAnnualRoi = () => {
-    const { calculatedValues: { annualRoi } } = useAppSelector((state) => state.bpoCalc);
-    const [modalOpen, setModalOpen] = useState(false);
-    const toggleModal = () => setModalOpen(prev => !prev);
+    const {
+        calculatedValues: { annualRoi, gross, savings, investment },
+        inputs: { agentsNumber, fcrIncrease, csatIncrease, salesIncrease, agentCost, trainingCost },
+        improvePercent,
+        isCurrentTypeSupport
+    } = useAppSelector((state) => state.bpoCalc);
 
     return (
         <div className={cls.annual}>
@@ -20,15 +23,38 @@ export const BpoCalcAnnualRoi = () => {
                     <span className={cls.placeholder}>{'$...'}</span>
                 }
             </div>
-            <Button
-                classNamesProps={cls.button}
-                onClick={toggleModal}
-                text="Receive detailed report"
-                disabled={!annualRoi}
-                variant={ButtonVariants.ACTION}
-                type='button'
-            />
-            <GetReportPopup open={modalOpen} onClose={toggleModal}/>
+            <div className={classNames(cls.linkContainer, { [cls.disabled]: !annualRoi })}>
+                <PDFDownloadLink
+                    document={
+                        <ReportDocument
+                            isBpo={true}
+                            isSupport={!!isCurrentTypeSupport}
+                            annualRoi={annualRoi}
+                            gross={gross}
+                            savings={savings}
+                            investment={investment}
+                            improvePercent={improvePercent}
+                            agentsNumber={agentsNumber}
+                            fcrIncrease={fcrIncrease}
+                            csatIncrease={csatIncrease}
+                            salesIncrease={salesIncrease}
+                            agentCost={agentCost}
+                            trainingCost={trainingCost}
+                            grossSavings={0}
+                        />}
+                    fileName="report.pdf"
+                >
+                    {({ blob, url, loading, error }) =>
+                        <Button
+                            classNamesProps={cls.button}
+                            text="Receive detailed report"
+                            disabled={loading || !annualRoi}
+                            variant={ButtonVariants.ACTION}
+                            type='button'
+                        />
+                    }
+                </PDFDownloadLink>
+            </div>
         </div>
     );
 };

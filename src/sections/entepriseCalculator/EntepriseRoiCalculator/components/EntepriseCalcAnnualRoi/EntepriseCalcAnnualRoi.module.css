@@ -36,8 +36,16 @@
     color: var(--third-text-color);
 }
 
+.link-container a {
+    text-decoration: none;
+}
+
 .button {
     margin-top: auto;
+}
+
+.disabled {
+    pointer-events: none;
 }
 
 @media(max-width: 1438px) {
