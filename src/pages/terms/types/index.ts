@@ -18,13 +18,21 @@ interface TermsContentList {
 interface TermsContentImage {
     type: 'image',
     alt: string,
-    src: string
+    src: string,
+    mobileSrc?: string,
+    classNameProps?: string,
+}
+
+interface TermsDownloadLink {
+    type: 'downloadLink',
+    src: string,
+    text: string
 }
 
 export interface TermsContentSection {
     sectionTitle: string;
     sectionId: string;
-    sectionContent: Array<TermsContentParagraph | TermsContentImage | TermsContentList>
+    sectionContent: Array<TermsContentParagraph | TermsContentImage | TermsContentList | TermsDownloadLink>
 }
 
 export interface TermsPageSchema {

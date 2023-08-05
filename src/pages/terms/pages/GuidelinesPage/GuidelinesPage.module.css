@@ -1,0 +1,78 @@
+.logo-usage {
+    width: 760px;
+    height: 280px;
+}
+
+.icon-usage {
+    width: 710px;
+    height: 214px;
+}
+
+.wrong-usage {
+    width: 760px;
+    height: 310px;
+}
+
+.palette {
+    width: 600px;
+    height: 262px;
+}
+
+.typography {
+    width: 585px;
+    height: 589px;
+}
+
+@media(max-width: 1438px) {
+    .logo-usage {
+        width: 575px;
+        height: 212px;
+    }
+
+    .icon-usage {
+        width: 577px;
+        height: 174px;
+    }
+
+    .wrong-usage {
+        width: 574px;
+        height: 234px;
+    }
+
+    .palette {
+        width: 542px;
+        height: 232px;
+    }
+
+    .typography {
+        width: 585px;
+        height: 559px;
+    }
+}
+
+@media(max-width: 1022px) {
+    .logo-usage {
+        width: 357px;
+        height: 378px;
+    }
+
+    .icon-usage {
+        width: 220px;
+        height: 584px;
+    }
+
+    .wrong-usage {
+        width: 357px;
+        height: 953px;
+    }
+
+    .palette {
+        width: 309px;
+        height: 332px;
+    }
+
+    .typography {
+        width: 326px;
+        height: 421px;
+    }
+}

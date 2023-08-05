@@ -31,7 +31,9 @@ export const TermsCommonContentMobile = (props: TermsCommonContentMobileProps) =
                             <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>{contentPart.text}</Text>
                         }
                         { contentPart.type === 'image' &&
-                            <img alt={contentPart.alt} src={contentPart.src}/>
+                            <div className={cls.imageWrapper}>
+                                <img className={contentPart.classNameProps} alt={contentPart.alt} src={contentPart.mobileSrc ? contentPart.mobileSrc : contentPart.src}/>
+                            </div>
                         }
                         { contentPart.type === 'list' &&
                             <div className={cls.listContainer}>
@@ -47,6 +49,11 @@ export const TermsCommonContentMobile = (props: TermsCommonContentMobileProps) =
                                     )}
                                 </ul>
                             </div>
+                        }
+                        { contentPart.type === 'downloadLink' &&
+                            <a className={cls.download} href={contentPart.src} download>
+                                {contentPart.text}
+                            </a>
                         }
                     </Fragment>
                 )}

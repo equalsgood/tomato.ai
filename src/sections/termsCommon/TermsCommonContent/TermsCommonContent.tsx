@@ -42,9 +42,6 @@ export const TermsCommonContent = (props: TermsContentProps) => {
                 setNewMenuIndex(sectionsIds.indexOf(sectionId));
             }
         }
-        if(!isViewportSectionFound) {
-            setNewMenuIndex(0);
-        }
     };
 
     useEffect(() => {
@@ -78,7 +75,7 @@ export const TermsCommonContent = (props: TermsContentProps) => {
                                 </Text>
                             }
                             { contentPart.type === 'image' &&
-                                <img alt={contentPart.alt} src={contentPart.src}/>
+                                <img className={contentPart.classNameProps} alt={contentPart.alt} src={contentPart.src}/>
                             }
                             { contentPart.type === 'list' &&
                                 <div className={cls.listContainer}>
@@ -94,6 +91,11 @@ export const TermsCommonContent = (props: TermsContentProps) => {
                                         )}
                                     </ul>
                                 </div>
+                            }
+                            { contentPart.type === 'downloadLink' &&
+                                <a className={cls.download} href={contentPart.src} download>
+                                    {contentPart.text}
+                                </a>
                             }
                         </Fragment>
                     )}
