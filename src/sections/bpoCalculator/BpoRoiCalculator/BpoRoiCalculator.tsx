@@ -12,7 +12,7 @@ export const BpoRoiCalculator = () => {
             <div className={cls.sectionTitle}>
                 <Text tag="p" variant={TextVariants.BADGE}>BPOs</Text>
                 <Text tag="h1" variant={TextVariants.TITLE} classNamesProps={cls.title}>ROI Calculator</Text>
-                <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.titleParagraph}>The BPO ROI calculator assess the financial benefit across customer support agents, and separately across sales agents, based on their average level of accent, noise, and speech clarity on calls.</Text>
+                <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.titleParagraph}>The BPO ROI calculator assess the financial benefit across customer support agents, and separately sales agents, based on their average level of accent, noise, and speech clarity on calls.</Text>
             </div>
             <div className={cls.contentContainer}>
                 <div className={cls.calculatorContainer}>

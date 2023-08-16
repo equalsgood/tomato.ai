@@ -171,6 +171,7 @@
 @media(max-width: 550px) {
     .footer {
         overflow: hidden;
+        height: max-content;
     }
 
     .content {
@@ -181,7 +182,7 @@
         position: relative;
 
         grid-template-columns: 140px 126px;
-        grid-template-rows: 75px 169px 252px 143px 1fr;
+        row-gap: 40px;
         justify-content: space-between;
     }
 
@@ -218,6 +219,7 @@
     .link {
         font-size: var(--font-size-14);
         line-height: 20px;
+        height: 20px;
     }
 
     .mail-link {

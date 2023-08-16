@@ -93,7 +93,7 @@ export const TermsCommonContent = (props: TermsContentProps) => {
                                 </div>
                             }
                             { contentPart.type === 'downloadLink' &&
-                                <a className={cls.download} href={contentPart.src} download>
+                                <a className={cls.download} href={contentPart.src} download="Tomato.ai Logos and Icons.zip">
                                     {contentPart.text}
                                 </a>
                             }

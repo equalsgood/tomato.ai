@@ -6,7 +6,7 @@ export const RequestDemoTitle = () => {
         <section className={cls.section}>
             <Text tag="p" variant={TextVariants.BADGE} classNamesProps={cls.badge}>FREE TRIAL</Text>
             <Text tag="h1" variant={TextVariants.TITLE_MEDIUM} classNamesProps={cls.title}>Request Demo</Text>
-            <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>Lorem ipsum dolor sit amet consectetur. Ultrices vel quam aliquet dictum donec. Enim suspendisse massa viverra velit mollis amet velit. </Text>
+            <Text tag="p" variant={TextVariants.PARAGRAPH_DARK} classNamesProps={cls.paragraph}>Please provide the information below so that we can better address your needs when we schedule a meeting</Text>
         </section>
     );
 };

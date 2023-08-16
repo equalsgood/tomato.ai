@@ -146,7 +146,7 @@ const commentsConfig: Array<PublicComment> = [
         name: 'Amir Erez',
         position: 'CEO',
         companyImage: CedarLogo,
-        text: '“At Cedar we have offshore agents calling US customers to collect on late bills. The benefit of the Tomato.ai accent softening is it is sure to increase trust when agents call, plus improve close rates and revenues.”'
+        text: '"Tomato.ai\'s accent softening solution is sure to boost trust, improve close rates, and drive higher revenues for our agents who call US customers to collect on past-due accounts."'
     },
     {
         picture: SecondCommentatorImage,

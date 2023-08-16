@@ -52,27 +52,32 @@
 
 @media(max-width: 1022px) {
     .logo-usage {
-        width: 357px;
+        width: 100%;
+        max-width: 357px;
         height: 378px;
     }
 
     .icon-usage {
-        width: 220px;
+        width: 100%;
+        max-width: 220px;
         height: 584px;
     }
 
     .wrong-usage {
-        width: 357px;
+        width: 100%;
+        max-width: 357px;
         height: 953px;
     }
 
     .palette {
-        width: 309px;
+        width: 100%;
+        max-width: 309px;
         height: 332px;
     }
 
     .typography {
-        width: 326px;
+        width: 100%;
+        max-width: 326px;
         height: 421px;
     }
 }
