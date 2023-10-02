@@ -95,21 +95,21 @@ export const InfoMenu = ({ isEnterprise = false }: InfoMenuProps) => {
                 variant={MenuContentComponentVariants.Cancellation}
             />
         },
-        // {
-        //     iconLight: <DistinctIconLight/>,
-        //     iconDark: <DistinctIconDark/>,
-        //     title: 'Preserve Voices',
-        //     RelatedSectionComponent: <MenuContentComponent
-        //         isEnterprise={isEnterprise}
-        //         title="Preserve Voices"
-        //         paragraph="Tomato.ai softens the accent while preserving the voice and rhythm of the speaker. So agents still sound like themselves but it’s as if they took classes to reduce the level of accent that they have."
-        //         audioOriginalSrc={pakistanOriginalSample}
-        //         audioEnhancedSrc={pakistanEnhancedSample}
-        //         imageSrc={preserveImage}
-        //         imageDarkSrc={preserveDarkImage}
-        //         variant={MenuContentComponentVariants.Preserve}
-        //     />
-        // },
+        {
+            iconLight: <DistinctIconLight/>,
+            iconDark: <DistinctIconDark/>,
+            title: 'Preserve Voices',
+            RelatedSectionComponent: <MenuContentComponent
+                isEnterprise={isEnterprise}
+                title="Preserve Voices"
+                paragraph="Tomato.ai softens the accent while preserving the voice and rhythm of the speaker. So agents still sound like themselves but it’s as if they took classes to reduce the level of accent that they have."
+                audioOriginalSrc={pakistanOriginalSample}
+                audioEnhancedSrc={pakistanEnhancedSample}
+                imageSrc={preserveImage}
+                imageDarkSrc={preserveDarkImage}
+                variant={MenuContentComponentVariants.Preserve}
+            />
+        },
     ], [isEnterprise]);
 
     return (
