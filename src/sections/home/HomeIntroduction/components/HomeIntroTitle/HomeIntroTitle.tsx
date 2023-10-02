@@ -3,8 +3,8 @@ import { AudioPlayer, NavigationLink, NavigationLinkVariants, Text, TextVariants
 import { RoutePaths } from 'app/providers/AppRouter';
 import RedArrowIcon from 'shared/assets/icons/arrow-red-right.svg';
 import agent from 'shared/assets/images/agent-home-page.png';
-import firstSample from 'shared/samples/1a_ph.mp3';
-import secondSample from 'shared/samples/1b_ph.mp3';
+import firstSample from 'shared/samples/1a_ph.wav';
+import secondSample from 'shared/samples/1b_ph.wav';
 import classNames from 'classnames';
 import { useContext, useEffect, useState } from 'react';
 import { scrollSmoothTo } from 'shared/lib';

@@ -8,14 +8,14 @@ import QualityIconDark from 'shared/assets/icons/info-menu/quality-dark.svg';
 import NoiseIconLight from 'shared/assets/icons/info-menu/noise-light.svg';
 import NoiseIconDark from 'shared/assets/icons/info-menu/noise-dark.svg';
 //
-import indiaOriginalSample from 'shared/samples/2a_in.wav';
-import philOriginalSample from 'shared/samples/3a_ph.wav';
-import haitiOriginalSample from 'shared/samples/4a_ht.wav';
-import pakistanOriginalSample from 'shared/samples/5a_pk.wav';
-import indiaEnhancedSample from 'shared/samples/2b_in.wav';
-import philEnhancedSample from 'shared/samples/3b_ph.wav';
-import haitiEnhancedSample from 'shared/samples/4b_ht.wav';
-import pakistanEnhancedSample from 'shared/samples/5b_pk.wav';
+import pronunciationOriginalSample from 'shared/samples/pronounciation_or.wav';
+import pronunciationEnhancedSample from 'shared/samples/pronounciation_en.wav';
+import improveOriginalSample from 'shared/samples/improve_or.wav';
+import improveEnhancedSample from 'shared/samples/improve_en.wav';
+import noiseOriginalSample from 'shared/samples/noise_or.wav';
+import noiseEnhancedSample from 'shared/samples/noise_en.wav';
+import preserveOriginalSample from 'shared/samples/distinct_or.wav';
+import preserveEnhancedSample from 'shared/samples/distinct_en.wav';
 //
 import pronunciationImage from 'shared/assets/images/info-menu/pronunciation.png';
 import pronunciationDarkImage from 'shared/assets/images/info-menu/pronunciation-dark.png';
@@ -58,8 +58,8 @@ export const InfoMenu = ({ isEnterprise = false }: InfoMenuProps) => {
                 isEnterprise={isEnterprise}
                 title="Clearer Pronunciation"
                 paragraph="Tomato.ai softens the accent of agents in real-time as they speak. The solution works for heavily and lightly accented agents. The accent heard by customers is set based on their geography."
-                audioOriginalSrc={indiaOriginalSample}
-                audioEnhancedSrc={indiaEnhancedSample}
+                audioOriginalSrc={pronunciationOriginalSample}
+                audioEnhancedSrc={pronunciationEnhancedSample}
                 imageSrc={pronunciationImage}
                 imageDarkSrc={pronunciationDarkImage}
                 variant={MenuContentComponentVariants.Pronunciation}
@@ -73,8 +73,8 @@ export const InfoMenu = ({ isEnterprise = false }: InfoMenuProps) => {
                 isEnterprise={isEnterprise}
                 title="Improve Voice Quality"
                 paragraph="Tomato.ai clears up the voice of an agent. If the agent is hard to hear, or breathy, or choppy, the solution using AI enhances the voice. Customers then are less annoyed by such issues, which are common on calls."
-                audioOriginalSrc={philOriginalSample}
-                audioEnhancedSrc={philEnhancedSample}
+                audioOriginalSrc={improveOriginalSample}
+                audioEnhancedSrc={improveEnhancedSample}
                 imageSrc={improveImage}
                 imageDarkSrc={improveDarkImage}
                 variant={MenuContentComponentVariants.Quality}
@@ -88,8 +88,8 @@ export const InfoMenu = ({ isEnterprise = false }: InfoMenuProps) => {
                 isEnterprise={isEnterprise}
                 title="Noise Cancellation"
                 paragraph="Tomato.ai removes background noises that are common on sales and support calls. Noise removal covers work from home noises like kids or pets, and call center noises like other agents in the background."
-                audioOriginalSrc={haitiOriginalSample}
-                audioEnhancedSrc={haitiEnhancedSample}
+                audioOriginalSrc={noiseOriginalSample}
+                audioEnhancedSrc={noiseEnhancedSample}
                 imageSrc={noiseImage}
                 imageDarkSrc={noiseDarkImage}
                 variant={MenuContentComponentVariants.Cancellation}
@@ -103,8 +103,8 @@ export const InfoMenu = ({ isEnterprise = false }: InfoMenuProps) => {
                 isEnterprise={isEnterprise}
                 title="Preserve Voices"
                 paragraph="Tomato.ai softens the accent while preserving the voice and rhythm of the speaker. So agents still sound like themselves but it’s as if they took classes to reduce the level of accent that they have."
-                audioOriginalSrc={pakistanOriginalSample}
-                audioEnhancedSrc={pakistanEnhancedSample}
+                audioOriginalSrc={preserveOriginalSample}
+                audioEnhancedSrc={preserveEnhancedSample}
                 imageSrc={preserveImage}
                 imageDarkSrc={preserveDarkImage}
                 variant={MenuContentComponentVariants.Preserve}
